@@ -7,4 +7,4 @@
 \contentsline {section}{\numberline {5}An $\mathbb {E}_2$-splitting in Complex Cobordism}{3}
 \contentsline {section}{\numberline {6}Obstructions to a general $\mathbb {E}_2$-splitting}{3}
 \contentsline {section}{\numberline {7}Snaith's Construction of Periodic Complex Bordism}{3}
-\contentsline {section}{\numberline {8}Miscellaneous stuff here}{3}
+\contentsline {section}{\numberline {8}Miscellaneous stuff here}{4}
