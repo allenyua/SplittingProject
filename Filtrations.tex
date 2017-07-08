@@ -243,27 +243,30 @@ Let $\Gr(\C)$ denote the functor category $\Fun(\Z_{\geq 0}^{ds}, \C).$  We shal
 \end{dfn}
 
  \begin{dfn} 
--Let $\Fil(\C)$ denote the functor category $\Fun(\Z_{\geq 0}, \C).$  We shall refer to $\Fil$ as the category of filtered spectra.  Its objects can be thought of as sequences $Y_0\to Y_1\to Y_2 \to \cdots$ of spectra filtering $\colim_i Y_i$.  
+Let $\Fil(\C)$ denote the functor category $\Fun(\Z_{\geq 0}, \C).$  We shall refer to $\Fil$ as the category of filtered objects in $\C$.  Its objects can be thought of as sequences $Y_0\to Y_1\to Y_2 \to \cdots \in \C$ filtering $\colim_i Y_i$.  
  \end{dfn}
+ 
+ For us, the category $\C$ will always be either spectra or the category of functors from an indexing category to spectra.  Because limits, colimits, and smash products of functors are taken pointwise, these cases are essentially the same.  Thus, we will suppress $\C$ in what follows and refer to its objects as spectra.
 
 %paragraph describes the functors
-The obvious map $\Z_{\geq 0}^{ds} \to \Z_{\geq 0}$ induces a restriction functor $\text{res}: \Fil \to \Gr.$  The restriction is right adjoint to a functor $I: \Gr \to \Fil$ given by left Kan extension.  The functor $I$ can be thought of as taking a graded spectrum $X_0,X_1,X_2,\cdots$ to the filtered spectrum $X_0\to X_0\oplus X_1\to X_0\oplus X_1\oplus X_2\to \cdots.$    There is also an associated graded functor $\text{gr }: \Fil \to \Gr$ such that the composite $\text{gr }\circ I : \Gr \to \Gr$ is an equivalence.   
+The obvious map $\Z_{\geq 0}^{ds} \to \Z_{\geq 0}$ induces a restriction functor $\text{res}: \Fil \to \Gr.$  The restriction is right adjoint to a functor $I: \Gr \to \Fil$ given by left Kan extension.  The functor $I$ can be thought of as taking a graded spectrum $X_0,X_1,X_2,\cdots$ to the filtered spectrum $X_0\to X_0\vee X_1\to X_0\vee X_1\vee X_2\to \cdots.$    There is also an associated graded functor $\text{gr }: \Fil \to \Gr$ such that the composite $\text{gr }\circ I : \Gr \to \Gr$ is an equivalence.   
 
 %paragraph describes the monoidal structures
-The categories $\Gr$ and $\Fil$ are given symmetric monoidal structures via the Day convolution; we denote the operation in both cases by $\otimes$.  The unit $\S0^{gr}$ of $\otimes$ in graded spectra is $S^0$ in degree 0 and $*$ otherwise; the unit $\S0^{fil}$ in filtered spectra is $I\S0^{gr}.$  
+The categories $\Gr$ and $\Fil$ are given symmetric monoidal structures via the Day convolution; we denote the operation in both cases by $\otimes$.  The unit $\S0^{gr}$ of $\otimes$ in graded spectra is $S^0$ in degree 0 and $*$ otherwise; the unit $\S0^{fil}$ in filtered spectra is $I\S0^{gr}.$  We may then talk about $\E_n$-algebras in $\Gr$ and $\Fil$.  We will require these to be unital in the strong sense that the unit map is an equivalence in degree $0$.  
 
-The functors $I$ and $\text{gr}$ can be given symmetric monoidal structures such that the composite $\text{gr }\circ I : \Gr \to \Gr$ is a symmetric monoidal equivalence.  It follows in particular that they extend to functors on between the categories of $\E_n$ algebras in $\Gr$ and $\Fil$.  Thus, given an $\E_n$ algebra $Y$ in filtered spectra, we obtain a canonical $\E_n$ structure on its associated graded $\text{gr}(Y).$  Conversely, given $X\in \Alg_{\E_n}(\Fil)$
+The functors $I$ and $\text{gr}$ can be given symmetric monoidal structures such that the composite $\text{gr }\circ I : \Gr \to \Gr$ is a symmetric monoidal equivalence.  It follows in particular that they extend to functors between the categories of $\E_n$ algebras in $\Gr$ and $\Fil$.  Thus, given an $\E_n$ algebra $Y$ in filtered spectra, we obtain a canonical $\E_n$ structure on its associated graded $\text{gr}(Y).$  Conversely, given $X\in \Alg_{\E_n}(\Gr)$, we obtain $IX\in \Alg_{\E_n}{\Fil}.$  
 
-
-%, and thus induces a functor $I:\Alg_{\E_n}(\Gr)\to \Alg_{\E_n}(\Fil).$   Similarly, the functor $\text{gr}$ can be given a symmetric monoidal structure such that the 
-%As such, it makes sense to talk about $\mathbb{E}_n$ algebras in $\Fil$ and $\Gr$.  In fact, 
-
-%maybe we should set apart the definitions that jacob did not already make?
+%%%%
 \begin{dfn}
 An object $X\in \Alg_{\E_n}(\Fil)$ is called \emph{$\E_n$-split} if it is in the essential image of $I$.  
 \end{dfn}
 
 Given an $\E_n$-split filtered spectrum $X$, we can recover the underlying graded spectrum by taking the associated graded. 
+%%%%
+%being careful about square zero extensions
+Note that there is a fully faithful functor $T:\Sp \to \Gr$ which sends a spectrum $X$ to the graded spectrum $$S^0 \longrightarrow X \longrightarrow * \longrightarrow * \longrightarrow \cdots.$$  Its essential image is the full subcategory $\Gr^0$ of $\Gr$ consisting of graded spectra $Y$ such that $Y_i$ is contractible for $i>1$ and $Y_0 = S^0$.  Furthermore, $T: \Sp \to \Gr^0$ may be promoted to a symmetric monoidal equivalence where $\Sp$ is given the cocartesian monoidal structure and $\Gr^0$ is given the obvious monoidal structure via localization of the symmetric monoidal category $\Gr$.   By 2.4.3.10 of \cite{HA}, any $X\in \Gr^0$ 
+%to be continued.  I'm trying to show that "Square 0" really makes sense.  
+
 
 
 \section{The (Segal-Mitchell-Richter?) Filtration on \texorpdfstring{$\Omega SU(n)$}{Loops SU(n)}}
