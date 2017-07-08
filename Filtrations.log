@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  7 JUL 2017 22:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  8 JUL 2017 10:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**Filtrations_Allen.tex
-(./Filtrations_Allen.tex
+**Filtrations.tex
+(./Filtrations.tex
 LaTeX2e <2015/01/01>
 Babel <3.9l> and hyphenation patterns for 79 languages loaded.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/article.cls
@@ -820,8 +820,8 @@ File: pgflibraryarrows.meta.code.tex 2013/12/13 v3.0.0 (rcs-revision 1.12)
 \pgfarrowlength=\dimen209
 \pgfarrowwidth=\dimen210
 \pgfarrowlinewidth=\dimen211
-))) (./Filtrations_Allen.aux)
-\openout1 = `Filtrations_Allen.aux'.
+))) (./Filtrations.aux)
+\openout1 = `Filtrations.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 174.
 LaTeX Font Info:    ... okay on input line 174.
@@ -928,10 +928,9 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-(./Filtrations_Allen.toc)
+No file Filtrations.toc.
 \tf@toc=\write5
-\openout5 = `Filtrations_Allen.toc'.
-
+\openout5 = `Filtrations.toc'.
 
 
 LaTeX Warning: Citation `LurieRot' on page 1 undefined on input line 201.
@@ -951,28 +950,28 @@ LaTeX Warning: Citation `MitchellSU(n)' on page 2 undefined on input line 233.
 
 LaTeX Warning: Citation `Arone' on page 2 undefined on input line 243.
 
-[2]
 
-LaTeX Warning: Citation `ChadwickMandell' on page 3 undefined on input line 272
+LaTeX Warning: Citation `ChadwickMandell' on page 2 undefined on input line 288
 .
 
+[2]
 
-LaTeX Warning: Citation `SnaithOriginal' on page 3 undefined on input line 288.
+LaTeX Warning: Citation `SnaithOriginal' on page 3 undefined on input line 304.
 
-
-
-LaTeX Warning: Citation `SnaithNotMultiplicative' on page 3 undefined on input 
-line 288.
 
 
 LaTeX Warning: Citation `SnaithNotMultiplicative' on page 3 undefined on input 
-line 303.
+line 304.
 
 
-LaTeX Warning: Citation `GepnerSnaith' on page 3 undefined on input line 303.
+LaTeX Warning: Citation `SnaithNotMultiplicative' on page 3 undefined on input 
+line 319.
 
 
-Overfull \hbox (4.45712pt too wide) in paragraph at lines 309--310
+LaTeX Warning: Citation `GepnerSnaith' on page 3 undefined on input line 319.
+
+
+Overfull \hbox (4.45712pt too wide) in paragraph at lines 325--326
 []\OT1/cmr/bx/n/10.95 Proposition 8.1. []\OT1/cmr/m/it/10.95 The as-so-ci-ated 
 graded of $\OT1/cmr/m/n/10.95 ^^F[]\OML/cmm/m/it/10.95 BU$ \OT1/cmr/m/it/10.95 
 is $\OML/cmm/m/it/10.95 E[]$ \OT1/cmr/m/it/10.95 equiv-a-lent to the Thom spec-
@@ -981,20 +980,20 @@ r/m/n/10.95 )\OML/cmm/m/it/10.95 :$
  []
 
 [3]
-No file Filtrations_Allen.bbl.
-[4] (./Filtrations_Allen.aux)
+No file Filtrations.bbl.
+[4] (./Filtrations.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 19367 strings out of 493089
- 364834 string characters out of 6134842
- 438149 words of memory out of 5000000
+ 19365 strings out of 493089
+ 364736 string characters out of 6134842
+ 437149 words of memory out of 5000000
  22403 multiletter control sequences out of 15000+600000
  21854 words of font info for 96 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,6n,82p,3356b,657s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,6n,82p,3350b,657s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
@@ -1011,7 +1010,7 @@ ve/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive
 /2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2
 015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/20
 15/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Filtrations_Allen.pdf (4 pages, 189761 bytes).
+Output written on Filtrations.pdf (4 pages, 186258 bytes).
 PDF statistics:
  84 PDF objects out of 1000 (max. 8388607)
  61 compressed objects within 1 object stream
