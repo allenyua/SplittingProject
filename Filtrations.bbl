@@ -1,0 +1,42 @@
+\providecommand{\bysame}{\leavevmode\hbox to3em{\hrulefill}\thinspace}
+\providecommand{\MR}{\relax\ifhmode\unskip\space\fi MR }
+% \MRhref is called by the amsart/book/proc definition of \MR.
+\providecommand{\MRhref}[2]{%
+  \href{http://www.ams.org/mathscinet-getitem?mr=#1}{#2}
+}
+\providecommand{\href}[2]{#2}
+\begin{thebibliography}{Aro01}
+
+\bibitem[Aro01]{Arone}
+Greg Arone, \emph{The {M}itchell-{R}ichter filtration of loops on {S}tiefel
+  manifolds stably splits}, Proc. Amer. Math. Soc. \textbf{129} (2001), no.~4,
+  1207--1211. \MR{1814154}
+
+\bibitem[CM15]{ChadwickMandell}
+Steven~Greg Chadwick and Michael~A. Mandell, \emph{{$E_n$} genera}, Geom.
+  Topol. \textbf{19} (2015), no.~6, 3193--3232. \MR{3447102}
+
+\bibitem[GS09]{GepnerSnaith}
+David Gepner and Victor Snaith, \emph{On the motivic spectra representing
+  algebraic cobordism and algebraic {$K$}-theory}, Doc. Math. \textbf{14}
+  (2009), 359--396. \MR{2540697}
+
+\bibitem[Lur15]{LurieRot}
+Jacob Lurie, \emph{Rotation invariance in algebraic $k$-theory}, \newline
+  {A}vailable at http://www.math.harvard.edu/~lurie/ (2015).
+
+\bibitem[Mit86]{MitchellSU(n)}
+Stephen~A. Mitchell, \emph{A filtration of the loops on {${\rm SU}(n)$} by
+  {S}chubert varieties}, Math. Z. \textbf{193} (1986), no.~3, 347--362.
+  \MR{862881}
+
+\bibitem[Sna77]{SnaithNotMultiplicative}
+Victor Snaith, \emph{The total {C}hern and {S}tiefel-{W}hitney classes are not
+  infinite loop maps}, Illinois J. Math. \textbf{21} (1977), no.~2, 300--304.
+  \MR{0433446}
+
+\bibitem[Sna81]{SnaithOriginal}
+\bysame, \emph{Localized stable homotopy of some classifying spaces}, Math.
+  Proc. Camb. Phil. Soc. \textbf{89} (1981), no.~2, 325--330. \MR{0600247}
+
+\end{thebibliography}

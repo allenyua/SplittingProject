@@ -97,6 +97,8 @@
 \DeclareMathOperator{\Sp}{\text{Sp}}
 \DeclareMathOperator{\Spaces}{\mathcal{S}}
 \DeclareMathOperator{\S0}{\mathbb{S}}
+\DeclareMathOperator{\J}{\mathcal{J}}
+\DeclareMathOperator{\Cofil}{\textbf{Cofil}}
 
 %----------------------------------------------------------------------%
 
@@ -159,7 +161,7 @@ In the above, $\Sigma^{\infty}_+ BU$ acquires an $\mathbb{E}_\infty$-structure (
 The genesis of this paper was an attempt to use Snaith's theorem to study the $\mathbb{E}_\infty$-ring structure on $MUP$.  This seemed like an especially reasonable idea in light of two facts.
 
 \begin{enumerate}
-\item By another theorem of Snaith, periodic $K$-theory $KU$ may be constructed as $\Sigma^{\infty}_+ \mathbb{CP}^{\infty}[\beta^{-1}]$.  This is an equivalence of $\mathbb{E}_\infty$-ring spectra \textbf{CITE}.
+\item By another theorem of Snaith, periodic $K$-theory $KU$ may be constructed as $$KU \simeq \Sigma^{\infty}_+ \mathbb{CP}^{\infty}[\beta^{-1}].$$  This is an equivalence of $\mathbb{E}_\infty$-ring spectra \textbf{CITE}.
 \item In \textbf{CITE}, Gepner and Snaith prove a motivic analogue of Theorem \ref{SnaithSplitting}.  In particular, \textbf{BLAH}.  They then use the $\mathbb{E}_\infty$-ring structure on \textbf{BLAH} to \textbf{define} an $\mathbb{E}_\infty$-ring structure on periodic $MGL$. 
 \end{enumerate}
 
@@ -231,15 +233,18 @@ The ??? filtration on $\Sigma^{\infty}_+ \Omega SU(n)$ is $\mathbb{E}_2$-split a
 
 %Cite Rotation Invariance \cite{LurieRot} and lay out the basic theory.  Explain why an $\mathbb{E}_n$ filtered spectrum with $\mathbb{E}_n$-backwards maps must be split.
 %I'd be happy to do this.  It's in progress below, but I'm not great with texing and notation so please give me suggestions.
-We begin this section by reviewing a framework from \cite{LurieRot} for studying graded and filtered spectra.  The reader is referred to \cite{LurieRot} for a more thorough treatment and all proofs.  
 
-Denote by $\Z_{\geq 0}$ the poset of non-negative integers, and by $\Z_{\geq 0}^{ds}$ the corresponding discrete category.  The reader is warned that our numbering conventions are opposite the ones in \cite{LurieRot}.  
+Here we review a framework from \cite{LurieRot} for studying graded and filtered objects.  The reader is referred to \cite{LurieRot} for a more thorough treatment and all proofs.  
+
+Let $\C$ be a stable $\infty$-category.  Denote by $\Z_{\geq 0}$ the poset of non-negative integers, and by $\Z_{\geq 0}^{ds}$ the corresponding discrete category.  The reader is warned that our numbering conventions are opposite the ones in \cite{LurieRot}.
+
 \begin{dfn} 
-Let $\Gr$ denote the functor category $\Fun(\Z_{\geq 0}^{ds}, \Sp).$  We shall refer to $\Gr$ as the category of graded spectra.  Its objects can be thought of as sequences $X_0, X_1,X_2,\cdots$ of spectra.  
+Let $\Gr(\C)$ denote the functor category $\Fun(\Z_{\geq 0}^{ds}, \C).$  We shall refer to $\Gr(\C)$ as the category of graded objects in $\C$.  Its objects can be thought of as sequences $X_0, X_1,X_2,\cdots \in \C$.
 \end{dfn}
-\begin{dfn} 
-Let $\Fil$ denote the functor category $\Fun(\Z_{\geq 0}, \Sp).$  We shall refer to $\Fil$ as the category of filtered spectra.  Its objects can be thought of as sequences $Y_0\to Y_1\to Y_2 \to \cdots$ of spectra filtering $\colim_i Y_i$.  
-\end{dfn}
+
+ \begin{dfn} 
+-Let $\Fil(\C)$ denote the functor category $\Fun(\Z_{\geq 0}, \C).$  We shall refer to $\Fil$ as the category of filtered spectra.  Its objects can be thought of as sequences $Y_0\to Y_1\to Y_2 \to \cdots$ of spectra filtering $\colim_i Y_i$.  
+ \end{dfn}
 
 %paragraph describes the functors
 The obvious map $\Z_{\geq 0}^{ds} \to \Z_{\geq 0}$ induces a restriction functor $\text{res}: \Fil \to \Gr.$  The restriction is right adjoint to a functor $I: \Gr \to \Fil$ given by left Kan extension.  The functor $I$ can be thought of as taking a graded spectrum $X_0,X_1,X_2,\cdots$ to the filtered spectrum $X_0\to X_0\oplus X_1\to X_0\oplus X_1\oplus X_2\to \cdots.$    There is also an associated graded functor $\text{gr }: \Fil \to \Gr$ such that the composite $\text{gr }\circ I : \Gr \to \Gr$ is an equivalence.   
@@ -272,7 +277,41 @@ I guess now we know this is just true.  We should probably thank Jacob for bring
 
 \section{An \texorpdfstring{$\mathbb{A}_\infty$}{Aoo}-splitting by Weiss Calculus}
 
-Using \cite{Arone}, we get backwards $\mathbb{A}_\infty$-maps.  This should prove the filtration splits.
+
+In this section, we extend the methods of \cite{Arone} to produce $\mathbb{A}_\infty$ stable splittings of Stiefel manifolds.  
+%some sort of outline
+%Review of weiss calculus
+%monoidalness of Weiss Calculus
+%general splitting machinery
+\subsection{Weiss Calculus}
+%cite Weiss
+Let $\J$ be the $\infty$-category which is the nerve of the topological category whose objects are finite dimensional complex vector spaces equipped with a Hermitian inner product and whose morphisms are spaces of linear isometries.  
+
+
+\subsection{General splitting machinery}
+
+
+Let $[n]$ denote the linearly ordered set of integers $0\leq i\leq n$.  Define $\Fil_n = \text{Fun}([n], \Sp^{\J})$ and $\Cofil_n = \text{Fun}([n]^{\text{op}},\Sp^{\J})$.  These categories admit functors to $\Sp^{\J}$ by taking colimit and limit, respectively.  Let $\C_n = \Fil_n \times_{\Sp^{\J}} \Cofil_n.$  Finally, let $\Gr_n = \text{Fun}([n]^{\text{ds}}, \Sp^{\J})$ where $[n]^{\text{ds}}$ denotes the underlying discrete category.  We have the following lemma:
+
+\begin{lem}
+For all integers $n>0$, there is a fully faithful functor $i_n:\Gr_{n+1} \to \C_n.$  
+\end{lem}
+\begin{proof}
+An element of $\C_n$ is given by a sequence of maps 
+
+The proof is by induction.  
+\end{proof}
+
+We may then take inverse limits to get a category $\C_\infty = \Fil(\Sp^{\J}) \times_{\Sp^{\J}} \Cofil(\Sp^{\J})$ and a functor $i: \Gr \to \C_\infty$. 
+
+\begin{cor}
+The functor $i$ is fully faithful.
+\end{cor}
+\begin{proof}
+%This amounts to checking that taking inverse limits retains fully faithfulness.  I think this is totally obvious if you were taking an inverse limit of simplicial sets, but maybe we need to be a little careful since we want a homotopy limit?
+\end{proof}
+
+at the end, restrict connectivity so that it's monoidal
 
 \section{An \texorpdfstring{$\mathbb{E}_2$}{E2}-splitting in Complex Cobordism} \label{sec:MUE2}
 
