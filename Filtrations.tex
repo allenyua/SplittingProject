@@ -1,27 +1,24 @@
-%\documentclass[leqno,12pt]{amsart}
-\documentclass[11pt]{article}
-\oddsidemargin=0in \evensidemargin=0in
-\textwidth=6.5in \textheight=8.5in
+\documentclass[oneside]{amsart}
+\usepackage{hyperref}
 
-%\usepackage{hyperref}
+%\usepackage[export]{adjustbox}
+%\usepackage[dvips]{pict2e}
+%\usepackage{amsmath,amsthm}
+\usepackage{comment}
+\usepackage{amsfonts, fullpage, fancyhdr, qtree, amsmath, tipa, amssymb, hyperref, url, amsthm, subfigure, xy, tikz-cd, verbatim}
 
-\usepackage[dvips]{pict2e}
-\usepackage{amssymb,enumerate, latexsym, mathrsfs, mdwlist}
-\usepackage{amsmath,amsthm}
-\usepackage[all,cmtip]{xy}
-\usepackage{amsfonts, fullpage, fancyhdr, qtree, amsmath, tipa, amssymb, url, subfigure, enumitem, setspace, mathrsfs, verbatim}
-%\usepackage{amsfonts, fancyhdr, qtree, amsmath, tipa, amssymb, url, subfigure, enumitem, setspace, mathrsfs, verbatim, color}
-\usepackage{stmaryrd}
-\usepackage{appendix}
-%\usepackage{xypic}
-%\usepackage[pdftex]{graphicx}
-\usepackage{leftidx}
+\usepackage[color=cyan!40]{todonotes}
+
+
+
+\usepackage[a4paper]{geometry}
+
 
 %----------------------------------------------------------------------%
 
 %\renewcommand{\appendixname}{Example}
-
 %\swapnumbers
+
 \theoremstyle{definition}
 \newtheorem{nul}{}[section]
 \newtheorem{dfn}[nul]{Definition}
@@ -42,11 +39,8 @@
 \newtheorem*{int*}{Intuition}
 \newtheorem*{qst*}{Question}
 
+
 \theoremstyle{plain}
-
-
-
-
 \newtheorem{sch}[nul]{Scholium}
 \newtheorem{thm}[nul]{Theorem}
 \newtheorem{prop}[nul]{Proposition}
@@ -56,30 +50,11 @@
 \newtheorem{cnj}[nul]{Conjecture}
 \newtheorem{cor}{Corollary}[nul]
 \newtheorem*{thm*}{Theorem}
-\newtheorem*{mainthm*}{Universal Additivity Theorem}
-\newtheorem*{structurethm*}{Structure Theorem}
 \newtheorem*{prop*}{Proposition}
 \newtheorem*{cor*}{Corollary}
 \newtheorem*{lem*}{Lemma}
 \newtheorem*{cnj*}{Conjecture}
 
-\numberwithin{equation}{nul}
-
-    \newtheoremstyle{TheoremNum}
-      %  {\topsep}{\topsep}              %%% space between body and thm
-			  {2mm}{2mm}              %%% space between body and thm
-        {\itshape}                      %%% Thm body font
-        {}                              %%% Indent amount (empty = no indent)
-        {\bfseries}                     %%% Thm head font
-        {.}                             %%% Punctuation after thm head
-        { }                             %%% Space after thm head
-        {\thmname{#1}\thmnote{ \bfseries #3}}%%% Thm head spec
-    \theoremstyle{TheoremNum}
-    \newtheorem{thmn}{Theorem}
-
-%----------------------------------------------------------------------%
-
-%\frenchspacing
 
 %----------------------------------------------------------------------%
 
@@ -95,6 +70,9 @@
 \DeclareMathOperator{\Skel}{\text{Skel}}
 \DeclareMathOperator*{\hocolim}{\text{hocolim}}
 \DeclareMathOperator*{\holim}{\text{holim}}
+\DeclareMathOperator{\smsh}{\wedge}
+
+
 
 \DeclareMathOperator{\C}{\mathcal{C}}
 \DeclareMathOperator{\CP}{\mathbb{CP}}
@@ -104,7 +82,6 @@
 \DeclareMathOperator{\m}{\mathfrak{m}}
 \DeclareMathOperator{\G}{\mathbb{G}}
 \DeclareMathOperator{\F}{\mathbb{F}}
-\DeclareMathOperator{\J}{\mathcal{J}}
 \DeclareMathOperator{\cG}{\mathcal{G}}
 \DeclareMathOperator{\cF}{\mathcal{F}}
 \DeclareMathOperator{\cS}{\mathcal{S}}
@@ -115,27 +92,11 @@
 \DeclareMathOperator{\nil}{\text{nil}}
 \DeclareMathOperator{\Gr}{\textbf{Gr}}
 \DeclareMathOperator{\Fil}{\textbf{Fil}}
-\DeclareMathOperator{\Cofil}{\textbf{Cofil}}
 \DeclareMathOperator{\Fun}{\text{Fun}}
 \DeclareMathOperator{\Alg}{\text{Alg}}
 \DeclareMathOperator{\Sp}{\text{Sp}}
 \DeclareMathOperator{\Spaces}{\mathcal{S}}
 \DeclareMathOperator{\S0}{\mathbb{S}}
-
-
-
-\DeclareMathOperator{\smsh}{\wedge}
-\DeclareMathOperator{\uBPn}{\underline{BP\langle n \rangle}}
-\DeclareMathOperator{\uE}{\underline{E}}
-\DeclareMathOperator{\uHom}{\underline{\Hom}}
-\DeclareMathOperator{\uMU}{\underline{MU}}
-
-\newcommand\myatop[2]{\genfrac{}{}{0pt}{}{#1}{#2}}
-\newcommand\BPn{BP\langle n \rangle}
-\newcommand\HFp{\text{H}\mathbb{F}_p}
-\newcommand\HZp{\text{H}\mathbb{Z}_{(p)}}
-\newcommand\HFtwo{\text{H}\mathbb{F}_2}
-\newcommand\HZtwo{\text{H}\mathbb{Z}_{(2)}}
 
 %----------------------------------------------------------------------%
 
@@ -143,44 +104,31 @@
 \usetikzlibrary{matrix,arrows,decorations}
 \usepackage{tikz-cd}
 
-%\pgfdeclaredecoration{single line}{initial}{\state{initial}[width=\pgfdecoratedpathlength-1sp]{\pgfpathmoveto{\pgfpointorigin}}\state{final}{\pgfpathlineto{\pgfpointorigin}}} 
-
-\newcommand{\fromto}[2]{{#1}\ \tikz[baseline]\draw[>=stealth,->](0,0.5ex)--(0.5,0.5ex);\ {#2}}
-\newcommand{\into}[2]{{#1}\ \tikz[baseline]\draw[>=stealth,right hook->](0,0.5ex)--(0.5,0.5ex);\ {#2}}
-\newcommand{\onto}[2]{{#1}\ \tikz[baseline]\draw[>=stealth,->>](0,0.5ex)--(0.5,0.5ex);\ {#2}}
-\newcommand{\cofto}[2]{{#1}\ \tikz[baseline]\draw[>=stealth,>->](0,0.5ex)--(0.5,0.5ex);\ {#2}}
-\newcommand{\fibto}[2]{{#1}\ \tikz[baseline]\draw[>=stealth,->>](0,0.5ex)--(0.5,0.5ex);\ {#2}}
-\newcommand{\equivto}[2]{{#1}\ \tikz[baseline]\draw[>=stealth,->,font=\scriptsize,inner sep=0.5pt](0,0.5ex)--node[above]{$\sim$}(0.5,0.5ex);\ {#2}}
-\newcommand{\goesto}[2]{{#1}\ \tikz[baseline]\draw[|->](0,0.5ex)--(0.5,0.5ex);\ {#2}}
-\newcommand{\adjunct}[4]{{#1}\colon{#2}\ \begin{tikzpicture}[baseline] \draw[>=stealth,->] (0,1ex) -- (0.75,1ex); \draw[>=stealth,->] (0.75,0.25ex) -- (0,0.25ex); \end{tikzpicture}\ {#3}\colon{#4}}
-
-\renewcommand{\to}{\ \tikz[baseline]\draw[>=stealth,->](0,0.5ex)--(0.5,0.5ex);\ }
-\newcommand{\ot}{\ \tikz[baseline]\draw[>=stealth,<-](0,0.5ex)--(0.5,0.5ex);\ }
+\usepackage{adjustbox}
 
 %----------------------------------------------------------------------%
 
-%\hyphenation{Mack-ey mon-oid-al Wald-hau-sen}
-
-%----------------------------------------------------------------------% 
-
-
-
-
-%\usepackage{hyperref}
-%\usepackage{color}
-
+\hyphenation{Mack-ey mon-oid-al Wald-hau-sen}
 
 %----------------------------------------------------------------------%
+%----------------------------------------------------------------------%
+
+
+
 \begin{document}
-\title{Structured Splittings of $\Omega SU(n)$ and Snaith's Construction of Periodic Complex Bordism}
 
+
+\title{Structured Splittings of $\Omega SU(n)$ and Snaith's Construction of Periodic Complex Bordism}
 \author{Jeremy Hahn and Allen Yuan}
 
+
 %----------------------------------------------------------------------%
 %----------------------------------------------------------------------%
 
 
+\setcounter{tocdepth}{1}
 \maketitle
+
 \tableofcontents
 
 
@@ -188,24 +136,109 @@
 
 \section{Introduction}
 
-Write this last after we have filled in all the theorems with complete proofs.
+The complex cobordism spectrum $MU$ has played a central role in homotopy theory ever since Quillen's 19XX arguments \textbf{CITE} connected its homotopy with the theory of one-dimensional formal group laws.  As the Thom spectrum of the canonical bundle over $BU$, $MU$ naturally acquires an immense amount of structure: it is an $\mathbb{E}_\infty$-ring spectrum.  To this day, however, much remains unknown about the full nature of this $\mathbb{E}_\infty$ structure.  For example, almost nothing is known about the k-invariants of the spectrum of units $gl_1(MU)$ \textbf{CITE}.
+
+As a spectrum, $MU$ is classically constructed via the sequence of natural maps
+$$MU(n) \longrightarrow \cdots$$
+
+This suggests that perhaps the more elemental object is $\bigvee MU(n)$, the Thom spectrum of the $J$-homomorphism
+$$\textbf{Vect} \stackrel{J}{\longrightarrow} \text{Pic}(S)$$
+that takes a vector space $V$ to its one-point compactification $J(V)=S^V$.  Since $$J(V \oplus W) \simeq S^V \smsh S^W,$$ the Thom spectrum $\bigvee MU(n)$
+is naturally an $\mathbb{E}_\infty$-ring spectrum.  Inverting the Bott element $\beta \in \pi_2(MU(1)) \cong \pi_2(MU(1))$, one obtains the \textit{periodic} complex cobordism spectrum
+$$MUP \simeq \left(\bigvee MU(n) \right)[\beta^{-1}].$$
+
+This periodic spectrum $MUP$ is a minor variation on $MU$ itself: there is a wedge decomposition $MUP \simeq \bigvee_{a \in \mathbb{Z}} \Sigma^{2a} MU$ and the inclusion $MU \rightarrow MUP$ onto the $a=0$ factor is an an $\mathbb{E}_\infty$-ring homomorphism.
+
+In 19XX, Victor Snaith \textbf{CITE} gave another presentation of periodic complex cobordism
+\begin{thm}[Snaith] \label{SnaithSplitting}
+As homotopy commutative ring spectra, $MUP \simeq \Sigma^{\infty}_+ BU[\beta^{-1}]$.  More generally, there is an equivalence of homotopy commutative rings
+$$\bigvee MU(n) \simeq \Sigma^{\infty}_+ BU.$$
+\end{thm}
+In the above, $\Sigma^{\infty}_+ BU$ acquires an $\mathbb{E}_\infty$-structure (and hence a homotopy commutative ring structure) from the fact that $BU$ is an infinite loop space.  One may think of $\Sigma^{\infty}_+ BU$ as the group ring of the topological group $BU$.
+
+The genesis of this paper was an attempt to use Snaith's theorem to study the $\mathbb{E}_\infty$-ring structure on $MUP$.  This seemed like an especially reasonable idea in light of two facts.
+
+\begin{enumerate}
+\item By another theorem of Snaith, periodic $K$-theory $KU$ may be constructed as $\Sigma^{\infty}_+ \mathbb{CP}^{\infty}[\beta^{-1}]$.  This is an equivalence of $\mathbb{E}_\infty$-ring spectra \textbf{CITE}.
+\item In \textbf{CITE}, Gepner and Snaith prove a motivic analogue of Theorem \ref{SnaithSplitting}.  In particular, \textbf{BLAH}.  They then use the $\mathbb{E}_\infty$-ring structure on \textbf{BLAH} to \textbf{define} an $\mathbb{E}_\infty$-ring structure on periodic $MGL$. 
+\end{enumerate}
+
+However, as it turns out (though it is not at all obvious from the modern literature and in particular not mentioned in \textbf{GepnerSnaith}) another old theorem of Snaith \textbf{CITE} shows that our idea was entirely unreasonable.
+
+\begin{thm}[Snaith]
+As $\mathbb{E}_\infty$-rings,
+$$MUP \not \simeq \Sigma^{\infty}_+ BU[\beta^{-1}].$$
+\end{thm}
+
+In Section \ref{sec:SnaithSplitting} we refine Snaith's results in to what we consider their definitive form:
+
+\begin{thm}
+There is an equivalence of $\mathbb{E}_2$-ring spectra
+$$MUP \simeq \Sigma^{\infty}_+ BU[\beta^{-1}],$$
+but $MUP \not \simeq \Sigma^{\infty}_+ BU[\beta^{-1}]$ as $\mathbb{E}_3$-ring spectra.  There is an equivalence of $\mathbb{A}_\infty$-ring spectra
+$$\bigvee MU(n) \simeq \Sigma^{\infty}_+ BU,$$
+but $\bigvee MU(n) \not \simeq \Sigma^{\infty}_+ BU$ as $\mathbb{E}_2$-ring spectra.
+\end{thm}
+
+
+\begin{rmk}
+We freely use the language of $\infty$-categories throughout this paper, refering to an $\infty$-category simply as a category.
+\end{rmk}
+
+In Section \ref{sec:FilGra} we will review the symmetric monoidal categories $\Fil$ and $\Gr$ of filtered and graded spectra, respectively.  A filtered spectrum is an infinite sequence
+$$X_0 \longrightarrow X_1 \longrightarrow X_2 \longrightarrow X_3 \longrightarrow \cdots$$
+of spectra.  The tensor product $$\left(X_0 \longrightarrow X_1 \longrightarrow X_2 \longrightarrow \cdots \right) \otimes \left(Y_0 \longrightarrow Y_1 \longrightarrow Y_2 \longrightarrow \cdots \right)$$
+of two filtered spectra is computed as a Day convolution
+
+\begin{center}
+$X_0 \otimes Y_0 \longrightarrow \colim $
+\adjustbox{scale=0.7} 
+{$ \left(\begin{tikzcd} X_0 \smsh Y_1 \\  X_0 \smsh Y_0 \arrow{u} \arrow{r} & X_1 \smsh Y_0 \end{tikzcd} \right) $} 
+$\longrightarrow \colim$
+\adjustbox{scale=0.7} {$ \left( \begin{tikzcd} X_0 \smsh Y_2 \\ X_0 \smsh Y_1 \arrow{r} \arrow{u} & X_1 \smsh Y_1  \\ X_0 \smsh Y_0 \arrow{r} \arrow{u} & X_1 \smsh Y_0 \arrow{u} \arrow{r} & X_2 \smsh Y_0 \end{tikzcd} \right) $}
+$\longrightarrow \cdots.$
+\end{center}
+
+A graded spectrum, on the other hand, is simply an ordered sequence $(A_0,A_1,A_2, \cdots)$ of spectra.  The tensor product  is computed as
+$$(A_0,A_1,A_2,\cdots) \otimes (B_0,B_1,B_2,\cdots) \simeq \left( A_0 \smsh B_0, (A_1 \smsh B_0) \vee (A_0 \smsh B_1), \cdots, \bigvee_{i+j=n} A_i \smsh B_j, \cdots \right).$$
+
+There is a sequence of symmetric monoidal functors
+$$
+\begin{tikzcd}[column sep=huge]
+\Gr \arrow{r}{I} & \Fil \arrow{r}{\text{colim}} & \Sp,
+\end{tikzcd}
+$$
+where $I$ sends the graded spectrum $(A_0,A_1,A_2,\cdots)$ to the filtered spectrum
+$$
+I(A_0,A_1,A_2,\cdots) = \left( A_0 \longrightarrow A_0 \vee A_1 \longrightarrow A_0 \vee A_1 \vee A_2 \longrightarrow \cdots\right).
+$$
+
+\begin{dfn}
+We say that an $\mathbb{E}_n$-ring spectrum is $\mathbb{E}_n$-\textbf{split} if it is equivalent to the image of an $\mathbb{E}_n$-algebra in $\Gr$ under the composite $\text{colim} \circ I.$  Similarly, a filtered $\mathbb{E}_n$-algebra is $\mathbb{E}_n$-split if it is equivalent to the image under $I$ of an $\mathbb{E}_n$-algebra in $\Gr$.
+\end{dfn}
+
+In section \ref{sec:MUE2} we will show:
+\begin{thm}
+The ??? filtration on $\Sigma^{\infty}_+ \Omega SU(n)$ is $\mathbb{E}_2$-split after smashing with $MU$.
+\end{thm}
+
+
+
 
 %Notations
 %Sp for spectra, S for spaces?
-%Disclaimer: Using \infty cats everywhere
-\section{Filtered and Graded Ring Spectra}
+\section{Filtered and Graded Ring Spectra} \label{sec:FilGra}
 
 %Cite Rotation Invariance \cite{LurieRot} and lay out the basic theory.  Explain why an $\mathbb{E}_n$ filtered spectrum with $\mathbb{E}_n$-backwards maps must be split.
 %I'd be happy to do this.  It's in progress below, but I'm not great with texing and notation so please give me suggestions.
-%should probably write this for a general stable \infty category C
-Here we review a framework from \cite{LurieRot} for studying graded and filtered objects.  The reader is referred to \cite{LurieRot} for a more thorough treatment and all proofs.  
+We begin this section by reviewing a framework from \cite{LurieRot} for studying graded and filtered spectra.  The reader is referred to \cite{LurieRot} for a more thorough treatment and all proofs.  
 
-Let $\C$ be a stable $\infty$-category.  Denote by $\Z_{\geq 0}$ the poset of non-negative integers, and by $\Z_{\geq 0}^{ds}$ the corresponding discrete category.  The reader is warned that our numbering conventions are opposite the ones in \cite{LurieRot}.  
+Denote by $\Z_{\geq 0}$ the poset of non-negative integers, and by $\Z_{\geq 0}^{ds}$ the corresponding discrete category.  The reader is warned that our numbering conventions are opposite the ones in \cite{LurieRot}.  
 \begin{dfn} 
-Let $\Gr(\C)$ denote the functor category $\Fun(\Z_{\geq 0}^{ds}, \C).$  We shall refer to $\Gr(\C)$ as the category of graded objects in $\C$.  Its objects can be thought of as sequences $X_0, X_1,X_2,\cdots \in \C$.  
+Let $\Gr$ denote the functor category $\Fun(\Z_{\geq 0}^{ds}, \Sp).$  We shall refer to $\Gr$ as the category of graded spectra.  Its objects can be thought of as sequences $X_0, X_1,X_2,\cdots$ of spectra.  
 \end{dfn}
 \begin{dfn} 
-Let $\Fil(\C)$ denote the functor category $\Fun(\Z_{\geq 0}, \C).$  We shall refer to $\Fil$ as the category of filtered spectra.  Its objects can be thought of as sequences $Y_0\to Y_1\to Y_2 \to \cdots$ of spectra filtering $\colim_i Y_i$.  
+Let $\Fil$ denote the functor category $\Fun(\Z_{\geq 0}, \Sp).$  We shall refer to $\Fil$ as the category of filtered spectra.  Its objects can be thought of as sequences $Y_0\to Y_1\to Y_2 \to \cdots$ of spectra filtering $\colim_i Y_i$.  
 \end{dfn}
 
 %paragraph describes the functors
@@ -228,7 +261,7 @@ An object $X\in \Alg_{\E_n}(\Fil)$ is called \emph{$\E_n$-split} if it is in the
 Given an $\E_n$-split filtered spectrum $X$, we can recover the underlying graded spectrum by taking the associated graded. 
 
 
-\section{The (Segal-Mitchell-Richter?) Filtration on $\Omega SU(n)$}
+\section{The (Segal-Mitchell-Richter?) Filtration on \texorpdfstring{$\Omega SU(n)$}{Loops SU(n)}}
 
 I believe Mitchell shows in \cite{MitchellSU(n)} that the filtration is filtered $\mathbb{A}_\infty$.  We need to check this.
 
@@ -237,53 +270,11 @@ I believe Mitchell shows in \cite{MitchellSU(n)} that the filtration is filtered
 I guess now we know this is just true.  We should probably thank Jacob for bringing to our attention that this conjecture of Mahowald is actually well-known by geometric representation theorists.  
 %We can leave this as a conjecture if we don't make easy progress on it.  Seems potentially hard.  We should cite Rotation Invariance for the $n \rightarrow \infty$ case and explain that our conjecture would be a refinement of the one in \cite{MahowaldRichter}.  It might also be worth briefly digging into \cite{MitchellLoopGroup} to see if our arguments generalize to broader loop group contexts.  We could also see if the splitting of all loops of Steifel manifolds is $\mathbb{A}_\infty$-structure, and not just $\Omega SU(n)$.  We can always write a sequel to this preprint if we feel like it.
 
-\section{An $\mathbb{A}_\infty$-splitting by Weiss Calculus}
+\section{An \texorpdfstring{$\mathbb{A}_\infty$}{Aoo}-splitting by Weiss Calculus}
 
+Using \cite{Arone}, we get backwards $\mathbb{A}_\infty$-maps.  This should prove the filtration splits.
 
-In this section, we extend the methods of \cite{Arone} to produce $\mathbb{A}_\infty$ stable splittings of Stiefel manifolds.  
-%some sort of outline
-%Review of weiss calculus
-%monoidalness of Weiss Calculus
-%general splitting machinery
-\subsection{Weiss Calculus}
-%cite Weiss
-Let $\J$ be the $\infty$-category which is the nerve of the topological category whose objects are finite dimensional complex vector spaces equipped with a Hermitian inner product and whose morphisms are spaces of linear isometries.  
-
-
-\subsection{General splitting machinery}
-
-
-Let $[n]$ denote the linearly ordered set of integers $0\leq i\leq n$.  Define $\Fil_n = \text{Fun}([n], \Sp^{\J})$ and $\Cofil_n = \text{Fun}([n]^{\text{op}},\Sp^{\J})$.  These categories admit functors to $\Sp^{\J}$ by taking colimit and limit, respectively.  Let $\C_n = \Fil_n \times_{\Sp^{\J}} \Cofil_n.$  Finally, let $\Gr_n = \text{Fun}([n]^{\text{ds}}, \Sp^{\J})$ where $[n]^{\text{ds}}$ denotes the underlying discrete category.  We have the following lemma:
-
-\begin{lem}
-For all integers $n>0$, there is a fully faithful functor $i_n:\Gr_{n+1} \to \C_n.$  
-\end{lem}
-\begin{proof}
-An element of $\C_n$ is given by a sequence of maps 
-
-The proof is by induction.  
-\end{proof}
-
-We may then take inverse limits to get a category $\C_\infty = \Fil(\Sp^{\J}) \times_{\Sp^{\J}} \Cofil(\Sp^{\J})$ and a functor $i: \Gr \to \C_\infty$. 
-
-\begin{cor}
-The functor $i$ is fully faithful.
-\end{cor}
-\begin{proof}
-%This amounts to checking that taking inverse limits retains fully faithfulness.  I think this is totally obvious if you were taking an inverse limit of simplicial sets, but maybe we need to be a little careful since we want a homotopy limit?
-\end{proof}
-
-
-at the end, restrict connectivity so that it's monoidal
-
-
-
-
-
-
-
-
-\section{An $\mathbb{E}_2$-splitting in Complex Cobordism}
+\section{An \texorpdfstring{$\mathbb{E}_2$}{E2}-splitting in Complex Cobordism} \label{sec:MUE2}
 
 Let $R$ denote any $\mathbb{E}_2$-ring spectrum with even-concentrated homotopy groups.  I claim that any $\mathbb{A}_\infty$-morphism $\Omega SU(n) \rightarrow R$ lifts to an $\mathbb{E}_2$-morphism.
 
@@ -296,12 +287,12 @@ The obstructions live in $H_*(\Omega SU(n);\pi_{*+1}(R))$, and no matter the val
 If $R$ is the relevant split $MU$-$\mathbb{E}_2$-algebra, this yields an $MU$-$\mathbb{E}_2$-algebra equivalence $\Omega SU(n) \smsh MU \rightarrow R$ by adjunction from the $\mathbb{E}_2$-map $\Omega SU(n) \rightarrow R$.
 \end{cor}
 
-\section{Obstructions to a general $\mathbb{E}_2$-splitting}
+\section{Obstructions to a general \texorpdfstring{$\mathbb{E}_2$}{E2}-splitting}
 
 Suppose there is a map $\Sigma^{\infty}_+ \Omega SU(n) \rightarrow \Sigma^{\infty}_+ \mathbb{CP}^{n-1}$.  This is adjoint to a double loop map $\Omega SU(n) \rightarrow GL_1(\Sigma^{\infty}_+\mathbb{CP}^{n-1})$ which lands in the component $SL_1(\Sigma^{\infty}_+ \mathbb{CP}^{n-1}) \simeq \Omega^2 \Sigma^2 \mathbb{CP}^{n-1}$.  BLAH BLAH
 %maybe remark that BU -> QCP^\infty not being E_2 is still true after taking \Sigma^\infty_+, and remark that this is like a version of the splitting principle.
 
-\section{Snaith's Construction of Periodic Complex Bordism}
+\section{Snaith's Construction of Periodic Complex Bordism} \label{sec:SnaithSplitting}
 
 A classical theorem of Snaith \cite{SnaithOriginal} gives an equivalence of homotopy commutative ring spectra $$\Sigma^{\infty}_+ BU [\beta^{-1}] \simeq MUP.$$  The equivalence arises from considering the total $MU$-Chern class map $BU \to GL_1(MUP).$  It is known from \cite{SnaithNotMultiplicative} that the total Chern class in integral homology is not an infinite loop map.  It follows from the existence of an $\E_\infty$ map $MUP \to H\Z P$ from periodic complex bordism to periodic integral homology that Snaith's equivalence is not an equivalence of $\E_\infty$ ring spectra.  The following theorem refines this observation:
 
