@@ -1,4 +1,4 @@
-\documentclass[oneside]{amsart}
+\documentclass[reqno, oneside]{amsart}
 \usepackage{hyperref}
 
 %\usepackage[export]{adjustbox}
@@ -116,12 +116,15 @@
 %----------------------------------------------------------------------%
 
 
-
 \begin{document}
-
 
 \title{Structured Splittings of $\Omega SU(n)$ and Snaith's Construction of Periodic Complex Bordism}
 \author{Jeremy Hahn and Allen Yuan}
+
+\begin{abstract}
+We show that the ??? filtration on the affine Grassmannian of $SL_n(\mathbb{C})$, known to topologists as the Bott filtration on $\Omega SU(n)$, stably splits as an $\mathbb{A}_\infty$ but not as an $\mathbb{E}_2$ filtration.  We further prove that the splitting becomes $\mathbb{E}_2$ after smashing with any complex-oriented homology theory.  As a limiting case, we study the coherence of Snaith's construction of periodic complex cobordism.  We determine that it is a construction of $MUP$ as an $\mathbb{E}_2$-ring spectrum, but not as an $\mathbb{E}_3$-ring spectrum.
+\end{abstract}
+
 
 
 %----------------------------------------------------------------------%
@@ -138,41 +141,51 @@
 
 \section{Introduction}
 
-The complex cobordism spectrum $MU$ has played a central role in homotopy theory ever since Quillen's 19XX arguments \textbf{CITE} connected its homotopy with the theory of one-dimensional formal group laws.  As the Thom spectrum of the canonical bundle over $BU$, $MU$ naturally acquires an immense amount of structure: it is an $\mathbb{E}_\infty$-ring spectrum.  To this day, however, much remains unknown about the full nature of this $\mathbb{E}_\infty$ structure.  For example, almost nothing is known about the k-invariants of the spectrum of units $gl_1(MU)$ \textbf{CITE}.
+The complex cobordism spectrum $MU$ has played a central role in homotopy theory ever since Quillen \cite{Quillen} connected its homotopy with the theory of one-dimensional formal group laws.  As the Thom spectrum of the canonical bundle over $BU$, $MU$ naturally acquires an immense amount of structure: it is an $\mathbb{E}_\infty$-ring spectrum.  To this day, however, much remains unknown about the full nature of this $\mathbb{E}_\infty$ structure.  For example, almost nothing is known about the k-invariants of the spectrum of units $gl_1(MU)$ \cite{LawsonBP}.
 
-As a spectrum, $MU$ is classically constructed via the sequence of natural maps
-$$MU(n) \longrightarrow \cdots$$
+As a spectrum, $MU$ is classically constructed as the direct limit of the sequence
+$$\mathbb{S}=MU(0) \longrightarrow \Sigma^{-2} MU(1) \longrightarrow \cdots \longrightarrow \Sigma^{-2n} MU(n) \longrightarrow \cdots,$$
+where $MU(n)$ is the Thom spectrum of the canonical bundle over $BU(n)$.
 
-This suggests that perhaps the more elemental object is $\bigvee MU(n)$, the Thom spectrum of the $J$-homomorphism
-$$\textbf{Vect} \stackrel{J}{\longrightarrow} \text{Pic}(S)$$
+This suggests that perhaps the more elemental object is $$\bigvee MU(n),$$ the Thom spectrum of the $J$-homomorphism
+$$\textbf{Vect} \stackrel{J}{\longrightarrow} \text{Pic}(\mathbb{S})$$
 that takes a vector space $V$ to its one-point compactification $J(V)=S^V$.  Since $$J(V \oplus W) \simeq S^V \smsh S^W,$$ the Thom spectrum $\bigvee MU(n)$
-is naturally an $\mathbb{E}_\infty$-ring spectrum.  Inverting the Bott element $\beta \in \pi_2(MU(1)) \cong \pi_2(MU(1))$, one obtains the \textit{periodic} complex cobordism spectrum
+is naturally an $\mathbb{E}_\infty$-ring spectrum.  Inverting the Bott element $\beta \in \pi_2(MU(1)) \cong \pi_2(\mathbb{CP}^{\infty})$, one obtains the \textit{periodic} complex cobordism spectrum
 $$MUP \simeq \left(\bigvee MU(n) \right)[\beta^{-1}].$$
 
-This periodic spectrum $MUP$ is a minor variation on $MU$ itself: there is a wedge decomposition $MUP \simeq \bigvee_{a \in \mathbb{Z}} \Sigma^{2a} MU$ and the inclusion $MU \rightarrow MUP$ onto the $a=0$ factor is an an $\mathbb{E}_\infty$-ring homomorphism.
+This periodic spectrum $MUP$ is a minor variation on $MU$ itself--there is a wedge decomposition $$MUP \simeq \bigvee_{a \in \mathbb{Z}} \Sigma^{2a} MU,$$ and the inclusion $MU \rightarrow MUP$ onto the $a=0$ factor is an an $\mathbb{E}_\infty$-ring homomorphism.
 
-In 19XX, Victor Snaith \textbf{CITE} gave another presentation of periodic complex cobordism
+In 1979, Victor Snaith \cite{SnaithBook} gave a second, and fundamentally different, presentation of periodic complex cobordism:
+
 \begin{thm}[Snaith] \label{SnaithSplitting}
-As homotopy commutative ring spectra, $MUP \simeq \Sigma^{\infty}_+ BU[\beta^{-1}]$.  More generally, there is an equivalence of homotopy commutative rings
+As homotopy commutative ring spectra, $$MUP \simeq \Sigma^{\infty}_+ BU[\beta^{-1}].$$  More generally, there is an equivalence of homotopy commutative rings
 $$\bigvee MU(n) \simeq \Sigma^{\infty}_+ BU.$$
 \end{thm}
-In the above, $\Sigma^{\infty}_+ BU$ acquires an $\mathbb{E}_\infty$-structure (and hence a homotopy commutative ring structure) from the fact that $BU$ is an infinite loop space.  One may think of $\Sigma^{\infty}_+ BU$ as the group ring of the topological group $BU$.
 
-The genesis of this paper was an attempt to use Snaith's theorem to study the $\mathbb{E}_\infty$-ring structure on $MUP$.  This seemed like an especially reasonable idea in light of two facts.
+\begin{rmk} In the above, $\Sigma^{\infty}_+ BU$ acquires an $\mathbb{E}_\infty$-structure (and hence a homotopy commutative ring structure) from the fact that $BU$ is an infinite loop space.  One may think of $\Sigma^{\infty}_+ BU$ as the group ring of the topological group $BU$.
+\end{rmk}
+
+The genesis of this paper was an attempt to use Snaith's theorem to study the $\mathbb{E}_\infty$-ring structure on $MUP$.  This seemed like an especially reasonable idea in light of two facts:
 
 \begin{enumerate}
 \item By another theorem of Snaith, periodic $K$-theory $KU$ may be constructed as $$KU \simeq \Sigma^{\infty}_+ \mathbb{CP}^{\infty}[\beta^{-1}].$$  This is an equivalence of $\mathbb{E}_\infty$-ring spectra \textbf{CITE}.
-\item In \textbf{CITE}, Gepner and Snaith prove a motivic analogue of Theorem \ref{SnaithSplitting}.  In particular, \textbf{BLAH}.  They then use the $\mathbb{E}_\infty$-ring structure on \textbf{BLAH} to \textbf{define} an $\mathbb{E}_\infty$-ring structure on periodic $MGL$. 
+\item In \cite{GepnerSnaith}, Gepner and Snaith prove a motivic analogue of Theorem \ref{SnaithSplitting}.  In particular, they prove an equivalence 
+$$\Sigma^{\infty}_+ BGL[\beta^{-1}] \simeq PMGL.$$
+They then use the natural $\mathbb{E}_\infty$-ring structure on $\Sigma^{\infty}_+ BGL[\beta^{-1}]$ to \textbf{define} an $\mathbb{E}_\infty$-ring structure on $PMGL$. 
 \end{enumerate}
 
-However, as it turns out (though it is not at all obvious from the modern literature and in particular not mentioned in \textbf{GepnerSnaith}) another old theorem of Snaith \textbf{CITE} shows that our idea was entirely unreasonable.
+\textbf{Allen, there is something I am confused about.  In Gepner-Snaith, they claim that there is an $\mathbb{E}_\infty$ ring homomorphism from $PMGL$ to $KU$ given by inverting $\beta$ in the suspension of the determinant map
+$$BU \rightarrow \mathbb{CP}^{\infty}.$$
+I thought though that we decided there is no $\mathbb{E}_\infty$-ring map to $H\mathbb{Z}P$.  What's up with that?}
+
+However, as it turns out (though it is not at all obvious from the modern literature and in particular not mentioned in \cite{GepnerSnaith}), another old theorem of Snaith \cite{SnaithNotMultiplicative} shows that our idea was entirely unreasonable:
 
 \begin{thm}[Snaith]
 As $\mathbb{E}_\infty$-rings,
 $$MUP \not \simeq \Sigma^{\infty}_+ BU[\beta^{-1}].$$
 \end{thm}
 
-In Section \ref{sec:SnaithSplitting} we refine Snaith's results in to what we consider their definitive form:
+In the final Section \ref{sec:SnaithSplitting} of this paper, we refine Snaith's results in to what we consider their definitive form:
 
 \begin{thm}
 There is an equivalence of $\mathbb{E}_2$-ring spectra
@@ -182,6 +195,18 @@ $$\bigvee MU(n) \simeq \Sigma^{\infty}_+ BU,$$
 but $\bigvee MU(n) \not \simeq \Sigma^{\infty}_+ BU$ as $\mathbb{E}_2$-ring spectra.
 \end{thm}
 
+With the focus now on $\mathbb{E}_2$-algebras, it is natural to view Snaith's splitting result as the limiting case of a sequence of other stable splittings.  Consider the filtration
+$$* \simeq \Omega SU(1) \longrightarrow \Omega SU(2) \longrightarrow \cdots \longrightarrow \Omega SU(n) \longrightarrow \cdots \longrightarrow \Omega SU \simeq BU,$$
+where the last equivalence is by Bott periodicity.  Taking suspension spectra, we obtain a filtration of $\mathbb{E}_2$-ring spectra
+$$\mathbb{S} \longrightarrow \Sigma^{\infty}_+ \Omega SU(2) \longrightarrow \cdots \longrightarrow \Sigma^{\infty}_+ \Omega SU(n) \longrightarrow \cdots \longrightarrow \Sigma^{\infty}_+ BU.$$
+
+It is a theorem of Crabb and Mitchell \cite{CrabbMitchell} that, for $n>1$, $\Sigma^{\infty}_+ \Omega SU(n)$ splits as an infinite wedge sum.  We study the coherence of their splitting in Sections \ref{sec:AooSplit} and \textbf{BLAH}:
+
+\begin{thm}
+The Crabb--Mitchell stable splitting of $\Sigma^{\infty}_+ \Omega SU(n)$ is a splitting of $\mathbb{A}_\infty$-ring spectra, but not of $\mathbb{E}_2$-ring spectra.
+\end{thm}
+
+To be precise about what we mean by a splitting of $\mathbb{E}_n$-ring spectra, we need to introduce a bit of abstract terminology.
 
 \begin{rmk}
 We freely use the language of $\infty$-categories throughout this paper, refering to an $\infty$-category simply as a category.
@@ -219,12 +244,14 @@ $$
 We say that an $\mathbb{E}_n$-ring spectrum is $\mathbb{E}_n$-\textbf{split} if it is equivalent to the image of an $\mathbb{E}_n$-algebra in $\Gr$ under the composite $\text{colim} \circ I.$  Similarly, a filtered $\mathbb{E}_n$-algebra is $\mathbb{E}_n$-split if it is equivalent to the image under $I$ of an $\mathbb{E}_n$-algebra in $\Gr$.
 \end{dfn}
 
+\textbf{BLAH}
+
 In section \ref{sec:MUE2} we will show:
 \begin{thm}
 The ??? filtration on $\Sigma^{\infty}_+ \Omega SU(n)$ is $\mathbb{E}_2$-split after smashing with $MU$.
 \end{thm}
 
-
+\textbf{BLAH}
 
 
 %Notations
@@ -243,30 +270,27 @@ Let $\Gr(\C)$ denote the functor category $\Fun(\Z_{\geq 0}^{ds}, \C).$  We shal
 \end{dfn}
 
  \begin{dfn} 
-Let $\Fil(\C)$ denote the functor category $\Fun(\Z_{\geq 0}, \C).$  We shall refer to $\Fil$ as the category of filtered objects in $\C$.  Its objects can be thought of as sequences $Y_0\to Y_1\to Y_2 \to \cdots \in \C$ filtering $\colim_i Y_i$.  
+-Let $\Fil(\C)$ denote the functor category $\Fun(\Z_{\geq 0}, \C).$  We shall refer to $\Fil$ as the category of filtered spectra.  Its objects can be thought of as sequences $Y_0\to Y_1\to Y_2 \to \cdots$ of spectra filtering $\colim_i Y_i$.  
  \end{dfn}
- 
- For us, the category $\C$ will always be either spectra or the category of functors from an indexing category to spectra.  Because limits, colimits, and smash products of functors are taken pointwise, these cases are essentially the same.  Thus, we will suppress $\C$ in what follows and refer to its objects as spectra.
 
 %paragraph describes the functors
-The obvious map $\Z_{\geq 0}^{ds} \to \Z_{\geq 0}$ induces a restriction functor $\text{res}: \Fil \to \Gr.$  The restriction is right adjoint to a functor $I: \Gr \to \Fil$ given by left Kan extension.  The functor $I$ can be thought of as taking a graded spectrum $X_0,X_1,X_2,\cdots$ to the filtered spectrum $X_0\to X_0\vee X_1\to X_0\vee X_1\vee X_2\to \cdots.$    There is also an associated graded functor $\text{gr }: \Fil \to \Gr$ such that the composite $\text{gr }\circ I : \Gr \to \Gr$ is an equivalence.   
+The obvious map $\Z_{\geq 0}^{ds} \to \Z_{\geq 0}$ induces a restriction functor $\text{res}: \Fil \to \Gr.$  The restriction is right adjoint to a functor $I: \Gr \to \Fil$ given by left Kan extension.  The functor $I$ can be thought of as taking a graded spectrum $X_0,X_1,X_2,\cdots$ to the filtered spectrum $X_0\to X_0\oplus X_1\to X_0\oplus X_1\oplus X_2\to \cdots.$    There is also an associated graded functor $\text{gr }: \Fil \to \Gr$ such that the composite $\text{gr }\circ I : \Gr \to \Gr$ is an equivalence.   
 
 %paragraph describes the monoidal structures
-The categories $\Gr$ and $\Fil$ are given symmetric monoidal structures via the Day convolution; we denote the operation in both cases by $\otimes$.  The unit $\S0^{gr}$ of $\otimes$ in graded spectra is $S^0$ in degree 0 and $*$ otherwise; the unit $\S0^{fil}$ in filtered spectra is $I\S0^{gr}.$  We may then talk about $\E_n$-algebras in $\Gr$ and $\Fil$.  We will require these to be unital in the strong sense that the unit map is an equivalence in degree $0$.  
+The categories $\Gr$ and $\Fil$ are given symmetric monoidal structures via the Day convolution; we denote the operation in both cases by $\otimes$.  The unit $\S0^{gr}$ of $\otimes$ in graded spectra is $S^0$ in degree 0 and $*$ otherwise; the unit $\S0^{fil}$ in filtered spectra is $I\S0^{gr}.$  
 
-The functors $I$ and $\text{gr}$ can be given symmetric monoidal structures such that the composite $\text{gr }\circ I : \Gr \to \Gr$ is a symmetric monoidal equivalence.  It follows in particular that they extend to functors between the categories of $\E_n$ algebras in $\Gr$ and $\Fil$.  Thus, given an $\E_n$ algebra $Y$ in filtered spectra, we obtain a canonical $\E_n$ structure on its associated graded $\text{gr}(Y).$  Conversely, given $X\in \Alg_{\E_n}(\Gr)$, we obtain $IX\in \Alg_{\E_n}{\Fil}.$  
+The functors $I$ and $\text{gr}$ can be given symmetric monoidal structures such that the composite $\text{gr }\circ I : \Gr \to \Gr$ is a symmetric monoidal equivalence.  It follows in particular that they extend to functors on between the categories of $\E_n$ algebras in $\Gr$ and $\Fil$.  Thus, given an $\E_n$ algebra $Y$ in filtered spectra, we obtain a canonical $\E_n$ structure on its associated graded $\text{gr}(Y).$  Conversely, given $X\in \Alg_{\E_n}(\Fil)$
 
-%%%%
+
+%, and thus induces a functor $I:\Alg_{\E_n}(\Gr)\to \Alg_{\E_n}(\Fil).$   Similarly, the functor $\text{gr}$ can be given a symmetric monoidal structure such that the 
+%As such, it makes sense to talk about $\mathbb{E}_n$ algebras in $\Fil$ and $\Gr$.  In fact, 
+
+%maybe we should set apart the definitions that jacob did not already make?
 \begin{dfn}
 An object $X\in \Alg_{\E_n}(\Fil)$ is called \emph{$\E_n$-split} if it is in the essential image of $I$.  
 \end{dfn}
 
 Given an $\E_n$-split filtered spectrum $X$, we can recover the underlying graded spectrum by taking the associated graded. 
-%%%%
-%being careful about square zero extensions
-Note that there is a fully faithful functor $T:\Sp \to \Gr$ which sends a spectrum $X$ to the graded spectrum $$S^0 \longrightarrow X \longrightarrow * \longrightarrow * \longrightarrow \cdots.$$  Its essential image is the full subcategory $\Gr^0$ of $\Gr$ consisting of graded spectra $Y$ such that $Y_i$ is contractible for $i>1$ and $Y_0 = S^0$.  Furthermore, $T: \Sp \to \Gr^0$ may be promoted to a symmetric monoidal equivalence where $\Sp$ is given the cocartesian monoidal structure and $\Gr^0$ is given the obvious monoidal structure via localization of the symmetric monoidal category $\Gr$.   By 2.4.3.10 of \cite{HA}, any $X\in \Gr^0$ 
-%to be continued.  I'm trying to show that "Square 0" really makes sense.  
-
 
 
 \section{The (Segal-Mitchell-Richter?) Filtration on \texorpdfstring{$\Omega SU(n)$}{Loops SU(n)}}
@@ -278,7 +302,7 @@ I believe Mitchell shows in \cite{MitchellSU(n)} that the filtration is filtered
 I guess now we know this is just true.  We should probably thank Jacob for bringing to our attention that this conjecture of Mahowald is actually well-known by geometric representation theorists.  
 %We can leave this as a conjecture if we don't make easy progress on it.  Seems potentially hard.  We should cite Rotation Invariance for the $n \rightarrow \infty$ case and explain that our conjecture would be a refinement of the one in \cite{MahowaldRichter}.  It might also be worth briefly digging into \cite{MitchellLoopGroup} to see if our arguments generalize to broader loop group contexts.  We could also see if the splitting of all loops of Steifel manifolds is $\mathbb{A}_\infty$-structure, and not just $\Omega SU(n)$.  We can always write a sequel to this preprint if we feel like it.
 
-\section{An \texorpdfstring{$\mathbb{A}_\infty$}{Aoo}-splitting by Weiss Calculus}
+\section{An \texorpdfstring{$\mathbb{A}_\infty$}{Aoo}-splitting by Weiss Calculus} \label{sec:AooSplit}
 
 
 In this section, we extend the methods of \cite{Arone} to produce $\mathbb{A}_\infty$ stable splittings of Stiefel manifolds.  
@@ -300,11 +324,8 @@ Let $[n]$ denote the linearly ordered set of integers $0\leq i\leq n$.  Define $
 For all integers $n>0$, there is a fully faithful functor $i_n:\Gr_{n+1} \to \C_n.$  
 \end{lem}
 \begin{proof}
-An element of $\C_n$ is given by a sequence of functors 
-\begin{center}
-$X_0 \longrightarrow X_1 \longrightarrow \cdots \longrightarrow X_n \simeq Y_n \longrightarrow \cdots \longrightarrow Y_1 \longrightarrow Y_0$ 
-\end{center}
-where the middle 
+An element of $\C_n$ is given by a sequence of maps 
+
 The proof is by induction.  
 \end{proof}
 
@@ -321,18 +342,51 @@ at the end, restrict connectivity so that it's monoidal
 
 \section{An \texorpdfstring{$\mathbb{E}_2$}{E2}-splitting in Complex Cobordism} \label{sec:MUE2}
 
-Let $R$ denote any $\mathbb{E}_2$-ring spectrum with even-concentrated homotopy groups.  I claim that any $\mathbb{A}_\infty$-morphism $\Omega SU(n) \rightarrow R$ lifts to an $\mathbb{E}_2$-morphism.
+In this brief section, we remark that the $\mathbb{A}_\infty$-splitting $$\Sigma^{\infty}_+ \Omega SU(n) \simeq ???$$ becomes $\mathbb{E}_2$ after smashing with $MU$.  More precisely, we show that there is an equivalence of $\mathbb{E}_2$-$MU$-algebras
+$$MU \smsh \Sigma^{\infty}_+ \Omega SU(n) \simeq ???.$$
 
-The argument is inspired by \cite{ChadwickMandell}
-\begin{proof}
-The obstructions live in $H_*(\Omega SU(n);\pi_{*+1}(R))$, and no matter the value of $\pi_{*+1}(R)$ this is $0$.
+The $\mathbb{A}_\infty$-$MU$-algebra equivalence constructed in Section \ref{sec:AooSplit} is realized by a map of $\mathbb{A}_\infty$-$\mathbb{S}$-algebras
+\begin{equation} \label{SplittingMap}
+\Sigma^{\infty} \Omega SU(n) \longrightarrow ???.
+\end{equation}
+
+Our task is to show that (\ref{SplittingMap}) may be refined to a morphism of $\mathbb{E}_2$-ring spectra.  We do so by obstruction theory--the key fact powering our proof is that 
+$$MU_*\left(\Omega SU(n)\right) \cong 0$$
+whenever $*=0$.  \textbf{FIND A REFERENCE}.  In fact, inspired by \cite{ChadwickMandell}, we prove the following more general result:
+
+\begin{thm}
+Suppose that $R$ is an $\mathbb{E}_2$-ring spectrum with no homotopy groups in odd degrees.  Then any $\mathbb{A}_\infty$-ring homomorphism
+$$\Sigma^{\infty}_+ \Omega SU(n) \rightarrow R$$
+lifts to a morphism of $\mathbb{E}_2$-ring spectra.
+\end{thm}
+
+\begin{proof} 
+
+
+It is clear that the $\mathbb{A}_\infty$-ring homomorphism
+$$\Sigma^{\infty}_+ \Omega SU(n) \longrightarrow R \longrightarrow \tau_{\le 0} R \simeq H\pi_0(R)$$
+may be lifted to an $\mathbb{E}_2$-ring homomorphism factoring through $\tau_{\le 0} \Sigma^{\infty}_+ \Omega SU(n) \simeq H\mathbb{Z}$. \textbf{Strictly speaking, this isn't true when $R$ is not connective. I need to modify things to account for that case.}
+
+Suppose now for $q>0$ that we have chosen an $\mathbb{E}_2$-ring homomorphism 
+$$\Sigma^{\infty}_+ \Omega SU(n) \longrightarrow \tau_{\le q-1} R$$
+lifting the given $\mathbb{A}_\infty$-algebra map
+$$\Sigma^{\infty}_+ \Omega SU(n) \longrightarrow R \longrightarrow \tau_{\le q-1} R.$$
+
+According to \cite[Theorem $4.1$]{ChadwickMandell}, there is a diagram of principal fibrations
+$$
+\begin{tikzcd}
+\mathbb{E}_2\text{-Ring}(\Sigma^{\infty}_+ \Omega SU(n), \tau_{\le q} R) \arrow{r} \arrow{d} & \mathbb{A}_\infty\text{-Ring}(\Sigma^{\infty}_+ \Omega SU(n), \tau_{\le q} R) \arrow{d} \\
+\mathbb{E}_2\text{-Ring}(\Sigma^{\infty}_+ \Omega SU(n), \tau_{\le q-1} R) \arrow{r} \arrow{d} & \mathbb{A}_\infty\text{-Ring}(\Sigma^{\infty}_+ \Omega SU(n), \tau_{\le q-1} R) \arrow{d} \\
+\cS_*(BSU(n),K(\pi_q R,q+3)) \arrow{r} & \cS_*(SU(n),K(\pi_q R,q+2))
+\end{tikzcd}
+$$
+By the five-lemma, it follows that \textbf{BLAH}
+
 \end{proof}
 
-\begin{cor}
-If $R$ is the relevant split $MU$-$\mathbb{E}_2$-algebra, this yields an $MU$-$\mathbb{E}_2$-algebra equivalence $\Omega SU(n) \smsh MU \rightarrow R$ by adjunction from the $\mathbb{E}_2$-map $\Omega SU(n) \rightarrow R$.
-\end{cor}
 
-\section{Obstructions to a general \texorpdfstring{$\mathbb{E}_2$}{E2}-splitting}
+
+\section{Obstructions to a General \texorpdfstring{$\mathbb{E}_2$}{E2}-splitting}
 
 Suppose there is a map $\Sigma^{\infty}_+ \Omega SU(n) \rightarrow \Sigma^{\infty}_+ \mathbb{CP}^{n-1}$.  This is adjoint to a double loop map $\Omega SU(n) \rightarrow GL_1(\Sigma^{\infty}_+\mathbb{CP}^{n-1})$ which lands in the component $SL_1(\Sigma^{\infty}_+ \mathbb{CP}^{n-1}) \simeq \Omega^2 \Sigma^2 \mathbb{CP}^{n-1}$.  BLAH BLAH
 %maybe remark that BU -> QCP^\infty not being E_2 is still true after taking \Sigma^\infty_+, and remark that this is like a version of the splitting principle.
@@ -375,6 +429,7 @@ Finally, we observe that we may tensor $z'$ with $\mathbb{A}$ and compose with t
 ******  
 
 What is $\Sigma^{\infty}_+ \Omega SU(n)[\beta^{-1}]$, by the way?  Is it related to a periodic version of the $X(n)$-filtration of $MU$??
+
 \bibliographystyle{amsalpha}
 \bibliography{Bibliography}
 
