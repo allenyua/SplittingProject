@@ -280,7 +280,11 @@ Let $\Fil(\C)$ denote the functor category $\Fun(\Z_{\geq 0}, \C).$  We shall re
 The obvious map $\Z_{\geq 0}^{ds} \to \Z_{\geq 0}$ induces a restriction functor $\text{res}: \Fil \to \Gr.$  The restriction is right adjoint to a functor $I: \Gr \to \Fil$ given by left Kan extension.  The functor $I$ can be thought of as taking a graded spectrum $X_0,X_1,X_2,\cdots$ to the filtered spectrum $X_0\to X_0\vee X_1\to X_0\vee X_1\vee X_2\to \cdots.$    There is also an associated graded functor $\text{gr }: \Fil \to \Gr$ such that the composite $\text{gr }\circ I : \Gr \to \Gr$ is an equivalence.   
 
 %paragraph describes the monoidal structures
-The categories $\Gr$ and $\Fil$ are given symmetric monoidal structures via the Day convolution; we denote the operation in both cases by $\otimes$.  The unit $\S0^{gr}$ of $\otimes$ in graded spectra is $S^0$ in degree 0 and $*$ otherwise; the unit $\S0^{fil}$ in filtered spectra is $I\S0^{gr}.$  We may then talk about $\E_n$-algebras in $\Gr$ and $\Fil$.  We will require these to be unital in the strong sense that the unit map is an equivalence in degree $0$.  
+The categories $\Gr$ and $\Fil$ are given symmetric monoidal structures via the Day convolution; we denote the operation in both cases by $\otimes$.  The unit $\S0^{gr}$ of $\otimes$ in graded spectra is $S^0$ in degree 0 and $*$ otherwise; the unit $\S0^{fil}$ in filtered spectra is $I\S0^{gr}.$  We may then talk about $\E_n$-algebras in $\Gr$ and $\Fil$.  
+
+%We will require these to be unital in the strong sense that the unit map is an equivalence in degree $0$.  
+
+%maybe we have to be even more careful about unital stuff with this extra assumption, or we want to just assume ALL graded spectra are unital in this sense.  I think that might be fine.  
 
 The functors $I$ and $\text{gr}$ can be given symmetric monoidal structures such that the composite $\text{gr }\circ I : \Gr \to \Gr$ is a symmetric monoidal equivalence.  It follows in particular that they extend to functors between the categories of $\E_n$ algebras in $\Gr$ and $\Fil$.  Thus, given an $\E_n$ algebra $Y$ in filtered spectra, we obtain a canonical $\E_n$ structure on its associated graded $\text{gr}(Y).$  Conversely, given $X\in \Alg_{\E_n}(\Gr)$, we obtain $IX\in \Alg_{\E_n}{\Fil}.$  
 
@@ -291,9 +295,20 @@ An object $X\in \Alg_{\E_n}(\Fil)$ is called \emph{$\E_n$-split} if it is in the
 
 Given an $\E_n$-split filtered spectrum $X$, we can recover the underlying graded spectrum by taking the associated graded. 
 %%%%
+
+\subsection{Square zero rings}
 %being careful about square zero extensions
-Note that there is a fully faithful functor $T:\Sp \to \Gr$ which sends a spectrum $X$ to the graded spectrum $$S^0 \longrightarrow X \longrightarrow * \longrightarrow * \longrightarrow \cdots.$$  Its essential image is the full subcategory $\Gr^0$ of $\Gr$ consisting of graded spectra $Y$ such that $Y_i$ is contractible for $i>1$ and $Y_0 = S^0$.  Furthermore, $T: \Sp \to \Gr^0$ may be promoted to a symmetric monoidal equivalence where $\Sp$ is given the cocartesian monoidal structure and $\Gr^0$ is given the obvious monoidal structure via localization of the symmetric monoidal category $\Gr$.   By 2.4.3.10 of \cite{HA}, any $X\in \Gr^0$ 
-%to be continued.  I'm trying to show that "Square 0" really makes sense.  
+
+We will now discuss square zero extensions in our framework.  For this, it will be convenient to work with the category $\Gr_u$ of \emph{unital} graded spectra in the strong sense that the unit induces an equivalence in grading 0.  
+Note that there is a fully faithful functor $T:\Sp \to \Gr_u$ which sends a spectrum $A$ to the graded spectrum $$S^0 \longrightarrow A \longrightarrow * \longrightarrow * \longrightarrow \cdots.$$  Its essential image is the full subcategory $i: \Gr^{\leq 1}_u \to \Gr_u$ consisting of unital graded spectra $X$ such that $X_i$ is contractible for $i>1$.  The inclusion $i$ admits a left adjoint $L^{\leq 1}$ which can be thought of as truncating above grading 1.  This localization is visibly compatible with the monoidal structure, and so $\Gr_u^{\leq 1}$ inherits a symmetric monoidal structure such that $L^{\leq 1}$ is symmetric monoidal and the inclusion $i$ is lax monoidal.  Furthermore, the restricted functor $\bar{T}: \Sp \to \Gr^{\leq 1}_u$ may be promoted to a symmetric monoidal equivalence where $\Sp$ is given the cocartesian monoidal structure.   By Proposition 2.4.3.9 of \cite{HA}, any $Y\in \Gr_u{\leq 1}$ admits an essentially unique $\E_n$-algebra structure for any integer $0\leq n\leq \infty$.  
+
+\begin{dfn}
+Let $Y\in \Gr_u{\leq 1}$.  We will refer to $iY\in \Alg_{\E_n}(\Gr_u)$ and $\colim iY\in \Alg_{\E_n}(\Sp)$ with their induced monoidal structures as having the \emph{square zero} $\E_n$ structure.
+\end{dfn}
+
+In particular, for any $X\in \Alg_{\E_n}(\Gr_u)$, we have a map $X\to iL^{\leq 1}X$ which by Remark 7.3.2.13 of \cite{HA} is a map of $\E_n$-algebras when $iL^{\leq 1}X$ is given the induced monoidal structure.  However, this is exactly the square zero structure by uniqueness.  We may then take colimits to obtain a canonical $\E_n$ map $\colim X \to \colim iL^{\leq 1}X.$  We may summarize this discussion informally by saying that any $\E_n$-split ring spectrum $X$ has an $\E_n$ map to the square zero extension determined by $X_1$.  
+
+
 
 \section{The (Segal-Mitchell-Richter?) Filtration on \texorpdfstring{$\Omega SU(n)$}{Loops SU(n)}}
 
