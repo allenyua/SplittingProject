@@ -286,11 +286,11 @@ The categories $\Gr$ and $\Fil$ are given symmetric monoidal structures via the 
 
 %maybe we have to be even more careful about unital stuff with this extra assumption, or we want to just assume ALL graded spectra are unital in this sense.  I think that might be fine.  
 
-The functors $I$ and $\text{gr}$ can be given symmetric monoidal structures such that the composite $\text{gr }\circ I : \Gr \to \Gr$ is a symmetric monoidal equivalence.  It follows in particular that they extend to functors between the categories of $\E_n$ algebras in $\Gr$ and $\Fil$.  Thus, given an $\E_n$ algebra $Y$ in filtered spectra, we obtain a canonical $\E_n$ structure on its associated graded $\text{gr}(Y).$  Conversely, given $X\in \Alg_{\E_n}(\Gr)$, we obtain $IX\in \Alg_{\E_n}{\Fil}.$  
+The functors $I$ and $\text{gr}$ can be given symmetric monoidal structures such that the composite $\text{gr }\circ I : \Gr \to \Gr$ is a symmetric monoidal equivalence.  It follows in particular that they extend to functors between the categories of $\E_n$-algebras in $\Gr$ and $\Fil$.  Thus, given an $\E_n$ algebra $Y$ in filtered spectra, we obtain a canonical $\E_n$ structure on its associated graded $\text{gr}(Y).$  Conversely, given $X\in \Alg_{\E_n}(\Gr)$, we obtain $IX\in \Alg_{\E_n}(\Fil).$  
 
 %%%%
 \begin{dfn}
-An object $X\in \Alg_{\E_n}(\Fil)$ is called \emph{$\E_n$-split} if it is in the essential image of $I$.  
+An object $X\in \Alg_{\E_n}(\Fil)$ is called \emph{$\E_n$-split} if there exists $Y\in \Alg_{\E_n}(\Gr)$ and an equivalence $X \simeq IY$ of $\E_n$ filtered spectra.  
 \end{dfn}
 
 Given an $\E_n$-split filtered spectrum $X$, we can recover the underlying graded spectrum by taking the associated graded. 
@@ -308,6 +308,14 @@ Let $Y\in \Gr_u{\leq 1}$.  We will refer to $iY\in \Alg_{\E_n}(\Gr_u)$ and $\col
 
 In particular, for any $X\in \Alg_{\E_n}(\Gr_u)$, we have a map $X\to iL^{\leq 1}X$ which by Remark 7.3.2.13 of \cite{HA} is a map of $\E_n$-algebras when $iL^{\leq 1}X$ is given the induced monoidal structure.  However, this is exactly the square zero structure by uniqueness.  We may then take colimits to obtain a canonical $\E_n$ map $\colim X \to \colim iL^{\leq 1}X.$  We may summarize this discussion informally by saying that any $\E_n$-split ring spectrum $X$ has an $\E_n$ map to the square zero extension determined by $X_1$.  
 
+A nice feature of square zero $\E_n$ rings is that it is easy to understand their space of units.  
+
+\begin{prop}
+Let $0\leq n\leq \infty$ be an integer and $X\in \Sp$.  Give the spectrum $S^0\vee X$ the square zero $\E_n$ structure.  There is a canonical equivalence $$GL_1(S^0\vee X) \simeq GL_1(S^0) \times \Omega^{\infty} X.$$
+\end{prop}
+\begin{proof}
+TBD...suffices to take $n=\infty$ by uniqueness.  
+\end{proof}
 
 
 \section{The (Segal-Mitchell-Richter?) Filtration on \texorpdfstring{$\Omega SU(n)$}{Loops SU(n)}}
