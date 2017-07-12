@@ -88,6 +88,7 @@
 \DeclareMathOperator{\Ring}{\textbf{Ring}}
 \DeclareMathOperator{\Aff}{\textbf{Aff}}
 \DeclareMathOperator{\Spec}{\text{Spec}}
+\DeclareMathOperator{\Poly}{\text{Poly}}
 \DeclareMathOperator{\Ext}{\text{Ext}}
 \DeclareMathOperator{\nil}{\text{nil}}
 \DeclareMathOperator{\Gr}{\textbf{Gr}}
@@ -299,8 +300,11 @@ Given an $\E_n$-split filtered spectrum $X$, we can recover the underlying grade
 \subsection{Square zero rings}
 %being careful about square zero extensions
 
-We will now discuss square zero extensions in our framework.  For this, it will be convenient to work with the category $\Gr_u$ of \emph{unital} graded spectra in the strong sense that the unit induces an equivalence in grading 0.  
-Note that there is a fully faithful functor $T:\Sp \to \Gr_u$ which sends a spectrum $A$ to the graded spectrum $$S^0 \longrightarrow A \longrightarrow * \longrightarrow * \longrightarrow \cdots.$$  Its essential image is the full subcategory $i: \Gr^{\leq 1}_u \to \Gr_u$ consisting of unital graded spectra $X$ such that $X_i$ is contractible for $i>1$.  The inclusion $i$ admits a left adjoint $L^{\leq 1}$ which can be thought of as truncating above grading 1.  This localization is visibly compatible with the monoidal structure, and so $\Gr_u^{\leq 1}$ inherits a symmetric monoidal structure such that $L^{\leq 1}$ is symmetric monoidal and the inclusion $i$ is lax monoidal.  Furthermore, the restricted functor $\bar{T}: \Sp \to \Gr^{\leq 1}_u$ may be promoted to a symmetric monoidal equivalence where $\Sp$ is given the cocartesian monoidal structure.   By Proposition 2.4.3.9 of \cite{HA}, any $Y\in \Gr_u{\leq 1}$ admits an essentially unique $\E_n$-algebra structure for any integer $0\leq n\leq \infty$.  
+
+We will now discuss square zero extensions in our framework.  For this, it will be convenient to work with the category $\Gr_u$ of \emph{unital} graded spectra in the strong sense that the unit map induces an equivalence in grading 0.  
+Note that there is a fully faithful functor $T:\Sp \to \Gr_u$ which sends a spectrum $A$ to the graded spectrum $$S^0, A, *, *, \cdots.$$  Its essential image is the full subcategory $i: \Gr^{\leq 1}_u \to \Gr_u$ consisting of unital graded spectra $X$ such that $X_k$ is contractible for $k>1$.  The inclusion $i$ admits a left adjoint $L^{\leq 1}$ which can be thought of as truncating above grading 1.  
+%need to do some more HA citing here
+This localization is visibly compatible with the monoidal structure, and so $\Gr_u^{\leq 1}$ inherits a symmetric monoidal structure such that $L^{\leq 1}$ is symmetric monoidal and the inclusion $i$ is lax monoidal.  Furthermore, the restricted functor $\bar{T}: \Sp \to \Gr^{\leq 1}_u$ may be promoted to a symmetric monoidal equivalence where $\Sp$ is given the cocartesian monoidal structure.   By Proposition 2.4.3.9 of \cite{HA}, any $Y\in \Gr_u{\leq 1}$ admits an essentially unique $\E_n$-algebra structure for any integer $0\leq n\leq \infty$.  
 
 \begin{dfn}
 Let $Y\in \Gr_u{\leq 1}$.  We will refer to $iY\in \Alg_{\E_n}(\Gr_u)$ and $\colim iY\in \Alg_{\E_n}(\Sp)$ with their induced monoidal structures as having the \emph{square zero} $\E_n$ structure.
@@ -329,15 +333,39 @@ I guess now we know this is just true.  We should probably thank Jacob for bring
 
 \section{An \texorpdfstring{$\mathbb{A}_\infty$}{Aoo}-splitting by Weiss Calculus} \label{sec:AooSplit}
 
+The main result of \cite{Arone} shows that the Mitchell-Richter filtration on $\Omega SU(n)$ (and more generally, for loops on a Stiefel manifold) stably splits.  The key insight is that this filtration has extra structure: it is a particular value of a \emph{functor} which has a natural filtration.  The tool that allows for the exploitation of this structure is Weiss's theory of orthogonal or unitary calculus.  
 
-In this section, we extend the methods of \cite{Arone} to produce $\mathbb{A}_\infty$ stable splittings of Stiefel manifolds.  
-%some sort of outline
-%Review of weiss calculus
-%monoidalness of Weiss Calculus
-%general splitting machinery
+In this section, we extend the methods of \cite{Arone} to produce $\mathbb{A}_\infty$ stable splittings of Stiefel manifolds.  We will begin this section by reviewing the theory of calculus introduced in \cite{Weiss}.  We then make a statement about the multiplicativity of the construction which ...%ok I'll finish this after the section is actually written
+
 \subsection{Weiss Calculus}
-%cite Weiss
+In this section, we will briefly review notions of Weiss calculus to set notation and then prove a statement about its multiplicative properties.  The reader is referred to \cite{Weiss} for proofs and additional details.  We note that the discussion there is in the case of real vector spaces, but the results work just the same in the complex case.  We shall also work in the language of $\infty$-categories rather than topological categories, and Remark \ref{rmk:infinityweiss} justifies this passage.  
+
 Let $\J$ be the $\infty$-category which is the nerve of the topological category whose objects are finite dimensional complex vector spaces equipped with a Hermitian inner product and whose morphisms are spaces of linear isometries.  
+
+The theory of Weiss calculus studies functors out of $\J$ in a way analogous to Goodwillie calculus, by understanding successive ``polynomial approximations'' to these functors.  Here, we will discuss only the stable setting where we apply the theory to the functor category $\Sp^{\J}$. The central definition is:
+
+\begin{dfn}\label{dfn:polyfun}
+A functor $F\in \Sp^{\J}$ is polynomial of degree at most $n$ if the natural map $$F(V) \to \lim_U F(U\oplus V)$$ is an equivalence, where the limit is indexed over the $\infty$-category of nonzero subspaces $U\subset \mathbb{C}^{n+1}.$
+\end{dfn}
+
+As in Goodwillie calculus, the inclusion of the full subcategory $\Poly^{\leq n}(\Sp^{\J}) \subset \Sp^{\J}$ of functors which are polynomial of degree at most $n$ admits a left adjoint $P_n: \Sp^{\J} \to \Poly^{\leq n}(\Sp^{\J}).$  The unit $\eta_n$ of this adjunction provides for each $F\in \Sp^{\J}$ a natural transformation $F \to P_nF$ which we will refer to as the \emph{degree $n$ polynomial approximation} of $F$. 
+
+\begin{rmk}\label{rmk:infinityweiss}
+This universal property was not explicitly stated in \cite{Weiss}, but it follows formally from Weiss's results as follows: the functor $P_n$ and the transformation $\eta_n$ can be defined explicitly as in \cite{Weiss} by iteratively applying the functor $\tau_n: \Sp^{\J} \to \Sp^{\J}$ defined by the formula $$\tau_n F(V) = \lim_U F(U\oplus V)$$ with the limit indexed as in Definition \ref{dfn:polyfun}.   The facts required of the functors $P_n$ in the proof of Theorem 6.1.1.10 in \cite{HA} are precisely the content of Theorem 6.3 of \cite{Weiss}.  
+\end{rmk}
+
+Given this universal property, Proposition 5.4 of \cite{Weiss} ensures the existence of a natural Taylor tower $$F \longrightarrow \cdots \longrightarrow P_{n} F \xrightarrow{p_{n-1}} P_{n-1} F \longrightarrow \cdots \longrightarrow P_0F$$ living under any functor $F\in \Sp^{\J}.$  The fiber $D_n F$ of $p_{n-1}$ has the special property that it is polynomial of degree at most $n$ and $P_{n-1} D_n F \simeq 0$.  Such a functor is called \emph{$n$-homogeneous}; such functors are completely classified by the following theorem:
+
+\begin{thm}[{{\cite[Theorem 7.3]{Weiss}}}]
+Let $F\in \Sp^{\J}$.  Then $F$ is an $n$-homogeneous functor if and only if there exists a spectrum $\Theta$ with an action of the unitary group $U(n)$ such that $$F(V) = (\Theta \wedge S^{nV})_{hU(n)}.$$
+\end{thm}
+
+%maybe mention how Arone gets his splitting and set up the notation
+We will now 
+
+
+%set up the monoidal structures
+In order to upgrade the results of \cite{Arone} to structured multiplicative splittings, we must first understand the multiplicative properties of the polynomial approximation functors.  
 
 
 \subsection{General splitting machinery}
