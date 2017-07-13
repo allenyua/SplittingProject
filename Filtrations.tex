@@ -283,9 +283,7 @@ The obvious map $\Z_{\geq 0}^{ds} \to \Z_{\geq 0}$ induces a restriction functor
 %paragraph describes the monoidal structures
 The categories $\Gr$ and $\Fil$ are given symmetric monoidal structures via the Day convolution; we denote the operation in both cases by $\otimes$.  The unit $\S0^{gr}$ of $\otimes$ in graded spectra is $S^0$ in degree 0 and $*$ otherwise; the unit $\S0^{fil}$ in filtered spectra is $I\S0^{gr}.$  We may then talk about $\E_n$-algebras in $\Gr$ and $\Fil$.  
 
-%We will require these to be unital in the strong sense that the unit map is an equivalence in degree $0$.  
-
-%maybe we have to be even more careful about unital stuff with this extra assumption, or we want to just assume ALL graded spectra are unital in this sense.  I think that might be fine.  
+%reminder to discuss the colim functor
 
 The functors $I$ and $\text{gr}$ can be given symmetric monoidal structures such that the composite $\text{gr }\circ I : \Gr \to \Gr$ is a symmetric monoidal equivalence.  It follows in particular that they extend to functors between the categories of $\E_n$-algebras in $\Gr$ and $\Fil$.  Thus, given an $\E_n$ algebra $Y$ in filtered spectra, we obtain a canonical $\E_n$ structure on its associated graded $\text{gr}(Y).$  Conversely, given $X\in \Alg_{\E_n}(\Gr)$, we obtain $IX\in \Alg_{\E_n}(\Fil).$  
 
@@ -300,17 +298,29 @@ Given an $\E_n$-split filtered spectrum $X$, we can recover the underlying grade
 \subsection{Square zero rings}
 %being careful about square zero extensions
 
-
 We will now discuss square zero extensions in our framework.  For this, it will be convenient to work with the category $\Gr_u$ of \emph{unital} graded spectra in the strong sense that the unit map induces an equivalence in grading 0.  
-Note that there is a fully faithful functor $T:\Sp \to \Gr_u$ which sends a spectrum $A$ to the graded spectrum $$S^0, A, *, *, \cdots.$$  Its essential image is the full subcategory $i: \Gr^{\leq 1}_u \to \Gr_u$ consisting of unital graded spectra $X$ such that $X_k$ is contractible for $k>1$.  The inclusion $i$ admits a left adjoint $L^{\leq 1}$ which can be thought of as truncating above grading 1.  
-%need to do some more HA citing here
-This localization is visibly compatible with the monoidal structure, and so $\Gr_u^{\leq 1}$ inherits a symmetric monoidal structure such that $L^{\leq 1}$ is symmetric monoidal and the inclusion $i$ is lax monoidal.  Furthermore, the restricted functor $\bar{T}: \Sp \to \Gr^{\leq 1}_u$ may be promoted to a symmetric monoidal equivalence where $\Sp$ is given the cocartesian monoidal structure.   By Proposition 2.4.3.9 of \cite{HA}, any $Y\in \Gr_u{\leq 1}$ admits an essentially unique $\E_n$-algebra structure for any integer $0\leq n\leq \infty$.  
+Note that there is a fully faithful functor $T:\Sp \to \Gr_u$ which sends a spectrum $A$ to the graded spectrum $$S^0, A, *, *, \cdots.$$  Its essential image is the full subcategory $i: \Gr^{\leq 1}_u \to \Gr_u$ consisting of unital graded spectra $X$ such that $X_k$ is contractible for $k>1$.  
+
+The inclusion $i$ admits a left adjoint $L^{\leq 1}$ which can be thought of as truncating above grading 1.  The localization $L^{\leq 1}$ is visibly compatible with the monoidal structure in the sense that for any $f:X\to Y$ in $\Gr_u$ such that $L^{\leq 1}f$ is an equivalence and any $Z\in \Gr_u$, the natural map $L^{\leq 1} (X\wedge Z) \to L^{\leq 1}(Y\wedge Z)$ is an equivalence.  Thus, by Proposition 2.2.1.9 of \cite{HA}, $\Gr_u^{\leq 1}$ inherits a symmetric monoidal structure such that $L^{\leq 1}$ is symmetric monoidal and the inclusion $i$ is lax monoidal.  Finally, by Remark 7.3.2.13 of \cite{HA}, we obtain an adjunction at the level of algebras for any integer $0\leq n\leq \infty$:
+$$L^{\leq 1}_{\text{alg}}: \Alg_{\E_n}( \Gr_u)  \rightleftharpoons \Alg_{\E_n}(\Gr_u^{\leq 1}) : i_{\text{alg}}.$$
+
+Since the counit $Li \to \text{id}$ before lifting to algebras is an equivalence, we have that the counit $L^{\leq 1}_{\text{alg}}  i_{\text{alg}} \to \text{id}$ is also an equivalence.  This implies in particular that $i_{\text{alg}}$ is fully faithful.  This is the key input to the following proposition:
+
+\begin{prop}
+Let $X\in \Gr_u^{\leq 1}.$  Then for all $0\leq n\leq \infty$, the graded spectrum $iX\in \Gr_u$ has an essentially unique $\E_n$-algebra structure.  
+\end{prop}
+\begin{proof}
+The fact that $i_{\text{alg}}$ is fully faithful implies that it suffices to show that $X$ has an essentially unique $\E_n$-algebra structure.  
+
+Note that the restricted functor $\bar{T}: \Sp \to \Gr^{\leq 1}_u$ may be promoted to a symmetric monoidal equivalence where $\Sp$ is given the cocartesian monoidal structure - that is, the monoidal structure defined by the $\vee$, the coproduct.   By Proposition 2.4.3.9 of \cite{HA}, any $Y\in \Sp$ admits an essentially unique $\E_n$-algebra structure under the coproduct, and thus the same holds for any $X\in \Gr^{\leq 1}_u$, as required.  
+\end{proof}
 
 \begin{dfn}
-Let $Y\in \Gr_u{\leq 1}$.  We will refer to $iY\in \Alg_{\E_n}(\Gr_u)$ and $\colim iY\in \Alg_{\E_n}(\Sp)$ with their induced monoidal structures as having the \emph{square zero} $\E_n$ structure.
+Let $X\in \Gr_u{\leq 1}$.  We will refer to $i_{\text{alg}}X\in \Alg_{\E_n}(\Gr_u)$ and $\colim i_{\text{alg}}X\in \Alg_{\E_n}(\Sp)$ with its induced monoidal structure as having the \emph{square zero} $\E_n$ structure.
 \end{dfn}
 
-In particular, for any $X\in \Alg_{\E_n}(\Gr_u)$, we have a map $X\to iL^{\leq 1}X$ which by Remark 7.3.2.13 of \cite{HA} is a map of $\E_n$-algebras when $iL^{\leq 1}X$ is given the induced monoidal structure.  However, this is exactly the square zero structure by uniqueness.  We may then take colimits to obtain a canonical $\E_n$ map $\colim X \to \colim iL^{\leq 1}X.$  We may summarize this discussion informally by saying that any $\E_n$-split ring spectrum $X$ has an $\E_n$ map to the square zero extension determined by $X_1$.  
+For any $X\in \Alg_{\E_n}(\Gr_u)$, we have a map $X\to i_{alg}L^{\leq 1}_{alg}X$ of $\E_n$-algebras.  Taking colimits, we obtain a map $\colim X \to \colim i_{alg}L^{\leq 1}_{alg}X$ of $\E_n$ ring spectra.
+ We may summarize this informally by saying that any $\E_n$-split ring spectrum $X$ has an $\E_n$ map to the square zero extension determined by its degree one component $X_1$.  
 
 A nice feature of square zero $\E_n$ rings is that it is easy to understand their space of units.  
 
