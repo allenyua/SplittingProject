@@ -5,7 +5,7 @@
 %\usepackage[dvips]{pict2e}
 %\usepackage{amsmath,amsthm}
 \usepackage{comment}
-\usepackage{amsfonts, fullpage, fancyhdr, qtree, amsmath, tipa, amssymb, hyperref, url, amsthm, subfigure, xy, tikz-cd, verbatim}
+\usepackage{amsfonts, fullpage, fancyhdr, mathtools, qtree, amsmath, tipa, amssymb, hyperref, url, amsthm, subfigure, xy, tikz-cd, verbatim}
 
 \usepackage[color=cyan!40]{todonotes}
 
@@ -302,7 +302,7 @@ We will now discuss square zero extensions in our framework.  For this, it will 
 Note that there is a fully faithful functor $T:\Sp \to \Gr_u$ which sends a spectrum $A$ to the graded spectrum $$S^0, A, *, *, \cdots.$$  Its essential image is the full subcategory $i: \Gr^{\leq 1}_u \to \Gr_u$ consisting of unital graded spectra $X$ such that $X_k$ is contractible for $k>1$.  
 
 The inclusion $i$ admits a left adjoint $L^{\leq 1}$ which can be thought of as truncating above grading 1.  The localization $L^{\leq 1}$ is visibly compatible with the monoidal structure in the sense that for any $f:X\to Y$ in $\Gr_u$ such that $L^{\leq 1}f$ is an equivalence and any $Z\in \Gr_u$, the natural map $L^{\leq 1} (X\wedge Z) \to L^{\leq 1}(Y\wedge Z)$ is an equivalence.  Thus, by Proposition 2.2.1.9 of \cite{HA}, $\Gr_u^{\leq 1}$ inherits a symmetric monoidal structure such that $L^{\leq 1}$ is symmetric monoidal and the inclusion $i$ is lax monoidal.  Finally, by Remark 7.3.2.13 of \cite{HA}, we obtain an adjunction at the level of algebras for any integer $0\leq n\leq \infty$:
-$$L^{\leq 1}_{\text{alg}}: \Alg_{\E_n}( \Gr_u)  \rightleftharpoons \Alg_{\E_n}(\Gr_u^{\leq 1}) : i_{\text{alg}}.$$
+$$L^{\leq 1}_{\text{alg}}: \Alg_{\E_n}( \Gr_u)  \xrightleftharpoons{\quad} \Alg_{\E_n}(\Gr_u^{\leq 1}) : i_{\text{alg}}.$$
 
 Since the counit $Li \to \text{id}$ before lifting to algebras is an equivalence, we have that the counit $L^{\leq 1}_{\text{alg}}  i_{\text{alg}} \to \text{id}$ is also an equivalence.  This implies in particular that $i_{\text{alg}}$ is fully faithful.  This is the key input to the following proposition:
 
@@ -371,7 +371,12 @@ Let $F\in \Sp^{\J}$.  Then $F$ is an $n$-homogeneous functor if and only if ther
 \end{thm}
 
 %maybe mention how Arone gets his splitting and set up the notation
-We will now 
+The observation of Goodwillie, as exploited by \cite{Arone}, is that this provides a canonical way to split certain functorial filtrations whose successive quotients are homogeneous.  More precisely, we have the following theorem:
+
+\begin{thm}[\cite{Arone}]
+Suppose $F \in \Sp^{\J}$ is a functor together with an increasing filtration $$0 = F^{(0)} \longrightarrow F^{(1)}\longrightarrow F^{(2)} \longrightarrow  \cdots F$$ by functors $F^{(i)}\in \Sp^{\J}$ with the property that the successive quotients $F^{(n)}/F^{(n-1)}$ are $n$-homogeneous for all integers $n>0$.  Then, each functor $F^{(n)}$ is polynomial of degree at most $n$ and each composite $F^{(n-1)} \longrightarrow F^{(n)} \xrightarrow{\eta_{n-1}} P_{n-1} F^{(n)}$ is an equivalence.
+\end{thm}
+%we need to at some point deal with the fact that Weiss doesn't actually deal with homog. functors to spectra
 
 
 %set up the monoidal structures
