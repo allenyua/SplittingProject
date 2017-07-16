@@ -76,6 +76,7 @@
 
 
 \DeclareMathOperator{\C}{\mathcal{C}}
+\DeclareMathOperator{\D}{\mathcal{D}}
 \DeclareMathOperator{\CP}{\mathbb{CP}}
 \DeclareMathOperator{\Z}{\mathbb{Z}}
 \DeclareMathOperator{\E}{\mathbb{E}}
@@ -263,38 +264,49 @@ The ??? filtration on $\Sigma^{\infty}_+ \Omega SU(n)$ is $\mathbb{E}_2$-split a
 
 It will be important for us to have a precise language for discussing filtered and graded spectra, what it means to be split, what it means to take associated graded, and the multiplicative aspects of these constructions. Here we review a framework from \cite{LurieRot} for studying graded and filtered objects.  The reader is referred to \cite{LurieRot} for a more thorough treatment and all proofs.  
 
-Let $\C$ be a symmetric monoidal stable $\infty$-category which admits filtered colimits.  Denote by $\Z_{\geq 0}$ the poset of non-negative integers thought of as an ordinary category where $\Hom(a,b)$ is a singleton if $a\leq b$, and empty otherwise.  Denote by $\Z_{\geq 0}^{ds}$ the corresponding discrete category.  We may then take nerves to obtain $\infty$-categories $N(\Z_{\geq 0})$ and $N(\Z_{\geq 0}^{ds})$, which will serve as the indexing sets for filtered and graded spectra.  The reader is warned that our numbering conventions are opposite the ones in \cite{LurieRot}.
+\subsection{Definitions}
+
+%Let $\C$ be a symmetric monoidal stable $\infty$-category which admits filtered colimits.  
+Let $\D$ be an $\infty$-category which we will regard as the diagram category.  Our filtered objects will be valued in the functor category $\Sp^{\D}.$  This will be no more difficult than just ordinary spectra because limits, colimits, and smash products will be considered pointwise.  
+
+Denote by $\Z_{\geq 0}$ the poset of non-negative integers thought of as an ordinary category where $\Hom(a,b)$ is a singleton if $a\leq b$, and empty otherwise.  Denote by $\Z_{\geq 0}^{ds}$ the corresponding discrete category.  We may then take nerves to obtain $\infty$-categories $N(\Z_{\geq 0})$ and $N(\Z_{\geq 0}^{ds})$, which will serve as the indexing sets for filtered and graded spectra.  The reader is warned that our numbering conventions are opposite the ones in \cite{LurieRot}.
 
 \begin{dfn} 
-Let $\Gr(\C)$ denote the functor category $\Fun(\Z_{\geq 0}^{ds}, \C).$  We shall refer to $\Gr(\C)$ as the category of graded objects in $\C$.  Its objects can be thought of as sequences $X_0, X_1,X_2,\cdots \in \C$.
+Let $\Gr(\Sp^{\D})$ denote the functor category $\Fun(\Z_{\geq 0}^{ds}, \Sp^{\D}).$  We shall refer to $\Gr(\Sp^{\D})$ as the category of graded objects in $\Sp^{\D}$.  Its objects can be thought of as sequences $X_0, X_1,X_2,\cdots \in \Sp^{\D}$.
 \end{dfn}
 
  \begin{dfn} 
-Let $\Fil(\C)$ denote the functor category $\Fun(\Z_{\geq 0}, \C).$  We shall refer to $\Fil(\C)$ as the category of filtered objects in $\C$.  Its objects can be thought of as sequences $Y_0\to Y_1\to Y_2 \to \cdots \in \C$ filtering $\colim_i Y_i$.  
+Let $\Fil(\Sp^{\D})$ denote the functor category $\Fun(\Z_{\geq 0}, \Sp^{\D}).$  We shall refer to $\Fil(\Sp^{\D})$ as the category of filtered objects in $\Sp^{\D}$.  Its objects can be thought of as sequences $Y_0\to Y_1\to Y_2 \to \cdots \in \Sp^{\D}$ filtering $\colim_i Y_i$.  
  \end{dfn}
  
- %For us, the category $\C$ will always be either spectra or the category of functors from an indexing category to spectra.  Because limits, colimits, and smash products of functors are taken pointwise, these cases are essentially the same.  Thus, we will suppress $\C$ in what follows and refer to its objects as spectra.
+ %For us, the category $\Sp^{\D}$ will always be either spectra or the category of functors from an indexing category to spectra.  Because limits, colimits, and smash products of functors are taken pointwise, these cases are essentially the same.  Thus, we will suppress $\Sp^{\D}$ in what follows and refer to its objects as spectra.
 
 %paragraph describes the functors
-The obvious map $N(\Z_{\geq 0}^{ds}) \to N(\Z_{\geq 0})$ induces a restriction functor $\text{res}: \Fil(\C) \to \Gr(\C)$ which can be thought of as forgetting the maps in the filtered object.  The restriction is right adjoint to a functor $I: \Gr(\C) \to \Fil(\C)$ given by left Kan extension.  The functor $I$ can be described explicitly as taking a graded object $X_0,X_1,X_2,\cdots$ to the filtered object $$I(X_0, X_1, \cdots) = (X_0\to X_0\oplus X_1\to X_0 \oplus X_1\oplus X_2\to \cdots).$$   
+The obvious map $N(\Z_{\geq 0}^{ds}) \to N(\Z_{\geq 0})$ induces a restriction functor $\text{res}: \Fil(\Sp^{\D}) \to \Gr(\Sp^{\D})$ which can be thought of as forgetting the maps in the filtered object.  The restriction fits into an adjunction  
+$$I:\Gr(\Sp^{\D}) \xrightleftharpoons{\quad} \Fil(\Sp^{\D}) : \text{res}$$
+
+where the left adjoint $I: \Gr(\Sp^{\D}) \to \Fil(\Sp^{\D})$ is given by left Kan extension.  The functor $I$ can be described explicitly as taking a graded object $X_0,X_1,X_2,\cdots$ to the filtered object $$I(X_0, X_1, \cdots) = (X_0\to X_0\oplus X_1\to X_0 \oplus X_1\oplus X_2\to \cdots).$$   
 
 
+\subsection{Monoidal structures}
 %paragraph describes the monoidal structures
-The categories $\Gr(\C)$ and $\Fil(\C)$ may be given symmetric monoidal structures via the Day convolution; we denote the operation in both cases by $\otimes$.  This product can be described explicitly as follows: 
-
-The unit $\S0^{gr}$ of $\otimes$ in graded spectra is $S^0$ in degree 0 and $*$ otherwise; the unit $\S0^{fil}$ in filtered spectra is $I\S0^{gr}.$  We may then talk about $\E_n$-algebras in $\Gr(\C)$ and $\Fil(\C)$.  
+The categories $\Gr(\Sp^{\D})$ and $\Fil(\Sp^{\D})$ may be given symmetric monoidal structures via the Day convolution; we denote the operation in both cases by $\otimes$.  This product can be described explicitly as follows: %now need to be way careful about how this works and cite rotation invariance
 
 
+The unit $\S0^{gr}_{\D}$ of $\otimes$ in $\Gr(\Sp^{\D})$ is the constant diagram at $S^0$ in degree 0 and $*$ otherwise; the unit $\S0^{fil}_{\D}$ in $\Fil(\Sp^{\D})$ is $I\S0^{gr}_{\D}.$  We may then talk about $\E_n$-algebras in $\Gr(\Sp^{\D})$ and $\Fil(\Sp^{\D})$.  
+
+
+
+There is also an associated graded functor $\text{gr }: \Fil(\Sp^{\D}) \to \Gr(\Sp^{\D})$ such that the composite $\text{gr }\circ I : \Gr(\Sp^{\D}) \to \Gr(\Sp^{\D})$ is an equivalence.   This can be thought of pointwise by the formula $$\text{gr}(X_0\to X_1\to X_2\to \cdots) = X_0, X_1/X_0, X_2/X_1, \cdots.$$
 %should say a little about how to construct the associated graded
-There is also an associated graded functor $\text{gr }: \Fil(\C) \to \Gr(\C)$ such that the composite $\text{gr }\circ I : \Gr(\C) \to \Gr(\C)$ is an equivalence.   
 
 %reminder to discuss the colim functor
 
-The functors $I$ and $\text{gr}$ can be given symmetric monoidal structures such that the composite $\text{gr }\circ I : \Gr(\C) \to \Gr(\C)$ is a symmetric monoidal equivalence.  It follows in particular that they extend to functors between the categories of $\E_n$-algebras in $\Gr(\C)$ and $\Fil(\C)$.  Thus, given an $\E_n$ algebra $Y$ in filtered spectra, we obtain a canonical $\E_n$ structure on its associated graded $\text{gr}(Y).$  Conversely, given $X\in \Alg_{\E_n}(\Gr(\C))$, we obtain $IX\in \Alg_{\E_n}(\Fil(\C)).$  
+The functors $I$ and $\text{gr}$ can be given symmetric monoidal structures such that the composite $\text{gr }\circ I : \Gr(\Sp^{\D}) \to \Gr(\Sp^{\D})$ is a symmetric monoidal equivalence.  It follows in particular that they extend to functors between the categories of $\E_n$-algebras in $\Gr(\Sp^{\D})$ and $\Fil(\Sp^{\D})$.  Thus, given an $\E_n$-algebra $Y$ in filtered spectra, we obtain a canonical $\E_n$ structure on its associated graded $\text{gr}(Y).$  Conversely, given $X\in \Alg_{\E_n}(\Gr(\Sp^{\D}))$, we obtain $IX\in \Alg_{\E_n}(\Fil(\Sp^{\D})).$  
 
 %%%%
 \begin{dfn}
-An object $X\in \Alg_{\E_n}(\Fil(\C))$ is called \emph{$\E_n$-split} if there exists $Y\in \Alg_{\E_n}(\Gr(\C))$ and an equivalence $X \simeq IY$ of $\E_n$ filtered spectra.  
+An object $X\in \Alg_{\E_n}(\Fil(\Sp^{\D}))$ is called \emph{$\E_n$-split} if there exists $Y\in \Alg_{\E_n}(\Gr(\Sp^{\D}))$ and an equivalence $X \simeq IY$ in $\Alg_{\E_n}(\Fil(\Sp^{\D}))$.  
 \end{dfn}
 
 Given an $\E_n$-split filtered spectrum $X$, we can recover the underlying graded spectrum by taking the associated graded. 
@@ -316,32 +328,41 @@ $$L^{\leq 1}_{\text{alg}}: \Alg_{\E_n}( \Gr_u)  \xrightleftharpoons{\quad} \Alg_
 Since the counit $Li \to \text{id}$ before lifting to algebras is an equivalence, we have that the counit $L^{\leq 1}_{\text{alg}}  i_{\text{alg}} \to \text{id}$ is also an equivalence.  This implies in particular that $i_{\text{alg}}$ is fully faithful.  We are now in position to prove the main proposition of this section:
 
 \begin{prop}\label{prop:sq0unique}
-Let $0\leq n\leq \infty$ be an integer.  Then, there is a sequence of equivalences of categories $$\Sp \xrightarrow{\bar{T}} \Gr_u^{\leq 1} \longrightarrow \Alg_{\E_n}(\Gr_u^{\leq 1}) \longrightarrow  \Alg_{\E_n}( \Gr_u) \times_{\Gr_u} \Gr^{\leq 1}_u $$ where the first functor $\bar{T}$ is obtained by restricting the codomain of the functor $T:\Sp \to \Gr_u.$  In particular, for any $X\in \Gr_u^{\leq 1}$, the graded spectrum $iX\in \Gr_u$ has an essentially unique $\E_n$-algebra structure.  %this is kind of imprecise...
+Let $0\leq n\leq \infty$ be an integer.  Then, there is a sequence of equivalences of categories $$\Sp \xrightarrow{\bar{T}} \Gr_u^{\leq 1} \longrightarrow \Alg_{\E_n}(\Gr_u^{\leq 1}) \longrightarrow  \Alg_{\E_n}( \Gr_u) \times_{\Gr_u} \Gr^{\leq 1}_u $$ where the first functor $\bar{T}$ is obtained by restricting the codomain of the functor $T:\Sp \to \Gr_u.$  In particular, for any $X\in \Gr_u^{\leq 1}$, the graded spectrum $iX\in \Gr_u$ has an essentially unique $\E_n$-algebra structure.  
 \end{prop}
 \begin{proof}
 The third arrow is defined by $i_{\text{alg}}$, and is an equivalence because $i_{\text{alg}}$ is fully faithful, so it remains to consider the first two arrows.  
-
 
 We have already seen that the functor $\bar{T}: \Sp \to \Gr^{\leq 1}_u$ is an equivalence of categories.  However, it may be promoted to a symmetric monoidal equivalence when $\Sp$ is given the cocartesian monoidal structure - that is, the monoidal structure defined by $\vee$, the coproduct.  This monoidal structure has a very special property: by Proposition 2.4.3.9 of \cite{HA}, there is for each $n$ an equivalence $\Sp \simeq \Alg^{\vee}_{\E_n}(\Sp)$, where the superscript $\vee$ indicates that we are considering algebras under the wedge.  Informally, this says that any $Y\in \Sp$ admits an essentially unique $\E_n$-algebra structure under the coproduct.  It follows that the same holds for any $X\in \Gr^{\leq 1}_u$, and so there is an equivalence $\Gr^{\leq 1}_u \to \Alg_{\E_n}(\Gr^{\leq 1}_u)$, as desired.    
 \end{proof}
 
 
 \begin{term}
-By taking composing with the colimit functor, Proposition \ref{prop:sq0unique} provides a functor $$\omega: \Sp \to \Alg_{\E_n}(\Sp)$$ which we will refer to as the square zero extension.  It sends a spectrum $X$ to a ring with underlying spectrum $S^0\vee X$.  We will call any $\E_n$-algebra structure produced via Proposition \ref{prop:sq0unique} or $\omega$ a \emph{square zero} $\E_n$ structure.  
+Let $0\leq n\leq \infty$ be an integer.  By taking composing with the colimit functor, Proposition \ref{prop:sq0unique} provides a functor $$\omega_n: \Sp \to \Alg_{\E_n}(\Sp)$$ which we will refer to as the square zero extension.  It sends a spectrum $X$ to a ring with underlying spectrum $S^0\vee X$.  We will call any $\E_n$-algebra structure produced via Proposition \ref{prop:sq0unique} or $\omega$ a \emph{square zero} $\E_n$ structure.  
 \end{term}
 
+\begin{rmk} \label{rmk:maptosq0}
 For any $X\in \Alg_{\E_n}(\Gr_u)$, we have a map $X\to i_{alg}L^{\leq 1}_{alg}X$ of $\E_n$-algebras.  Taking colimits, we obtain a map $\colim X \to \colim i_{alg}L^{\leq 1}_{alg}X$ of $\E_n$ ring spectra.
  We may summarize this informally by saying that any $\E_n$-split ring spectrum $X$ has an $\E_n$ map to the square zero extension determined by its degree one component $X_1$.  
+ \end{rmk}
 
-A nice feature of square zero $\E_n$ rings is that it is easy to understand their space of units.  
+A nice feature of square zero $\E_n$-rings is that it is easy to understand their space of units.  
 
-\begin{prop}
-Let $0\leq n\leq \infty$ be an integer and $X\in \Sp$.  Give the spectrum $S^0\vee X$ the square zero $\E_n$ structure.  There is a canonical equivalence $$GL_1(S^0\vee X) \simeq GL_1(S^0) \times \Omega^{\infty} X.$$
+\begin{prop}\label{prop:sq0units}
+Let $0\leq n\leq \infty$ be an integer and $X\in \Sp$.  
+ There is a canonical equivalence $$GL_1(\omega (X)) \simeq GL_1(S^0) \times \Omega^{\infty} X.$$
 \end{prop}
 \begin{proof}
-It suffices to prove the statement for $n=\infty.$  
+The functors $\omega_n$ are compatible under restriction, so it suffices to prove the statement for $n=\infty.$  For this case, we will show that there is a splitting $$gl_1(\omega_\infty(X)) \simeq gl_1(S^0) \vee X$$ of spectra, where $gl_1$ denotes the spectrum of units of an $\E_\infty$-ring \textbf{CITE}.  This will be accomplished by producing a map separately from each of the summands on the right and showing that the sum of these maps is an isomorphism on homotopy.  
 
-First, recall the equivalence $\bar{T}:\Sp \to \Gr^{\leq 1}_u$ of Proposition \ref{prop:sq0unique}.  
+First, note that there is a tautological retraction sequence $$*\longrightarrow X \longrightarrow *$$ of spectra, where $*\in \Sp$ denotes the zero object.  Applying $gl_1\circ \omega_\infty$ allows us to conclude that $gl_1(S^0) = gl_1(\omega_\infty(0))$ splits off of $gl_1(\omega_\infty(X))$ in spectra.  
+
+Additionally, observe that since $\omega_\infty (X)$ is an $\E_\infty$-ring, it receives a canonical $\E_\infty$ map %damn, this works better if we started with $\Sigma^{\infty}_+ X$...is it worth doing a bunch of extra work?
+
+
+
+%recall the symmetric monoidal equivalence $\bar{T}:\Sp \to \Gr^{\leq 1}_u$ of Proposition \ref{prop:sq0unique}, where $\Sp$ is given a monoidal structure under $\vee$.  By the proof of Proposition \ref{prop:sq0unique}, there is a canonical retraction sequence of $\E_\infty$ objects in $\Sp$ (under $\vee$) $$* \longrightarrrow X \longrightarrow *.$$  Taking the associated square $0$ spectra
+
 
 
 %for general reasons we know gl_1 S^0 splits off gl_1 S^0 v X
@@ -479,16 +500,24 @@ induced by the natural map $\Sigma SU(n) \rightarrow BSU(n)$.  It is a classical
 
 \section{Obstructions to a General \texorpdfstring{$\mathbb{E}_2$}{E2}-splitting}
 
-We will now show that the $\mathbb{A}_\infty$ splitting $$\Sigma^{\infty}_+ \Omega SU(n) \simeq ???$$ cannot be promoted to an $\mathbb{E}_2$-splitting before smashing with complex-cobordism.  According to ????, such a splitting would yield an $\mathbb{E}_2$-ring homomorphism $\Sigma^{\infty}_+ \Omega SU(n) \rightarrow \Sigma^{\infty}_+ \mathbb{CP}^{n-1}$, where $\Sigma^{\infty}_+ \mathbb{CP}^{n-1}$ is given the square-zero multiplication.  Furthermore, the precomposition with the inclusion $\Sigma^{\infty}_+ \mathbb{CP}^{n-1} \longrightarrow \Sigma^{\infty}_+ \Omega SU(n)$ must yield the identity map.
+Let $2< n\leq \infty$ be an integer.  We will now show that the $\mathbb{A}_\infty$ splitting $$\Sigma^{\infty}_+ \Omega SU(n) \simeq ???$$ cannot be promoted to an $\mathbb{E}_2$-splitting before smashing with $MU$.  
+
+Suppose that such a splitting existed.  By Remark \ref{rmk:maptosq0}, we would obtain an $\mathbb{E}_2$-ring homomorphism $\Sigma^{\infty}_+ \Omega SU(n) \rightarrow \Sigma^{\infty}_+ \mathbb{CP}^{n-1}$, where $\Sigma^{\infty}_+ \mathbb{CP}^{n-1}$ is given the square-zero multiplication.  Furthermore, the precomposition with the inclusion $\Sigma^{\infty}_+ \mathbb{CP}^{n-1} \longrightarrow \Sigma^{\infty}_+ \Omega SU(n)$ must yield the identity map.  In particular, the map sends the generator of $\pi_2(\Sigma^{\infty}\CP^{n-1})$ to the generator of $\pi_2(\Sigma^{\infty}\Omega SU(n)).$  
+
+
 
 Recall now that there is an adjunction \textbf{CITE}
-$$\Sigma^{\infty}_+:\textbf{Double Loop Spaces} \leftrightarrows \mathbb{E}_2\text{-Rings}:GL_1.$$
-Using this, we may form the adjoint double loop map
+$$\Sigma^{\infty}_+:\textbf{Double Loop Spaces}  \xrightleftharpoons{\quad} \Alg_{\E_2}(\Sp) :GL_1.$$
+
+Using this, we may form the adjoint $\E_2$ map
 $$\Omega SU(n) \rightarrow GL_1(\Sigma^{\infty}_+ \mathbb{CP}^{n-1}).$$
 
-\textbf{I'll wait to write this until we work out the previous sections, since I think it will be helpful to reference abstract nonsense about filtered stuff we prove earlier.}
+The right hand side is identified as an $\E_2$ algebra by Proposition \ref{prop:sq0units}.  In particular, we obtain an $\E_2$ map $$\Omega SU(n) \to GL_1(\Sigma^{\infty}_+ \mathbb{CP}^{n-1}) \simeq  GL_1(S^0) \times Q\CP^{n-1} \to Q\CP^{n-1}$$ which has the additional property that it is an isomorphism on $\pi_2$.
 
-Suppose there is a map $\Sigma^{\infty}_+ \Omega SU(n) \rightarrow \Sigma^{\infty}_+ \mathbb{CP}^{n-1}$.  This is adjoint to a double loop map $\Omega SU(n) \rightarrow GL_1(\Sigma^{\infty}_+\mathbb{CP}^{n-1})$ which lands in the component $SL_1(\Sigma^{\infty}_+ \mathbb{CP}^{n-1}) \simeq \Omega^2 \Sigma^2 \mathbb{CP}^{n-1}$.  BLAH BLAH
+We now show that such a map cannot exist due to the operations that exist in the homotopy of an $\E_2$ algebra.  
+
+
+
 %maybe remark that BU -> QCP^\infty not being E_2 is still true after taking \Sigma^\infty_+, and remark that this is like a version of the splitting principle.
 
 \section{Snaith's Construction of Periodic Complex Bordism} \label{sec:SnaithSplitting}
