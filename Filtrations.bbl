@@ -5,7 +5,7 @@
   \href{http://www.ams.org/mathscinet-getitem?mr=#1}{#2}
 }
 \providecommand{\href}[2]{#2}
-\begin{thebibliography}{Aro01}
+\begin{thebibliography}{Wei95}
 
 \bibitem[Aro01]{Arone}
 Greg Arone, \emph{The {M}itchell-{R}ichter filtration of loops on {S}tiefel
@@ -25,6 +25,10 @@ David Gepner and Victor Snaith, \emph{On the motivic spectra representing
 Jacob Lurie, \emph{Rotation invariance in algebraic $k$-theory}, \newline
   {A}vailable at http://www.math.harvard.edu/~lurie/ (2015).
 
+\bibitem[Lur17]{HA}
+\bysame, \emph{Higher algebra}, \newline {A}vailable at
+  http://www.math.harvard.edu/~lurie/ (2017).
+
 \bibitem[Mit86]{MitchellSU(n)}
 Stephen~A. Mitchell, \emph{A filtration of the loops on {${\rm SU}(n)$} by
   {S}chubert varieties}, Math. Z. \textbf{193} (1986), no.~3, 347--362.
@@ -38,5 +42,9 @@ Victor Snaith, \emph{The total {C}hern and {S}tiefel-{W}hitney classes are not
 \bibitem[Sna81]{SnaithOriginal}
 \bysame, \emph{Localized stable homotopy of some classifying spaces}, Math.
   Proc. Camb. Phil. Soc. \textbf{89} (1981), no.~2, 325--330. \MR{0600247}
+
+\bibitem[Wei95]{Weiss}
+Michael Weiss, \emph{Orthogonal calculus}, Trans. Amer. Math. Soc. \textbf{347}
+  (1995), no.~10, 3743--3796. \MR{1321590}
 
 \end{thebibliography}

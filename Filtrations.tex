@@ -257,9 +257,12 @@ The ??? filtration on $\Sigma^{\infty}_+ \Omega SU(n)$ is $\mathbb{E}_2$-split a
 \end{thm}
 
 \textbf{BLAH}
+%acknowledge
+%1. Jacob, Mike
+%2. arone? akhil, denis?, dyang?, 
+%3. Arpon if he reads it,
 
-
-%Notations
+%Notations, todo?
 %\Sp for spectra, S for spaces? should also say that by default, these are given \smash, and \times.
 
 \section{Filtered and Graded Ring Spectra} \label{sec:FilGra}
@@ -271,7 +274,7 @@ It will be important for us to have a precise language for discussing filtered a
 %Let $\C$ be a symmetric monoidal stable $\infty$-category which admits filtered colimits.  
 Let $\D$ be an $\infty$-category which we will regard as the diagram category.  Our filtered objects will be valued in the functor category $\Sp^{\D}.$  This will be no more difficult than just ordinary spectra because limits, colimits, and smash products will be considered pointwise.  
 
-Denote by $\Z_{\geq 0}$ the poset of non-negative integers thought of as an ordinary category where $\Hom(a,b)$ is a singleton if $a\leq b$, and empty otherwise.  Denote by $\Z_{\geq 0}^{ds}$ the corresponding discrete category.  We may then take nerves to obtain $\infty$-categories $N(\Z_{\geq 0})$ and $N(\Z_{\geq 0}^{ds})$, which will serve as the indexing sets for filtered and graded spectra.  The reader is warned that our numbering conventions are opposite the ones in \cite{LurieRot}.
+Denote by $\Z_{\geq 0}$ the poset of non-negative integers, denoted $[n]$, thought of as an ordinary category where $\Hom([a],[b])$ is a singleton if $a\leq b$, and empty otherwise.  Denote by $\Z_{\geq 0}^{ds}$ the corresponding discrete category.  We may then take nerves to obtain $\infty$-categories $N(\Z_{\geq 0})$ and $N(\Z_{\geq 0}^{ds})$, which will serve as the indexing sets for filtered and graded spectra.  The reader is warned that our numbering conventions are opposite the ones in \cite{LurieRot}.
 
 \begin{dfn} 
 Let $\Gr(\Sp^{\D})$ denote the functor category $\Fun(\Z_{\geq 0}^{ds}, \Sp^{\D}).$  We shall refer to $\Gr(\Sp^{\D})$ as the category of graded objects in $\Sp^{\D}$.  Its objects can be thought of as sequences $X_0, X_1,X_2,\cdots \in \Sp^{\D}$.
@@ -280,10 +283,8 @@ Let $\Gr(\Sp^{\D})$ denote the functor category $\Fun(\Z_{\geq 0}^{ds}, \Sp^{\D}
 \begin{dfn} 
 Let $\Fil(\Sp^{\D})$ denote the functor category $\Fun(\Z_{\geq 0}, \Sp^{\D}).$  We shall refer to $\Fil(\Sp^{\D})$ as the category of filtered objects in $\Sp^{\D}$.  Its objects can be thought of as sequences $Y_0\to Y_1\to Y_2 \to \cdots \in \Sp^{\D}$ filtering $\colim_i Y_i$.  
 \end{dfn}
- 
- %For us, the category $\Sp^{\D}$ will always be either spectra or the category of functors from an indexing category to spectra.  Because limits, colimits, and smash products of functors are taken pointwise, these cases are essentially the same.  Thus, we will suppress $\Sp^{\D}$ in what follows and refer to its objects as spectra.
 
-%paragraph describes the functors
+
 The obvious map $N(\Z_{\geq 0}^{ds}) \to N(\Z_{\geq 0})$ induces a restriction functor $\text{res}: \Fil(\Sp^{\D}) \to \Gr(\Sp^{\D})$ which can be thought of as forgetting the maps in the filtered object.  The restriction fits into an adjunction  
 $$I:\Gr(\Sp^{\D}) \xrightleftharpoons{\quad} \Fil(\Sp^{\D}) : \text{res}$$
 
@@ -291,8 +292,7 @@ where the left adjoint $I: \Gr(\Sp^{\D}) \to \Fil(\Sp^{\D})$ is given by left Ka
 
 
 \subsection{Monoidal structures}
-%paragraph describes the monoidal structures
-By \textbf{CITE}, the categories $\Gr(\Sp)$ and $\Fil(\Sp)$ may be given symmetric monoidal structures via the Day convolution.  Then, via the identifications $\Gr(\Sp^{\D}) = \Gr(\Sp)^{\D}$ and $\Fil(\Sp^{\D}) = \Fil(\Sp)^{\D}$, the categories $\Gr(\Sp^{\D})$ and $\Fil(\Sp^{\D})$ may be given symmetric monoidal structures pointwise on $\D$.  In both cases, we denote the resulting operation by $\otimes$.  Explicitly, the filtered tensor product $$\left(X_0 \longrightarrow X_1 \longrightarrow X_2 \longrightarrow \cdots \right) \otimes \left(Y_0 \longrightarrow Y_1 \longrightarrow Y_2 \longrightarrow \cdots \right)$$
+By \cite[Corollary 2.3.9]{LurieRot}, the categories $\Gr(\Sp)$ and $\Fil(\Sp)$ may be given symmetric monoidal structures via the Day convolution.  Then, via the identifications $\Gr(\Sp^{\D}) = \Gr(\Sp)^{\D}$ and $\Fil(\Sp^{\D}) = \Fil(\Sp)^{\D}$, the categories $\Gr(\Sp^{\D})$ and $\Fil(\Sp^{\D})$ may be given symmetric monoidal structures pointwise on $\D$.  In both cases, we denote the resulting operation by $\otimes$.  Explicitly, the filtered tensor product $$\left(X_0 \longrightarrow X_1 \longrightarrow X_2 \longrightarrow \cdots \right) \otimes \left(Y_0 \longrightarrow Y_1 \longrightarrow Y_2 \longrightarrow \cdots \right)$$
 of two filtered spectra is computed as
 
 \begin{center}
@@ -334,7 +334,6 @@ Given an $\E_n$-split filtered spectrum $X$, we can recover the underlying grade
 %%%%
 
 \subsection{Square zero rings}
-%being careful about square zero extensions
 
 We will now discuss square zero extensions in our framework.  For this, it will be convenient to work with the category $\Gr_u$ of \emph{unital} graded spectra in the strong sense that the unit map induces an equivalence in grading 0.  
 Note that there is a fully faithful functor $T:\Sp \to \Gr_u$ which sends a spectrum $A$ to the graded spectrum $$S^0, A, *, *, \cdots.$$  Its essential image is the full subcategory $i: \Gr^{\leq 1}_u \to \Gr_u$ consisting of unital graded spectra $X$ such that $X_k$ is contractible for $k>1$.  In this section, we analyze graded spectra in this subcategory $\Gr^{\leq 1}_u$. Our goal is to show any such graded spectrum admits an essentially unique $\E_n$-algebra structure for any $0\leq n\leq \infty.$  This goal is realized in Proposition \ref{prop:sq0unique}.  
@@ -374,13 +373,13 @@ Let $0\leq n\leq \infty$ be an integer and $X\in \cS$ a connected space.
  There is a canonical equivalence $$GL_1(\omega_n (\Sigma^{\infty} X)) \simeq GL_1(S^0) \times QX$$ of $\E_n$ algebras in spaces, where $QX$ is our notation for $\Omega^{\infty}\Sigma^\infty X$.  
 \end{prop}
 \begin{proof}
-The functors $\omega_n$ are compatible under restriction, so it suffices to prove the statement for $n=\infty.$  For this case, we will show that there is a splitting $$gl_1(\omega_\infty(\Sigma^{\infty}X)) \simeq gl_1(S^0) \vee \Sigma^\infty X$$ of spectra, where $gl_1$ denotes the spectrum of units of an $\E_\infty$-ring \textbf{CITE}.  We first look at what happens on homotopy.  Recall that for any $\E_\infty$ ring spectrum $Y$, we have the formula $$\pi_*(gl_1(Y)) \simeq (\pi_*(Y))^\times$$ where on the right hand side, we consider $\pi_*(Y)$ as a graded ring.  In our case, this yields an identification $$\pi_*(gl_1(\omega_\infty (\Sigma^{\infty}X))) \simeq (\pi_*(S^0) \oplus \pi_*(\Sigma^{\infty}X))^\times \simeq \pi_*(S^0)^{\times} \times \pi_*(\Sigma^\infty X)$$
+The functors $\omega_n$ are compatible under restriction, so it suffices to prove the statement for $n=\infty.$  For this case, we will show that there is a splitting $$gl_1(\omega_\infty(\Sigma^{\infty}X)) \simeq gl_1(S^0) \vee \Sigma^\infty X$$ of spectra, where $gl_1$ denotes the spectrum of units of an $\E_\infty$-ring introduced in \cite{MQRT}.  We first look at what happens on homotopy.  Recall that for any $\E_\infty$ ring spectrum $Y$, we have the formula $$\pi_*(gl_1(Y)) \simeq (\pi_*(Y))^\times$$ where on the right hand side, we consider $\pi_*(Y)$ as a graded ring.  In our case, this yields an identification $$\pi_*(gl_1(\omega_\infty (\Sigma^{\infty}X))) \simeq (\pi_*(S^0) \oplus \pi_*(\Sigma^{\infty}X))^\times \simeq \pi_*(S^0)^{\times} \times \pi_*(\Sigma^\infty X)$$
 where we have used that on homotopy, $\omega_\infty (\Sigma^\infty X)$ is a square zero extension.  To conclude the proof, it suffices to show that the two factors on the right hand side can be realized by maps of spectra.  
 
 The first factor is realized simply by $gl_1$ of the unit map $S^0 \to \omega_\infty (\Sigma^\infty X).$  In fact, it is not difficult to see directly that this map is split.  
 %First, note that there is a tautological retraction sequence $$*\longrightarrow \Sigma^\infty X \longrightarrow *$$ of spectra, where $*\in \Sp$ denotes the zero object.  Applying $gl_1\circ \omega_\infty$ allows us to conclude that $gl_1(S^0) = gl_1(\omega_\infty(*))$ splits off of $gl_1(\omega_\infty(\Sigma^\infty X))$ in spectra.  In particular, this determines a map $$a:gl_1(S^0) \to gl_1(\omega_\infty (\Sigma^\infty X)).$$
 
-For the second factor, observe that since $\omega_\infty (\Sigma^\infty X)$ is an $\E_\infty$-ring, it receives a canonical $\E_\infty$ map $$\Sigma^{\infty}_+ QX \longrightarrow \omega_\infty (\Sigma^\infty X)$$ from the free $\E_\infty$ ring on $\Sigma^\infty X$ which extends the canonical map of spectra $\Sigma^\infty X \to \omega_\infty (\Sigma^\infty X).$  Now, note that there is an adjunction \textbf{CITE} $$\Sigma^{\infty}_+\Omega^\infty : \Sp \xrightleftharpoons{\quad} \Alg_{\E_\infty}(\Sp) : gl_1$$ under which the above map may be identified with a map $$b: \Sigma^\infty X \to gl_1 (\omega_\infty (\Sigma^{\infty} X))$$ of spectra.  \textbf{NEED TO SAY A TINY BIT MORE}
+For the second factor, observe that since $\omega_\infty (\Sigma^\infty X)$ is an $\E_\infty$-ring, it receives a canonical $\E_\infty$ map $$\Sigma^{\infty}_+ QX \longrightarrow \omega_\infty (\Sigma^\infty X)$$ from the free $\E_\infty$ ring on $\Sigma^\infty X$ which extends the canonical map of spectra $\Sigma^\infty X \to \omega_\infty (\Sigma^\infty X).$  Now, note that there is an adjunction \cite{MQRT} $$\Sigma^{\infty}_+\Omega^\infty : \Sp \xrightleftharpoons{\quad} \Alg_{\E_\infty}(\Sp) : gl_1$$ under which the above map may be identified with a map $$b: \Sigma^\infty X \to gl_1 (\omega_\infty (\Sigma^{\infty} X))$$ of spectra.  \textbf{NEED TO SAY A TINY BIT MORE}
 %how to compute this on htpy...more or less obv but maybe should explain
 
 
@@ -443,7 +442,7 @@ Given this universal property, Proposition 5.4 of \cite{Weiss} ensures the exist
 Let $F\in \Sp^{\J}$.  Then $F$ is an $n$-homogeneous functor if and only if there exists a spectrum $\Theta$ with an action of the unitary group $U(n)$ such that $$F(V) = (\Theta \wedge S^{nV})_{hU(n)}.$$
 \end{thm}
 
-%maybe mention how Arone gets his splitting and set up the notation
+
 The observation of Goodwillie, as exploited by \cite{Arone}, is that this provides a canonical way to split certain functorial filtrations whose successive quotients are homogeneous.  More precisely, we have the following theorem:
 
 \begin{thm}[\cite{Arone}]
@@ -453,25 +452,46 @@ Suppose $F \in \Sp^{\J}$ is a functor together with an increasing filtration $$0
 
 
 %set up the monoidal structures
-In order to upgrade the results of \cite{Arone} to structured multiplicative splittings, we must understand the multiplicative properties of the polynomial approximation functors.  We first set some additional notation:
+In order to upgrade the results of \cite{Arone} to structured multiplicative splittings, we must understand the multiplicative properties of the polynomial approximation functors.  More precisely, for a functor $F\in \Sp^{\J}$, we aim to understand the Taylor tower of $F\wedge F$ in terms of the tower for $F.$  The results in this section are likely known to experts, but the authors were not able to locate it in the literature.  They thank Jacob Lurie for suggesting that Proposition \ref{prop:weissmonoidal} is true.  
+
+The idea is to consider all the polynomial approximations at once.  To do so, we first set some additional notation:
 
 \begin{dfn} 
-Let $\Cofil(\Sp^{\J})$ denote the functor category $\Fun(\Z_{\geq 0}^{op}, \Sp^{\J}).$  We shall refer to $\Cofil(\Sp^{\J})$ as the category of cofiltered objects in $\Sp^{\J}$.  Its objects can be thought of as towers $Y_0\leftarrow Y_1\leftarrow Y_2 \leftarrow \cdots \in \Sp^{\J}$.
+Let $\Cofil(\Sp^{\J})$ denote the functor category $\Fun(\Z_{\geq 0}^{op}, \Sp^{\J}).$  We shall refer to $\Cofil(\Sp^{\J})$ as the category of cofiltered objects in $\Sp^{\J}$.  Its objects can be thought of as towers of functors $Y_0\leftarrow Y_1\leftarrow Y_2 \leftarrow \cdots \in \Sp^{\J}$.
 \end{dfn}%ok maybe I'll want cofil^+ or some garbage....
 
-We have already seen that $\Cofil(\Sp^{\J})$ is the natural target for the Taylor tower.  However, we will need to be more careful and consider the monoidal structure.  
-%define cofiltered spectra with the monoidal structure
-%construct the ordinary Tow functor
+We have already seen that $\Cofil(\Sp^{\J})$ is the natural target for the Taylor tower.  However, to understand the monoidal structure, one needs to be more careful.  First, to put a symmetric monoidal structure on $\Cofil(\Sp^{\J})$ ...do it?
+%ugh, bleh, how do you say this in a careful way...
 
 \begin{prop}\label{prop:weissmonoidal}
-There is a symmetric monoidal functor $$\text{Tow}: \Sp^{\J} \to \Cofil(\Sp^{\J})$$  with the property that restriction 
+There is a symmetric monoidal functor $$\text{Tow}: \Sp^{\J} \to \Cofil(\Sp^{\J})$$ with the property that it sends a functor $F\in \Sp^{\J}$ to its Taylor tower $$\text{Tow}(F) = P_0F \longleftarrow P_1F \longleftarrow P_2F \longleftarrow \cdots.$$
 
 \end{prop}
 \begin{proof}
-?
+Recall that the $P_n$ functors are given as left adjoints of the fully faithful inclusions $\Poly^{\leq n}(\Sp^{\J}) \subset \Sp^{\J}$.  We proceed by telling a parametrized version of this story that includes all $n$ simultaneously.  The proper framework for such a story is the formalism of \emph{relative adjunctions}; these are developed in the $\infty$-categorical context in \cite{HA}, Section 7.3.2.  
+
+Consider the category $\Sp^{\J}\times \Z^{op}_{\geq 0}.$  This will be relevant to us because it admits a projection to $\Z^{op}_{\geq 0}$ whose category of sections are precisely $\Cofil(\Sp^{\J}).$  We consider also the full subcategory $(\Sp^{\J}\times \Z^{op}_{\geq 0})_{\text{poly}} \subset \Sp^{\J}\times \Z^{op}_{\geq 0}$ on the pairs $(F, [n])$ such that $F\in \Poly^{\leq n}(\Sp^{\J}).$  It fits into a diagram
+%***draw the diagram; the morphisms down are q, p; leftpointing arrow is i 
+
+On the fiber over an integer $[n] \in \Z^{op}_{\geq 0}$, we see the inclusion $\Sp^{\J} \leftarrow \Poly^{\leq n}(\Sp^{\J}).$  It is in this sense that the current picture is a parametrized version of the ordinary polynomial approximations.  We now claim that $i$ admits a left adjoint $\text{Tow}: \Sp^{\J}\times \Z^{op}_{\geq 0} \to (\Sp^{\J}\times \Z^{op}_{\geq 0})_{\text{poly}}$ \emph{relative} to $\Z^{op}_{\geq 0}.$    The strategy is to use Proposition 7.3.2.6 of \cite{HA}, which tells us that we need to check the following three statements:
+\begin{enumerate}
+\item The functors $p$ and $q$ are locally Cartesian categorical fibrations.
+\item For each $[n]\in \Z^{op}_{\geq 0}$, the functor on fibers $i|_{p^{-1}[n]}:p^{-1}[n] \to q^{-1}[n]$ admits a right adjoint.  
+\item The functor $i$ carries locally $p$-Cartesian morphisms of $(\Sp^{\J}\times \Z^{op}_{\geq 0})_{\text{poly}}$ to locally $q$-Cartesian morphisms of $\Sp^{\J}\times \Z^{op}_{\geq 0}$.
+\end{enumerate}
+
+Condition (2) is clear from the existence of polynomial approximations in Weiss calculus.  To see conditions (1) and (3), we first note that $q$ is in fact a Cartesian fibration because it is a projection from a product.  Moreover, the $q$-Cartesian morphisms are precisely those morphisms which are equivalences on the $\Sp^{\J}$ coordinate.  We now observe that for any pair $(F, [m]) \in \Sp^{\J}\times \Z^{op}_{\geq 0}$ such that $F\in \Poly^{\leq m}(\Sp^{\J})$ and morphism $\sigma :[n]\to [m]$, any $q$-Cartesian edge lying over $\sigma$ with target $(F, [m])$ is also in the full subcategory $(\Sp^{\J}\times \Z^{op}_{\geq 0})_{\text{poly}}.$  This implies that $p$ is also a Cartesian fibration and that the inclusion $i$ carries $p$-Cartesian edges to $q$-Cartesian edges.  Since any Cartesian fibration is a categorical fibration (\cite[Proposition 3.3.1.7]{HTT}), conditions (1) and (3) are verified.  
+
+It remains to check that %Tow is the right functor...what does that mean?  
+
+
+
+
 \end{proof}
 
-
+\begin{rmk}
+Proposition \ref{prop:weissmonoidal} is written in the language of Weiss calculus as that is the present application, but the proof works equally well in Goodwillie calculus.  
+\end{rmk}
 
 
 
@@ -497,7 +517,7 @@ We may then take inverse limits to get a category $\C_\infty = \Fil(\Sp^{\J}) \t
 The functor $i$ is fully faithful.
 \end{cor}
 \begin{proof}
-%This amounts to checking that taking inverse limits retains fully faithfulness.  I think this is totally obvious if you were taking an inverse limit of simplicial sets, but maybe we need to be a little careful since we want a homotopy limit?
+%This amounts to checking that taking inverse limits retains fully faithfulness.  this is obvious, thanks to arpon
 \end{proof}
 
 at the end, restrict connectivity so that it's monoidal
@@ -553,13 +573,13 @@ induced by the natural map $\Sigma SU(n) \rightarrow BSU(n)$.  It is a classical
 
 \section{Obstructions to a General \texorpdfstring{$\mathbb{E}_2$}{E2}-splitting}
 
-Let $2< n\leq \infty$ be an integer.  We will now show that the $\mathbb{A}_\infty$ splitting $$\Sigma^{\infty}_+ \Omega SU(n) \simeq ???$$ cannot be promoted to an $\mathbb{E}_2$-splitting before smashing with $MU$.  
+Let $3< n\leq \infty$ be an integer.  We will now show that the $\mathbb{A}_\infty$ splitting $$\Sigma^{\infty}_+ \Omega SU(n) \simeq ???$$ cannot be promoted to an $\mathbb{E}_2$-splitting before smashing with $MU$.  
 
 Suppose that such a splitting existed.  By Remark \ref{rmk:maptosq0}, we would obtain an $\mathbb{E}_2$-ring homomorphism $\Sigma^{\infty}_+ \Omega SU(n) \rightarrow \Sigma^{\infty}_+ \mathbb{CP}^{n-1}$, where $\Sigma^{\infty}_+ \mathbb{CP}^{n-1}$ is given the square-zero multiplication.  Furthermore, the precomposition with the inclusion $\Sigma^{\infty}_+ \mathbb{CP}^{n-1} \longrightarrow \Sigma^{\infty}_+ \Omega SU(n)$ must yield the identity map.  In particular, the map sends the generator of $\pi_2(\Sigma^{\infty}\CP^{n-1})$ to the generator of $\pi_2(\Sigma^{\infty}\Omega SU(n)).$  
 
 
 
-Recall now that there is an adjunction \textbf{CITE}
+Recall now that there is an adjunction \cite{MQRT}
 $$\Sigma^{\infty}_+:\textbf{Double Loop Spaces}  \xrightleftharpoons{\quad} \Alg_{\E_2}(\Sp) :GL_1.$$
 
 Using this, we may form the adjoint $\E_2$ map
@@ -572,17 +592,17 @@ We now show that such a map $\phi$ cannot exist due to the operations that exist
 \begin{obs}Let $Y\in \Alg_{\E_2}(\cS)$, and suppose we are given a map $S^2\to Y$.  This extends to an $\E_2$ map $\Omega^2 S^4 \to Y.$  We may precompose with the map $S^5 \to \Omega^2 S^4$ adjoint to the Hopf map $S^7\to S^4$.  This procedure determines a natural operation $$\nu^u: \pi_2(Y) \to \pi_5(Y)$$ in the homotopy of any $\E_2$-algebra in spaces.  
 \end{obs}
 
-\begin{rmk}
+\begin{rmk} \label{rmk:multnu}
 The notation is meant to hint at the fact that if $Y = \Omega^\infty X$ comes from a spectrum, then the operation $\nu^u$ is given by multiplication by the element $\nu \in \pi_3(\mathbb{S})^{\wedge}_2$ from the $2$-primary homotopy groups of the sphere spectrum.  Thus, $\nu^u$ is an unstable version of $\nu$ that is already seen in any $\E_2$ algebra in spaces.    
 \end{rmk}
 
 Finally, we show that $\phi$ cannot be compatible with $\nu^u$ on homotopy by directly computing $\nu^u$ on either side.
 
-For $n>2$, observe that the natural map $\Omega SU(n) \to BU$ is an ...iso in large degrees.  But $\pi_*(BU)$ is even, so $\pi_5(\Omega SU(n)) \simeq 0.$  
+For $n>3$, observe that the natural map $\Omega SU(n) \to BU$ is an isomorphism in homology up to degree $7$.  This implies that $\pi_5(\Omega SU(n)) \simeq \pi_5(BU) \simeq 0$ because $BU$ is even.  Hence, $\nu^u$ is trivial on the generator of $\pi_2(\Omega SU(n)).$  
 
-On the other hand, the map $\CP^{n-1} \to \CP^\infty$ \textbf{something something}.  Hence, if $\beta\in \pi_2(Q\CP^{n-1})$ denotes the generator, then $\nu^u(\beta)\in \pi_5(Q\CP^{n-1})$ is nontrivial.  This implies that there can be no $\E_2$ map $\phi$ which induces an isomorphism on $\pi_2$ and concludes the proof.  
+Similarly, the map $Q\CP^{n-1} \to Q\CP^\infty$ is an isomorphism on $\pi_5$ for $n>3$.  However, it was computed in \cite[Theorem II.8]{Liulevicius} that $\pi_5(\CP^{\infty})=\mathbb{Z}/2$ generated by $\nu$ times the degree $2$ generator.  Hence, by Remark \ref{rmk:multnu}, if $\beta\in \pi_2(Q\CP^{n-1})$ denotes the generator, then $\nu^u(\beta)\in \pi_5(Q\CP^{n-1})$ is nontrivial.  This implies that there can be no $\E_2$ map $\phi$ which induces an isomorphism on $\pi_2$ and concludes the proof.  
 
-\begin{rmk}
+\begin{rmk}%say this better
 Taking the limit as $n\to\infty$, we obtain the statement that the map $BU\to Q\CP^{\infty}$ implementing the splitting principle does not lift to an $\E_2$ map.  This map is well-studied: among other places, it appears as the first connecting map in the Weiss tower for the functor $V\mapsto BU(V)$.  As such, it can be seen as a ``$BU$-analog'' to the Kahn-Priddy map.  
 \end{rmk}
 
