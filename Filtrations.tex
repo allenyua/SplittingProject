@@ -94,6 +94,7 @@
 \DeclareMathOperator{\Poly}{\text{Poly}}
 \DeclareMathOperator{\Ext}{\text{Ext}}
 \DeclareMathOperator{\nil}{\text{nil}}
+\DeclareMathOperator{\fin}{\text{fin}}
 \DeclareMathOperator{\Gr}{\textbf{Gr}}
 \DeclareMathOperator{\Fil}{\textbf{Fil}}
 \DeclareMathOperator{\Fun}{\text{Fun}}
@@ -291,7 +292,7 @@ $$I:\Gr(\Sp^{\D}) \xrightleftharpoons{\quad} \Fil(\Sp^{\D}) : \text{res}$$
 where the left adjoint $I: \Gr(\Sp^{\D}) \to \Fil(\Sp^{\D})$ is given by left Kan extension.  The functor $I$ can be described explicitly as taking a graded object $X_0,X_1,X_2,\cdots$ to the filtered object $$I(X_0, X_1, \cdots) = (X_0\to X_0\oplus X_1\to X_0 \oplus X_1\oplus X_2\to \cdots).$$   
 
 
-\subsection{Monoidal structures}
+\subsection{Monoidal structures}\label{sect:monoidal}
 By \cite[Corollary 2.3.9]{LurieRot}, the categories $\Gr(\Sp)$ and $\Fil(\Sp)$ may be given symmetric monoidal structures via the Day convolution.  Then, via the identifications $\Gr(\Sp^{\D}) = \Gr(\Sp)^{\D}$ and $\Fil(\Sp^{\D}) = \Fil(\Sp)^{\D}$, the categories $\Gr(\Sp^{\D})$ and $\Fil(\Sp^{\D})$ may be given symmetric monoidal structures pointwise on $\D$.  In both cases, we denote the resulting operation by $\otimes$.  Explicitly, the filtered tensor product $$\left(X_0 \longrightarrow X_1 \longrightarrow X_2 \longrightarrow \cdots \right) \otimes \left(Y_0 \longrightarrow Y_1 \longrightarrow Y_2 \longrightarrow \cdots \right)$$
 of two filtered spectra is computed as
 
@@ -430,7 +431,8 @@ The theory of Weiss calculus studies functors out of $\J$ in a way analogous to 
 A functor $F\in \Sp^{\J}$ is polynomial of degree at most $n$ if the natural map $$F(V) \to \lim_U F(U\oplus V)$$ is an equivalence, where the limit is indexed over the $\infty$-category of nonzero subspaces $U\subset \mathbb{C}^{n+1}.$
 \end{dfn}
 
-As in Goodwillie calculus, the inclusion of the full subcategory $\Poly^{\leq n}(\Sp^{\J}) \subset \Sp^{\J}$ of functors which are polynomial of degree at most $n$ admits a left adjoint $P_n: \Sp^{\J} \to \Poly^{\leq n}(\Sp^{\J}).$  The unit $\eta_n$ of this adjunction provides for each $F\in \Sp^{\J}$ a natural transformation $F \to P_nF$ which we will refer to as the \emph{degree $n$ polynomial approximation} of $F$. 
+As in Goodwillie calculus, the inclusion of the full subcategory $\Poly^{\leq n}(\Sp^{\J}) \subset \Sp^{\J}$ of functors which are polynomial of degree at most $n$ admits a left adjoint $$P_n: \Sp^{\J} \xrightleftharpoons{\quad} \Poly^{\leq n}(\Sp^{\J}): j_n.$$ %center this...
+ The unit $\eta_n$ of this adjunction provides for each $F\in \Sp^{\J}$ a natural transformation $F \to P_nF$ which we will refer to as the \emph{degree $n$ polynomial approximation} of $F$. 
 
 \begin{rmk}\label{rmk:infinityweiss}
 This universal property was not explicitly stated in \cite{Weiss}, but it follows formally from Weiss's results as follows: the functor $P_n$ and the transformation $\eta_n$ can be defined explicitly as in \cite{Weiss} by iteratively applying the functor $\tau_n: \Sp^{\J} \to \Sp^{\J}$ defined by the formula $$\tau_n F(V) = \lim_U F(U\oplus V)$$ with the limit indexed as in Definition \ref{dfn:polyfun}.   The facts required of the functors $P_n$ in the proof of Theorem 6.1.1.10 in \cite{HA} are precisely the content of Theorem 6.3 of \cite{Weiss}.  
@@ -460,20 +462,19 @@ The idea is to consider all the polynomial approximations at once.  To do so, we
 Let $\Cofil(\Sp^{\J})$ denote the functor category $\Fun(\Z_{\geq 0}^{op}, \Sp^{\J}).$  We shall refer to $\Cofil(\Sp^{\J})$ as the category of cofiltered objects in $\Sp^{\J}$.  Its objects can be thought of as towers of functors $Y_0\leftarrow Y_1\leftarrow Y_2 \leftarrow \cdots \in \Sp^{\J}$.
 \end{dfn}%ok maybe I'll want cofil^+ or some garbage....
 
-We have already seen that $\Cofil(\Sp^{\J})$ is the natural target for the Taylor tower.  However, to understand the monoidal structure, one needs to be more careful.  First, to put a symmetric monoidal structure on $\Cofil(\Sp^{\J})$ ...do it?
-%ugh, bleh, how do you say this in a careful way...
+The category $\Cofil(\Sp^{\J})$ is the natural target for the Weiss tower.  The following construction makes this precise:
 
-\begin{prop}\label{prop:weissmonoidal}
-There is a symmetric monoidal functor $$\text{Tow}: \Sp^{\J} \to \Cofil(\Sp^{\J})$$ with the property that it sends a functor $F\in \Sp^{\J}$ to its Taylor tower $$\text{Tow}(F) = P_0F \longleftarrow P_1F \longleftarrow P_2F \longleftarrow \cdots.$$
+\begin{cnstr}\label{cnstr:tower}
+We now construct a functor $$\text{Tow}: \Sp^{\J} \to \Cofil(\Sp^{\J})$$ with the property that it sends a functor $F\in \Sp^{\J}$ to its Taylor tower $$\text{Tow}(F) = P_0F \longleftarrow P_1F \longleftarrow P_2F \longleftarrow \cdots.$$
 
-\end{prop}
-\begin{proof}
+
 Recall that the $P_n$ functors are given as left adjoints of the fully faithful inclusions $\Poly^{\leq n}(\Sp^{\J}) \subset \Sp^{\J}$.  We proceed by telling a parametrized version of this story that includes all $n$ simultaneously.  The proper framework for such a story is the formalism of \emph{relative adjunctions}; these are developed in the $\infty$-categorical context in \cite{HA}, Section 7.3.2.  
 
-Consider the category $\Sp^{\J}\times \Z^{op}_{\geq 0}.$  This will be relevant to us because it admits a projection to $\Z^{op}_{\geq 0}$ whose category of sections are precisely $\Cofil(\Sp^{\J}).$  We consider also the full subcategory $(\Sp^{\J}\times \Z^{op}_{\geq 0})_{\text{poly}} \subset \Sp^{\J}\times \Z^{op}_{\geq 0}$ on the pairs $(F, [n])$ such that $F\in \Poly^{\leq n}(\Sp^{\J}).$  It fits into a diagram
-%***draw the diagram; the morphisms down are q, p; leftpointing arrow is i 
+Consider the category $\Sp^{\J}\times \Z^{op}_{\geq 0}$ together with the full subcategory $(\Sp^{\J}\times \Z^{op}_{\geq 0})_{\text{poly}} \subset \Sp^{\J}\times \Z^{op}_{\geq 0}$ on the pairs $(F, [n])$ such that $F\in \Poly^{\leq n}(\Sp^{\J}).$  Via projection, these fit into a diagram
+%***draw the diagram; the morphisms down are q, p; leftpointing arrow is i, label dia:reladj
+ This will be relevant to us because the category of sections of $q$ are precisely $\Cofil(\Sp^{\J}).$  The sections of $p$ can be thought of those cofiltered functors such that the $n$th piece is polynomial of degree at most $n$.  We will denote this category of sections of $p$ by $\Cofil(\Sp^{\J})_{\text{poly}}.$ 
 
-On the fiber over an integer $[n] \in \Z^{op}_{\geq 0}$, we see the inclusion $\Sp^{\J} \leftarrow \Poly^{\leq n}(\Sp^{\J}).$  It is in this sense that the current picture is a parametrized version of the ordinary polynomial approximations.  We now claim that $i$ admits a left adjoint $\text{Tow}: \Sp^{\J}\times \Z^{op}_{\geq 0} \to (\Sp^{\J}\times \Z^{op}_{\geq 0})_{\text{poly}}$ \emph{relative} to $\Z^{op}_{\geq 0}.$    The strategy is to use Proposition 7.3.2.6 of \cite{HA}, which tells us that we need to check the following three statements:
+On the fibers over an integer $[n] \in \Z^{op}_{\geq 0}$, we see the inclusion $\Sp^{\J} \leftarrow \Poly^{\leq n}(\Sp^{\J}).$  It is in this sense that the current picture is a parametrized version of the ordinary polynomial approximations.  We now claim that $i$ admits a left adjoint $P^{\text{total}}: \Sp^{\J}\times \Z^{op}_{\geq 0} \to (\Sp^{\J}\times \Z^{op}_{\geq 0})_{\text{poly}}$ \emph{relative} to $\Z^{op}_{\geq 0}.$    The strategy is to use Proposition 7.3.2.6 of \cite{HA}, which tells us that we need to check the following three statements:
 \begin{enumerate}
 \item The functors $p$ and $q$ are locally Cartesian categorical fibrations.
 \item For each $[n]\in \Z^{op}_{\geq 0}$, the functor on fibers $i|_{p^{-1}[n]}:p^{-1}[n] \to q^{-1}[n]$ admits a right adjoint.  
@@ -482,9 +483,42 @@ On the fiber over an integer $[n] \in \Z^{op}_{\geq 0}$, we see the inclusion $\
 
 Condition (2) is clear from the existence of polynomial approximations in Weiss calculus.  To see conditions (1) and (3), we first note that $q$ is in fact a Cartesian fibration because it is a projection from a product.  Moreover, the $q$-Cartesian morphisms are precisely those morphisms which are equivalences on the $\Sp^{\J}$ coordinate.  We now observe that for any pair $(F, [m]) \in \Sp^{\J}\times \Z^{op}_{\geq 0}$ such that $F\in \Poly^{\leq m}(\Sp^{\J})$ and morphism $\sigma :[n]\to [m]$, any $q$-Cartesian edge lying over $\sigma$ with target $(F, [m])$ is also in the full subcategory $(\Sp^{\J}\times \Z^{op}_{\geq 0})_{\text{poly}}.$  This implies that $p$ is also a Cartesian fibration and that the inclusion $i$ carries $p$-Cartesian edges to $q$-Cartesian edges.  Since any Cartesian fibration is a categorical fibration (\cite[Proposition 3.3.1.7]{HTT}), conditions (1) and (3) are verified.  
 
-It remains to check that %Tow is the right functor...what does that mean?  
+We now wish to look at the adjunction at the level of sections of $q$ and $p$.  Considering functors from $\Z_{\geq 0}^{op}$ into Diagram \ref{dia:reladj}, we obtain a new diagram %***draw the diagram, q_*, p_*, P^{\text{total}}_*
+
+which exhibits $P^{\text{total}}$ as a left adjoint of $i_*$ relative to $\Fun(\Z_{\geq 0}^{op},\Z_{\geq 0}^{op}).$  Proposition 7.3.2.5 of \cite{HA} ensures that there is an adjunction at the level of fibers above $\text{id}\in \Fun(\Z_{\geq 0}^{op},\Z_{\geq 0}^{op})$: $$\text{Tow}^*: \Cofil(\Sp^{\J}) \xrightleftharpoons{\quad} \Cofil(\Sp^{\J})_{\text{poly}}:j .$$  Finally, we may precompose with the constant functor $\Sp^{\J}\to \Cofil(\Sp^{\J})$ to obtain the functor $\text{Tow}:\Sp^{\J} \to \Cofil(\Sp^{\J})_{\text{poly}}.$  
+
+It remains to check that $\text{Tow}$ actually recovers the Weiss tower.  %Tow is the right functor...what does that mean?  
 
 
+This concludes the construction of $\text{Tow}.$ 
+\end{cnstr}
+
+
+The next task is to understand the monoidal structure on $\text{Tow}$.  The idea is that we would like to express $\text{Tow}(F\wedge F)$ in terms of $\text{Tow}(F)$ and a ``Day convolution'' monoidal structure on $\Cofil(\Sp^{\J}).$  However, there is trouble defining the convolution as in Section \ref{sect:monoidal} because smash product does not preserve \emph{limits} of spectra in each variable separately.  The situation becomes better if one restricts to the category $\Sp_{\fin}$ of \emph{finite} spectra.  The full subcategory $\Fun(\Z_{\geq 0}, \Sp_{\fin}^{\J})\subset \Fil(\Sp^{\J})$ is closed under the convolution product defined in Section \ref{sect:monoidal}, and therefore inherits a symmetric monoidal structure.  By Spanier-Whitehead duality, this induces a symmetric monoidal structure on $\Fun(\Z_{\geq 0},(\Sp_{\fin}^{\J})^{op}),$ which in turn induces a symmetric monoidal structure on its opposite, $\Cofil(\Sp^{\J}_{\fin}).$  This can be described explicitly as sending %insert some pictures!
+
+%restrict to functors, all of whose P_n's are finite
+One would now hope that Tow restricts to a symmetric monoidal functor when we replace $\Sp^{\J}$ by $\Sp^{\J}_{\fin}.$  However, it is not clear that the derivatives of a functor $\J \to \Sp$ factoring through $\Sp_{\fin}$ will still factor through $\Sp_{\fin}.$  We may simply restrict to this situation.  
+
+\begin{dfn} \label{dfn:stronglyfinite}
+
+Let $\overline{\Sp}^{\J}_{\fin}$ denote the full subcategory of functors $F\in \Sp^{\J}$ such that the functors $F$ and $P_nF$ factor through $\Sp_{\fin}^{\J}$ for all $n$.  We will refer to objects of $\overline{\Sp}^{\J}_{\fin}$ as \emph{strongly finite} functors.  
+\end{dfn}
+
+\begin{prop}\label{prop:weissmonoidal}
+The Weiss tower functor $\text{Tow}$ restricts to a symmetric monoidal functor $$\text{Tow}_{\text{fin}}: \overline{\Sp}^{\J}_{\fin} \to \Cofil(\overline{\Sp}^{\J}_{\fin}).$$
+\end{prop}
+\begin{proof}
+Combining Construction \ref{cnstr:tower} with Definition \ref{dfn:stronglyfinite}, we obtain the diagram
+
+$$
+\begin{tikzcd}
+ \Cofil(\Sp^{\J})  &\Cofil(\Sp^{\J})_{\text{poly}} \arrow[l,"j"]  \\
+ \Cofil(\overline{\Sp}^{\J}_{\fin}) \arrow[u,hook] &  \Cofil(\overline{\Sp}^{\J}_{\fin})_{\text{poly}} \arrow[l,"\overline{j}"]  \arrow[u,hook]\\
+ \end{tikzcd}
+$$
+of fully faithful functors.  Recall that $j$ admits a left adjoint $\text{Tow}_*.$  It is clear that $\text{Tow}_*$ restricts to a functor $\overline{\text{Tow}}_*:  \Cofil(\overline{\Sp}^{\J}_{\fin}) \to  \Cofil(\overline{\Sp}^{\J}_{\fin})_{\text{poly}}.$  It follows that $\overline{\text{Tow}}_*$ is left adjoint to $\overline{j}.$  
+
+Observe that a finite limit of functors which are polynomial of degree at most $n$ is itself polynomial of degree at most $n$.  This implies that the full subcategory $\overline{j}$ is closed under the symmetric monoidal structure.  It follow that the left adjoint $\overline{\text{Tow}}_*$ naturally admits the structure of a lax symmetric monoidal functor.  It remains to show that $\overline{\text{Tow}}_*$ is in fact symmetric monoidal.  
 
 
 \end{proof}
