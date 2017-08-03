@@ -1,0 +1,24 @@
+
+Let $[n]$ denote the linearly ordered set of integers $0\leq i\leq n$.  Define $\Fil_n = \text{Fun}([n], \Sp^{\J})$ and $\Cofil_n = \text{Fun}([n]^{\text{op}},\Sp^{\J})$.  These categories admit functors to $\Sp^{\J}$ by taking colimit and limit, respectively.  Let $\C_n = \Fil_n \times_{\Sp^{\J}} \Cofil_n.$  Finally, let $\Gr_n = \text{Fun}([n]^{\text{ds}}, \Sp^{\J})$ where $[n]^{\text{ds}}$ denotes the underlying discrete category.  We have the following lemma:
+
+\begin{lem}
+For all integers $n>0$, there is a fully faithful functor $i_n:\Gr_{n+1} \to \C_n.$  
+\end{lem}
+\begin{proof}
+An element of $\C_n$ is given by a sequence of functors 
+\begin{center}
+$X_0 \longrightarrow X_1 \longrightarrow \cdots \longrightarrow X_n \simeq Y_n \longrightarrow \cdots \longrightarrow Y_1 \longrightarrow Y_0$ 
+\end{center}
+where the middle 
+\end{proof}
+
+We may then take inverse limits to get a category $\C_\infty = \Fil(\Sp^{\J}) \times_{\Sp^{\J}} \Cofil(\Sp^{\J})$ and a functor $i: \Gr \to \C_\infty$. 
+
+\begin{cor}
+The functor $i$ is fully faithful.
+\end{cor}
+\begin{proof}
+%This amounts to checking that taking inverse limits retains fully faithfulness.  this is obvious, thanks to arpon
+\end{proof}
+
+at the end, restrict connectivity so that it's monoidal

@@ -1,0 +1,47 @@
+
+In this brief section, we remark that the $\mathbb{A}_\infty$-splitting $$\Sigma^{\infty}_+ \Omega SU(n) \simeq ???$$ becomes $\mathbb{E}_2$ after smashing with $MU$.  More precisely, we show that there is an equivalence of $\mathbb{E}_2$-$MU$-algebras
+$$MU \smsh \Sigma^{\infty}_+ \Omega SU(n) \simeq ???.$$
+
+The $\mathbb{A}_\infty$-$MU$-algebra equivalence constructed in Section \ref{sec:AooSplit} is realized by a map of $\mathbb{A}_\infty$-$\mathbb{S}$-algebras
+\begin{equation} \label{SplittingMap}
+\Sigma^{\infty} \Omega SU(n) \longrightarrow ???.
+\end{equation}
+
+Our task is to show that (\ref{SplittingMap}) may be refined to a morphism of $\mathbb{E}_2$-ring spectra.  We do so by obstruction theory--the key fact powering our proof is that 
+$$MU_*\left(\Omega SU(n)\right) \cong 0$$
+whenever $*$ is odd.  \textbf{FIND A REFERENCE}.  In fact, inspired by \cite{ChadwickMandell}, we prove the following more general result:
+
+\begin{thm}
+Suppose that $R$ is an $\mathbb{E}_2$-ring spectrum with no homotopy groups in odd degrees.  Then any $\mathbb{A}_\infty$-ring homomorphism %did you need to start with an A\infty map, or just a homotopy ring map
+$$\Sigma^{\infty}_+ \Omega SU(n) \rightarrow R$$
+lifts to a morphism of $\mathbb{E}_2$-ring spectra.
+\end{thm}
+
+\begin{proof} 
+By taking connective covers, one learns that any $\mathbb{A}_\infty$-ring homomorphism
+$$\Sigma^{\infty}_+ \Omega SU(n) \rightarrow R$$
+must factor through the natural $\mathbb{E}_2$-algebra map $\tau_{\ge 0} R \rightarrow R$.  Thus, without loss of generality we will assume that $R$ is $(-1)$-connected.
+
+It is clear that the composite $\mathbb{A}_\infty$-ring homomorphism
+$$\Sigma^{\infty}_+ \Omega SU(n) \longrightarrow R \longrightarrow \tau_{\le 0} R \simeq H\pi_0(R)$$
+may be lifted to an $\mathbb{E}_2$-ring homomorphism factoring through $\tau_{\le 0} \Sigma^{\infty}_+ \Omega SU(n) \simeq H\mathbb{Z}$.   Suppose now for $q>0$ that we have chosen an $\mathbb{E}_2$-ring homomorphism 
+$$\Sigma^{\infty}_+ \Omega SU(n) \longrightarrow \tau_{\le q-1} R$$
+lifting the given $\mathbb{A}_\infty$-algebra map
+$$\Sigma^{\infty}_+ \Omega SU(n) \longrightarrow R \longrightarrow \tau_{\le q-1} R.$$
+We will show that there is no obstruction to the existence of a further $\mathbb{E}_2$-lift $$\Sigma^{\infty}_+ \Omega SU(n) \longrightarrow \tau_{\le q} R.$$
+According to \cite[Theorem $4.1$]{ChadwickMandell}, there is a diagram of principal fibrations
+$$
+\begin{tikzcd}
+\mathbb{E}_2\text{-Ring}(\Sigma^{\infty}_+ \Omega SU(n), \tau_{\le q} R) \arrow{r} \arrow{d} & \mathbb{A}_\infty\text{-Ring}(\Sigma^{\infty}_+ \Omega SU(n), \tau_{\le q} R) \arrow{d} \\
+\mathbb{E}_2\text{-Ring}(\Sigma^{\infty}_+ \Omega SU(n), \tau_{\le q-1} R) \arrow{r} \arrow{d} & \mathbb{A}_\infty\text{-Ring}(\Sigma^{\infty}_+ \Omega SU(n), \tau_{\le q-1} R) \arrow{d} \\
+\cS_*(BSU(n),K(\pi_q R,q+3)) \arrow{r} & \cS_*(SU(n),K(\pi_q R,q+2))
+\end{tikzcd}
+$$
+For $q$ odd, $\tau_{\le q-1} R \simeq \tau_{\le q} R$, so there is no obstruction.  Let us therefore assume that $q$ is even.
+
+Since the cohomology of $BSU(n)$ is even-concentrated with coefficients in any abelian group, we have that $\pi_0 \cS_*(BSU(n),K(\pi_q R,q+3)) \cong H^{q+3}(BSU(n);\pi_q R)$ is zero.  It follows then that the given class $$x \in \pi_0 \mathbb{E}_2\text{-Ring}(\Sigma^{\infty}_+ \Omega SU(n), \tau_{\le q-1} R)$$ admits some lift $$\widetilde{x} \in \mathbb{E}_2\text{-Ring}(\Sigma^{\infty}_+ \Omega SU(n), \tau_{\le q} R).$$  We may need to modify $\widetilde{x}$ to match our chosen $\mathbb{A}_\infty$-ring homomorphism.  This is always possible so long as the map
+$$\pi_1(\cS_*(BSU(n),K(\pi_q R,q+3))) \longrightarrow \pi_1(\cS_*(SU(n),K(\pi_q R,q+2)))$$
+is surjective.  Said in other terms, this is just the map
+$$H^{2q+2}(BSU(n);\pi_q R) \longrightarrow H^{2q+1}(SU(n);\pi_q R) \cong H^{2q+2}(\Sigma SU(n);\pi_q R)$$
+induced by the natural map $\Sigma SU(n) \rightarrow BSU(n)$.  It is a classical fact that this map is surjective (it follows from a calculation with the bar spectral sequence, using the fact that the cohomology of $SU(n)$ is exterior). \textbf{Maybe you can check this Allen}.
+\end{proof}
