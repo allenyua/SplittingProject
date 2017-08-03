@@ -1,0 +1,83 @@
+\begin{thebibliography}{May77}
+
+\bibitem[Aro01]{Arone}
+Greg Arone.
+\newblock The {M}itchell-{R}ichter filtration of loops on {S}tiefel manifolds
+  stably splits.
+\newblock {\em Proc. Amer. Math. Soc.}, 129(4):1207--1211, 2001.
+
+\bibitem[CM88]{CrabbMitchell}
+M.~C. Crabb and S.~A. Mitchell.
+\newblock The loops on {${\rm U}(n)/{\rm O}(n)$} and {${\rm U}(2n)/{\rm
+  Sp}(n)$}.
+\newblock {\em Math. Proc. Cambridge Philos. Soc.}, 104(1):95--103, 1988.
+
+\bibitem[CM15]{ChadwickMandell}
+Steven~Greg Chadwick and Michael~A. Mandell.
+\newblock {$E_n$} genera.
+\newblock {\em Geom. Topol.}, 19(6):3193--3232, 2015.
+
+\bibitem[GS09]{GepnerSnaith}
+David Gepner and Victor Snaith.
+\newblock On the motivic spectra representing algebraic cobordism and algebraic
+  {$K$}-theory.
+\newblock {\em Doc. Math.}, 14:359--396, 2009.
+
+\bibitem[Liu63]{Liulevicius}
+Arunas Liulevicius.
+\newblock A theorem in homological algebra and stable homotopy of projective
+  spaces.
+\newblock {\em Trans. Amer. Math. Soc.}, 109:540--552, 1963.
+
+\bibitem[Lur15]{LurieRot}
+Jacob Lurie.
+\newblock Rotation {I}nvariance in {A}lgebraic {K}-theory.
+\newblock {\em \newline {A}vailable at http://www.math.harvard.edu/~lurie/},
+  2015.
+
+\bibitem[Lur16]{HA}
+Jacob Lurie.
+\newblock Higher {A}lgebra.
+\newblock {\em \newline {A}vailable at http://www.math.harvard.edu/~lurie/},
+  2016.
+
+\bibitem[Lur17]{HTT}
+Jacob Lurie.
+\newblock Higher {T}opos {T}heory.
+\newblock {\em \newline {A}vailable at http://www.math.harvard.edu/~lurie/},
+  2017.
+
+\bibitem[May77]{MQRT}
+J.~Peter May.
+\newblock {\em {$E_{\infty }$} ring spaces and {$E_{\infty }$} ring spectra}.
+\newblock Lecture Notes in Mathematics, Vol. 577. Springer-Verlag, Berlin-New
+  York, 1977.
+\newblock With contributions by Frank Quinn, Nigel Ray, and J\o rgen Tornehave.
+
+\bibitem[Mit86]{MitchellSU(n)}
+Stephen~A. Mitchell.
+\newblock A filtration of the loops on {${\rm SU}(n)$} by {S}chubert varieties.
+\newblock {\em Math. Z.}, 193(3):347--362, 1986.
+
+\bibitem[Sna77]{SnaithNotMultiplicative}
+Victor Snaith.
+\newblock The total {C}hern and {S}tiefel-{W}hitney classes are not infinite
+  loop maps.
+\newblock {\em Illinois J. Math.}, 21(2):300--304, 1977.
+
+\bibitem[Sna79]{SnaithBook}
+Victor~P. Snaith.
+\newblock Algebraic cobordism and {$K$}-theory.
+\newblock {\em Mem. Amer. Math. Soc.}, 21(221):vii+152, 1979.
+
+\bibitem[Sna81]{SnaithOriginal}
+Victor Snaith.
+\newblock Localized stable homotopy of some classifying spaces.
+\newblock {\em Math. Proc. Camb. Phil. Soc.}, 89(2):325--330, 1981.
+
+\bibitem[Wei95]{Weiss}
+Michael Weiss.
+\newblock Orthogonal calculus.
+\newblock {\em Trans. Amer. Math. Soc.}, 347(10):3743--3796, 1995.
+
+\end{thebibliography}

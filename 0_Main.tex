@@ -1,0 +1,226 @@
+\documentclass[reqno, oneside]{amsart}
+\usepackage{etex}
+\usepackage{hyperref}
+
+%\usepackage[export]{adjustbox}
+%\usepackage[dvips]{pict2e}
+%\usepackage{amsmath,amsthm}
+\usepackage{comment}
+\usepackage{amsfonts, fullpage, fancyhdr, mathtools, qtree, amsmath, tipa, amssymb, hyperref, url, amsthm, subfigure, xy, tikz-cd, verbatim}
+
+\usepackage[color=cyan!40]{todonotes}
+
+
+
+\usepackage[a4paper]{geometry}
+
+
+%----------------------------------------------------------------------%
+
+%\renewcommand{\appendixname}{Example}
+%\swapnumbers
+
+\theoremstyle{definition}
+\newtheorem{nul}{}[section]
+\newtheorem{dfn}[nul]{Definition}
+\newtheorem{axm}[nul]{Axiom}
+\newtheorem{rmk}[nul]{Remark}
+\newtheorem{term}[nul]{Terminology}
+\newtheorem{cnstr}[nul]{Construction}
+\newtheorem{ntn}[nul]{Notation}
+\newtheorem{exm}[nul]{Example}
+\newtheorem{obs}[nul]{Observation}
+\newtheorem{ctrexm}[nul]{Counterexample}
+\newtheorem{rec}[nul]{Recollection}
+\newtheorem{exr}[nul]{Exercise}
+\newtheorem{wrn}[nul]{Warning}
+\newtheorem*{dfn*}{Definition}
+\newtheorem*{axm*}{Axiom}
+\newtheorem*{ntn*}{Notation}
+\newtheorem*{exm*}{Example}
+\newtheorem*{exr*}{Exercise}
+\newtheorem*{int*}{Intuition}
+\newtheorem*{qst*}{Question}
+
+
+\theoremstyle{plain}
+\newtheorem{sch}[nul]{Scholium}
+\newtheorem{thm}[nul]{Theorem}
+\newtheorem{prop}[nul]{Proposition}
+\newtheorem{lem}[nul]{Lemma}
+\newtheorem{sublem}{Lemma}[nul]
+\newtheorem{por}[nul]{Porism}
+\newtheorem{cnj}[nul]{Conjecture}
+\newtheorem{cor}{Corollary}[nul]
+\newtheorem*{thm*}{Theorem}
+\newtheorem*{prop*}{Proposition}
+\newtheorem*{cor*}{Corollary}
+\newtheorem*{lem*}{Lemma}
+\newtheorem*{cnj*}{Conjecture}
+
+
+%----------------------------------------------------------------------%
+
+\DeclareMathOperator{\Aut}{\text{Aut}}
+\DeclareMathOperator{\Tr}{\text{Tr}}
+\DeclareMathOperator{\Res}{\text{Res}}
+\DeclareMathOperator{\im}{\text{im}}
+\DeclareMathOperator*{\colim}{\text{colim}}
+\DeclareMathOperator{\Map}{\text{Map}}
+\DeclareMathOperator{\cofiber}{\text{cofiber}}
+\DeclareMathOperator{\fiber}{\text{fiber}}
+\DeclareMathOperator{\Hom}{\text{Hom}}
+\DeclareMathOperator{\Skel}{\text{Skel}}
+\DeclareMathOperator*{\hocolim}{\text{hocolim}}
+\DeclareMathOperator*{\holim}{\text{holim}}
+\DeclareMathOperator{\smsh}{\wedge}
+
+
+
+\DeclareMathOperator{\C}{\mathcal{C}}
+\DeclareMathOperator{\D}{\mathcal{D}}
+\DeclareMathOperator{\CP}{\mathbb{CP}}
+\DeclareMathOperator{\Z}{\mathbb{Z}}
+\DeclareMathOperator{\E}{\mathbb{E}}
+\DeclareMathOperator{\Q}{\mathbb{Q}}
+\DeclareMathOperator{\m}{\mathfrak{m}}
+\DeclareMathOperator{\G}{\mathbb{G}}
+\DeclareMathOperator{\F}{\mathbb{F}}
+\DeclareMathOperator{\cG}{\mathcal{G}}
+\DeclareMathOperator{\cF}{\mathcal{F}}
+\DeclareMathOperator{\cS}{\mathcal{S}}
+\DeclareMathOperator{\Ring}{\textbf{Ring}}
+\DeclareMathOperator{\Aff}{\textbf{Aff}}
+\DeclareMathOperator{\Spec}{\text{Spec}}
+\DeclareMathOperator{\Poly}{\text{Poly}}
+\DeclareMathOperator{\Ext}{\text{Ext}}
+\DeclareMathOperator{\nil}{\text{nil}}
+\DeclareMathOperator{\fin}{\text{fin}}
+\DeclareMathOperator{\Gr}{\textbf{Gr}}
+\DeclareMathOperator{\Fil}{\textbf{Fil}}
+\DeclareMathOperator{\Fun}{\text{Fun}}
+\DeclareMathOperator{\Alg}{\text{Alg}}
+\DeclareMathOperator{\Sp}{\text{Sp}}
+\DeclareMathOperator{\Spaces}{\mathcal{S}}
+\DeclareMathOperator{\S0}{\mathbb{S}}
+\DeclareMathOperator{\J}{\mathcal{J}}
+\DeclareMathOperator{\Cofil}{\textbf{Cofil}}
+
+%----------------------------------------------------------------------%
+
+\usepackage{tikz}
+\usetikzlibrary{matrix,arrows,decorations}
+\usepackage{tikz-cd}
+
+\usepackage{adjustbox}
+
+%----------------------------------------------------------------------%
+
+\hyphenation{Mack-ey mon-oid-al Wald-hau-sen}
+
+%----------------------------------------------------------------------%
+%----------------------------------------------------------------------%
+
+
+\begin{document}
+
+\title{Multiplicative Structure in the Stable Splitting of $\Omega SU(n)$}
+\author{Jeremy Hahn and Allen Yuan}
+
+\begin{abstract}
+We show that the Schubert filtration of the affine Grassmannian for $SL_n(\mathbb{C})$, known to topologists as the Bott filtration on $\Omega SU(n)$, stably splits as an $\mathbb{A}_\infty$ but not as an $\mathbb{E}_2$ filtration.  We further prove that the splitting becomes $\mathbb{E}_2$ after smashing with complex cobordism.  As a limiting case, we study the coherence of Snaith's construction of periodic complex cobordism.  We determine that it is a construction of $MUP$ as an $\mathbb{E}_2$-ring spectrum, but not as an $\mathbb{E}_3$-ring spectrum.
+\end{abstract}
+
+
+
+%----------------------------------------------------------------------%
+%----------------------------------------------------------------------%
+
+
+\setcounter{tocdepth}{1}
+\maketitle
+
+\tableofcontents
+
+
+%----------------------------------------------------------------------%
+
+\section{Introduction}
+
+\input{Introduction.tex}
+
+\section{Filtered and Graded Ring Spectra} \label{sec:FilGra}
+
+\input{FilteredAndGraded.tex}
+
+\section{Filtrations on \texorpdfstring{$\Omega SU(n)$}{Loops SU(n)} and Loop Spaces of Steifel Manifolds}
+
+\input{MitchellRichterFiltration.tex}
+
+\section{A General Splitting Machine}
+
+\input{SplittingMachine.tex}
+
+\section{Multiplicative Aspects of Weiss Calculus}
+
+\input{MultiplicativeWeiss.tex}
+
+\section{Stable \texorpdfstring{$\mathbb{A}_\infty$}{Aoo} Splittings} \label{sec:AooSplit}
+
+\input{AInfinitySplitting.tex}
+
+\section{\texorpdfstring{$\mathbb{E}_2$}{E2} Splittings in Complex Cobordism} \label{sec:MUE2}
+
+\input{SplitInBordism.tex}
+
+\section{Square Zero Algebras}
+
+\input{SquareZero.tex}
+
+\section{Obstructions to a General \texorpdfstring{$\mathbb{E}_2$}{E2}-splitting}
+
+\input{Obstructions.tex}
+
+\section{Snaith's Construction of Periodic Complex Bordism} \label{sec:SnaithSplitting}
+
+\input{PeriodicComplexBordism.tex}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Miscellaneous stuff here}
+
+It would be nice to at some point deal with showing the associated graded $E_2$ structure of BU is the thom spectrum VMU(n).  I've directly pasted in some writing from a previous argument I claimed, but it definitely uses that $\coprod BU(n)$ is an $E_2$ algebra over $\Z _{\geq 0}$ which I never got straight an actual proof of.  
+
+\begin{prop}The associated graded of $\Sigma^{\infty}_+BU$ is $E_2$ equivalent to the Thom spectrum $\bigvee MU(n).$
+\end{prop}
+\begin{proof}
+Let $R = BU$ with its natural filtration, and let $R^{\oplus} = \coprod BU(n)$ with its natural filtration.  Let $M$ be the ($E_\infty$) filtered spectrum which is $MU(n)$ in degree $n$, and all maps are $0$.  In other words, $\bigvee MU(n)$ with its natural filtration is $I(res(M))$.  
+
+We begin with a filtered $E_\infty$ map $z:R^\oplus \to I(res(M))$ coming from the zero section.  Then, $R^\oplus$ comes with the structure of an $E_2$ algebra over $\Z_{\geq 0}^{fil}$.  In fact, $I(res(M))$  has a trivial structure as an $E_\infty$-algebra over $\Z_{\geq 0}^{fil}$ via the augmentation $\Z_{\geq 0}^{fil}\to S^{0,fil} \to I(res(M))$.  We may then tensor $z$ along the augmentation to get a map of $E_2$ filtered spectra $z':R \to I(res(M))$.  
+
+There is a canonical equivalence $I(res(M)) \otimes \mathbb{A} \simeq M$ because $M$ is in the image of $\mathbb{A} \otimes I(-)$ (that is, all the maps in the filtration of $M$ were zero).  As such, $M$ acquires a canonical structure as an $\mathbb{A}$ algebra such that the map $M \otimes \mathbb{A} \to M$ is a map of $E_2$ rings (in fact I think it's $E_\infty$?).  
+
+Finally, we observe that we may tensor $z'$ with $\mathbb{A}$ and compose with the multiplication map to get an $E_2$ map $R\otimes A \to M \otimes A \to M$ which is the right thing up to homotopy, so it's an equivalence.  
+\end{proof}
+
+******  
+
+What is $\Sigma^{\infty}_+ \Omega SU(n)[\beta^{-1}]$, by the way?  Is it related to a periodic version of the $X(n)$-filtration of $MU$??
+
+\bibliographystyle{alpha}
+\bibliography{Bibliography}
+
+\end{document}

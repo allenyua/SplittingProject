@@ -1,0 +1,13 @@
+\contentsline {section}{\tocsection {}{1}{Introduction}}{1}{section.1}
+\contentsline {section}{\tocsection {}{2}{Filtered and Graded Ring Spectra}}{4}{section.2}
+\contentsline {subsection}{\tocsubsection {}{2.1}{Monoidal structures}}{4}{subsection.2.1}
+\contentsline {section}{\tocsection {}{3}{Filtrations on $\Omega SU(n)$ and Loop Spaces of Steifel Manifolds}}{5}{section.3}
+\contentsline {section}{\tocsection {}{4}{A General Splitting Machine}}{5}{section.4}
+\contentsline {section}{\tocsection {}{5}{Multiplicative Aspects of Weiss Calculus}}{6}{section.5}
+\contentsline {section}{\tocsection {}{6}{Stable $\mathbb {A}_\infty $ Splittings}}{10}{section.6}
+\contentsline {section}{\tocsection {}{7}{$\mathbb {E}_2$ Splittings in Complex Cobordism}}{10}{section.7}
+\contentsline {section}{\tocsection {}{8}{Square Zero Algebras}}{12}{section.8}
+\contentsline {section}{\tocsection {}{9}{Obstructions to a General $\mathbb {E}_2$-splitting}}{14}{section.9}
+\contentsline {section}{\tocsection {}{10}{Snaith's Construction of Periodic Complex Bordism}}{15}{section.10}
+\contentsline {section}{\tocsection {}{11}{Miscellaneous stuff here}}{15}{section.11}
+\contentsline {section}{\tocsection {}{}{References}}{16}{section*.2}

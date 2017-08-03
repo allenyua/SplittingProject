@@ -1,0 +1,66 @@
+
+We will now discuss square zero extensions in our framework.  For this, it will be convenient to work with the category $\Gr_u$ of \emph{unital} graded spectra in the strong sense that the unit map induces an equivalence in grading 0.  
+Note that there is a fully faithful functor $T:\Sp \to \Gr_u$ which sends a spectrum $A$ to the graded spectrum $$S^0, A, *, *, \cdots.$$  Its essential image is the full subcategory $i: \Gr^{\leq 1}_u \to \Gr_u$ consisting of unital graded spectra $X$ such that $X_k$ is contractible for $k>1$.  In this section, we analyze graded spectra in this subcategory $\Gr^{\leq 1}_u$. Our goal is to show any such graded spectrum admits an essentially unique $\E_n$-algebra structure for any $0\leq n\leq \infty.$  This goal is realized in Proposition \ref{prop:sq0unique}.  
+
+
+The inclusion $i$ fits into an adjunction
+$$L^{\leq 1}:  \Gr_u \xrightleftharpoons{\quad} \Gr_u^{\leq 1} : i$$ where the left adjoint $L^{\leq 1}$ can be thought of as truncating above grading 1.  The localization $L^{\leq 1}$ is visibly compatible with the monoidal structure in the sense that for any $f:X\to Y$ in $\Gr_u$ such that $L^{\leq 1}f$ is an equivalence and any $Z\in \Gr_u$, the natural map $L^{\leq 1} (X\wedge Z) \to L^{\leq 1}(Y\wedge Z)$ is an equivalence.  We are now in the situation of Proposition 2.2.1.9 of \cite{HA}, and so we may conclude that $\Gr_u^{\leq 1}$ inherits a symmetric monoidal structure such that $L^{\leq 1}$ is symmetric monoidal and the inclusion $i$ is lax monoidal.  This monoidal structure can be described explicitly by the formula $$X \otimes_{\Gr_u^{\leq 1}} Y = L^{\leq 1}(X \otimes_{\Gr_u} Y).$$
+
+We may then apply Remark 7.3.2.13 of \cite{HA} to obtain an adjunction at the level of algebras for any integer $0\leq n\leq \infty$:
+$$L^{\leq 1}_{\text{alg}}: \Alg_{\E_n}( \Gr_u)  \xrightleftharpoons{\quad} \Alg_{\E_n}(\Gr_u^{\leq 1}) : i_{\text{alg}}.$$
+
+Since the counit $Li \to \text{id}$ before lifting to algebras is an equivalence, we have that the counit $L^{\leq 1}_{\text{alg}}  i_{\text{alg}} \to \text{id}$ is also an equivalence.  This implies in particular that $i_{\text{alg}}$ is fully faithful.  We are now in position to prove the main proposition of this section:
+
+\begin{prop}\label{prop:sq0unique}
+Let $0\leq n\leq \infty$ be an integer.  Then, there is a sequence of equivalences of categories $$\Sp \xrightarrow{\bar{T}} \Gr_u^{\leq 1} \longrightarrow \Alg_{\E_n}(\Gr_u^{\leq 1}) \longrightarrow  \Alg_{\E_n}( \Gr_u) \times_{\Gr_u} \Gr^{\leq 1}_u $$ where the first functor $\bar{T}$ is obtained by restricting the codomain of the functor $T:\Sp \to \Gr_u.$  In particular, for any $X\in \Gr_u^{\leq 1}$, the graded spectrum $iX\in \Gr_u$ has an essentially unique $\E_n$-algebra structure.  
+\end{prop}
+\begin{proof}
+The third arrow is defined by $i_{\text{alg}}$, and is an equivalence because $i_{\text{alg}}$ is fully faithful, so it remains to consider the first two arrows.  
+
+We have already seen that the functor $\bar{T}: \Sp \to \Gr^{\leq 1}_u$ is an equivalence of categories.  However, it may be promoted to a symmetric monoidal equivalence when $\Sp$ is given the cocartesian monoidal structure - that is, the monoidal structure defined by $\vee$, the coproduct.  This monoidal structure has a very special property: by Proposition 2.4.3.9 of \cite{HA}, there is for each $n$ an equivalence $\Sp \simeq \Alg^{\vee}_{\E_n}(\Sp)$, where the superscript $\vee$ indicates that we are considering algebras under the wedge.  Informally, this says that any $Y\in \Sp$ admits an essentially unique $\E_n$-algebra structure under the coproduct.  It follows that the same holds for any $X\in \Gr^{\leq 1}_u$, and so there is an equivalence $\Gr^{\leq 1}_u \to \Alg_{\E_n}(\Gr^{\leq 1}_u)$, as desired.    
+\end{proof}
+
+
+\begin{term}
+Let $0\leq n\leq \infty$ be an integer.  By taking composing with the colimit functor, Proposition \ref{prop:sq0unique} provides a functor $$\omega_n: \Sp \to \Alg_{\E_n}(\Sp)$$ which we will refer to as the square zero extension.  It sends a spectrum $X$ to a ring with underlying spectrum $S^0\vee X$.  We will call any $\E_n$-algebra structure produced via Proposition \ref{prop:sq0unique} or $\omega_n$ a \emph{square zero} $\E_n$ structure.  
+\end{term}
+
+\begin{rmk} \label{rmk:maptosq0}
+For any $X\in \Alg_{\E_n}(\Gr_u)$, we have a map $X\to i_{alg}L^{\leq 1}_{alg}X$ of $\E_n$-algebras.  Taking colimits, we obtain a map $\colim X \to \colim i_{alg}L^{\leq 1}_{alg}X$ of $\E_n$ ring spectra.
+ We may summarize this informally by saying that any $\E_n$-split ring spectrum $X$ has an $\E_n$ map to the square zero extension determined by its degree one component $X_1$.  
+ \end{rmk}
+
+We will need to understand structured maps into square zero extensions.  This amounts to understanding the space of units.  In classical algebra, given a commutative ring $A$ and an $A$-module $M$, the group of units of the square zero extension are given by the formula $$(A\oplus M)^{\times} \simeq A^{\times} \times M.$$ A similar formula holds in our context for suspension spectra of connected spaces.  
+
+\begin{prop}\label{prop:sq0units}
+Let $0\leq n\leq \infty$ be an integer and $X\in \cS$ a connected space.  
+ There is a canonical equivalence $$GL_1(\omega_n (\Sigma^{\infty} X)) \simeq GL_1(S^0) \times QX$$ of $\E_n$-algebras in spaces, where $QX$ is our notation for $\Omega^{\infty}\Sigma^\infty X$.  
+\end{prop}
+\begin{proof}
+The functors $\omega_n$ are compatible under restriction, so it suffices to prove the statement for $n=\infty.$  For this case, we will show that there is a splitting $$gl_1(\omega_\infty(\Sigma^{\infty}X)) \simeq gl_1(S^0) \vee \Sigma^\infty X$$ of spectra, where $gl_1$ denotes the spectrum of units of an $\E_\infty$-ring introduced in \cite{MQRT}.  We first look at what happens on homotopy.  Recall that for any $\E_\infty$ ring spectrum $Y$, we have the formula $$\pi_*(gl_1(Y)) \simeq (\pi_*(Y))^\times$$ where on the right hand side, we consider $\pi_*(Y)$ as a graded ring.  In our case, this yields an identification $$\pi_*(gl_1(\omega_\infty (\Sigma^{\infty}X))) \simeq (\pi_*(S^0) \oplus \pi_*(\Sigma^{\infty}X))^\times \simeq \pi_*(S^0)^{\times} \times \pi_*(\Sigma^\infty X)$$
+where we have used that on homotopy, $\omega_\infty (\Sigma^\infty X)$ is a square zero extension.  To conclude the proof, it suffices to show that the two factors on the right hand side can be realized by maps of spectra.  
+
+The first factor is realized simply by $gl_1$ of the unit map $S^0 \to \omega_\infty (\Sigma^\infty X).$  In fact, it is not difficult to see directly that this map is split.  
+%First, note that there is a tautological retraction sequence $$*\longrightarrow \Sigma^\infty X \longrightarrow *$$ of spectra, where $*\in \Sp$ denotes the zero object.  Applying $gl_1\circ \omega_\infty$ allows us to conclude that $gl_1(S^0) = gl_1(\omega_\infty(*))$ splits off of $gl_1(\omega_\infty(\Sigma^\infty X))$ in spectra.  In particular, this determines a map $$a:gl_1(S^0) \to gl_1(\omega_\infty (\Sigma^\infty X)).$$
+
+For the second factor, observe that since $\omega_\infty (\Sigma^\infty X)$ is an $\E_\infty$-ring, it receives a canonical $\E_\infty$ map $$\Sigma^{\infty}_+ QX \longrightarrow \omega_\infty (\Sigma^\infty X)$$ from the free $\E_\infty$ ring on $\Sigma^\infty X$ which extends the canonical map of spectra $\Sigma^\infty X \to \omega_\infty (\Sigma^\infty X).$  Now, note that there is an adjunction \cite{MQRT} $$\Sigma^{\infty}_+\Omega^\infty : \Sp \xrightleftharpoons{\quad} \Alg_{\E_\infty}(\Sp) : gl_1$$ under which the above map may be identified with a map $$b: \Sigma^\infty X \to gl_1 (\omega_\infty (\Sigma^{\infty} X))$$ of spectra.  \textbf{NEED TO SAY A TINY BIT MORE}
+%how to compute this on htpy...more or less obv but maybe should explain
+
+
+Finally, we may take the map $a\vee b: gl_1(S^0)\vee \Sigma^\infty X \to gl_1(\omega_\infty (\Sigma^{\infty} X))$ and the above comments show that it is an equivalence, as desired.  
+
+
+
+
+
+
+
+
+%recall the symmetric monoidal equivalence $\bar{T}:\Sp \to \Gr^{\leq 1}_u$ of Proposition \ref{prop:sq0unique}, where $\Sp$ is given a monoidal structure under $\vee$.  By the proof of Proposition \ref{prop:sq0unique}, there is a canonical retraction sequence of $\E_\infty$ objects in $\Sp$ (under $\vee$) $$* \longrightarrrow X \longrightarrow *.$$  Taking the associated square $0$ spectra
+
+
+
+%for general reasons we know gl_1 S^0 splits off gl_1 S^0 v X
+%by the \Sigma^\infty \Omega^\infty // gl_1 adjunction and the fact that \Sigma^\infty Q is free E_\infty, you get a map from \Sigma^\infty X to gl_1 S^0 v X that's nontrivial enough on homotopy...so then you just add em up and you're done
+
+\end{proof}

@@ -1,0 +1,64 @@
+
+It will be important for us to have a precise language for discussing filtered and graded spectra, what it means to be split, what it means to take associated graded, and the multiplicative aspects of these constructions. Here we review a framework from \cite{LurieRot} for studying graded and filtered objects.  The reader is referred to \cite{LurieRot} for a more thorough treatment and all proofs.  
+
+%Let $\C$ be a symmetric monoidal stable $\infty$-category which admits filtered colimits.  
+Let $\D$ be an $\infty$-category which we will regard as the diagram category.  Our filtered objects will be valued in the functor category $\Sp^{\D}.$  This will be no more difficult than just ordinary spectra because limits, colimits, and smash products will be considered pointwise.  
+
+Denote by $\Z_{\geq 0}$ the poset of non-negative integers, denoted $[n]$, thought of as an ordinary category where $\Hom([a],[b])$ is a singleton if $a\leq b$, and empty otherwise.  Denote by $\Z_{\geq 0}^{ds}$ the corresponding discrete category.  We may then take nerves to obtain $\infty$-categories $N(\Z_{\geq 0})$ and $N(\Z_{\geq 0}^{ds})$, which will serve as the indexing sets for filtered and graded spectra.  The reader is warned that our numbering conventions are opposite the ones in \cite{LurieRot}.
+
+\begin{dfn} 
+Let $\Gr(\Sp^{\D})$ denote the functor category $\Fun(\Z_{\geq 0}^{ds}, \Sp^{\D}).$  We shall refer to $\Gr(\Sp^{\D})$ as the category of graded objects in $\Sp^{\D}$.  Its objects can be thought of as sequences $X_0, X_1,X_2,\cdots \in \Sp^{\D}$.
+\end{dfn}
+
+\begin{dfn} 
+Let $\Fil(\Sp^{\D})$ denote the functor category $\Fun(\Z_{\geq 0}, \Sp^{\D}).$  We shall refer to $\Fil(\Sp^{\D})$ as the category of filtered objects in $\Sp^{\D}$.  Its objects can be thought of as sequences $Y_0\to Y_1\to Y_2 \to \cdots \in \Sp^{\D}$ filtering $\colim_i Y_i$.  
+\end{dfn}
+
+
+The obvious map $N(\Z_{\geq 0}^{ds}) \to N(\Z_{\geq 0})$ induces a restriction functor $\text{res}: \Fil(\Sp^{\D}) \to \Gr(\Sp^{\D})$ which can be thought of as forgetting the maps in the filtered object.  The restriction fits into an adjunction  
+$$I:\Gr(\Sp^{\D}) \xrightleftharpoons{\quad} \Fil(\Sp^{\D}) : \text{res}$$
+
+where the left adjoint $I: \Gr(\Sp^{\D}) \to \Fil(\Sp^{\D})$ is given by left Kan extension.  The functor $I$ can be described explicitly as taking a graded object $X_0,X_1,X_2,\cdots$ to the filtered object $$I(X_0, X_1, \cdots) = (X_0\to X_0\oplus X_1\to X_0 \oplus X_1\oplus X_2\to \cdots).$$   
+
+
+\subsection{Monoidal structures}\label{sect:monoidal}
+By \cite[Corollary 2.3.9]{LurieRot}, the categories $\Gr(\Sp)$ and $\Fil(\Sp)$ may be given symmetric monoidal structures via the Day convolution.  Then, via the identifications $\Gr(\Sp^{\D}) = \Gr(\Sp)^{\D}$ and $\Fil(\Sp^{\D}) = \Fil(\Sp)^{\D}$, the categories $\Gr(\Sp^{\D})$ and $\Fil(\Sp^{\D})$ may be given symmetric monoidal structures pointwise on $\D$.  In both cases, we denote the resulting operation by $\otimes$.  Explicitly, the filtered tensor product $$\left(X_0 \longrightarrow X_1 \longrightarrow X_2 \longrightarrow \cdots \right) \otimes \left(Y_0 \longrightarrow Y_1 \longrightarrow Y_2 \longrightarrow \cdots \right)$$
+of two filtered spectra is computed as
+
+\begin{center}
+$X_0 \otimes Y_0 \longrightarrow \colim $
+\adjustbox{scale=0.7} 
+{$ \left(\begin{tikzcd} X_0 \smsh Y_1 \\  X_0 \smsh Y_0 \arrow{u} \arrow{r} & X_1 \smsh Y_0 \end{tikzcd} \right) $} 
+$\longrightarrow \colim$
+\adjustbox{scale=0.7} {$ \left( \begin{tikzcd} X_0 \smsh Y_2 \\ X_0 \smsh Y_1 \arrow{r} \arrow{u} & X_1 \smsh Y_1  \\ X_0 \smsh Y_0 \arrow{r} \arrow{u} & X_1 \smsh Y_0 \arrow{u} \arrow{r} & X_2 \smsh Y_0 \end{tikzcd} \right) $}
+$\longrightarrow \cdots.$
+\end{center}
+
+For graded spectra, the analogous formula is:
+
+$$(A_0,A_1,A_2,\cdots) \otimes (B_0,B_1,B_2,\cdots) \simeq \left( A_0 \smsh B_0, (A_1 \smsh B_0) \vee (A_0 \smsh B_1), \cdots, \bigvee_{i+j=n} A_i \smsh B_j, \cdots \right).$$
+
+
+
+
+
+The unit $\S0^{gr}_{\D}$ of $\otimes$ in $\Gr(\Sp^{\D})$ is the constant diagram at $S^0$ in degree 0 and $*$ otherwise; the unit $\S0^{fil}_{\D}$ in $\Fil(\Sp^{\D})$ is $I\S0^{gr}_{\D}.$  We may then talk about $\E_n$-algebras in $\Gr(\Sp^{\D})$ and $\Fil(\Sp^{\D})$.  
+
+
+
+There is also an associated graded functor $\text{gr }: \Fil(\Sp^{\D}) \to \Gr(\Sp^{\D})$ such that the composite $\text{gr }\circ I : \Gr(\Sp^{\D}) \to \Gr(\Sp^{\D})$ is an equivalence.   This can be thought of pointwise by the formula $$\text{gr}(X_0\to X_1\to X_2\to \cdots) = X_0, X_1/X_0, X_2/X_1, \cdots.$$
+%should say a little about how to construct the associated graded
+
+
+
+%reminder to discuss the colim functor
+
+The functors $I$ and $\text{gr}$ can be given symmetric monoidal structures such that the composite $\text{gr }\circ I : \Gr(\Sp^{\D}) \to \Gr(\Sp^{\D})$ is a symmetric monoidal equivalence.  It follows in particular that they extend to functors between the categories of $\E_n$-algebras in $\Gr(\Sp^{\D})$ and $\Fil(\Sp^{\D})$.  Thus, given an $\E_n$-algebra $Y$ in filtered spectra, we obtain a canonical $\E_n$ structure on its associated graded $\text{gr}(Y).$  Conversely, given $X\in \Alg_{\E_n}(\Gr(\Sp^{\D}))$, we obtain $IX\in \Alg_{\E_n}(\Fil(\Sp^{\D})).$  
+
+%%%%
+\begin{dfn}
+An object $X\in \Alg_{\E_n}(\Fil(\Sp^{\D}))$ is called \emph{$\E_n$-split} if there exists $Y\in \Alg_{\E_n}(\Gr(\Sp^{\D}))$ and an equivalence $X \simeq IY$ in $\Alg_{\E_n}(\Fil(\Sp^{\D}))$.  
+\end{dfn}
+
+Given an $\E_n$-split filtered spectrum $X$, we can recover the underlying graded spectrum by taking the associated graded. 
+%%%%
