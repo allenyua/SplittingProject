@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.9.4)  3 AUG 2017 12:37
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.9.4)  4 AUG 2017 16:03
 entering extended mode
 **0_Main.tex
 
@@ -1071,9 +1071,24 @@ JeremyEdits\0_Main.toc")
 
 ("C:\Users\Jeremy\Dropbox\Summer 2017\2_Filtrations of the E2 kind\Filtrations\
 JeremyEdits\Introduction.tex" [1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex
-.map}] [2] [3])
+.map}]
+Overfull \hbox (12.2052pt too wide) in paragraph at lines 11--12
+[]\OT1/cmr/m/it/10 As an $\U/msb/m/n/10 A[]$\OT1/cmr/m/it/10 -algebra ob-ject i
+n fil-tered spec-tra, the Bott fil-tra-tion of $\OT1/cmr/m/n/10 []
+\OML/cmm/m/it/10 SU\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 n\OT1/cmr/m/n/10 )$
+ []
+
+
+Overfull \hbox (19.90517pt too wide) in paragraph at lines 13--14
+[]\OT1/cmr/m/it/10 As an $\U/msb/m/n/10 E[]$\OT1/cmr/m/it/10 -algebra ob-ject i
+n fil-tered $\OML/cmm/m/it/10 MU$\OT1/cmr/m/it/10 -module spec-tra, the Bott fi
+l-tra-tion of $\OML/cmm/m/it/10 MU [] \OT1/cmr/m/n/10 []
+\OML/cmm/m/it/10 SU\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 n\OT1/cmr/m/n/10 )$
+ []
+
+)
 ("C:\Users\Jeremy\Dropbox\Summer 2017\2_Filtrations of the E2 kind\Filtrations\
-JeremyEdits\FilteredAndGraded.tex" [4]
+JeremyEdits\FilteredAndGraded.tex" [2]
 Overfull \hbox (21.7799pt too wide) in paragraph at lines 60--61
 [][]\OT1/cmr/bx/n/10 Definition 2.3. []\OT1/cmr/m/n/10 An ob-ject $\OML/cmm/m/i
 t/10 X \OMS/cmsy/m/n/10 2 [][]\OT1/cmr/m/n/10 ([]([][]))$ is called $[][]$\OT1/
@@ -1081,13 +1096,13 @@ cmr/m/it/10 -split \OT1/cmr/m/n/10 if there ex-ists $\OML/cmm/m/it/10 Y \OMS/cm
 sy/m/n/10 2 [][]\OT1/cmr/m/n/10 ([]([][]))$
  []
 
-)
+[3])
 ("C:\Users\Jeremy\Dropbox\Summer 2017\2_Filtrations of the E2 kind\Filtrations\
 JeremyEdits\MitchellRichterFiltration.tex")
 ("C:\Users\Jeremy\Dropbox\Summer 2017\2_Filtrations of the E2 kind\Filtrations\
-JeremyEdits\SplittingMachine.tex" [5])
+JeremyEdits\SplittingMachine.tex")
 ("C:\Users\Jeremy\Dropbox\Summer 2017\2_Filtrations of the E2 kind\Filtrations\
-JeremyEdits\MultiplicativeWeiss.tex" [6]
+JeremyEdits\MultiplicativeWeiss.tex" [4] [5]
 Overfull \hbox (10.4712pt too wide) in paragraph at lines 51--52
 []\OT1/cmr/m/n/10 Recall that the $\OML/cmm/m/it/10 P[]$ \OT1/cmr/m/n/10 func-t
 ors are given as left ad-joints of the fully faith-ful in-clu-sions $[][]([][])
@@ -1101,19 +1116,19 @@ mr/m/n/10 to-gether with the full sub-cat-e-gory $([][] \OMS/cmsy/m/n/10  [][]
 \OT1/cmr/m/n/10 )[] \OMS/cmsy/m/n/10  [][]  [][]$
  []
 
-[7] [8] [9])
+[6] [7])
 ("C:\Users\Jeremy\Dropbox\Summer 2017\2_Filtrations of the E2 kind\Filtrations\
-JeremyEdits\AInfinitySplitting.tex")
+JeremyEdits\AInfinitySplitting.tex") [8]
 ("C:\Users\Jeremy\Dropbox\Summer 2017\2_Filtrations of the E2 kind\Filtrations\
-JeremyEdits\SplitInBordism.tex" [10])
+JeremyEdits\SplitInBordism.tex" [9])
 ("C:\Users\Jeremy\Dropbox\Summer 2017\2_Filtrations of the E2 kind\Filtrations\
-JeremyEdits\SquareZero.tex" [11] [12] [13])
+JeremyEdits\SquareZero.tex" [10] [11])
 ("C:\Users\Jeremy\Dropbox\Summer 2017\2_Filtrations of the E2 kind\Filtrations\
-JeremyEdits\Obstructions.tex" [14])
+JeremyEdits\Obstructions.tex" [12])
 ("C:\Users\Jeremy\Dropbox\Summer 2017\2_Filtrations of the E2 kind\Filtrations\
-JeremyEdits\PeriodicComplexBordism.tex")
+JeremyEdits\PeriodicComplexBordism.tex") [13]
 ("C:\Users\Jeremy\Dropbox\Summer 2017\2_Filtrations of the E2 kind\Filtrations\
-JeremyEdits\0_Main.bbl" [15]) [16]
+JeremyEdits\0_Main.bbl") [14]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 226.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 226.
 
@@ -1126,10 +1141,10 @@ Package rerunfilecheck Info: File `0_Main.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 226.
  ) 
 Here is how much of TeX's memory you used:
- 23334 strings out of 493921
- 436628 string characters out of 3144874
- 507254 words of memory out of 3000000
- 25937 multiletter control sequences out of 15000+200000
+ 23212 strings out of 493921
+ 433781 string characters out of 3144874
+ 505507 words of memory out of 3000000
+ 25823 multiletter control sequences out of 15000+200000
  13972 words of font info for 53 fonts, out of 3000000 for 9000
  1005 hyphenation exceptions out of 8191
  61i,18n,82p,1084b,1026s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1158,9 +1173,9 @@ msfonts/cm/cmti8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsf
 onts/symbols/msam10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/a
 msfonts/symbols/msbm10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publi
 c/amsfonts/symbols/msbm7.pfb>
-Output written on 0_Main.pdf (16 pages, 395481 bytes).
+Output written on 0_Main.pdf (14 pages, 386250 bytes).
 PDF statistics:
- 377 PDF objects out of 1000 (max. 8388607)
- 85 named destinations out of 1000 (max. 500000)
+ 358 PDF objects out of 1000 (max. 8388607)
+ 77 named destinations out of 1000 (max. 500000)
  109 words of extra memory for PDF output out of 10000 (max. 10000000)
 
