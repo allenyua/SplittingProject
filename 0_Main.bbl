@@ -23,6 +23,11 @@ David Gepner and Victor Snaith.
   {$K$}-theory.
 \newblock {\em Doc. Math.}, 14:359--396, 2009.
 
+\bibitem[Kit01]{Kitchloo}
+Nitu Kitchloo.
+\newblock Cohomology splittings of {S}tiefel manifolds.
+\newblock {\em J. London Math. Soc. (2)}, 64(2):457--471, 2001.
+
 \bibitem[Liu63]{Liulevicius}
 Arunas Liulevicius.
 \newblock A theorem in homological algebra and stable homotopy of projective
@@ -53,6 +58,11 @@ J.~Peter May.
 \newblock Lecture Notes in Mathematics, Vol. 577. Springer-Verlag, Berlin-New
   York, 1977.
 \newblock With contributions by Frank Quinn, Nigel Ray, and J\o rgen Tornehave.
+
+\bibitem[Mil85]{MillerSplitting}
+Haynes Miller.
+\newblock Stable splittings of {S}tiefel manifolds.
+\newblock {\em Topology}, 24(4):411--419, 1985.
 
 \bibitem[Mit86]{MitchellSU(n)}
 Stephen~A. Mitchell.

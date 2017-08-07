@@ -2,41 +2,50 @@ The space $\Omega SU(n)$ of based loops in $SU(n)$ is well-studied by both algeb
 
 In algebraic topology, it was a long-standing conjecture of Mahowald, eventually proven by Mitchell and Richter \cite[Theorem 2.1]{CrabbMitchell}, that the suspension spectrum 
 $$\Sigma^{\infty}_+ \Omega SU(n) \simeq \mathbb{S} \vee \Sigma^{\infty} \mathbb{CP}^{n-1} \vee \cdots$$
-splits as an infinite wedge sum.  On the other hand, since $\Omega SU(n) \simeq \Omega^2 BSU(n)$ is a double loop space, its suspension spectrum is naturally an $\mathbb{E}_2$-ring spectrum (or, in other words, the affine Grasmannian of $SL_n(\mathbb{C})$ admits a factorization structure).  It is the main purpose of our work here to study the interaction of the $\mathbb{E}_2$-ring structure with the splitting of Mitchell and Richter.  Roughly speaking, we will prove that the splitting respects the underlying $\mathbb{A}_\infty$-ring structure, but does not respect the $\mathbb{E}_2$ structure before base change to complex cobordism.
+splits as an infinite wedge sum.  On the other hand, since $\Omega SU(n) \simeq \Omega^2 BSU(n)$ is a double loop space, its suspension spectrum is naturally an $\mathbb{E}_2$-ring spectrum (or, in other words, the affine Grasmannian of $SL_n(\mathbb{C})$ admits a factorization structure).  It is the main purpose of our work here to study the interaction of the $\mathbb{E}_2$-ring structure with the splitting of Mitchell and Richter.  Roughly speaking, we will prove that the splitting respects the underlying $\mathbb{A}_\infty$-ring structure, but does not respect the $\mathbb{E}_2$-ring structure before base change to complex cobordism.
 
 As we will recall in much more detail in Sections \ref{sec:FilGra} and \ref{sec:MRFil} below, the theory of the Belinson-Drinfeld Grassmannian provides a natural $\mathbb{E}_2$ filtration of the space $\Omega SU(n)$.  This \textit{Schubert filtration} is indexed by the coweights of $SU(n)$, but restriction along the diagonal produces a coarser, integer-graded $\mathbb{E}_2$ filtration that Mitchell names the \textit{Bott filtration} of $\Omega SU(n)$.  Suspending, we obtain a Bott filtration of $\Sigma^{\infty}_+ \Omega SU(n)$ that forms an $\mathbb{E}_2$-algebra object in the symmetric monoidal category of filtered spectra.  What we prove is as follows:
 
-\begin{thm}
-\begin{enumerate}
-\item As an $\mathbb{A}_\infty$-algebra object in filtered spectra, the Bott filtration of $\Sigma^{\infty}_+ \Omega SU(n)$ is equivalent to its associated graded.
-\item As an $\mathbb{E}_2$-algebra object in filtered spectra, the Bott filtration of $\Sigma^{\infty}_+ \Omega SU(n)$ is \textit{not} equivalent to its associated graded.
-\item As an $\mathbb{E}_2$-algebra object in filtered $MU$-module spectra, the Bott filtration of $MU \smsh \Sigma^{\infty}_+ \Omega SU(n)$ is equivalent to its associated graded.
-\end{enumerate}
+\begin{thm} \label{thm:MainAoo}
+As an $\mathbb{A}_\infty$-algebra object in filtered spectra, the Bott filtration of $\Sigma^{\infty}_+ \Omega SU(n)$ is equivalent to its associated graded.
+\end{thm}
+\begin{thm} \label{thm:MainObstruction}
+As an $\mathbb{E}_2$-algebra object in filtered spectra, the Bott filtration of $\Sigma^{\infty}_+ \Omega SU(n)$ is \textit{not} equivalent to its associated graded.
+\end{thm}
+\begin{thm} \label{thm:MainMUE2}
+As an $\mathbb{E}_2$-algebra object in filtered $MU$-module spectra, the Bott filtration of $MU \smsh \Sigma^{\infty}_+ \Omega SU(n)$ is equivalent to its associated graded.
 \end{thm}
 
-The final result above, regarding $MU$-modules, can be seen as analogous to work of Kitchloo \textbf{BLAH}.  Kitchloo's theorem is that, \textit{for complex-oriented $E$}, the direct sum decomposition of $E_*(SU(n))$ is multiplicative.  \textbf{BLAH}
+The final result above, regarding $MU$-module spectra, can be seen as a once-looped analogue of work of Kitchloo \cite{Kitchloo}.   Kitchloo studied a splitting, due to Miller \cite{MillerSplitting}, of $\Sigma^{\infty}_+ SU(n)$.  His theorem is that, \textit{for complex-oriented $E$}, the corresponding direct sum decomposition of $E_*(SU(n))$ is multiplicative.
 
-\textbf{SOMETHING ABOUT STEIFEL MANIFOLDS}
+Our proof of Theorem \ref{thm:MainMUE2} is by obstruction theory.  We show in Section \ref{sec:MUE2} that all obstructions to an $\mathbb{E}_2$-equivalence vanish.  On the other hand, we prove Theorem \ref{thm:MainObstruction} by explicitly calculating a non-zero obstruction in Section \ref{sec:Obstruction}.
+
+It remains to discuss Theorem \ref{thm:MainAoo}, the $\mathbb{A}_\infty$ splitting.
+\textbf{SOMETHING ABOUT STIEFEL MANIFOLDS}
 
 Our original interest in the subject arose from the limiting case $n \rightarrow \infty$.  There, one considers a stable splitting of $\Omega SU \simeq BU$ due to Snaith \cite{SnaithBook}.  In particular, Snaith shows that
 $$\Sigma^{\infty}_+ BU \simeq \bigvee MU(n),$$
-where $MU(n)$ is the Thom spectrum of the canonical bundle over $MU(n)$.  Inverting the Bott element, Snaith uses his splitting to note that $\Sigma^{\infty}_+ BU [\beta^{-1}]$ is equivalent to the periodic complex bordism spectrum $MUP$ as a homotopy commutative ring spectrum.
+where $MU(n)$ is the Thom spectrum of the canonical bundle over $BU(n)$.  Inverting the Bott element, Snaith uses his splitting to note that $\Sigma^{\infty}_+ BU [\beta^{-1}]$ is equivalent to the periodic complex bordism spectrum $MUP$ as a homotopy commutative ring spectrum.
 
-It was our hope that Snaith's equivalence of homotopy commutative ring spectra could be promoted to an $\mathbb{E}_\infty$-equivalence, and so used to profitably study the $\mathbb{E}_\infty$-ring structure on $MUP$.  Indeed, in the motivic setting Gepner and Snaith \cite{GepnerSnaith} use $\Sigma^{\infty}_+ BGL[\beta^{-1}]$ to \textit{define} an $\mathbb{E}_\infty$-ring structure on $PMGL$.  Though it is not made obvious in the literature, it was pointed out to us by Jacob Lurie that Snaith \cite{SnaithNotMultiplicative} made a power operations computation precluding his equivalence from being $\mathbb{E}_\infty$.  In the final Section \ref{sec:SnaithSplitting} of this paper, we refine Snaith's results into what we consider their definitive form:
+It was our hope that Snaith's equivalence of homotopy commutative ring spectra could be promoted to an $\mathbb{E}_\infty$-equivalence, and so used to profitably study the $\mathbb{E}_\infty$-ring structure on $MUP$.  Indeed, in the motivic setting Gepner and Snaith \cite{GepnerSnaith} use $\Sigma^{\infty}_+ BGL[\beta^{-1}]$ to \textit{define} an $\mathbb{E}_\infty$-ring structure on $PMGL$.  Though it is not made obvious in the literature, it was pointed out to us by Jacob Lurie that Snaith \cite{SnaithNotMultiplicative} made a power operations computation precluding his equivalence from being $\mathbb{E}_\infty$.  In the final Section \ref{sec:SnaithSplitting} of this paper, we refine Snaith's results:
 
 \begin{thm}
 There is an equivalence of $\mathbb{E}_2$-ring spectra
 $$MUP \simeq \Sigma^{\infty}_+ BU[\beta^{-1}],$$
-but $MUP \not \simeq \Sigma^{\infty}_+ BU[\beta^{-1}]$ as $\mathbb{E}_3$-ring spectra.  There is an equivalence of $\mathbb{A}_\infty$-ring spectra
-$$\bigvee MU(n) \simeq \Sigma^{\infty}_+ BU,$$
-but $\bigvee MU(n) \not \simeq \Sigma^{\infty}_+ BU$ as $\mathbb{E}_2$-ring spectra.
+but $MUP \not \simeq \Sigma^{\infty}_+ BU[\beta^{-1}]$ as $\mathbb{E}_3$-ring spectra.
 \end{thm}
+
+We end with two open questions regarding natural extensions of our work:
+
+\textbf{What is the structure of the equivariant splitting?}
+
+\textbf{What is the proper motivic analogue of our result?}
+
 
 %%%Allen, there is something I am confused about.  In Gepner-Snaith, they claim that there is an $\mathbb{E}_\infty$ ring homomorphism from $PMGL$ to $KU$ given by inverting $\beta$ in the suspension of the determinant map
 %%$$BU \rightarrow \mathbb{CP}^{\infty}.$$
 %%I thought though that we decided there is no $\mathbb{E}_\infty$-ring map to $H\mathbb{Z}P$.  What's up with that?}
 
-\textbf{ADD REMARKS ABOUT OPEN QUESTIONS}
 %acknowledge
 %1. Jacob, Mike
 %2. arone? akhil, denis?, dyang?, 
