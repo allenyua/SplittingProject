@@ -7,17 +7,17 @@ Let $\J$ be the $\infty$-category which is the nerve of the topological category
 The theory of Weiss calculus studies functors out of $\J$ in a way analogous to Goodwillie calculus, by understanding successive ``polynomial approximations'' to these functors.  Here, we will discuss only the stable setting where we apply the theory to the functor category $\Sp^{\J}$. The central definition is:
 
 \begin{dfn}\label{dfn:polyfun}
-A functor $F\in \Sp^{\J}$ is polynomial of degree at most $n$ if the natural map $$F(V) \to \lim_U F(U\oplus V)$$ is an equivalence, where the limit is indexed over the $\infty$-category of nonzero subspaces $U\subset \mathbb{C}^{n+1}.$
+A functor $F\in \Sp^{\J}$ is polynomial of degree $n$ if the natural map $$F(V) \to \lim_U F(U\oplus V)$$ is an equivalence, where the limit is indexed over the $\infty$-category of nonzero subspaces $U\subset \mathbb{C}^{n+1}.$
 \end{dfn}
 
-As in Goodwillie calculus, the inclusion of the full subcategory $\Poly^{\leq n}(\Sp^{\J}) \subset \Sp^{\J}$ of functors which are polynomial of degree at most $n$ admits a left adjoint $$P_n: \Sp^{\J} \xrightleftharpoons{\quad} \Poly^{\leq n}(\Sp^{\J}): j_n.$$ %center this...
+As in Goodwillie calculus, the inclusion of the full subcategory $\Poly^{\leq n}(\Sp^{\J}) \subset \Sp^{\J}$ of functors which are polynomial of degree $n$ admits a left adjoint $$P_n: \Sp^{\J} \xrightleftharpoons{\quad} \Poly^{\leq n}(\Sp^{\J}): j_n.$$ %center this...
  The unit $\eta_n$ of this adjunction provides for each $F\in \Sp^{\J}$ a natural transformation $F \to P_nF$ which we will refer to as the \emph{degree $n$ polynomial approximation} of $F$. 
 
 \begin{rmk}\label{rmk:infinityweiss}
 This universal property was not explicitly stated in \cite{Weiss}, but it follows formally from Weiss's results as follows: the functor $P_n$ and the transformation $\eta_n$ can be defined explicitly as in \cite{Weiss} by iteratively applying the functor $\tau_n: \Sp^{\J} \to \Sp^{\J}$ defined by the formula $$\tau_n F(V) = \lim_U F(U\oplus V)$$ with the limit indexed as in Definition \ref{dfn:polyfun}.   The facts required of the functors $P_n$ in the proof of Theorem 6.1.1.10 in \cite{HA} are precisely the content of Theorem 6.3 of \cite{Weiss}.  
 \end{rmk}
 
-Given this universal property, Proposition 5.4 of \cite{Weiss} ensures the existence of a natural Taylor tower $$F \longrightarrow \cdots \longrightarrow P_{n} F \xrightarrow{p_{n-1}} P_{n-1} F \longrightarrow \cdots \longrightarrow P_0F$$ living under any functor $F\in \Sp^{\J}.$  The fiber $D_n F$ of $p_{n-1}$ has the special property that it is polynomial of degree at most $n$ and $P_{n-1} D_n F \simeq 0$.  Such a functor is called \emph{$n$-homogeneous}; such functors are completely classified by the following theorem:
+Given this universal property, Proposition 5.4 of \cite{Weiss} ensures the existence of a natural Taylor tower $$F \longrightarrow \cdots \longrightarrow P_{n} F \xrightarrow{p_{n-1}} P_{n-1} F \longrightarrow \cdots \longrightarrow P_0F$$ living under any functor $F\in \Sp^{\J}.$  The fiber $D_n F$ of $p_{n-1}$ has the special property that it is polynomial of degree $n$ and $P_{n-1} D_n F \simeq 0$.  Such a functor is called \emph{$n$-homogeneous}; such functors are completely classified by the following theorem:
 
 \begin{thm}[{{\cite[Theorem 7.3]{Weiss}}}]
 Let $F\in \Sp^{\J}$.  Then $F$ is an $n$-homogeneous functor if and only if there exists a spectrum $\Theta$ with an action of the unitary group $U(n)$ such that $$F(V) = (\Theta \wedge S^{nV})_{hU(n)}.$$
@@ -27,7 +27,7 @@ Let $F\in \Sp^{\J}$.  Then $F$ is an $n$-homogeneous functor if and only if ther
 The observation of Goodwillie, as exploited by \cite{Arone}, is that this provides a canonical way to split certain functorial filtrations whose successive quotients are homogeneous.  More precisely, we have the following theorem:
 
 \begin{thm}[\cite{Arone}]\label{thm:aronesplit}
-Suppose $F \in \Sp^{\J}$ is a functor together with an increasing filtration $$0 = F^{(0)} \longrightarrow F^{(1)}\longrightarrow F^{(2)} \longrightarrow  \cdots F$$ by functors $F^{(i)}\in \Sp^{\J}$ with the property that the successive quotients $F^{(n)}/F^{(n-1)}$ are $n$-homogeneous for all integers $n>0$.  Then, each functor $F^{(n)}$ is polynomial of degree at most $n$ and each composite $F^{(n-1)} \longrightarrow F^{(n)} \xrightarrow{\eta_{n-1}} P_{n-1} F^{(n)}$ is an equivalence.
+Suppose $F \in \Sp^{\J}$ is a functor together with an increasing filtration $$0 = F^{(0)} \longrightarrow F^{(1)}\longrightarrow F^{(2)} \longrightarrow  \cdots F$$ by functors $F^{(i)}\in \Sp^{\J}$ with the property that the successive quotients $F^{(n)}/F^{(n-1)}$ are $n$-homogeneous for all integers $n>0$.  Then, each functor $F^{(n)}$ is polynomial of degree $n$ and each composite $F^{(n-1)} \longrightarrow F^{(n)} \xrightarrow{\eta_{n-1}} P_{n-1} F^{(n)}$ is an equivalence.
 \end{thm}
 %we need to at some point deal with the fact that Weiss doesn't actually deal with homog. functors to spectra
 
@@ -57,7 +57,7 @@ $$
 & \Z^{op}_{\geq 0}
 \end{tikzcd}
 $$
- This will be relevant to us because the category of sections of $q$ are precisely $\Cofil(\Sp^{\J}).$  The sections of $p$ can be thought of those cofiltered functors such that the $n$th piece is polynomial of degree at most $n$.  We will denote this category of sections of $p$ by $\Cofil(\Sp^{\J})_{\text{poly}}.$ 
+ This will be relevant to us because the category of sections of $q$ are precisely $\Cofil(\Sp^{\J}).$  The sections of $p$ can be thought of those cofiltered functors such that the $n$th piece is polynomial of degree $n$.  We will denote this category of sections of $p$ by $\Cofil(\Sp^{\J})_{\text{poly}}.$ 
 
 On the fibers over an integer $[n] \in \Z^{op}_{\geq 0}$, we see the inclusion $\Sp^{\J} \leftarrow \Poly^{\leq n}(\Sp^{\J}).$  It is in this sense that the current picture is a parametrized version of the ordinary polynomial approximations.  We now claim that $i$ admits a left adjoint $P^{\text{total}}: \Sp^{\J}\times \Z^{op}_{\geq 0} \to (\Sp^{\J}\times \Z^{op}_{\geq 0})_{\text{poly}}$ \emph{relative} to $\Z^{op}_{\geq 0}.$    The strategy is to use Proposition 7.3.2.6 of \cite{HA}, which tells us that we need to check the following three statements:
 \begin{enumerate}
@@ -75,8 +75,8 @@ $$
 & \Fun(\Z^{op}_{\geq 0}, \Z^{op}_{\geq 0})
 \end{tikzcd}
 $$
-which exhibits $P^{\text{total}}$ as a left adjoint of $i_*$ relative to $\Fun(\Z_{\geq 0}^{op},\Z_{\geq 0}^{op}).$  Proposition 7.3.2.5 of \cite{HA} ensures that there is an adjunction at the level of fibers above $\text{id}\in \Fun(\Z_{\geq 0}^{op},\Z_{\geq 0}^{op})$: $$\text{Tow}^*: \Cofil(\Sp^{\J}) \xrightleftharpoons{\quad} \Cofil(\Sp^{\J})_{\text{poly}}:j .$$  
-Finally, observe that the unique functor $r: \Z^{op}_{\geq 0} \to *$ induces an adjunction $$r^*: \Sp^{\J} \xrightleftharpoons{\quad} \Cofil(\Sp^{\J}): \lim$$ where $r^*$ is the constant functor and $\lim$ is the same as right Kan extension along $r$.  We now compose these adjunctions, denoting $\text{Tow} = \text{Tow}^*\circ r^*$ to obtain: $$\text{Tow}: \Sp^{\J} \xrightleftharpoons{\quad}  \Cofil(\Sp^{\J})_{\text{poly}}: \lim.$$
+which exhibits $P^{\text{total}}_*$ as a left adjoint of $i_*$ relative to $\Fun(\Z_{\geq 0}^{op},\Z_{\geq 0}^{op}).$  Proposition 7.3.2.5 of \cite{HA} ensures that there is an adjunction at the level of fibers above $\text{id}\in \Fun(\Z_{\geq 0}^{op},\Z_{\geq 0}^{op})$: $$\mathcal{P}: \Cofil(\Sp^{\J}) \xrightleftharpoons{\quad} \Cofil(\Sp^{\J})_{\text{poly}}:j .$$  
+Finally, observe that the unique functor $r: \Z^{op}_{\geq 0} \to *$ induces an adjunction $$r^*: \Sp^{\J} \xrightleftharpoons{\quad} \Cofil(\Sp^{\J}): \lim$$ where $r^*$ is the constant functor and $\lim$ is the same as right Kan extension along $r$.  We now compose these adjunctions, denoting $\text{Tow} = \mathcal{P}\circ r^*$ to obtain: $$\text{Tow}: \Sp^{\J} \xrightleftharpoons{\quad}  \Cofil(\Sp^{\J})_{\text{poly}}: \lim.$$
 
 It remains to check that $\text{Tow}$ actually recovers the Weiss tower.  TBD%Tow is the right functor...what does that mean?  It certainly does the right thing on objects... might want the morphisms to be the natural one.  Certainly it can't be anything else, but seems like it might be a hassle to check this.  I guess maybe we only care about the individual morphisms...so that's doable but perhaps long :(
 
@@ -85,48 +85,22 @@ This concludes the construction of $\text{Tow}.$
 \end{cnstr}
 
 
-The next task is to understand the monoidal structure on $\text{Tow}$.  The idea is that we would like to express $\text{Tow}(F\wedge F)$ in terms of $\text{Tow}(F)$ and a ``Day convolution'' monoidal structure on $\Cofil(\Sp^{\J}).$  However, there is trouble defining the convolution as in Section \ref{sect:monoidal} because smash product does not preserve \emph{limits} of spectra in each variable separately.  The situation becomes better if one restricts to the category $\Sp_{\fin}$ of \emph{finite} spectra.  The full subcategory $\Fun(\Z_{\geq 0}, \Sp_{\fin}^{\J})\subset \Cofil(\Sp^{\J})$ is closed under the convolution product defined in Section \ref{sect:monoidal}, and therefore inherits a symmetric monoidal structure.  By Spanier-Whitehead duality, this induces a symmetric monoidal structure on $\Fun(\Z_{\geq 0},(\Sp_{\fin}^{\J})^{op}),$ which in turn induces a symmetric monoidal structure on its opposite, $\Cofil(\Sp^{\J}_{\fin}).$  This can be described explicitly as sending %insert some pictures!
-%ok this monoidal structure is wrong potentially...
+The next task is to understand the monoidal structure on $\text{Tow}$.  The idea is that we would like to express $\text{Tow}(F\wedge F)$ in terms of $\text{Tow}(F)$ and a ``Day convolution'' monoidal structure on $\Cofil(\Sp^{\J}).$  
+TODO: actually define it here
+%actually this is something that you can do.  This provides a convolution product on \Cofil(\Sp^{\J}).  
 
-DO NOT TRUST THE FOLLOWING SECTION RIGHT NOW
-
-
-One would now hope that Tow restricts to a symmetric monoidal functor when we replace $\Sp^{\J}$ by $\Sp^{\J}_{\fin}.$  However, we would like to understand functors which do not necessarily take values in finite spectra.  Furthermore, it is not even clear that the derivatives of a functor $\J \to \Sp$ factoring through $\Sp_{\fin}$ will still factor through $\Sp_{\fin}.$  We may simply restrict to this situation.  
-
-\begin{dfn} \label{dfn:stronglyfinite}
-
-Let $\overline{\Sp}^{\J}$ denote the full subcategory of functors $F\in \Sp^{\J}$ such that the functors $P_nF$ factor through $\Sp_{\fin}^{\J}$ for all $n$.  Additionally, let $\overline{\Sp}^{\J}_{\fin}$ denote the full subcategory of $F\in \overline{\Sp}^{\J}$ for which $F$ itself factors through $\Sp^{\J}_{\fin}.$  %We will refer to objects of $\overline{\Sp}^{\J}_{\fin}$ as \emph{strongly finite} functors.  
-\end{dfn}
+We then have the following result about the monoidality of the Weiss tower functor.  
 
 \begin{prop}\label{prop:weissmonoidal}
-The Weiss tower functor $\text{Tow}$ restricts to a symmetric monoidal functor $$\text{Tow}_{\text{fin}}: \overline{\Sp}^{\J} \to \Cofil(\overline{\Sp}^{\J}_{\fin}).$$
+The Weiss tower functor $\text{Tow}$ defines a symmetric monoidal functor $$\text{Tow}: \Sp^{\J} \to \Cofil(\Sp^{\J}).$$
 \end{prop}
 \begin{proof}
-Combining Construction \ref{cnstr:tower} with Definition \ref{dfn:stronglyfinite}, we obtain the diagram
+Recall that the Weiss tower functor was defined as a composite $\text{Tow} = \mathcal{P} \circ r^*.$  The functor $r^*$ is just the constant functor, so it is symmetric monoidal.  On the other hand, $\mathcal{P}$ is adjoint to the inclusion $j: \Cofil(\Sp^{\J})_{\text{poly}} \to \Cofil(\Sp^{\J}).$  Since the class of functors which are polynomial of degree $n$ is closed under finite limits, the subcategory $\Cofil(\Sp^{\J})$ is closed under the convolution tensor product.  We may therefore give it the structure of a symmetric monoidal $\infty$-category such that $j$ is symmetric monoidal.  This makes the left adjoint $\mathcal{P}$ an oplax monoidal functor, which induces an oplax monoidal structure on $\text{Tow}.$  
 
-$$
-\begin{tikzcd}
-\Sp^{\J} \rar[harpoon, yshift=1pt] &\lar[harpoon, yshift=-1pt] \Cofil(\Sp^{\J})&\Cofil(\Sp^{\J})_{\text{poly}} \arrow[l,hook, "j"]  \\
- \overline{\Sp}^{\J} \arrow[u, hook] &\Cofil(\overline{\Sp}^{\J}) \arrow[l, "\lim"] \arrow[u,hook] &  \Cofil(\overline{\Sp}^{\J}_{\fin})_{\text{poly}} \arrow[l,hook, "\overline{j}"]  \arrow[u,hook]\\
- \end{tikzcd}%diagram needs to be fixed
-$$
-where the hooked arrows denote inclusions of full subcategories.  Recall that $j$ admits a left adjoint $\text{Tow}_*$ and $\lim$ admits a left adjoint $r^*$.  It is clear that these left adjoints restrict to functors $\overline{\text{Tow}}_*$ and $r^*$ on the bottom row.  Consequently, setting $\text{Tow}_{\fin} = \overline{\text{Tow}}_* \circ r^*$, we obtain an adjunction $$\text{Tow}_{\fin}: \overline{\Sp}^{\J} \xrightleftharpoons{\quad} \Cofil(\overline{\Sp}^{\J}_{\fin})_{\text{poly}}: \overline{j}\circ \lim.$$ %need to be centered
-
-We now show that there are natural symmetric monoidal structures on both of these categories such that the right adjoint $\overline{j}\circ \lim$ has a symmetric monoidal structure.  This is because it admits a different factorization $$\Cofil(\overline{\Sp}^{\J}_{\fin})_{\text{poly}} \xrightarrow{\overline{j}'} \Cofil(\overline{\Sp}^{\J}_{\fin}) \xrightarrow{\lim} \overline{\Sp}^{\J}.$$ The category $\Cofil(\overline{\Sp}^{\J}_{\fin})$ inherits a symmetric monoidal structure from $\Cofil(\Sp^{\J}_{\fin})$ as a full subcategory which is closed under the tensor product.  As such, the functor $\lim$ is symmetric monoidal because the the tensor product commutes with limits of finite spectra separately in each variable.  %might need to restrict connectivities for this to actually work...
-
-
-bserve that a finite limit of functors which are polynomial of degree at most $n$ is itself polynomial of degree at most $n$.  This implies that the full subcategory $\overline{j}'$ is closed under the symmetric monoidal structure.  It follow that the left adjoint $\overline{\text{Tow}}_*$ naturally admits the structure of a oplax symmetric monoidal functor.  Moreover, it is clear that the constant functor $\overline{\Sp^{\J}_{\fin}}\to  \Cofil(\overline{\Sp}^{\J}_{\fin})$ is symmetric monoidal, and so precomposing by it yields an oplax monoidal functor $\text{Tow}_{\fin} :\overline{\Sp}^{\J}_{\fin} \to \Cofil(\overline{\Sp}^{\J}_{\fin})_{\text{poly}}.$
-
-Concretely, the oplax structure can be described on the $n$th filtered piece as follows: since $\text{Tow}_{\fin}(F)\in  \Cofil(\overline{\Sp}^{\J}_{\fin})_{\text{poly}}$, the filtered piece $(\text{Tow}_{\fin}(F) \otimes \text{Tow}_{\fin}(F))_n$ is polynomial of degree at most $n$.  It follows that the natural map from $F\wedge F$ factors through a map $\varphi_n: P_n(F\wedge F)\to (\text{Tow}_{\fin}(F) \otimes \text{Tow}_{\fin}(F))_n$.  To see that $\text{Tow}_{\fin}$ is a symmetric monoidal functor, it suffices to show that each $\varphi_n$ is an equivalence.   TODO
+Concretely, this oplax structure can be described on the $n$th filtered piece as follows: since $\text{Tow}(F) \in  \Cofil(\Sp^{\J})_{\text{poly}}$, the filtered piece $(\text{Tow}(F) \otimes \text{Tow}(F))_n$ is polynomial of degree $n$.  It follows that the natural map from $F\wedge F$ factors through a map $\varphi_n: P_n(F\wedge F)\to (\text{Tow}(F) \otimes \text{Tow}(F))_n$.  To see that $\text{Tow}$ is a symmetric monoidal functor, it suffices to show that each $\varphi_n$ is an equivalence.   TODO
 %need to check the oplax structure map is an equivalence; do the cubes thing...
 
 \end{proof}
-
-\begin{rmk}
-The functor $F(W) = \Sigma^{\infty}_+\Omega \J(V,V+W)$ described after Theorem \ref{thm:aronesplit} does not take values in finite spectra (note that the V has been suppressed in the notation).  However, it is filtered by functors $F^{(n)}(W)$ which do take values in finite complexes for all $n<\infty $.  Moreover, $P_nF(W) = F^{(n)}(W).$  
-%to get non-finite things, we take limits in the resulting equivalence; i.e., each P_nF is a monoid, and I can take a filtered colimit of these, and I know the things preserve filtered colimits and whatnot so I'm okay.  
-
-\end{rmk}
 
 \begin{rmk}
 Proposition \ref{prop:weissmonoidal} is written in the language of Weiss calculus as that is the present application, but the proof works equally well in Goodwillie calculus.  
