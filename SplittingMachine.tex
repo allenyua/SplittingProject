@@ -1,24 +1,81 @@
+%I HAVE NOT BEEN CAREFUL WITH Sp vs. Sp^J vs Sp^D and whether to call them spectra or functors; I think we should call them spectra...need to find/replace
+Given a filtered spectrum $$X_0\longrightarrow X_1 \longrightarrow X_2 \longrightarrow \cdots ,$$ it will split if and only if there are maps going the other way: $$X_0 \longleftarrow X_1 \longleftarrow X_2 \longleftarrow \cdots,$$ with the property that the relevant composites are equivalences.  Motivated by this, one could ask: given an $\E_n$ filtered spectrum $X$, when is it $\E_n$-split?  In this section, we answer this question by proving the following:
 
-Let $[n]$ denote the linearly ordered set of integers $0\leq i\leq n$.  Define $\Fil_n = \text{Fun}([n], \Sp^{\J})$ and $\Cofil_n = \text{Fun}([n]^{\text{op}},\Sp^{\J})$.  These categories admit functors to $\Sp^{\J}$ by taking colimit and limit, respectively.  Let $\C_n = \Fil_n \times_{\Sp^{\J}} \Cofil_n.$  Finally, let $\Gr_n = \text{Fun}([n]^{\text{ds}}, \Sp^{\J})$ where $[n]^{\text{ds}}$ denotes the underlying discrete category.  We have the following lemma:
+%beware, perhaps not enough definitions are made for this statement to make sense; should probably also say either spectra or functors to spectra....
+\begin{thm}
+Let $X\in \Alg_{\E_n}(\Fil)$ be an $\E_n$ filtered spectrum.  Suppose there exists an $\E_n$ cofiltered spectrum $Y\in \Alg_{\E_n}$ with the following two properties:
+\begin{enumerate}
+\item There is an equivalence $\colim X \simeq \lim Y$ of $\E_n$-algebras in spectra.
+\item The resulting natural maps $X_i \to Y_i$ are equivalences.  
+\end{enumerate}
+Then, the filtered spectrum $X$ is $\E_n$-split.
+\end{thm}
+
+
+%1. define the Fil, Fil_n^+, etc. categories and all the random monoidal functors and stuff
+
+%For an indexing category I, we can form I^+; may need to mess around with this a bit to say it better
+We will need a few preliminary definitions.  We start by fixing a positive integer $n$.  
+Let $[n]$ denote the linearly ordered set of integers $0\leq i\leq n$. For any indexing 1-category $\mathcal{D}$, denote by $\mathcal{D}^{ds}$ the underlying discrete category, and denote by $\mathcal{D}^+$ the the category formed by formally adding a final object, which we will refer to as ``$+$''.  Define $\Fil_n^+ = \Fun([n]^+, \Sp^{\J})$ and $\Cofil_n^+ = \Fun(([n]^+)^{op},\Sp^{\J}).$  These categories admit functors to $\Sp^{\J}$ by restriction to the distinguished point.  We define $\C_n$ by the following pullback:
+
+$$
+\begin{tikzcd}
+\C_n \arrow[r] \arrow[d]&  \Cofil_n^+ \arrow[d]\\
+\Fil_n^+ \arrow[r]& \Sp^{\J}
+\end{tikzcd}
+$$
+
+
+%2. Write down the pullback; identify the full subcategory as the image of Gr_n x Sp^J.
+An element of $\C_n$ can be thought of as a sequence of functors connected by natural transformations:
+\begin{center}
+$X_0 \longrightarrow X_1 \longrightarrow \cdots \longrightarrow X_n \longrightarrow X \simeq Y \longrightarrow Y_n \longrightarrow \cdots \longrightarrow Y_1 \longrightarrow Y_0$
+\end{center}
+where the middle arrow is an equivalence, as indicated.  This is equivalent to just considering sequences
+\begin{center}
+$X_0 \longrightarrow X_1 \longrightarrow \cdots \longrightarrow X_n \longrightarrow Z \longrightarrow Y_n \longrightarrow \cdots \longrightarrow Y_1 \longrightarrow Y_0$,
+\end{center}
+and so we shall refer to general elements by these names below.   
+
+
+Define the subcategory $\mathcal{G}_n\subset \C_n$ as the full subcategory such that for each integer $0\leq i\leq n$, the composite $X_i \longrightarrow Y_i$ is an equivalence.  
 
 \begin{lem}
-For all integers $n>0$, there is a fully faithful functor $i_n:\Gr_{n+1} \to \C_n.$  
+There is an equivalence $$\mathcal{G}_n \simeq \Gr_n^+ := \Fun(([n]^{+})^{ds}, \Sp^{J}),$$
+where $([n]^+)^{ds}$ is, as usual, the underlying set of $[n]^+$.  
 \end{lem}
 \begin{proof}
-An element of $\C_n$ is given by a sequence of functors 
-\begin{center}
-$X_0 \longrightarrow X_1 \longrightarrow \cdots \longrightarrow X_n \simeq Y_n \longrightarrow \cdots \longrightarrow Y_1 \longrightarrow Y_0$ 
-\end{center}
-where the middle 
+We proceed by induction on $n$.  
+
+For $n=0$, we are considering the full subcategory of diagrams $X_0 \to Z \to Y_0$ of spectra with the property that the composite is an equivalence.  By taking the fiber of the second map, this is equivalent to the category of triples $(X_0, Y_0',Z)$ of spectra together with an equivalence $X_0 \vee Y_0' \xrightarrow{\sim} Z.$   This is  certainly equivalent to the category of pairs $(X_0, Y_0')$ of spectra, which is $\Gr_0^+.$  
+
+Next, assume the statement for $n\leq k$ and consider $\mathcal{G}_{k+1}.$  We consider the auxiliary category $\overline{\mathcal{G}}_{k+1}$ which is the full subcategory of $\C_{k+1}$ where only $X_{k+1} \to Y_{k+1}$ is stipulated to be an equivalence.    The argument for the base case shows that $$\overline{\mathcal{G}}_{k+1} = \Fil_k \times_{\Sp} \Gr_0^+ \times_{\Sp} \Cofil_k$$ where the fiber products are over the restriction to $0\in [0]^+$ for $\Gr_0^+$, and over $X_{k+1}$ and $Y_{k+1}$ in the filtered and cofiltered spectra.  By commuting the fiber products, we find that $$\overline{\mathcal{G}}_{k+1} = \C_k \times_{\Sp} \Gr_0^+.$$  Under this equivalence, the full subcategory $\mathcal{G}_{k+1} \subset \overline{\mathcal{G}}_{k+1}$ corresponds to $\mathcal{G}_k \times_{\Sp} \Gr_0^+ \simeq \Gr_{k+1}^+$ as desired.  
+
 \end{proof}
 
-We may then take inverse limits to get a category $\C_\infty = \Fil(\Sp^{\J}) \times_{\Sp^{\J}} \Cofil(\Sp^{\J})$ and a functor $i: \Gr \to \C_\infty$. 
+In fact, the functor $\Gr_n^+ \to \C_n$ can be seen very explicitly as follows: theres a functor $$I_n^+: \Gr_n^+ \to \Fil_n^+$$ given by left Kan extension along the inclusion $([n]^+)^{ds} \to [n]^+$ which is completely analogous to the functor $I$ described in Section \ref{sec:FilGra}.  Dually, there's a functor $$I_n^{op,+}:\Gr_n^+ \to \Cofil_n^+$$ given by right Kan extension along the inclusion $([n]^+)^{ds} \to ([n]^+)^{op}$ which sends an element $(X_0, X_1, \cdots, X_n, X)\in \Gr_n^+$ to $$X_0 \longleftarrow X_0\vee X_1 \longleftarrow \cdots \longleftarrow \bigvee_i X_i \longleftarrow X \vee \bigvee_i X_i.$$  These functors agree on restriction to the distinguished object, and so they define the desired functor $\Gr_n^+ \to \C_n.$  
 
-\begin{cor}
-The functor $i$ is fully faithful.
-\end{cor}
-\begin{proof}
-%This amounts to checking that taking inverse limits retains fully faithfulness.  this is obvious, thanks to arpon
-\end{proof}
 
-at the end, restrict connectivity so that it's monoidal
+%3. Identify everything as monoidal, then take the limit n-> \infty.
+
+Until this point, we have been working with a fixed $n$.  The pullbacks defining $\C_n$ fit together for the various $n$ by the maps induced by the natural inclusion $[n] \to [n+1]$.  This yields a diagram
+
+$$
+\begin{tikzcd}
+\mathcal{G}_\infty \arrow[r] &\C_\infty \arrow[r] \arrow[d]&  \Cofil^+ \arrow[d]\\
+& \Fil^+ \arrow[r]& \Sp
+\end{tikzcd}
+$$
+where $\Fil^+ := \Fun(\Z_{\geq 0}^+, \Sp)$, $\Cofil^+ := \Fun((\Z_{\geq 0}^+)^{op},\Sp)$, and the square is Cartesian.  
+
+\begin{rmk}
+While $\mathcal{G}_\infty \to \mathcal{C}_\infty$ remains a fully faithful functor, we warn the reader that $\mathcal{G}_\infty$ is not simply $\Fun((\Z_{\geq 0}^+)^{ds}, \Sp)$ because the maps in the inverse system for $\mathcal{G}$ are not just the ones induced by the inclusions $([n]^+)^{ds} \to ([n+1]^+)^{ds}.$
+\end{rmk}
+
+
+Remains to add in the monoidal structure, but this should be easy.  
+%can I avoid talking about finite level monoidal structures
+%
+
+
+
