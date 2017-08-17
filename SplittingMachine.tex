@@ -1,9 +1,10 @@
-%I HAVE NOT BEEN CAREFUL WITH Sp vs. Sp^J vs Sp^D and whether to call them spectra or functors; I think we should call them spectra...need to find/replace
+%This section is currently written with Sp instead of Sp^J or Sp^D.  
+
 Given a filtered spectrum $$X_0\longrightarrow X_1 \longrightarrow X_2 \longrightarrow \cdots ,$$ it will split if and only if there are maps going the other way: $$X_0 \longleftarrow X_1 \longleftarrow X_2 \longleftarrow \cdots,$$ with the property that the relevant composites are equivalences.  Motivated by this, one could ask: given an $\E_n$ filtered spectrum $X$, when is it $\E_n$-split?  In this section, we answer this question by proving the following:
 
 %beware, perhaps not enough definitions are made for this statement to make sense; should probably also say either spectra or functors to spectra....
-\begin{thm}
-Let $X\in \Alg_{\E_n}(\Fil)$ be an $\E_n$ filtered spectrum.  Suppose there exists an $\E_n$ cofiltered spectrum $Y\in \Alg_{\E_n}$ with the following two properties:
+\begin{thm}\label{thm:SplitMachine}
+Let $X\in \Alg_{\E_n}(\Fil)$ be an $\E_n$ filtered spectrum.  Suppose there exists an $\E_n$ cofiltered spectrum $Y\in \Alg_{\E_n}(\Cofil)$ with the following two properties:
 \begin{enumerate}
 \item There is an equivalence $\colim X \simeq \lim Y$ of $\E_n$-algebras in spectra.
 \item The resulting natural maps $X_i \to Y_i$ are equivalences.  
@@ -16,18 +17,18 @@ Then, the filtered spectrum $X$ is $\E_n$-split.
 
 %For an indexing category I, we can form I^+; may need to mess around with this a bit to say it better
 We will need a few preliminary definitions.  We start by fixing a positive integer $n$.  
-Let $[n]$ denote the linearly ordered set of integers $0\leq i\leq n$. For any indexing 1-category $\mathcal{D}$, denote by $\mathcal{D}^{ds}$ the underlying discrete category, and denote by $\mathcal{D}^+$ the the category formed by formally adding a final object, which we will refer to as ``$+$''.  Define $\Fil_n^+ = \Fun([n]^+, \Sp^{\J})$ and $\Cofil_n^+ = \Fun(([n]^+)^{op},\Sp^{\J}).$  These categories admit functors to $\Sp^{\J}$ by restriction to the distinguished point.  We define $\C_n$ by the following pullback:
+Let $[n]$ denote the linearly ordered set of integers $0\leq i\leq n$. For any indexing 1-category $\mathcal{D}$, denote by $\mathcal{D}^{ds}$ the underlying discrete category, and denote by $\mathcal{D}^+$ the the category formed by formally adding a final object, which we will refer to as ``$+$''.  Define $\Fil_n^+ = \Fun([n]^+, \Sp)$ and $\Cofil_n^+ = \Fun(([n]^+)^{op},\Sp).$  These categories admit functors to $\Sp$ by restriction to the distinguished point.  We define $\C_n$ by the following pullback:
 
 $$
 \begin{tikzcd}
 \C_n \arrow[r] \arrow[d]&  \Cofil_n^+ \arrow[d]\\
-\Fil_n^+ \arrow[r]& \Sp^{\J}
+\Fil_n^+ \arrow[r]& \Sp
 \end{tikzcd}
 $$
 
 
 %2. Write down the pullback; identify the full subcategory as the image of Gr_n x Sp^J.
-An element of $\C_n$ can be thought of as a sequence of functors connected by natural transformations:
+An element of $\C_n$ can be thought of as a sequence of spectra connected by maps:
 \begin{center}
 $X_0 \longrightarrow X_1 \longrightarrow \cdots \longrightarrow X_n \longrightarrow X \simeq Y \longrightarrow Y_n \longrightarrow \cdots \longrightarrow Y_1 \longrightarrow Y_0$
 \end{center}
@@ -41,7 +42,7 @@ and so we shall refer to general elements by these names below.
 Define the subcategory $\mathcal{G}_n\subset \C_n$ as the full subcategory such that for each integer $0\leq i\leq n$, the composite $X_i \longrightarrow Y_i$ is an equivalence.  
 
 \begin{lem}
-There is an equivalence $$\mathcal{G}_n \simeq \Gr_n^+ := \Fun(([n]^{+})^{ds}, \Sp^{J}),$$
+There is an equivalence $$\mathcal{G}_n \simeq \Gr_n^+ := \Fun(([n]^{+})^{ds}, \Sp),$$
 where $([n]^+)^{ds}$ is, as usual, the underlying set of $[n]^+$.  
 \end{lem}
 \begin{proof}
@@ -73,9 +74,41 @@ While $\mathcal{G}_\infty \to \mathcal{C}_\infty$ remains a fully faithful funct
 \end{rmk}
 
 
-Remains to add in the monoidal structure, but this should be easy.  
-%can I avoid talking about finite level monoidal structures
-%
+Recall that we were interested in understanding when an $\E_n$ filtered spectrum $X\in \Alg_{\E_n}(\Fil)$ is split - that is, when there exists $Z\in \Alg_{\E_n}(\Gr)$ such that $X \simeq IZ.$  The following proposition is key in relating that to our current situation.
+
+\begin{prop}\label{prop:MonRet}
+There exists a diagram of symmetric monoidal $\infty$-categories and lax symmetric monoidal functors 
+$$
+\begin{tikzcd}
+\Gr \arrow[r] \arrow[d, "I"]&\mathcal{G}_\infty \arrow[r,"\pi"] \arrow[d, "I^+"]&  \Gr \arrow[d, "I"]\\
+\Fil \arrow[r,"\iota"] & \Fil^+ \arrow[r,"\varpi"]& \Fil
+\end{tikzcd}
+$$
+where the rows are retracts and $I^+$ is induced by the $I_n^+$ at each finite level.  
+\end{prop} 
+\begin{proof}
+By taking inverse limits, it suffices to show that there is a similar diagram
+$$
+\begin{tikzcd}
+\Gr_n \arrow[r] \arrow[d, "I_n"]&\Gr_n^+ \arrow[r] \arrow[d, "I_n^+"]&  \Gr_n \arrow[d, "I_n"]\\
+\Fil_n \arrow[r] & \Fil_n^+ \arrow[r]& \Fil_n
+\end{tikzcd}
+$$
+for each $n$. %technically, also need to see this gives the right monoidal str on \Gr, etc., when you take limit
+
+***I think everything here is obvious by how things are defined, but I guess I need to say something, maybe even a lot, since to be careful, I'd need to spell out all these monoidal structures :(.  %TODO
+
+\end{proof}
+
+
+We are now ready to prove the main result of this section.
+
+\begin{proof}[Proof of Theorem \ref{thm:SplitMachine}]
+We use the notations of Proposition \ref{prop:MonRet}.  Since $\iota$ is lax monoidal, we obtain an $\E_n$ algebra $\iota X \in \Alg_{\E_n}(\Fil^+).$  
+Similarly, since the functor $\iota^{op}: \Cofil \to \Cofil+$ is lax monoidal, we get $\iota^{op}Y \in \Cofil^+$.  %This needs explanation.  I think this is true since lim is lax the right way
+Condition (1) in the statement of the Theorem guarantees that $\iota X$ and $\iota^{op}Y$ determine an element $\mathcal{X} \in \Alg_{\E_n}(\C_{\infty})$.  Condition (2) combined with the fact that $\mathcal{G}_\infty \to \C_\infty$ is fully faithful implies that $\mathcal{X} \in \Alg_{\E_n}(\G_\infty).$  Finally, we chase through the diagram of Proposition \ref{prop:MonRet} to see that $I\pi \mathcal{X} \simeq \varpi I^+ \mathcal{X} \simeq \varpi \iota X \simeq X$ as $\E_n$ algebras in $\Fil$.  
+\end{proof}
+
 
 
 
