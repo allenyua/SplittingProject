@@ -54,49 +54,76 @@ Next, assume the statement for $n\leq k$ and consider $\mathcal{G}_{k+1}.$  We c
 
 \end{proof}
 
+
+
 In fact, the functor $\Gr_n^+ \to \C_n$ can be seen very explicitly as follows: theres a functor $$I_n^+: \Gr_n^+ \to \Fil_n^+$$ given by left Kan extension along the inclusion $([n]^+)^{ds} \to [n]^+$ which is completely analogous to the functor $I$ described in Section \ref{sec:FilGra}.  Dually, there's a functor $$I_n^{op,+}:\Gr_n^+ \to \Cofil_n^+$$ given by right Kan extension along the inclusion $([n]^+)^{ds} \to ([n]^+)^{op}$ which sends an element $(X_0, X_1, \cdots, X_n, X)\in \Gr_n^+$ to $$X_0 \longleftarrow X_0\vee X_1 \longleftarrow \cdots \longleftarrow \bigvee_i X_i \longleftarrow X \vee \bigvee_i X_i.$$  These functors agree on restriction to the distinguished object, and so they define the desired functor $\Gr_n^+ \to \C_n.$  
 
 
 %3. Identify everything as monoidal, then take the limit n-> \infty.
 
-Until this point, we have been working with a fixed $n$.  The pullbacks defining $\C_n$ fit together for the various $n$ by the maps induced by the natural inclusion $[n] \to [n+1]$.  This yields a diagram
+
+
+Until this point, we have been working with a fixed $n$ and without regard to the monoidal structure.  The key to moving further is the following theorem of Lurie:
+
+\begin{thm}[\cite{LurieRot}, Corollary 2.3.8]\label{thm:LurDay}%maybe this can be stated earlier.  
+The construction which sends an $\infty$-category $\mathcal{D}$ to the functor category $\Fun(\mathcal{D}^{op}, \Sp)$ determines a symmetric monoidal functor from the $\infty$-category of $\infty$-categories to the $\infty$-category of presentable stable $\infty$-categories.  
+\end{thm}
+
+In particular, this implies that if $\D$ is a symmetric monoidal category, then $\Fun(\D, \Sp)$ has a natural symmetric monoidal structure, and for any symmetric monoidal functor $\D_1\to \D_2$, left Kan extension yields a symmetric monoidal functor $\Fun(\D_1,\Sp) \to \Fun(\D_2,\Sp).$  
+
+To apply this to our situation, we give $[n]^+$ the structure of a symmetric monoidal category by taking $\Z_{\geq 0}$ under addition and identifying all the integers $m >n$ with the point $+$.  There are natural symmetric monoidal functors $[n+1]^+ \to [n]^+$ by successive quotient.  By Theorem \ref{thm:LurDay} combined with the commutative diagram of symmetric monoidal functors
 
 $$
+\begin{tikzcd}
+(\lbrack n+1\rbrack^+)^{ds} \arrow[r] \arrow[d] & \lbrack n+1\rbrack^+ \arrow[d]\\
+(\lbrack n\rbrack^+)^{ds} \arrow[r] & \lbrack n\rbrack^+ ,
+\end{tikzcd}
+$$
+we obtain a commutative diagram of symmetric monoidal $\infty$-categories:
+$$
+\begin{tikzcd}
+\Gr_{n+1}^+ \arrow[r,"I_{n+1}^+"] \arrow[d] & \Fil_{n+1}^+ \arrow[d]\\
+\Gr_n^+  \arrow[r,"I_n^+"] & \Fil_n^+ .
+\end{tikzcd}
+$$
+We remark that the right vertical functor coincides with the restriction induced by the natural inclusion $[n] \to [n+1]$.  As a consequence, $\lim_n \Fil_n^+ = \Fun(\Z_{\geq 0}^+, \Sp) =: \Fil^+$.  
+
+There is a similar diagram for the cofiltered side. (TODO, once we figure out how to say the cofiltered convolution) %Need to justify this once I figure out what to do about monoidal structure on cofil; define Cofil^+ while you're at it.
+
+Thus, taking the limit in $n$ in the original picture yields a diagram of symmetric monoidal functors:
+
+$$%change this to a twisty diagram where we've labelled I^+.
 \begin{tikzcd}
 \mathcal{G}_\infty \arrow[r] &\C_\infty \arrow[r] \arrow[d]&  \Cofil^+ \arrow[d]\\
 & \Fil^+ \arrow[r]& \Sp
 \end{tikzcd}
 $$
-where $\Fil^+ := \Fun(\Z_{\geq 0}^+, \Sp)$, $\Cofil^+ := \Fun((\Z_{\geq 0}^+)^{op},\Sp)$, and the square is Cartesian.  
+where the square is Cartesian.
 
 \begin{rmk}
 While $\mathcal{G}_\infty \to \mathcal{C}_\infty$ remains a fully faithful functor, we warn the reader that $\mathcal{G}_\infty$ is not simply $\Fun((\Z_{\geq 0}^+)^{ds}, \Sp)$ because the maps in the inverse system for $\mathcal{G}$ are not just the ones induced by the inclusions $([n]^+)^{ds} \to ([n+1]^+)^{ds}.$
 \end{rmk}
 
 
-Recall that we were interested in understanding when an $\E_n$ filtered spectrum $X\in \Alg_{\E_n}(\Fil)$ is split - that is, when there exists $Z\in \Alg_{\E_n}(\Gr)$ such that $X \simeq IZ.$  The following proposition is key in relating that to our current situation.
+Recall that we were interested in understanding when an $\E_n$ filtered spectrum $X\in \Alg_{\E_n}(\Fil)$ is split - that is, when there exists $Z\in \Alg_{\E_n}(\Gr)$ such that $X \simeq IZ.$  The following proposition is key in relating that to our current situation; informally, it allows us to get rid of the +'s.
 
 \begin{prop}\label{prop:MonRet}
-There exists a diagram of symmetric monoidal $\infty$-categories and lax symmetric monoidal functors 
+There exists a diagram of symmetric monoidal $\infty$-categories and symmetric monoidal functors 
 $$
 \begin{tikzcd}
-\Gr \arrow[r] \arrow[d, "I"]&\mathcal{G}_\infty \arrow[r,"\pi"] \arrow[d, "I^+"]&  \Gr \arrow[d, "I"]\\
+&\mathcal{G}_\infty \arrow[r,"\pi"] \arrow[d, "I^+"]&  \Gr \arrow[d, "I"]\\
 \Fil \arrow[r,"\iota"] & \Fil^+ \arrow[r,"\varpi"]& \Fil
 \end{tikzcd}
 $$
-where the rows are retracts and $I^+$ is induced by the $I_n^+$ at each finite level.  
+where the bottom row is a retract and $I^+$ is induced by the $I_n^+$ at each finite level.  
 \end{prop} 
 \begin{proof}
-By taking inverse limits, it suffices to show that there is a similar diagram
-$$
-\begin{tikzcd}
-\Gr_n \arrow[r] \arrow[d, "I_n"]&\Gr_n^+ \arrow[r] \arrow[d, "I_n^+"]&  \Gr_n \arrow[d, "I_n"]\\
-\Fil_n \arrow[r] & \Fil_n^+ \arrow[r]& \Fil_n
-\end{tikzcd}
-$$
-for each $n$. %technically, also need to see this gives the right monoidal str on \Gr, etc., when you take limit
+We have already seen that $I^+$ is symmetric monoidal.  For the bottom row, simply apply Theorem \ref{thm:LurDay} to the sequence $$\Z_{\geq 0} \to \Z_{\geq 0}^+ \to \Z_{\geq 0}.$$
 
-***I think everything here is obvious by how things are defined, but I guess I need to say something, maybe even a lot, since to be careful, I'd need to spell out all these monoidal structures :(.  %TODO
+Finally, to see that $\pi$ is symmetric monoidal, we claim that at each finite level $n$, the functor $$\pi_n: \Gr_n^+ \to \Gr_n$$ is symmetric monoidal.  This is because it is localization to the full subcategory of $\Gr_n^+$ which restricts to $0$ at the element $+\in ([n]^+)^{ds}$, and the localization is clearly compatible with the monoidal structure (for example, see \cite[Proposition 2.2.1.9]{HA}).%need I say this more carefully?
+
+
+%do I need to say something about taking limits of symmetric monoidal functors
 
 \end{proof}
 
@@ -105,7 +132,7 @@ We are now ready to prove the main result of this section.
 
 \begin{proof}[Proof of Theorem \ref{thm:SplitMachine}]
 We use the notations of Proposition \ref{prop:MonRet}.  Since $\iota$ is lax monoidal, we obtain an $\E_n$ algebra $\iota X \in \Alg_{\E_n}(\Fil^+).$  
-Similarly, since the functor $\iota^{op}: \Cofil \to \Cofil+$ is lax monoidal, we get $\iota^{op}Y \in \Cofil^+$.  %This needs explanation.  I think this is true since lim is lax the right way
+Similarly, since the functor $\iota^{op}: \Cofil \to \Cofil^+$ is lax monoidal, we get $\iota^{op}Y \in \Cofil^+$.  %This needs explanation.  I think this is true since lim is lax the right way
 Condition (1) in the statement of the Theorem guarantees that $\iota X$ and $\iota^{op}Y$ determine an element $\mathcal{X} \in \Alg_{\E_n}(\C_{\infty})$.  Condition (2) combined with the fact that $\mathcal{G}_\infty \to \C_\infty$ is fully faithful implies that $\mathcal{X} \in \Alg_{\E_n}(\G_\infty).$  Finally, we chase through the diagram of Proposition \ref{prop:MonRet} to see that $I\pi \mathcal{X} \simeq \varpi I^+ \mathcal{X} \simeq \varpi \iota X \simeq X$ as $\E_n$ algebras in $\Fil$.  
 \end{proof}
 
