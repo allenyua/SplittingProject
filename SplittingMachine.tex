@@ -94,7 +94,9 @@ Thus, taking the limit in $n$ in the original picture yields a diagram of symmet
 
 $$%change this to a twisty diagram where we've labelled I^+.
 \begin{tikzcd}
-\mathcal{G}_\infty \arrow[r] &\C_\infty \arrow[r] \arrow[d]&  \Cofil^+ \arrow[d]\\
+\mathcal{G}_\infty
+ \arrow[drr, bend left, "I^{+,op}"]  \arrow[ddr, bend right, "I^+"]  \arrow[dr] & & \\
+&\C_\infty \arrow[r] \arrow[d]&  \Cofil^+ \arrow[d]\\
 & \Fil^+ \arrow[r]& \Sp
 \end{tikzcd}
 $$
