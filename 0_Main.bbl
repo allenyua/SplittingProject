@@ -17,6 +17,11 @@ Steven~Greg Chadwick and Michael~A. Mandell.
 \newblock {$E_n$} genera.
 \newblock {\em Geom. Topol.}, 19(6):3193--3232, 2015.
 
+\bibitem[Gla13]{Glasman}
+Saul Glasman.
+\newblock Day convolution for infinity-categories.
+\newblock {\em \newline {P}reprint {\tt arXiv:1308.4940}}, Aug 2013.
+
 \bibitem[GS09]{GepnerSnaith}
 David Gepner and Victor Snaith.
 \newblock On the motivic spectra representing algebraic cobordism and algebraic
@@ -68,6 +73,11 @@ Haynes Miller.
 Stephen~A. Mitchell.
 \newblock A filtration of the loops on {${\rm SU}(n)$} by {S}chubert varieties.
 \newblock {\em Math. Z.}, 193(3):347--362, 1986.
+
+\bibitem[Nik16]{Nikolaus}
+Thomas Nikolaus.
+\newblock Stable $\infty$-operads and the multiplicative yoneda lemma.
+\newblock {\em \newline {P}reprint {\tt arXiv:1608.02901}}, Aug 2016.
 
 \bibitem[Sna77]{SnaithNotMultiplicative}
 Victor Snaith.

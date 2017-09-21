@@ -72,7 +72,7 @@ Given an $\E_n$-split filtered spectrum $X$, we can recover the underlying grade
 \subsection{Monoidal structures, II}\label{sect:monoidal2}
 Here we discuss some additional constructions and results that we will need for the more technical parts of this paper.  %at some point, warn that we'll have to use infinity operads
 
-The monoidal structures on our categories will arise from Day convolution.  This was studied for $\infty$-categories by Glasman \cite{**INSERT CITATION**} and Lurie \cite{LurieRot, HA} at varying levels of generality.  We will find it convenient to use the formulation from Section 2.2.6 of \cite{HA}.  
+The monoidal structures on our categories will arise from Day convolution.  This was studied for $\infty$-categories by Glasman \cite{Glasman} and Lurie \cite{LurieRot, HA} at varying levels of generality.  We will find it convenient to use the formulation from Section 2.2.6 of \cite{HA}.  
 
 \begin{thm}[\cite{HA}, Example 2.2.6.9]
 Let $\C$ and $\D$ be symmetric monoidal $\infty$-categories.  Then there is an $\infty$-operad $\Fun(\C, \D)^{\otimes} $ with the following properties:
@@ -102,9 +102,9 @@ As stated before, Proposition \ref{prop:dayconvsmc} is sufficient to construct s
 \begin{dfn}Let $\D$ be an $\infty$-category.  Let $\Cofil(\Sp^{\D})$ denote the functor category $\Fun(\Z_{\geq 0}^{op}, \Sp^{\D}).$  We shall refer to $\Cofil(\Sp^{\D})$ as the category of cofiltered objects in $\Sp^{\D}$.  Its objects can be thought of as towers of functors $Y_0\leftarrow Y_1\leftarrow Y_2 \leftarrow \cdots \in \Sp^{\D}$.
 \end{dfn}
 
-We would like to make $\Cofil(\Sp)$ a symmetric monoidal $\infty$-category by putting the Day convolution on its opposite, $\Fun(\Z_{\geq 0}, \Sp^{op}).$  However, the smash product of spectra does not preserve small colimits separately in each variable.  Nevertheless, it does preserve \emph{finite} colimits separately in each variable.  In fact, these are the only colimits that are needed in the case at hand:
+We would like to make $\Cofil(\Sp)$ a symmetric monoidal $\infty$-category by putting the Day convolution on its opposite, $\Fun(\Z_{\geq 0}, \Sp^{op}).$  However, the smash product of spectra does not preserve small colimits separately in each variable.  Nevertheless, it does preserve \emph{finite} colimits separately in each variable.  In fact, these are the only colimits that are needed in the case at hand and so we have the following variant of Proposition \ref{prop:dayconvsmc}:
 
-\begin{var}
+\begin{var}\label{var:day}
 Let $\C$ and $\D$ be symmetric monoidal $\infty$-categories.  Suppose that:
 \begin{enumerate}
 \item For every $C\in \C$, the slice category $\C_{/C}$ is finite.  
@@ -118,13 +118,24 @@ This follows directly from the same arguments as Proposition \ref{prop:dayconvsm
 \end{proof}
 
 
+In Section \ref{sec:SplittingMachine}, we will need to consider not only the Day convolution monoidal structure on $\Fun(\C,\D)$ but its functoriality as $\C$ varies.  For instance, we would for symmetric monoidal functors $\C_1 \to \C_2$ to induce symmetric monoidal functors $\Fun(\C_1,\D) \to \Fun(\C_2,\D)$ via left Kan extension.  
 
-%need the general thing where symmetric monoidal functors give symmetric monoidal functors by Kan extension
+We give a very close variant of \cite[Corollary 3.8]{Nikolaus} in our current framework:
 
-%define cofil, Fil, and say something about Kan extending along "cofinite" symmetric monoidal maps
+\begin{prop}
+Let $\C_1$, $\C_2$, and $\D$ be symmetric monoidal $\infty$-categories such that the pairs $(\C_1, \D)$ and $(\C_2, \D)$ satisfy the hypotheses of Proposition \ref{prop:dayconvsmc} or of Variant \ref{var:day}.  Let $f:\C_1 \to \C_2$ be a symmetric monoidal functor.  Then there is an adjunction 
+$$ f_! : \Fun(\C_1, \D) \xrightleftharpoons{\quad} \Fun(\C_2, \D): f_* $$ 
+
+where $f_*$ denotes restriction and $f_!$ denotes left Kan extension.  Moreover, the functor $f_*$ is lax symmetric monoidal and $f_!$ is symmetric monoidal.  
+\end{prop}
+\begin{proof}
+The universal property of $\Fun(\C_1, \D)^{\otimes}$ immediately implies the existence of a map of $\infty$-operads $\Fun(\C_2,\D)^{\otimes} \to \Fun(\C_1,\D)^{\otimes}$, which makes $f_*$ a lax symmetric monoidal functor.  
+
+Assumptions (1) and (2) of Proposition \ref{prop:dayconvsmc} guarantee that the adjunction exists at the level of $\infty$-categories.  The rest of the proof from \cite[Corollary 3.8]{Nikolaus} carries over verbatim.  
+\end{proof}
 
 
-
+%should check I wrote lax *symmetric* monoidal, not just lax monoidal everywhere
 
 
 
