@@ -50,7 +50,7 @@ We proceed by induction on $n$.
 
 For $n=0$, we are considering the full subcategory of diagrams $X_0 \to Z \to Y_0$ of spectra with the property that the composite is an equivalence.  By taking the fiber of the second map, this is equivalent to the category of triples $(X_0, Y_0',Z)$ of spectra together with an equivalence $X_0 \vee Y_0' \xrightarrow{\sim} Z.$   This is  certainly equivalent to the category of pairs $(X_0, Y_0')$ of spectra, which is $\Gr_0^+.$  
 
-Next, assume the statement for $n\leq k$ and consider $\mathcal{G}_{k+1}.$  We consider the auxiliary category $\overline{\mathcal{G}}_{k+1}$ which is the full subcategory of $\C_{k+1}$ where only $X_{k+1} \to Y_{k+1}$ is stipulated to be an equivalence.    The argument for the base case shows that $$\overline{\mathcal{G}}_{k+1} = \Fil_k \times_{\Sp} \Gr_0^+ \times_{\Sp} \Cofil_k$$ where the fiber products are over the restriction to $0\in [0]^+$ for $\Gr_0^+$, and over $X_{k+1}$ and $Y_{k+1}$ in the filtered and cofiltered spectra.  By commuting the fiber products, we find that $$\overline{\mathcal{G}}_{k+1} = \C_k \times_{\Sp} \Gr_0^+.$$  Under this equivalence, the full subcategory $\mathcal{G}_{k+1} \subset \overline{\mathcal{G}}_{k+1}$ corresponds to $\mathcal{G}_k \times_{\Sp} \Gr_0^+ \simeq \Gr_{k+1}^+$ as desired.  
+Next, assume the statement for $n\leq k$ and consider $\mathcal{G}_{k+1}.$  We consider the auxiliary category $\overline{\mathcal{G}}_{k+1}$ which is the full subcategory of $\C_{k+1}$ where only $X_{k+1} \to Y_{k+1}$ is stipulated to be an equivalence.    The argument for the base case shows that $$\overline{\mathcal{G}}_{k+1} = \Fil_{k+1} \times_{\Sp} \Gr_0^+ \times_{\Sp} \Cofil_{k+1}$$ where the fiber products are over the restriction to $0\in [0]^+$ for $\Gr_0^+$, and over $X_{k+1}$ and $Y_{k+1}$ in the filtered and cofiltered spectra.  By commuting the fiber products, we find that $$\overline{\mathcal{G}}_{k+1} = (\Fil_{k+1} \times_{\Sp} \Cofil_{k+1}) \times_{\Sp} \Gr_0^+  \simeq \C_k \times_{\Sp} \Gr_0^+$$ where we have implicitly used the identifications $\Fil_{k+1} \simeq \Fil_k^+$ and $\Cofil_{k+1} \simeq \Cofil_k^+.$   Under this equivalence, the full subcategory $\mathcal{G}_{k+1} \subset \overline{\mathcal{G}}_{k+1}$ corresponds to $\mathcal{G}_k \times_{\Sp} \Gr_0^+ \simeq \Gr_{k+1}^+$ as desired.  
 
 \end{proof}
 
@@ -86,7 +86,7 @@ $$
 \Gr_n^+  \arrow[r,"I_n^+"] & \Fil_n^+ .
 \end{tikzcd}
 $$
-We remark that the right vertical functor coincides with the restriction induced by the natural inclusion $[n] \to [n+1]$.  As a consequence, $\lim_n \Fil_n^+ = \Fun(\Z_{\geq 0}^+, \Sp) =: \Fil^+$.  
+We remark that the right vertical functor coincides with the restriction induced by the natural inclusion $[n] \to [n+1]$.  As a consequence, we find that $\lim_n \Fil_n^+ = \Fun(\colim_n [n]^+, \Sp) = \Fun(\Z_{\geq 0}^+, \Sp) =: \Fil^+$.  
 
 There is a similar diagram for the cofiltered side. (TODO, once we figure out how to say the cofiltered convolution) %Need to justify this once I figure out what to do about monoidal structure on cofil; define Cofil^+ while you're at it.
 
@@ -95,7 +95,9 @@ Thus, taking the limit in $n$ in the original picture yields a diagram of symmet
 $$%change this to a twisty diagram where we've labelled I^+.
 \begin{tikzcd}
 \mathcal{G}_\infty
- \arrow[drr, bend left, "I^{+,op}"]  \arrow[ddr, bend right, "I^+"]  \arrow[dr] & & \\
+ \arrow[drr, bend left, "I^{+,op}"]
+  \arrow[ddr, bend right, "I^+"]
+  \arrow[dr] & & \\
 &\C_\infty \arrow[r] \arrow[d]&  \Cofil^+ \arrow[d]\\
 & \Fil^+ \arrow[r]& \Sp
 \end{tikzcd}
@@ -135,7 +137,7 @@ We are now ready to prove the main result of this section.
 \begin{proof}[Proof of Theorem \ref{thm:SplitMachine}]
 We use the notations of Proposition \ref{prop:MonRet}.  Since $\iota$ is lax monoidal, we obtain an $\E_n$ algebra $\iota X \in \Alg_{\E_n}(\Fil^+).$  
 Similarly, since the functor $\iota^{op}: \Cofil \to \Cofil^+$ is lax monoidal, we get $\iota^{op}Y \in \Cofil^+$.  %This needs explanation.  I think this is true since lim is lax the right way
-Condition (1) in the statement of the Theorem guarantees that $\iota X$ and $\iota^{op}Y$ determine an element $\mathcal{X} \in \Alg_{\E_n}(\C_{\infty})$.  Condition (2) combined with the fact that $\mathcal{G}_\infty \to \C_\infty$ is fully faithful implies that $\mathcal{X} \in \Alg_{\E_n}(\G_\infty).$  Finally, we chase through the diagram of Proposition \ref{prop:MonRet} to see that $I\pi \mathcal{X} \simeq \varpi I^+ \mathcal{X} \simeq \varpi \iota X \simeq X$ as $\E_n$ algebras in $\Fil$.  
+Condition (1) in the statement of the theorem guarantees that $\iota X$ and $\iota^{op}Y$ determine an element $\mathcal{X} \in \Alg_{\E_n}(\C_{\infty})$.  Condition (2) combined with the fact that $\mathcal{G}_\infty \to \C_\infty$ is fully faithful implies that $\mathcal{X} \in \Alg_{\E_n}(\G_\infty).$  Finally, we chase through the diagram of Proposition \ref{prop:MonRet} to see that $I\pi \mathcal{X} \simeq \varpi I^+ \mathcal{X} \simeq \varpi \iota X \simeq X$ as $\E_n$ algebras in $\Fil$.  
 \end{proof}
 
 

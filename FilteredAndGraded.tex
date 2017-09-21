@@ -2,6 +2,7 @@
 It will be important for us to have a precise language for discussing filtered and graded spectra, what it means to be split, what it means to take associated graded, and the multiplicative aspects of these constructions. Here we review a framework from \cite{LurieRot} for studying graded and filtered objects.  The reader is referred to \cite{LurieRot} for a more thorough treatment and all proofs.  
 
 %Let $\C$ be a symmetric monoidal stable $\infty$-category which admits filtered colimits.  
+\subsection{First definitions}
 Let $\D$ be an $\infty$-category which we will regard as the diagram category.  Our filtered objects will be valued in the functor category $\Sp^{\D}.$  This will be no more difficult than just ordinary spectra because limits, colimits, and smash products will be considered pointwise.  
 
 Denote by $\Z_{\geq 0}$ the poset of non-negative integers, denoted $[n]$, thought of as an ordinary category where $\Hom([a],[b])$ is a singleton if $a\leq b$, and empty otherwise.  Denote by $\Z_{\geq 0}^{ds}$ the corresponding discrete category.  We may then take nerves to obtain $\infty$-categories $N(\Z_{\geq 0})$ and $N(\Z_{\geq 0}^{ds})$, which will serve as the indexing sets for filtered and graded spectra.  The reader is warned that our numbering conventions are opposite the ones in \cite{LurieRot}.
@@ -21,8 +22,10 @@ $$I:\Gr(\Sp^{\D}) \xrightleftharpoons{\quad} \Fil(\Sp^{\D}) : \text{res}$$
 where the left adjoint $I: \Gr(\Sp^{\D}) \to \Fil(\Sp^{\D})$ is given by left Kan extension.  The functor $I$ can be described explicitly as taking a graded object $X_0,X_1,X_2,\cdots$ to the filtered object $$I(X_0, X_1, \cdots) = (X_0\to X_0\oplus X_1\to X_0 \oplus X_1\oplus X_2\to \cdots).$$   
 
 
-\subsection{Monoidal structures}\label{sect:monoidal}
-By \cite[Corollary 2.3.9]{LurieRot}, the categories $\Gr(\Sp)$ and $\Fil(\Sp)$ may be given symmetric monoidal structures via the Day convolution.  Then, via the identifications $\Gr(\Sp^{\D}) = \Gr(\Sp)^{\D}$ and $\Fil(\Sp^{\D}) = \Fil(\Sp)^{\D}$, the categories $\Gr(\Sp^{\D})$ and $\Fil(\Sp^{\D})$ may be given symmetric monoidal structures pointwise on $\D$.  In both cases, we denote the resulting operation by $\otimes$.  Explicitly, the filtered tensor product $$\left(X_0 \longrightarrow X_1 \longrightarrow X_2 \longrightarrow \cdots \right) \otimes \left(Y_0 \longrightarrow Y_1 \longrightarrow Y_2 \longrightarrow \cdots \right)$$
+\subsection{Monoidal structures, I}\label{sect:monoidal}
+We now begin studying the monoidal structures on graded and filtered spectra.  We confine ourselves to a basic discussion in this section, saving the finer details and definitions for the next subsection. 
+%\cite[Corollary 2.3.9]{LurieRot}
+By \cite[Example 2.2.6.17]{HA}, the categories $\Gr(\Sp)$ and $\Fil(\Sp)$ may be given symmetric monoidal structures via the Day convolution.  Then, via the identifications $\Gr(\Sp^{\D}) = \Gr(\Sp)^{\D}$ and $\Fil(\Sp^{\D}) = \Fil(\Sp)^{\D}$, the categories $\Gr(\Sp^{\D})$ and $\Fil(\Sp^{\D})$ may be given symmetric monoidal structures pointwise on $\D$.  In both cases, we denote the resulting operation by $\otimes$.  Explicitly, the filtered tensor product $$\left(X_0 \longrightarrow X_1 \longrightarrow X_2 \longrightarrow \cdots \right) \otimes \left(Y_0 \longrightarrow Y_1 \longrightarrow Y_2 \longrightarrow \cdots \right)$$
 of two filtered spectra is computed as
 
 \begin{center}
@@ -64,4 +67,64 @@ Given an $\E_n$-split filtered spectrum $X$, we can recover the underlying grade
 %%%%
 
 ***Maybe it's worth making a remark about what these mean in terms of power operations, or say, the spectral sequence associated to the filtered object; maybe there's some sort of power operation on the $E_2$ page and you can say something about it...
+
+
+\subsection{Monoidal structures, II}\label{sect:monoidal2}
+Here we discuss some additional constructions and results that we will need for the more technical parts of this paper.  %at some point, warn that we'll have to use infinity operads
+
+The monoidal structures on our categories will arise from Day convolution.  This was studied for $\infty$-categories by Glasman \cite{**INSERT CITATION**} and Lurie \cite{LurieRot, HA} at varying levels of generality.  We will find it convenient to use the formulation from Section 2.2.6 of \cite{HA}.  
+
+\begin{thm}[\cite{HA}, Example 2.2.6.9]
+Let $\C$ and $\D$ be symmetric monoidal $\infty$-categories.  Then there is an $\infty$-operad $\Fun(\C, \D)^{\otimes} $ with the following properties:
+\begin{enumerate}
+\item The underlying $\infty$-category of $\Fun(\C,\D)^{\otimes}$ is the functor category $\Fun(\C, \D)$.
+\item The $\infty$-category $\Alg_{\E_\infty}(\Fun(\C, \D)^{\otimes})$ of $\E_\infty$ algebras in $\Fun(\C,\D)^{\otimes}$ is equivalent to the category of lax symmetric monoidal functors from $\C$ to $\D$.  
+
+\end{enumerate}
+\end{thm}
+
+In order for the $\infty$-operad $\Fun(\C,\D)^{\otimes}$ to actually be a symmetric monoidal $\infty$-category, one needs to make additional assumptions.  
+
+\begin{prop}[\cite{HA}, Proposition 2.2.6.16]\label{prop:dayconvsmc}
+Let $\C$ and $\D$ be symmetric monoidal $\infty$-categories.  Suppose that $\kappa$ is an uncountable regular cardinal such that:
+\begin{enumerate}
+\item $\C$ is essentially $\kappa$-small.
+\item $\D$ admits $\kappa$-small colimits.
+\item The tensor product on $\D$ preserves $\kappa$-small colimits separately in each variable.  
+\end{enumerate}
+Then $\Fun(\C,\D)^{\otimes}$ is a symmetric monoidal $\infty$-category.  
+\end{prop}
+
+Recall that the Day convolution is defined classically via left Kan extension.  Assumptions (1) and (2) ensure that the relevant Kan extensions exist.  Assumption (3) then ensures that the multiplication is associative by allowing the colimits taken in the formula for left Kan extension to commute with the tensor product.  
+
+As stated before, Proposition \ref{prop:dayconvsmc} is sufficient to construct symmetric monoidal $\infty$-categories $\Fil(\Sp)$ and $\Gr(\Sp)$.  However, we wish to understand the interaction of the Weiss calculus with multiplicative structure; there, the filtrations go the other way.
+
+\begin{dfn}Let $\D$ be an $\infty$-category.  Let $\Cofil(\Sp^{\D})$ denote the functor category $\Fun(\Z_{\geq 0}^{op}, \Sp^{\D}).$  We shall refer to $\Cofil(\Sp^{\D})$ as the category of cofiltered objects in $\Sp^{\D}$.  Its objects can be thought of as towers of functors $Y_0\leftarrow Y_1\leftarrow Y_2 \leftarrow \cdots \in \Sp^{\D}$.
+\end{dfn}
+
+We would like to make $\Cofil(\Sp)$ a symmetric monoidal $\infty$-category by putting the Day convolution on its opposite, $\Fun(\Z_{\geq 0}, \Sp^{op}).$  However, the smash product of spectra does not preserve small colimits separately in each variable.  Nevertheless, it does preserve \emph{finite} colimits separately in each variable.  In fact, these are the only colimits that are needed in the case at hand:
+
+\begin{var}
+Let $\C$ and $\D$ be symmetric monoidal $\infty$-categories.  Suppose that:
+\begin{enumerate}
+\item For every $C\in \C$, the slice category $\C_{/C}$ is finite.  
+\item $\D$ admits finite colimits. 
+\item The tensor product on $\D$ preserves finite colimits separately in each variable.  
+\end{enumerate}
+Then $\Fun(\C, \D)^{\otimes}$ is a symmetric monoidal $\infty$-category.  
+\end{var}
+\begin{proof}
+This follows directly from the same arguments as Proposition \ref{prop:dayconvsmc}.  In \cite[Corollary 2.2.6.14]{HA}, the assumptions are used to guarantee the existence of a left Kan extension; this again exists by assumptions (1) and (2) and \cite[Lemma 4.3.2.13]{HTT}.  Similarly, the proof of \cite[Proposition 2.2.6.16]{HA} only makes reference to commuting tensor products in $\D$ with finite colimits, which is ensured by assumption (3).  
+\end{proof}
+
+
+
+%need the general thing where symmetric monoidal functors give symmetric monoidal functors by Kan extension
+
+%define cofil, Fil, and say something about Kan extending along "cofinite" symmetric monoidal maps
+
+
+
+
+
 

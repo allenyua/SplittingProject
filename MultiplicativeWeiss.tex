@@ -1,10 +1,10 @@
 
 
-In this section, we will briefly review notions of Weiss calculus to set notation and then prove a statement about its multiplicative properties.  The reader is referred to \cite{Weiss} for proofs and additional details.  We note that the discussion there is in the case of real vector spaces, but the results work just the same in the complex case.  We shall also work in the language of $\infty$-categories rather than topological categories, and Remark \ref{rmk:infinityweiss} justifies this passage.  
+In this section, we briefly review notions of Weiss calculus to set notation and then prove a statement about its multiplicative properties.  The reader is referred to \cite{Weiss} for proofs and additional details.  We note that the discussion there is in the case of real vector spaces, but the results work just the same in the complex case.  We shall also work in the language of $\infty$-categories rather than topological categories, and Remark \ref{rmk:infinityweiss} justifies this passage.  
 
 Let $\J$ be the $\infty$-category which is the nerve of the topological category whose objects are finite dimensional complex vector spaces equipped with a Hermitian inner product and whose morphisms are spaces of linear isometries.  
 
-The theory of Weiss calculus studies functors out of $\J$ in a way analogous to Goodwillie calculus, by understanding successive ``polynomial approximations'' to these functors.  Here, we will discuss only the stable setting where we apply the theory to the functor category $\Sp^{\J}$. The central definition is:
+Weiss calculus studies functors out of $\J$ in a way analogous to Goodwillie calculus, by understanding successive ``polynomial approximations'' to these functors.  Here, we will discuss only the stable setting where we apply the theory to the functor category $\Sp^{\J}$. The central definition is:
 
 \begin{dfn}\label{dfn:polyfun}
 A functor $F\in \Sp^{\J}$ is polynomial of degree $n$ if the natural map $$F(V) \to \lim_U F(U\oplus V)$$ is an equivalence, where the limit is indexed over the $\infty$-category of nonzero subspaces $U\subset \mathbb{C}^{n+1}.$
@@ -31,18 +31,20 @@ Suppose $F \in \Sp^{\J}$ is a functor together with an increasing filtration $$0
 \end{thm}
 %we need to at some point deal with the fact that Weiss doesn't actually deal with homog. functors to spectra
 
-In \cite{Arone}, this result is applied to the functor $F\in \Sp^{\J}$ defined by the formula $$F_V(W) = \Sigma^{\infty}_+ \Omega \J(V,V\oplus W)$$ where $V\in \J$ is a fixed finite dimensional complex vector space.  Arone provides a filtration $F^{(0)}_V(W) \subset F^{(1)}_V(W) \subset \cdots F_V(W)$ which is functorial in both $V$ and $W$, and which satisfies the constraints of Theorem \ref{thm:aronesplit} for fixed $V$.  This provides a stable splitting of the space $\Omega \J(V,V\oplus W).$  Letting $W=\mathbb{C}$ and $V=\mathbb{C}^{n-1}$, we obtain splittings of the loop groups $\Omega SU(n)$, and for higher dimension $W$, this provides splittings of the loop spaces of Stiefel manifolds.  
+In \cite{Arone}, this result is applied to the functor $F\in \Sp^{\J}$ defined by the formula $$F_V(W) = \Sigma^{\infty}_+ \Omega \J(V,V\oplus W)$$ where $V\in \J$ is a fixed finite dimensional complex vector space.  Arone provides a filtration $F^{(0)}_V(W) \subset F^{(1)}_V(W) \subset \cdots F_V(W)$ which is functorial in both $V$ and $W$, and which satisfies the constraints of Theorem \ref{thm:aronesplit} for fixed $V$.  This provides a stable splitting of the space $\Omega \J(V,V\oplus W).$  Letting $W=\mathbb{C}$ and $V=\mathbb{C}^{n-1}$, he obtains splittings of the loop groups $\Omega SU(n)$, and for higher dimension $W$, this provides splittings of the loop spaces of Stiefel manifolds.  
 
 
 In order to upgrade the results of \cite{Arone} to structured multiplicative splittings, we must understand the multiplicative properties of the polynomial approximation functors.  More precisely, for a functor $F\in \Sp^{\J}$, we aim to understand the Taylor tower of $F\wedge F$ in terms of the tower for $F.$  The results in this section are likely known to experts, but the authors were not able to locate it in the literature.  They thank Jacob Lurie for suggesting that Proposition \ref{prop:weissmonoidal} is true.  
 
-The idea is to consider all the polynomial approximations at once.  To do so, we first set some additional notation:
+The idea is to consider all the polynomial approximations at once.  The following construction makes this precise:
+%To do so, we first set some additional notation:
 
-\begin{dfn} 
-Let $\Cofil(\Sp^{\J})$ denote the functor category $\Fun(\Z_{\geq 0}^{op}, \Sp^{\J}).$  We shall refer to $\Cofil(\Sp^{\J})$ as the category of cofiltered objects in $\Sp^{\J}$.  Its objects can be thought of as towers of functors $Y_0\leftarrow Y_1\leftarrow Y_2 \leftarrow \cdots \in \Sp^{\J}$.
-\end{dfn}%ok maybe I'll want cofil^+ or some garbage....
+%\begin{dfn} 
+%Let $\Cofil(\Sp^{\J})$ denote the functor category $\Fun(\Z_{\geq 0}^{op}, \Sp^{\J}).$  We shall refer to $\Cofil(\Sp^{\J})$ as the category of cofiltered objects in $\Sp^{\J}$.  Its objects can be thought of as towers of functors $Y_0\leftarrow Y_1\leftarrow Y_2 \leftarrow \cdots \in \Sp^{\J}$.
+%\end{dfn}
+%ok maybe I'll want cofil^+ or some garbage....
 
-The category $\Cofil(\Sp^{\J})$ is the natural target for the Weiss tower.  The following construction makes this precise:
+%The category $\Cofil(\Sp^{\J})$ is the natural target for the Weiss tower.  The following construction makes this precise:
 
 \begin{cnstr}\label{cnstr:tower}
 We now construct a functor $$\text{Tow}: \Sp^{\J} \to \Cofil(\Sp^{\J})$$ with the property that it sends a functor $F\in \Sp^{\J}$ to its Taylor tower $$\text{Tow}(F) = P_0F \longleftarrow P_1F \longleftarrow P_2F \longleftarrow \cdots.$$
@@ -66,7 +68,10 @@ On the fibers over an integer $[n] \in \Z^{op}_{\geq 0}$, we see the inclusion $
 \item The functor $i$ carries locally $p$-Cartesian morphisms of $(\Sp^{\J}\times \Z^{op}_{\geq 0})_{\text{poly}}$ to locally $q$-Cartesian morphisms of $\Sp^{\J}\times \Z^{op}_{\geq 0}$.
 \end{enumerate}
 
-Condition (2) is clear from the existence of polynomial approximations in Weiss calculus.  To see conditions (1) and (3), we first note that $q$ is in fact a Cartesian fibration because it is a projection from a product.  Moreover, the $q$-Cartesian morphisms are precisely those morphisms which are equivalences on the $\Sp^{\J}$ coordinate.  We now observe that for any pair $(F, [m]) \in \Sp^{\J}\times \Z^{op}_{\geq 0}$ such that $F\in \Poly^{\leq m}(\Sp^{\J})$ and morphism $\sigma :[n]\to [m]$, any $q$-Cartesian edge lying over $\sigma$ with target $(F, [m])$ is also in the full subcategory $(\Sp^{\J}\times \Z^{op}_{\geq 0})_{\text{poly}}.$  This implies that $p$ is also a Cartesian fibration and that the inclusion $i$ carries $p$-Cartesian edges to $q$-Cartesian edges.  Since any Cartesian fibration is a categorical fibration (\cite[Proposition 3.3.1.7]{HTT}), conditions (1) and (3) are verified.  
+Condition (2) is clear from the existence of polynomial approximations in Weiss calculus.  To see conditions (1) and (3), we first note that $q$ is in fact a Cartesian fibration because it is a projection from a product.  Moreover, the $q$-Cartesian morphisms are precisely those morphisms which are equivalences on the $\Sp^{\J}$ coordinate.  
+Now suppose we are given a pair $(F, [m]) \in \Sp^{\J}\times \Z^{op}_{\geq 0}$ such that $F\in \Poly^{\leq m}(\Sp^{\J})$ and morphism $\sigma :[n]\to [m]$.  Any $q$-Cartesian edge lying over $\sigma$ with target $(F, [m])$ has source equivalent to $(F, [n])$ and thus is also in the full subcategory $(\Sp^{\J}\times \Z^{op}_{\geq 0})_{\text{poly}}$ because $m\leq n$.   
+%We now observe that for any pair $(F, [m]) \in \Sp^{\J}\times \Z^{op}_{\geq 0}$ such that $F\in \Poly^{\leq m}(\Sp^{\J})$ and morphism $\sigma :[n]\to [m]$, any $q$-Cartesian edge lying over $\sigma$ with target $(F, [m])$ is also in the full subcategory $(\Sp^{\J}\times \Z^{op}_{\geq 0})_{\text{poly}}.$  
+Since $p$ is certainly an inner fibration (by construction as a full subcategory), this implies that $p$ is also a Cartesian fibration and that the inclusion $i$ carries $p$-Cartesian edges to $q$-Cartesian edges.  Since any Cartesian fibration is a categorical fibration (\cite[Proposition 3.3.1.7]{HTT}), conditions (1) and (3) are verified.  
 
 We now wish to look at the adjunction at the level of sections of $q$ and $p$.  Considering functors from $\Z_{\geq 0}^{op}$ into Diagram \ref{dia:reladj}, we obtain a new diagram 
 $$
@@ -78,7 +83,9 @@ $$
 which exhibits $P^{\text{total}}_*$ as a left adjoint of $i_*$ relative to $\Fun(\Z_{\geq 0}^{op},\Z_{\geq 0}^{op}).$  Proposition 7.3.2.5 of \cite{HA} ensures that there is an adjunction at the level of fibers above $\text{id}\in \Fun(\Z_{\geq 0}^{op},\Z_{\geq 0}^{op})$: $$\mathcal{P}: \Cofil(\Sp^{\J}) \xrightleftharpoons{\quad} \Cofil(\Sp^{\J})_{\text{poly}}:j .$$  
 Finally, observe that the unique functor $r: \Z^{op}_{\geq 0} \to *$ induces an adjunction $$r^*: \Sp^{\J} \xrightleftharpoons{\quad} \Cofil(\Sp^{\J}): \lim$$ where $r^*$ is the constant functor and $\lim$ is the same as right Kan extension along $r$.  We now compose these adjunctions, denoting $\text{Tow} = \mathcal{P}\circ r^*$ to obtain: $$\text{Tow}: \Sp^{\J} \xrightleftharpoons{\quad}  \Cofil(\Sp^{\J})_{\text{poly}}: \lim.$$
 
-It remains to check that $\text{Tow}$ actually recovers the Weiss tower.  TBD%Tow is the right functor...what does that mean?  It certainly does the right thing on objects... might want the morphisms to be the natural one.  Certainly it can't be anything else, but seems like it might be a hassle to check this.  I guess maybe we only care about the individual morphisms...so that's doable but perhaps long :(
+It remains to check that $\text{Tow}$ actually recovers the Weiss tower.  **TBD**.  Maybe let's just say this:
+By construction, $\text{Tow}(F)$ is the cofiltered spectrum $$P_0 F\longleftarrow P_1 F \longleftarrow P_2 F \longleftarrow \cdots .$$
+%Tow is the right functor...what does that mean?  It certainly does the right thing on objects... might want the morphisms to be the natural one.  Certainly it can't be anything else, but seems like it might be a hassle to check this.  I guess maybe we only care about the individual morphisms...so that's doable but perhaps long :(
 
 
 This concludes the construction of $\text{Tow}.$ 
@@ -95,9 +102,9 @@ We then have the following result about the monoidality of the Weiss tower funct
 The Weiss tower functor $\text{Tow}$ defines a symmetric monoidal functor $$\text{Tow}: \Sp^{\J} \to \Cofil(\Sp^{\J}).$$
 \end{prop}
 \begin{proof}
-Recall that the Weiss tower functor was defined as a composite $\text{Tow} = \mathcal{P} \circ r^*.$  The functor $r^*$ is just the constant functor, so it is symmetric monoidal.  On the other hand, $\mathcal{P}$ is adjoint to the inclusion $j: \Cofil(\Sp^{\J})_{\text{poly}} \to \Cofil(\Sp^{\J}).$  Since the class of functors which are polynomial of degree $n$ is closed under finite limits, the subcategory $\Cofil(\Sp^{\J})$ is closed under the convolution tensor product.  We may therefore give it the structure of a symmetric monoidal $\infty$-category such that $j$ is symmetric monoidal.  This makes the left adjoint $\mathcal{P}$ an oplax monoidal functor, which induces an oplax monoidal structure on $\text{Tow}.$  
+Recall that the Weiss tower functor was defined as a composite $\text{Tow} = \mathcal{P} \circ r^*.$  The functor $r^*$ is just the constant functor, so it is symmetric monoidal.  On the other hand, $\mathcal{P}$ is adjoint to the inclusion $j: \Cofil(\Sp^{\J})_{\text{poly}} \to \Cofil(\Sp^{\J}).$  Since the class of functors which are polynomial of degree $n$ is closed under finite limits, the subcategory $(\Cofil(\Sp^{\J}))_{\text{poly}}$ is closed under the convolution tensor product.  We may therefore give it the structure of a symmetric monoidal $\infty$-category such that $j$ is symmetric monoidal.  This makes the left adjoint $\mathcal{P}$ an oplax monoidal functor, which induces an oplax monoidal structure on $\text{Tow}.$  
 
-Concretely, this oplax structure can be described on the $n$th filtered piece as follows: since $\text{Tow}(F) \in  \Cofil(\Sp^{\J})_{\text{poly}}$, the filtered piece $(\text{Tow}(F) \otimes \text{Tow}(F))_n$ is polynomial of degree $n$.  It follows that the natural map from $F\wedge F$ factors through a map $\varphi_n: P_n(F\wedge F)\to (\text{Tow}(F) \otimes \text{Tow}(F))_n$.  To see that $\text{Tow}$ is a symmetric monoidal functor, it suffices to show that each $\varphi_n$ is an equivalence.   TODO
+Concretely, this oplax structure can be described on the $n$th filtered piece as follows: suppose $F,G \in \Sp^{\J}$; since $\text{Tow}(F) \otimes \text{Tow}(G) \in  \Cofil(\Sp^{\J})_{\text{poly}}$, the filtered piece $(\text{Tow}(F) \otimes \text{Tow}(G))_n$ is polynomial of degree $n$.  It follows that the natural map from $F\wedge G$ factors through a map $\varphi_n: P_n(F\wedge G)\to (\text{Tow}(F) \otimes \text{Tow}(G))_n$.  To see that $\text{Tow}$ is a symmetric monoidal functor, it suffices to show that each $\varphi_n$ is an equivalence.   TODO
 %need to check the oplax structure map is an equivalence; do the cubes thing...
 
 \end{proof}
