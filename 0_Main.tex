@@ -104,7 +104,6 @@
 \DeclareMathOperator{\Alg}{\text{Alg}}
 \DeclareMathOperator{\Sp}{\text{Sp}}
 \DeclareMathOperator{\Spaces}{\mathcal{S}}
-\DeclareMathOperator{\S0}{\mathbb{S}}
 \DeclareMathOperator{\J}{\mathcal{J}}
 \DeclareMathOperator{\Cofil}{\textbf{Cofil}}
 
@@ -130,7 +129,7 @@
 \author{Jeremy Hahn and Allen Yuan}
 
 \begin{abstract}
-We show that the Schubert filtration on the affine Grassmannian of $SL_n(\mathbb{C})$, known to topologists as the Bott filtration on $\Omega SU(n)$, stably splits as an $\mathbb{A}_\infty$ but not as an $\mathbb{E}_2$ filtration.  We further prove that the splitting becomes $\mathbb{E}_2$ after smashing with complex cobordism.  As a limiting case, we study the coherence of Snaith's construction of periodic complex cobordism.  We determine that it is a construction of $MUP$ as an $\mathbb{E}_2$-ring spectrum, but not as an $\mathbb{E}_3$-ring spectrum.
+The space of based loops in $SU(n)$, also known as the affine Grassmannian of $SL_n(\mathbb{C})$, admits an $\mathbb{E}_2$ or fusion product.  Work of Mitchell and Richter proves that this based loop space stably splits as an infinite wedge sum.  We prove that the Mitchell--Richter splitting is $\mathbb{A}_\infty$, but not $\mathbb{E}_2$.  Furthermore, we show that the splitting becomes $\mathbb{E}_2$ after base-change to complex cobordism.  Our proofs involve on the one hand an analysis of the multiplicative properties of Weiss calculus, and on the other a use of Beilinson--Drinfeld Grassmannians to verify a conjecture of Mahowald and Richter.
 \end{abstract}
 
 
@@ -149,15 +148,17 @@ We show that the Schubert filtration on the affine Grassmannian of $SL_n(\mathbb
 
 \section{Introduction}
 
+hi \S is
+
 \input{Introduction.tex}
 
 \section{Filtered and Graded Ring Spectra} \label{sec:FilGra}
 
 \input{FilteredAndGraded.tex}
 
-\section{Filtrations on Loop Spaces of Stiefel Manifolds}
+\section{The Bott filtration on \texorpdfstring{$\Omega SU(n)$}{OmegaSU(n)}} \label{sec:MRFil}
 
-\input{MitchellRichterFiltration.tex} \label{sec:MRFil}
+\input{MitchellRichterFiltration.tex} 
 
 \section{A General Splitting Machine}\label{sec:SplittingMachine}
 
@@ -183,23 +184,13 @@ We show that the Schubert filtration on the affine Grassmannian of $SL_n(\mathbb
 
 \input{Obstructions.tex}
 
+\begin{comment}
+
+We can add this in to a second version of the paper, or perhaps write a small second paper.
+
 \section{Snaith's Construction of Periodic Complex Bordism} \label{sec:SnaithSplitting}
 
 \input{PeriodicComplexBordism.tex}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 \section{Miscellaneous stuff here}
@@ -221,6 +212,9 @@ Finally, we observe that we may tensor $z'$ with $\mathbb{A}$ and compose with t
 ******  
 
 What is $\Sigma^{\infty}_+ \Omega SU(n)[\beta^{-1}]$, by the way?  Is it related to a periodic version of the $X(n)$-filtration of $MU$??
+
+
+\end{comment}
 
 \bibliographystyle{alpha}
 \bibliography{Bibliography}
