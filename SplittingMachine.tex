@@ -61,17 +61,9 @@ In fact, the functor $\Gr_n^+ \to \C_n$ can be seen very explicitly as follows: 
 
 %3. Identify everything as monoidal, then take the limit n-> \infty.
 
+Until this point, we have been working with a fixed $n$ and without regard to the monoidal structure.  The results of Section \ref{sec:FilGra} allow us to add this in.  
 
-
-Until this point, we have been working with a fixed $n$ and without regard to the monoidal structure.  The key to moving further is the following theorem of Lurie:
-
-\begin{thm}[\cite{LurieRot}, Corollary 2.3.8]\label{thm:LurDay}%maybe this can be stated earlier.  
-The construction which sends an $\infty$-category $\mathcal{D}$ to the functor category $\Fun(\mathcal{D}^{op}, \Sp)$ determines a symmetric monoidal functor from the $\infty$-category of $\infty$-categories to the $\infty$-category of presentable stable $\infty$-categories.  
-\end{thm}
-
-In particular, this implies that if $\D$ is a symmetric monoidal category, then $\Fun(\D, \Sp)$ has a natural symmetric monoidal structure, and for any symmetric monoidal functor $\D_1\to \D_2$, left Kan extension yields a symmetric monoidal functor $\Fun(\D_1,\Sp) \to \Fun(\D_2,\Sp).$  
-
-To apply this to our situation, we give $[n]^+$ the structure of a symmetric monoidal category by taking $\Z_{\geq 0}$ under addition and identifying all the integers $m >n$ with the point $+$.  There are natural symmetric monoidal functors $[n+1]^+ \to [n]^+$ by successive quotient.  By Theorem \ref{thm:LurDay} combined with the commutative diagram of symmetric monoidal functors
+In particular, give $[n]^+$ the structure of a symmetric monoidal category by taking $\Z_{\geq 0}$ under addition and identifying all the integers $m >n$ with the point $+$.  By Proposition \ref{prop:dayconvsmc}, this gives $\Fil_n^+$ the structure of a symmetric monoidal $\infty$-category.  There are natural symmetric monoidal functors $[n+1]^+ \to [n]^+$ by successive quotient.  By Proposition \ref{prop:kanmonoidal} combined with the commutative diagram of symmetric monoidal functors
 
 $$
 \begin{tikzcd}
@@ -88,11 +80,22 @@ $$
 $$
 We remark that the right vertical functor coincides with the restriction induced by the natural inclusion $[n] \to [n+1]$.  As a consequence, we find that $\lim_n \Fil_n^+ = \Fun(\colim_n [n]^+, \Sp) = \Fun(\Z_{\geq 0}^+, \Sp) =: \Fil^+$.  
 
-There is a similar diagram for the cofiltered side. (TODO, once we figure out how to say the cofiltered convolution) %Need to justify this once I figure out what to do about monoidal structure on cofil; define Cofil^+ while you're at it.
+There is a similar diagram for the cofiltered side by the appropriate analogs of the above statements:
+$$
+\begin{tikzcd}
+\Gr_{n+1}^+ \arrow[r,"I_{n+1}^{op,+}"] \arrow[d] & \Cofil_{n+1}^+ \arrow[d]\\
+\Gr_n^+  \arrow[r,"I_n^{op,+}"] & \Cofil_n^+ 
+\end{tikzcd}
+$$
+and so $\lim_n \Cofil_n^+ = \Fun((\Z_{\geq 0}^{+})^{op}, \Sp) =: \Cofil^+.$  
+
+\begin{rmk}
+Strictly speaking, $\Cofil^+$ does not satisfy the conditions of Variant \ref{var:day} because the slice category over the point
+\end{rmk}
 
 Thus, taking the limit in $n$ in the original picture yields a diagram of symmetric monoidal functors:
 
-$$%change this to a twisty diagram where we've labelled I^+.
+$$
 \begin{tikzcd}
 \mathcal{G}_\infty
  \arrow[drr, bend left, "I^{+,op}"]
@@ -122,7 +125,7 @@ $$
 where the bottom row is a retract and $I^+$ is induced by the $I_n^+$ at each finite level.  
 \end{prop} 
 \begin{proof}
-We have already seen that $I^+$ is symmetric monoidal.  For the bottom row, simply apply Theorem \ref{thm:LurDay} to the sequence $$\Z_{\geq 0} \to \Z_{\geq 0}^+ \to \Z_{\geq 0}.$$
+We have already seen that $I^+$ is symmetric monoidal.  For the bottom row, simply apply Proposition \ref{prop:kanmonoidal} to the sequence $$\Z_{\geq 0} \to \Z_{\geq 0}^+ \to \Z_{\geq 0}.$$
 
 Finally, to see that $\pi$ is symmetric monoidal, we claim that at each finite level $n$, the functor $$\pi_n: \Gr_n^+ \to \Gr_n$$ is symmetric monoidal.  This is because it is localization to the full subcategory of $\Gr_n^+$ which restricts to $0$ at the element $+\in ([n]^+)^{ds}$, and the localization is clearly compatible with the monoidal structure (for example, see \cite[Proposition 2.2.1.9]{HA}).%need I say this more carefully?
 
