@@ -134,7 +134,8 @@ We now prove the corollary:
 Corollary \ref{cor:varphiequiv} implies that by replacing $F$ and $G$ by appropriate polynomial approximations, it suffices to consider the case where $F$ and $G$ are polynomial of degree $m$ for some $m$ (and thus, have finite Weiss towers).   Note further that Lemma \ref{lem:cubes} applied to the case $X = \text{Tow}(F)$, $Y=\text{Tow}(G)$ implies that $$\text{fib}((\text{Tow}(F)\otimes \text{Tow}(G) )_{n+1} \to (\text{Tow}(F) \otimes \text{Tow}(G))_n)$$ is homogeneous of degree $n+1$.  It follows that the fiber of the natural map $$F\smsh G \to (\text{Tow}(F)\otimes \text{Tow}(G))_n$$  is a finite limit of functors killed by $P_n$.  Since $P_n$ commutes with finite limits, we conclude that the natural map $\varphi_n: P_n(F\smsh G)\to (\text{Tow}(F)\otimes \text{Tow}(G))_n$ is an equivalence.  
 \end{proof}
 
-The proof shows further that rapidly convergent functors are closed under the tensor product.  In total, we have now proven the following proposition:
+The proof shows further that rapidly convergent functors are closed under the tensor product.  %okay uhh maybe this isn't completely obvious.  F, G rapidly convergent, then F -> P_n(F) is a*n*d connected, F-> P_{n+1}F is a*(n+1)*d connected, so P_{n+1}F -> P_nF is also a*n*d connected.  This says that when I go from P_n(F\otimes G) to P_{n+1}(F\otimes G), you are adding things that are a*n*d connected.  This plus a Milnor sequence will give it to you. 
+In total, we have now proven the following proposition:
 
 \begin{prop}\label{prop:weissmonoidal}
 The Weiss tower defines a symmetric monoidal functor $$\text{Tow}: \Sp^{\J}_{\text{conv}} \to \Cofil(\Sp^{\J}_{\text{conv}}).$$
