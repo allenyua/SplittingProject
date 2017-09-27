@@ -45,7 +45,7 @@ $$(A_0,A_1,A_2,\cdots) \otimes (B_0,B_1,B_2,\cdots) \simeq \left( A_0 \smsh B_0,
 
 
 
-The unit $\S0^{gr}_{\D}$ of $\otimes$ in $\Gr(\Sp^{\D})$ is the constant diagram at $S^0$ in degree 0 and $*$ otherwise; the unit $\S0^{fil}_{\D}$ in $\Fil(\Sp^{\D})$ is $I\S0^{gr}_{\D}.$  We may then talk about $\E_n$-algebras in $\Gr(\Sp^{\D})$ and $\Fil(\Sp^{\D})$.  
+The unit $\mathbb{S}^{gr}_{\D}$ of $\otimes$ in $\Gr(\Sp^{\D})$ is the constant diagram at $S^0$ in degree 0 and $*$ otherwise; the unit $\mathbb{S}^{fil}_{\D}$ in $\Fil(\Sp^{\D})$ is $I\mathbb{S}^{gr}_{\D}.$  We may then talk about $\E_n$-algebras in $\Gr(\Sp^{\D})$ and $\Fil(\Sp^{\D})$.  
 
 
 
@@ -66,7 +66,16 @@ An object $X\in \Alg_{\E_n}(\Fil(\Sp^{\D}))$ is called \emph{$\E_n$-split} if th
 Given an $\E_n$-split filtered spectrum $X$, we can recover the underlying graded spectrum by taking the associated graded. 
 %%%%
 
-***Maybe it's worth making a remark about what these mean in terms of power operations, or say, the spectral sequence associated to the filtered object; maybe there's some sort of power operation on the $E_2$ page and you can say something about it...
+As a final remark, we note that the category of filtered spectra may be recovered as a module category inside the category of graded spectra.  Specifically, consider $A=\Sigma^{\infty}_+ \mathbb{Z}^{ds}_{\ge 0}$, the suspension of the nerve of the symmetric monoidal category $\mathbb{Z}^{ds}_{\ge 0}$, as an $\mathbb{E}_\infty$-algebra in $\Gr(\Sp)$.  The spectrum underlying $A$ is an infinite wedge of copies of $\mathbb{S}^0$.  Then the following may be shown by the argument in \cite[Proposition 3.1.6]{LurieRot}:
+
+\begin{lem} \label{lem:FilAsGrMod}
+There is an equivalence of symmetric monoidal categories
+$$\Fil(\Sp) \stackrel{\simeq}{\longrightarrow} \textbf{Mod}_{A}(\Gr(\Sp)),$$
+given by the forgetful functor.
+\end{lem}
+
+
+%%%Maybe it's worth making a remark about what these mean in terms of power operations, or say, the spectral sequence associated to the filtered object; maybe there's some sort of power operation on the $E_2$ page and you can say something about it...
 
 
 
