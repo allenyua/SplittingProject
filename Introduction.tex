@@ -17,7 +17,7 @@ In Section \ref{sec:FilGra}, we review the symmetric monoidal structures on the 
 
 \begin{thm} \label{thm:BottIsAoo}
 The suspension of the Bott filtration 
-$$\mathbb{S} \longrightarrow \Sigma^{\infty} \mathbb{CP}^{n-1} \simeq F_{n,1} \longrightarrow F_{n,2} \longrightarrow \cdots \longrightarrow \Omega SU(n).$$
+$$\mathbb{S} \longrightarrow \Sigma_+^{\infty} \mathbb{CP}^{n-1} \simeq \Sigma_+^{\infty} F_{n,1} \longrightarrow \Sigma_+^{\infty} F_{n,2} \longrightarrow \cdots \longrightarrow \Sigma^{\infty}_+ \Omega SU(n).$$
 is an $\mathbb{A}_\infty$-algebra object in filtered spectra.
 \end{thm}
 
@@ -44,27 +44,41 @@ $$
 do not commute on the nose, but only up to non-canonical homotopy.
 \end{exm}
 
-The rest of the paper is concerned with the stable splitting of this Bott filtration.  We prove the following theorems:
+The rest of the paper is concerned with the stable splitting of this Bott filtration.  Our main results are as follows:
 
 \begin{thm} \label{thm:MainAoo}
 As an $\mathbb{A}_\infty$-algebra object in filtered spectra, the Bott filtration of $\Sigma^{\infty}_+ \Omega SU(n)$ is equivalent to its associated graded.
 \end{thm}
 
 \begin{thm} \label{thm:MainObstruction}
-Suppose $n \ge 4$.  If the Bott filtration of $\Sigma^{\infty}_+ \Omega SU(n)$ may be made into an $\mathbb{E}_2$-algebra object in filtered spectra, then it is \textit{not} equivalent to its $\mathbb{E}_2$ associated graded.
+Suppose $n \ge 4$.  If the Bott filtration of $\Sigma^{\infty}_+ \Omega SU(n)$ may be made into an $\mathbb{E}_2$-algebra object in filtered spectra, then it is \textbf{not} equivalent to its $\mathbb{E}_2$ associated graded.
 \end{thm}
 
 \begin{thm} \label{thm:MainMUE2}
-Let $MU$ denote the $\mathbb{E}_\infty$-ring spectrum of complex bordism.  Then there is an equivalence of $\mathbb{E}_2$-$MU$-algebras, 
-$$MU \smsh \Sigma^{\infty}_+ \Omega SU(n) \simeq MU \smsh \text{gr}(\text{Bott Filtration}).$$
-\textbf{What does this even mean if we do not know the Bott filtration is $\mathbb{E}_2$?}  I may need to rethink this section.
+Let $MU$ denote the $\mathbb{E}_\infty$-ring spectrum of complex bordism, and let $\text{gr}(\Sigma^{\infty}_+\{F_{n,k}\})$ denote the associated graded of the Bott filtration of $\Sigma^{\infty}_+ \Omega SU(n)$.  Then
+\begin{enumerate}
+\item There exists a graded $\mathbb{E}_2$-algebra structure on the graded spectrum $\text{gr}(\Sigma^{\infty}_+ \{F_{n,k}\})$ that extends the canonical graded $\mathbb{A}_\infty$-algebra structure.
+
+\item For any $\mathbb{E}_2$-algebra structure on the underlying (ungraded) $\mathbb{A}_\infty$-ring $\text{gr}(\Sigma^{\infty}_+\{F_{n,k}\})$, there is an equivalence of $\mathbb{E}_2$-$MU$-algebras
+$$MU \smsh \Sigma^{\infty}_+ \Omega SU(n) \simeq MU \smsh \text{gr}(\Sigma^{\infty}_+\{F_{n,k}\}).$$
+\end{enumerate}
 \end{thm}
+
+\begin{rmk}
+There exist exotic $\mathbb{E}_2$-algebra structures on $gr(\Sigma^{\infty}_+ \{F_{n,k}\})$ before smashing with $MU$.  For example, as $n$ tends to infinity we recover the Snaith splitting \cite{SnaithBook}
+$$\Sigma^{\infty}_+ BU \simeq \bigvee_n MU(n),$$
+where $MU(n)$ is the Thom spectrum of the canonical bundle over $BU(n)$.  The $\mathbb{E}_2$-ring structure arising from the Thom spectrum construction applied to
+$$\coprod BU(n) \stackrel{J}{\longrightarrow} Pic(\mathbb{S})$$
+does not agree with the $\mathbb{E}_2$-ring structure on $\Sigma^{\infty}_+ BU$ that arises from the infinite loop space structure on $BU$.
+\textbf{Allen are we sure these don't agree?}
+\end{rmk}
 
 The final result above, regarding $MU$-module spectra, can be seen as a once-looped analogue of work of Kitchloo \cite{Kitchloo}.   Kitchloo studied a splitting, due to Miller \cite{MillerSplitting}, of $\Sigma^{\infty}_+ SU(n)$.  His theorem is that, \textit{for complex-oriented $E$}, the corresponding direct sum decomposition of $E_*(SU(n))$ is multiplicative.
 
 Our proof of Theorem \ref{thm:MainMUE2} is by obstruction theory.  We show in Section \ref{sec:MUE2} that all obstructions to an $\mathbb{E}_2$-equivalence vanish.  On the other hand, we prove Theorem \ref{thm:MainObstruction} by explicitly calculating a non-zero obstruction in Section \ref{sec:Obstruction}.
 
 It remains to discuss Theorem \ref{thm:MainAoo}, the $\mathbb{A}_\infty$ splitting.
+
 \textbf{SOMETHING ABOUT STIEFEL MANIFOLDS}
 
 Open questions regarding natural extensions of our work:
