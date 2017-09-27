@@ -55,5 +55,31 @@ We draw the following lemma, affirming a conjecture of Mahowald and Richter, as 
 \begin{lem} [Conjecture of Mahowald--Richter \cite{MahowaldRichter}] 
 The inclusion 
 $$\coprod_k F_{n,k} \subset \Omega GL_n(\mathbb{C})$$
-may be made into a map of non-unital $\mathbb{E}_2$-algebras.
+may be made into a map of non-unital $\mathbb{E}_2$-algebras.  The suspension $$\Sigma^{\infty}_+ \coprod_k F_{n,k}$$ is a graded $\mathbb{E}_2$-algebra in the sense of Section \ref{sec:FilGra}.
 \end{lem}
+
+As explained by Segal \cite{Segal}, the coproduct $\coprod_k F_{n,k}$ may be viewed as the subspace of loops in $U(n)$ `of positive winding number.'  The $k$th piece $F_{n,k}$ consists of loops of winding number exactly $k$, and the group completion of $\coprod_k F_{n,k}$ is $\Omega U(n)$.
+
+\begin{exm}
+For any $n$, $F_{n,1}$ is equivalent to $\mathbb{CP}^{n-1}$.  The space $F_{2,k}$ is the $k$th stage of the James filtration of $\Omega S^3$, consisting of all words of length $\le k$.
+\end{exm}
+
+It is not at all obvious from the above construction that there should exist maps $F_{n,k} \rightarrow F_{n,k+1}$.  To make such maps requires some way of identifying the various connected components of $\Omega U(n)$, each of which is individually equivalent to $\Omega SU(n)$.  Following Segal \cite[pg. 3--4]{Segal}, one makes this identification by multiplying by powers of 
+$$\lambda = \left( \begin{array}{cccc} t^k & 0 & \cdots & 0 \\ 0 & 1 & \cdots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & \cdots & 1 \end{array} \right).$$
+In other words, there is a map from the space of loops of winding number $k$ to loops of winding number $0$ given by multiplication by $\lambda^{-k}$.
+
+\begin{dfn}
+The Bott filtration on $\Omega SL_n(\mathbb{C})$ is the filtration with $k$th piece given by $\lambda^{-k} F_{n,k}$.  We will refer to the associated filtered spectrum 
+$$\mathbb{S} \rightarrow \Sigma^{\infty} \lambda^{-1} F_{n,1} \simeq \Sigma^{\infty} \mathbb{CP}^{n-1} \rightarrow \Sigma^{\infty} \lambda^{-2} F_{n,2} \rightarrow \cdots$$
+by $\Sigma^{\infty}_+ \{F_{n,k}\}$.
+\end{dfn}
+
+The above constructions make $\Sigma^{\infty}_+ \{F_{n,k}\}$ into a filtered spectrum whose underlying graded spectrum is $\mathbb{E}_2$.  We will now discuss the problem of making the filtered spectrum itself $\mathbb{E}_2$, or at least $\mathbb{A}_\infty$.
+
+\begin{lem}[TODO:REFERENCE]
+In the category of graded spectra, there is an $\mathbb{E}_\infty$-algebra $A=\Sigma^{\infty}_+(\mathbb{Z}_{\ge 0})$.  The category of filtered spectra is equivalent to the category of $A$-modules in graded spectra.
+\end{lem}
+
+In terms of algebraic geometry, we may at least identify $A$ as an $\mathbb{E}_2$-algebra.  To do so, conside $Gr_{\mathbb{G}_m}$, the affine Grassmannian for the multiplicative group.  This is a model for $\Omega S^1$ and so has $\mathbb{Z}$ many contractible connected components.  Choosing a dominant coweight corresponding to a loop of winding number $1$ identifies a copy of $\mathbb{Z}_{\ge 0}$ inside of $Gr_{\mathbb{G}_m}$.  The Beilinson--Drinfeld Grassmannian for the group $G=\mathbb{G}_m$ then describes $\Sigma^{\infty}_+ \mathbb{Z}_{\ge 0}$ as a sub-$\mathbb{E}_2$-algebra of $\Sigma^{\infty}_+ Gr_{\mathbb{G}_m}$.
+
+Now, the map of groups $\mathbb{G}_m \rightarrow SL_n(\mathbb{C})$ given by the dominant coweight $(1,0,\cdots,0)$ induces a map of Beilinson--Drinfeld Grassmannians.
