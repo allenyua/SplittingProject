@@ -74,7 +74,7 @@ $$\mathbb{S} \rightarrow \Sigma^{\infty} \lambda^{-1} F_{n,1} \simeq \Sigma^{\in
 by $\Sigma^{\infty}_+ \{F_{n,k}\}$.
 \end{dfn}
 
-The above constructions make $\Sigma^{\infty}_+ \{F_{n,k}\}$ into a filtered spectrum whose underlying graded spectrum is $\mathbb{E}_2$.  We will now discuss the problem of making the filtered spectrum itself $\mathbb{E}_2$, or at least $\mathbb{A}_\infty$.  For this, recall from Lemma \ref{lem:FilAsGrMod} that there is a graded $\mathbb{E}_\infty$ ring $A=\Sigma^{\infty}_+ \mathbb{Z}^{ds}_{\ge 0}$ so that filtered spectra may be described as $A$-modules in graded spectra.  In the remainder of this section, we discuss the following theorem, which again follows easily from the machinery of Beilinson--Drinfeld Grassmannians:
+The above constructions make $\Sigma^{\infty}_+ \{F_{n,k}\}$ into a filtered spectrum whose underlying graded spectrum is $\mathbb{E}_2$.  We will now discuss the problem of making the filtered spectrum itself $\mathbb{E}_2$, or at least $\mathbb{A}_\infty$.  For this, recall from Lemma \ref{lem:FilAsGrMod} that there is a graded $\mathbb{E}_\infty$ ring $A=\Sigma^{\infty}_+ \mathbb{Z}^{ds}_{\ge 0}$ so that filtered spectra may be described as $A$-modules in graded spectra.  We now discuss the following theorem, named Theorem \ref{thm:BottIsAoo} in the Introduction, which again follows easily from the machinery of Beilinson--Drinfeld Grassmannians:
 
 \begin{thm} \label{thm:AooFil}
 There is a map of $\mathbb{E}_2$-algebra objects in graded spectra
@@ -94,10 +94,10 @@ The map $\Sigma^{\infty}_+ \mathbb{Z} \rightarrow \Sigma^{\infty}_+ \Omega U(n)$
 $$\Omega^2(BU(1) \rightarrow BU(n)).$$
 \end{rmk}
 
-\begin{rmk}
-The fact that there is an $\mathbb{E}_2$-algebra map $A \rightarrow \Sigma^{\infty}_+ \coprod_k F_{n,k}$ is stronger than the fact that $\Sigma^{\infty}_+ \{F_{n,k}\}$ is $\mathbb{A}_\infty$, but it is weaker than the claim that $\Sigma^{\infty}_+ \{F_{n,k}\}$ is $\mathbb{E}_2$.  We do not know if the Bott filtration is $\mathbb{E}_2$ or not, but would be very interested to learn the answer.  At the limiting case $n=\infty$, Jacob Lurie proves in \cite{LurieRot} that the Bott filtration is $\mathbb{E}_2$.  The machinery of Beilinson--Drinfeld Grassmannians proves that, at a general $n$, the coarsened filtration consisting of every $n$th piece of the Bott filtration (i.e. $\Sigma^{\infty}_+ \{F_{n,nk}\}$) is an $\mathbb{E}_2$-filtration.
+\begin{rmk} \label{rmk:E2fil}
+The fact that there is an $\mathbb{E}_2$-algebra map $A \rightarrow \Sigma^{\infty}_+ \coprod_k F_{n,k}$ is stronger than the fact that $\Sigma^{\infty}_+ \{F_{n,k}\}$ is $\mathbb{A}_\infty$, but it is weaker than the claim that $\Sigma^{\infty}_+ \{F_{n,k}\}$ is $\mathbb{E}_2$.  We do not know if the Bott filtration is $\mathbb{E}_2$ or not, but would be very interested to learn the answer.
 
-The question is equivalent to the production of an $\mathbb{E}_3$-algebra map from $A$ to the $\mathbb{E}_3$-center of the $\mathbb{E}_2$-algebra $\Sigma^{\infty}_+ \coprod \{F_{n,k}\}$. 
+The machinery of Beilinson--Drinfeld Grassmannians proves that, at a general $n$, the coarsened filtration consisting of every $n$th piece of the Bott filtration (i.e. $\Sigma^{\infty}_+ \{F_{n,nk}\}$) is an $\mathbb{E}_2$-filtration.  The question is equivalent to the production of an $\mathbb{E}_3$-algebra map from $A$ to the $\mathbb{E}_3$-center of the $\mathbb{E}_2$-algebra $\Sigma^{\infty}_+ \coprod \{F_{n,k}\}$. 
 After group completion, this would in particular imply the existence of an $\mathbb{E}_3$-algebra map
 $$\mathbb{Z} \longrightarrow (\Omega U(n))^{hU(n)}.$$
 We do not know whether even this last map exists.
@@ -108,4 +108,20 @@ We do not know whether even this last map exists.
 Consider $Gr_{\mathbb{G}_m}$, the affine Grassmannian for the multiplicative group.  This is a model for $\Omega S^1$ and so has $\mathbb{Z}$ many contractible connected components.  Choosing a dominant coweight corresponding to a loop of winding number $1$ identifies a copy of $\mathbb{Z}^{ds}_{\ge 0}$ inside of $Gr_{\mathbb{G}_m}$.  The Beilinson--Drinfeld Grassmannian for the group $G=\mathbb{G}_m$ then describes $\Sigma^{\infty}_+ \mathbb{Z}^{ds}_{\ge 0}$ as a sub-$\mathbb{E}_2$-algebra of $\Sigma^{\infty}_+ Gr_{\mathbb{G}_m}$.
 
 Now, the map of groups $\mathbb{G}_m \rightarrow SL_n(\mathbb{C})$ given by the dominant coweight $(1,0,\cdots,0)$ induces a map of Beilinson--Drinfeld Grassmannians, which gives the desired map of graded $\mathbb{E}_2$-algebras.
+\end{proof}
+
+We end this section by proving the second part of Theorem \ref{thm:MainMUE2}:
+
+\begin{lem} \label{lem:E2GrConstruction}
+The graded $\mathbb{A}_\infty$-algebra $gr(\Sigma^{\infty}_+ \{F_{n,k}\})$ may be equipped with the structure of a graded $\mathbb{E}_2$-algebra.
+\end{lem}
+
+\begin{proof}
+Consider the sequence of $\mathbb{E}_2$-algebras in spaces
+$$\coprod F_{n,k} \longrightarrow \Omega U(n) \longrightarrow BU \times \mathbb{Z},$$
+where the first arrow is given by group completion.  Taking Thom spectra, one obtains a graded $\mathbb{E}_2$-ring spectrum
+$\text{Thom}(\coprod F_{n,k}).$
+It is proven in \cite[1.7]{Segal} that this Thom spectrum is equivalent (as a spectrum) to $gr(\Sigma^{\infty}_+ \{F_{n,k}\})$.  We need to show that this is the case as $\mathbb{A}_\infty$-ring spectra.
+
+\textbf{I know you thought about this Allen?  How far did we get?}
 \end{proof}
