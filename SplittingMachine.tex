@@ -108,14 +108,14 @@ $$
 where the square is Cartesian.
 
 \begin{rmk}
-While $\mathcal{G}_\infty \to \mathcal{C}_\infty$ remains a fully faithful functor and $\mathcal{G}_\infty \simeq \lim \Gr_n^{+}$, we warn the reader that $\mathcal{G}_\infty$ is not simply $\Fun((\Z_{\geq 0}^+)^{ds}, \Sp)$ because the maps in the inverse system for $\mathcal{G}$ are not just the ones induced by the inclusions $([n]^+)^{ds} \to ([n+1]^+)^{ds}.$
+While $\mathcal{G}_\infty \to \mathcal{C}_\infty$ remains a fully faithful functor, we warn the reader that $\mathcal{G}_\infty$ is not simply $\Fun((\Z_{\geq 0}^+)^{ds}, \Sp)$ because the maps in the inverse system for $\mathcal{G}$ are not just the ones induced by the inclusions $([n]^+)^{ds} \to ([n+1]^+)^{ds}.$
 \end{rmk}
 
 
 Recall that we were interested in understanding when an $\E_n$ filtered spectrum $X\in \Alg_{\E_n}(\Fil)$ is split - that is, when there exists $Z\in \Alg_{\E_n}(\Gr)$ such that $X \simeq IZ.$  The following proposition is key in relating that to our current situation; informally, it allows us to get rid of the +'s.
 
 \begin{prop}\label{prop:MonRet}
-There exists a commutative diagram of symmetric monoidal $\infty$-categories and symmetric monoidal functors 
+There exists a diagram of symmetric monoidal $\infty$-categories and symmetric monoidal functors 
 $$
 \begin{tikzcd}
 &\mathcal{G}_\infty \arrow[r,"\pi"] \arrow[d, "I^+"]&  \Gr \arrow[d, "I"]\\
@@ -126,7 +126,8 @@ where the bottom row is a retract and $I^+$ is induced by the $I_n^+$ at each fi
 \end{prop} 
 \begin{proof}
 We have already seen that $I^+$ is symmetric monoidal.  For the bottom row, simply apply Proposition \ref{prop:kanmonoidal} to the sequence $$\Z_{\geq 0} \to \Z_{\geq 0}^+ \to \Z_{\geq 0}.$$
-Finally, to see that $\pi$ is symmetric monoidal, we claim that at each finite level $n$, the functor $$\pi_n: \Gr_n^+ \to \Gr_n$$ is symmetric monoidal.  This is because the inclusion of the full subcategory of $\Gr_n^+$ which restricts to $0$ at the element $+\in ([n]^+)^{ds}$ induces a localization and the localization is clearly compatible with the monoidal structure (for example, see \cite[Proposition 2.2.1.9]{HA}).%need I say this more carefully?
+
+Finally, to see that $\pi$ is symmetric monoidal, we claim that at each finite level $n$, the functor $$\pi_n: \Gr_n^+ \to \Gr_n$$ is symmetric monoidal.  This is because it is localization to the full subcategory of $\Gr_n^+$ which restricts to $0$ at the element $+\in ([n]^+)^{ds}$, and the localization is clearly compatible with the monoidal structure (for example, see \cite[Proposition 2.2.1.9]{HA}).%need I say this more carefully?
 
 
 %do I need to say something about taking limits of symmetric monoidal functors
@@ -137,9 +138,9 @@ Finally, to see that $\pi$ is symmetric monoidal, we claim that at each finite l
 We are now ready to prove the main result of this section.
 
 \begin{proof}[Proof of Theorem \ref{thm:SplitMachine}]
-We use the notations of Proposition \ref{prop:MonRet}.  Since $\iota$ is a symmetric monoidal functor, we obtain an $\E_n$ algebra $\iota X \in \Alg_{\E_n}(\Fil^+).$  
+We use the notations of Proposition \ref{prop:MonRet}.  Since $\iota$ is lax monoidal, we obtain an $\E_n$ algebra $\iota X \in \Alg_{\E_n}(\Fil^+).$  
 Similarly, since the functor $\iota^{op}: \Cofil \to \Cofil^+$ is lax monoidal, we get $\iota^{op}Y \in \Cofil^+$.  %This needs explanation.  I think this is true since lim is lax the right way
-Condition (1) in the statement of the theorem guarantees that $\iota X$ and $\iota^{op}Y$ determine an element $\mathcal{X} \in \Alg_{\E_n}(\C_{\infty})$.  Condition (2) combined with the fact that $\mathcal{G}_\infty \to \C_\infty$ is fully faithful implies that $\mathcal{X} \in \Alg_{\E_n}(\mathcal{G}_\infty).$  Finally, we chase through the diagram of Proposition \ref{prop:MonRet} to see that $I\pi \mathcal{X} \simeq \varpi I^+ \mathcal{X} \simeq \varpi \iota X \simeq X$ as $\E_n$ algebras in $\Fil$.  
+Condition (1) in the statement of the theorem guarantees that $\iota X$ and $\iota^{op}Y$ determine an element $\mathcal{X} \in \Alg_{\E_n}(\C_{\infty})$.  Condition (2) combined with the fact that $\mathcal{G}_\infty \to \C_\infty$ is fully faithful implies that $\mathcal{X} \in \Alg_{\E_n}(\G_\infty).$  Finally, we chase through the diagram of Proposition \ref{prop:MonRet} to see that $I\pi \mathcal{X} \simeq \varpi I^+ \mathcal{X} \simeq \varpi \iota X \simeq X$ as $\E_n$ algebras in $\Fil$.  
 \end{proof}
 
 

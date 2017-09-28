@@ -65,7 +65,7 @@ For any $n$, $F_{n,1}$ is equivalent to $\mathbb{CP}^{n-1}$.  The space $F_{2,k}
 \end{exm}
 
 It is not at all obvious from the above construction that there should exist maps $F_{n,k} \rightarrow F_{n,k+1}$.  To make such maps requires some way of identifying the various connected components of $\Omega U(n)$, each of which is individually equivalent to $\Omega SU(n)$.  Following Segal \cite[pg. 3--4]{Segal}, one makes this identification by multiplying by powers of 
-$$\lambda = \left( \begin{array}{cccc} t^k & 0 & \cdots & 0 \\ 0 & 1 & \cdots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & \cdots & 1 \end{array} \right).$$
+$$\lambda = \left( \begin{array}{cccc} t & 0 & \cdots & 0 \\ 0 & 1 & \cdots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & \cdots & 1 \end{array} \right).$$
 In other words, there is a map from the space of loops of winding number $k$ to loops of winding number $0$ given by multiplication by $\lambda^{-k}$.
 
 \begin{dfn}
@@ -97,7 +97,7 @@ $$\Omega^2(BU(1) \rightarrow BU(n)).$$
 \begin{rmk} \label{rmk:E2fil}
 The fact that there is an $\mathbb{E}_2$-algebra map $A \rightarrow \Sigma^{\infty}_+ \coprod_k F_{n,k}$ is stronger than the fact that $\Sigma^{\infty}_+ \{F_{n,k}\}$ is $\mathbb{A}_\infty$, but it is weaker than the claim that $\Sigma^{\infty}_+ \{F_{n,k}\}$ is $\mathbb{E}_2$.  We do not know if the Bott filtration is $\mathbb{E}_2$ or not, but would be very interested to learn the answer.
 
-The machinery of Beilinson--Drinfeld Grassmannians proves that, at a general $n$, the coarsened filtration consisting of every $n$th piece of the Bott filtration (i.e. $\Sigma^{\infty}_+ \{F_{n,nk}\}$) is an $\mathbb{E}_2$-filtration.  The question is equivalent to the production of an $\mathbb{E}_3$-algebra map from $A$ to the $\mathbb{E}_3$-center of the $\mathbb{E}_2$-algebra $\Sigma^{\infty}_+ \coprod \{F_{n,k}\}$. 
+The machinery of Beilinson--Drinfeld Grassmannians proves that the coarsened filtration consisting of every $n$th piece of the Bott filtration (i.e. $\Sigma^{\infty}_+ \{F_{n,nk}\}$) is an $\mathbb{E}_2$-filtration.  The question is equivalent to the production of an $\mathbb{E}_3$-algebra map from $A$ to the $\mathbb{E}_3$-center of the $\mathbb{E}_2$-algebra $\Sigma^{\infty}_+ \coprod \{F_{n,k}\}$. 
 After group completion, this would in particular imply the existence of an $\mathbb{E}_3$-algebra map
 $$\mathbb{Z} \longrightarrow (\Omega U(n))^{hU(n)}.$$
 We do not know whether even this last map exists.
@@ -110,18 +110,16 @@ Consider $Gr_{\mathbb{G}_m}$, the affine Grassmannian for the multiplicative gro
 Now, the map of groups $\mathbb{G}_m \rightarrow SL_n(\mathbb{C})$ given by the dominant coweight $(1,0,\cdots,0)$ induces a map of Beilinson--Drinfeld Grassmannians, which gives the desired map of graded $\mathbb{E}_2$-algebras.
 \end{proof}
 
-We end this section by proving the second part of Theorem \ref{thm:MainMUE2}:
+We end this section by sketching what is named Construction \ref{cnstr:IntroGr} in the Introduction:
 
-\begin{lem} \label{lem:E2GrConstruction}
+\begin{cnstr} \label{cnstr:E2GrConstruction}
 The graded $\mathbb{A}_\infty$-algebra $gr(\Sigma^{\infty}_+ \{F_{n,k}\})$ may be equipped with the structure of a graded $\mathbb{E}_2$-algebra.
-\end{lem}
+\end{cnstr}
 
-\begin{proof}
+\begin{proof}[Proof sketch]
 Consider the sequence of $\mathbb{E}_2$-algebras in spaces
 $$\coprod F_{n,k} \longrightarrow \Omega U(n) \longrightarrow BU \times \mathbb{Z},$$
 where the first arrow is given by group completion.  Taking Thom spectra, one obtains a graded $\mathbb{E}_2$-ring spectrum
 $\text{Thom}(\coprod F_{n,k}).$
-It is proven in \cite[1.7]{Segal} that this Thom spectrum is equivalent (as a spectrum) to $gr(\Sigma^{\infty}_+ \{F_{n,k}\})$.  We need to show that this is the case as $\mathbb{A}_\infty$-ring spectra.
-
-\textbf{I know you thought about this Allen?  How far did we get?}
+It is proven in \cite[1.7]{Segal} that this Thom spectrum is equivalent (as a spectrum) to $gr(\Sigma^{\infty}_+ \{F_{n,k}\})$.  We need to show that this is the case as $\mathbb{A}_\infty$-ring spectra.  \textbf{TODO: Finish this!}
 \end{proof}
