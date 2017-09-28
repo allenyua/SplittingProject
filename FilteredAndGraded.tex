@@ -64,7 +64,18 @@ The functors $I$ and $\text{gr}$ can be given symmetric monoidal structures such
 An object $X\in \Alg_{\E_n}(\Fil(\Sp^{\D}))$ is called \emph{$\E_n$-split} if there exists $Y\in \Alg_{\E_n}(\Gr(\Sp^{\D}))$ and an equivalence $X \simeq IY$ in $\Alg_{\E_n}(\Fil(\Sp^{\D}))$.  
 \end{dfn}
 
-Given an $\E_n$-split filtered spectrum $X$, we can recover the underlying graded spectrum by taking the associated graded. 
+Given an $\E_n$-split filtered spectrum $X$, we can recover the underlying graded spectrum by taking the associated graded.  In this paper, we will be interested in when a given $\E_n$ filtered spectrum is $\E_n$ split.  Disregarding the multiplicative structure, a filtered spectrum $$X_0\longrightarrow X_1 \longrightarrow X_2 \longrightarrow \cdots ,$$ will split if and only if there are maps going the other way: $$X_0 \longleftarrow X_1 \longleftarrow X_2 \longleftarrow \cdots,$$ with the property that the relevant composites are equivalences.  One might correctly surmise that the answer to the multiplicatively structured version of this question involves the multiplicativity of this opposite filtration.  %more to write to set up this next thing; should define cofiltered things
+
+%beware, perhaps not enough definitions are made for this statement to make sense; should probably also say either spectra or functors to spectra....
+\begin{thm}\label{thm:SplitMachine}%maybe this is an iff
+Let $X\in \Alg_{\E_n}(\Fil)$ be an $\E_n$ filtered spectrum.  Suppose there exists an $\E_n$ cofiltered spectrum $Y\in \Alg_{\E_n}(\Cofil)$ with the following two properties:
+\begin{enumerate}
+\item There is an equivalence $\colim X \simeq \lim Y$ of $\E_n$-algebras in spectra.
+\item The resulting natural maps $X_i \to Y_i$ are equivalences.  
+\end{enumerate}
+Then, the filtered spectrum $X$ is $\E_n$-split.
+\end{thm}
+
 %%%%
 
 As a final remark, we note that the category of filtered spectra may be recovered as a module category inside the category of graded spectra.  Specifically, consider $A=\Sigma^{\infty}_+ \mathbb{Z}^{ds}_{\ge 0}$, the suspension of the nerve of the symmetric monoidal category $\mathbb{Z}^{ds}_{\ge 0}$, as an $\mathbb{E}_\infty$-algebra in $\Gr(\Sp)$.  The spectrum underlying $A$ is an infinite wedge of copies of $\mathbb{S}^0$.  Then the following may be shown by the argument in \cite[Proposition 3.1.6]{LurieRot}:
