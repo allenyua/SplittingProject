@@ -61,9 +61,9 @@ In fact, the functor $\Gr_n^+ \to \C_n$ can be seen very explicitly as follows: 
 
 %3. Identify everything as monoidal, then take the limit n-> \infty.
 
-Until this point, we have been working with a fixed $n$ and without regard to the monoidal structure.  The results of Section \ref{sec:FilGra} allow us to add this in.  
+Until this point, we have been working with a fixed $n$ and without regard to the monoidal structure.  The results of Appendix \ref{app:day} allow us to analyze what happens as $n$ varies.   
 
-In particular, give $[n]^+$ the structure of a symmetric monoidal category by taking $\Z_{\geq 0}$ under addition and identifying all the integers $m >n$ with the point $+$.  By Proposition \ref{prop:dayconvsmc}, this gives $\Fil_n^+$ the structure of a symmetric monoidal $\infty$-category.  There are natural symmetric monoidal functors $[n+1]^+ \to [n]^+$ by successive quotient.  By Proposition \ref{prop:kanmonoidal} combined with the commutative diagram of symmetric monoidal functors
+In particular, give $[n]^+$ the structure of a symmetric monoidal category by taking $\Z_{\geq 0}$ under addition and identifying all the integers $m >n$ with the point $+$.  By Proposition \ref{prop:dayconvsmc}, this gives $\Fil_n^+$ the structure of a symmetric monoidal $\infty$-category.  There are natural symmetric monoidal functors $\Z_{\geq 0}^+ \to [n+1]^+ \to [n]^+$ by successive quotient.  By Proposition \ref{prop:kanmonoidal} combined with the commutative diagram of symmetric monoidal functors
 
 $$
 \begin{tikzcd}
@@ -78,7 +78,8 @@ $$
 \Gr_n^+  \arrow[r,"I_n^+"] & \Fil_n^+ .
 \end{tikzcd}
 $$
-We remark that the right vertical functor coincides with the restriction induced by the natural inclusion $[n] \to [n+1]$.  As a consequence, we find that $\lim_n \Fil_n^+ = \Fun(\colim_n [n]^+, \Sp) = \Fun(\Z_{\geq 0}^+, \Sp) =: \Fil^+$.  
+We claim that the limit of the right vertical arrows over $n$ is $\Fil^+ := \Fun(\Z_{\geq 0}^+,\Sp)$ with its symmetric monoidal structure as given by Proposition \ref{prop:dayconvsmc}.  This is because by Proposition \ref{prop:kanmonoidal}, there are symmetric monoidal functors $\Fil^+ \to \Fil_n^+$ induced by the symmetric monoidal functor $\Z_{\geq 0}^+ \to [n]^+$ collapsing $+$ and all integers $m> n$ to a point.  This induces a symmetric monoidal functor $\Fil^+ \to \lim_n \Fil_n^{+}.$  It is then easy to check that this is an equivalence.  
+%We remark that the right vertical functor coincides with the restriction induced by the natural inclusion $[n] \to [n+1]$.   
 
 There is a similar diagram for the cofiltered side by the appropriate analogs of the above statements:
 $$
@@ -87,15 +88,11 @@ $$
 \Gr_n^+  \arrow[r,"I_n^{op,+}"] & \Cofil_n^+ 
 \end{tikzcd}
 $$
-and so $\lim_n \Cofil_n^+ = \Fun((\Z_{\geq 0}^{+})^{op}, \Sp) =: \Cofil^+.$  
-
-\begin{rmk}
-Strictly speaking, $\Cofil^+$ does not satisfy the conditions of Variant \ref{var:day} because the slice category over the point
-\end{rmk}
+and as before, we have an identification $ \Fun((\Z_{\geq 0}^{+})^{op}, \Sp) =: \Cofil^+ \simeq \lim_n \Cofil_n^+$ by Variant \ref{var:day} and Proposition \ref{prop:kanmonoidal}.
 
 Thus, taking the limit in $n$ in the original picture yields a diagram of symmetric monoidal functors:
 
-$$
+\begin{equation}\label{dia:fund}
 \begin{tikzcd}
 \mathcal{G}_\infty
  \arrow[drr, bend left, "I^{+,op}"]
@@ -104,15 +101,29 @@ $$
 &\C_\infty \arrow[r] \arrow[d]&  \Cofil^+ \arrow[d]\\
 & \Fil^+ \arrow[r]& \Sp
 \end{tikzcd}
-$$
+\end{equation}
 where the square is Cartesian.
 
 \begin{rmk}
-While $\mathcal{G}_\infty \to \mathcal{C}_\infty$ remains a fully faithful functor, we warn the reader that $\mathcal{G}_\infty$ is not simply $\Fun((\Z_{\geq 0}^+)^{ds}, \Sp)$ because the maps in the inverse system for $\mathcal{G}$ are not just the ones induced by the inclusions $([n]^+)^{ds} \to ([n+1]^+)^{ds}.$
+While $\mathcal{G}_\infty \simeq \lim \Gr_n^{+}$, we warn the reader that $\mathcal{G}_\infty$ is not simply $\Fun((\Z_{\geq 0}^+)^{ds}, \Sp)$ because the maps in the inverse system for $\mathcal{G}_\infty$ are not just the ones induced by the inclusions $([n]^+)^{ds} \to ([n+1]^+)^{ds}.$
 \end{rmk}
 
+The functor $\mathcal{G}_\infty \to \mathcal{C}_\infty$ is fully faithful because it is the inverse limit of fully faithful functors.  Moreover, the essential image consists of those pairs $(X,Y)\in \Fil^+\times_{\Sp} \Cofil^+ = \C_{\infty}$ such that the natural maps $X_i\to Y_i$ are equivalences for all $i\geq 0$.   Since all the functors in the diagram \ref{dia:fund} were symmetric monoidal, this will remain the case on the level of algebras.  We therefore have for each integer $n\geq 0$ a diagram:
 
-Recall that we were interested in understanding when an $\E_n$ filtered spectrum $X\in \Alg_{\E_n}(\Fil)$ is split - that is, when there exists $Z\in \Alg_{\E_n}(\Gr)$ such that $X \simeq IZ.$  The following proposition is key in relating that to our current situation; informally, it allows us to get rid of the +'s.
+\begin{equation}\label{dia:fundmon}
+\begin{tikzcd}
+\Alg_{\E_n}(\mathcal{G}_\infty)
+ \arrow[drr, bend left, "I^{+,op}"]
+  \arrow[ddr, bend right, "I^+"]
+  \arrow[dr] & & \\
+&\Alg_{\E_n}(\C_\infty) \arrow[r] \arrow[d]&  \Alg_{\E_n}(\Cofil^+ )\arrow[d]\\
+& \Alg_{\E_n}(\Fil^+ )\arrow[r]& \Alg_{\E_n}(\Sp)
+\end{tikzcd}
+\end{equation}
+where the square is Cartesian and the functor $\Alg_{\E_n}(\mathcal{G}_\infty) \to \Alg_{\E_n}(\C_\infty)$ is fully faithful with essential image as described above.  
+
+
+Recall that we were interested in understanding when an $\E_n$ filtered spectrum $X\in \Alg_{\E_n}(\Fil)$ is split - that is, when there exists $Z\in \Alg_{\E_n}(\Gr)$ such that $X \simeq IZ.$  The following proposition relates that to our current situation; informally, it allows us to get rid of the +'s.
 
 \begin{prop}\label{prop:MonRet}
 There exists a diagram of symmetric monoidal $\infty$-categories and symmetric monoidal functors 
@@ -125,22 +136,30 @@ $$
 where the bottom row is a retract and $I^+$ is induced by the $I_n^+$ at each finite level.  
 \end{prop} 
 \begin{proof}
-We have already seen that $I^+$ is symmetric monoidal.  For the bottom row, simply apply Proposition \ref{prop:kanmonoidal} to the sequence $$\Z_{\geq 0} \to \Z_{\geq 0}^+ \to \Z_{\geq 0}.$$
 
-Finally, to see that $\pi$ is symmetric monoidal, we claim that at each finite level $n$, the functor $$\pi_n: \Gr_n^+ \to \Gr_n$$ is symmetric monoidal.  This is because it is localization to the full subcategory of $\Gr_n^+$ which restricts to $0$ at the element $+\in ([n]^+)^{ds}$, and the localization is clearly compatible with the monoidal structure (for example, see \cite[Proposition 2.2.1.9]{HA}).%need I say this more carefully?
+We have the square at each finite level: %ok this is not technically rigorous but I think it's totally obvious
+$$
+\begin{tikzcd}
+\Gr_{n}^+ \arrow[r] \arrow[d,"I_n^{+}"] & \Gr_{n} \arrow[d,"I_n"]\\
+\Fil_n^+  \arrow[r] & \Fil_n .
+\end{tikzcd}
+$$
+where the right arrow comes from ignoring the $+$.  It is easy to see that all the functors are symmetric monoidal, and so taking the limit gives the square.  
 
+For the bottom row, we apply Proposition \ref{prop:kanmonoidal} to the symmetric monoidal functor $q:\Z_{\geq 0} \to \Z_{\geq 0}^+.$  The functor $\varpi$ certainly coincides with $q_*$, and we define $\iota = q_!$, which is symmetric monoidal by Proposition \ref{prop:kanmonoidal}.  It is immediate that $\varpi \circ \iota$ is an equivalence, so the bottom row is a retract.  
 
-%do I need to say something about taking limits of symmetric monoidal functors
-
+%Finally, to see that $\pi$ is symmetric monoidal, we claim that at each finite level $n$, the functor $$\pi_n: \Gr_n^+ \to \Gr_n$$ is symmetric monoidal.  This is because the inclusion of the full subcategory of $\Gr_n^+$ which restricts to $0$ at the element $+\in ([n]^+)^{ds}$ induces a localization and the localization is clearly compatible with the monoidal structure (for example, see \cite[Proposition 2.2.1.9]{HA}).%need I say this more carefully?
 \end{proof}
 
+%On the cofiltered side, we need the following lemma:
 
 We are now ready to prove the main result of this section.
 
 \begin{proof}[Proof of Theorem \ref{thm:SplitMachine}]
-We use the notations of Proposition \ref{prop:MonRet}.  Since $\iota$ is lax monoidal, we obtain an $\E_n$ algebra $\iota X \in \Alg_{\E_n}(\Fil^+).$  
-Similarly, since the functor $\iota^{op}: \Cofil \to \Cofil^+$ is lax monoidal, we get $\iota^{op}Y \in \Cofil^+$.  %This needs explanation.  I think this is true since lim is lax the right way
-Condition (1) in the statement of the theorem guarantees that $\iota X$ and $\iota^{op}Y$ determine an element $\mathcal{X} \in \Alg_{\E_n}(\C_{\infty})$.  Condition (2) combined with the fact that $\mathcal{G}_\infty \to \C_\infty$ is fully faithful implies that $\mathcal{X} \in \Alg_{\E_n}(\G_\infty).$  Finally, we chase through the diagram of Proposition \ref{prop:MonRet} to see that $I\pi \mathcal{X} \simeq \varpi I^+ \mathcal{X} \simeq \varpi \iota X \simeq X$ as $\E_n$ algebras in $\Fil$.  
+We use the notations of Proposition \ref{prop:MonRet}.  Since $\iota$ is a symmetric monoidal functor, we obtain an $\E_n$ algebra $\iota X \in \Alg_{\E_n}(\Fil^+).$  
+On the cofiltered side, we note that by the universal property of Day convolution, the symmetric monoidal functor $\Z_{\geq 0} \to \Z_{\geq 0}^+$ induces a map of $\infty$-operads $\Fun(\Z_{\geq 0}^+, \Sp^{op})^{\otimes} \to \Fun(\Z_{\geq 0},\Sp^{op})^{\otimes}.$  This amounts to an oplax symmetric monoidal functor $\Cofil^+\to \Cofil$ which restricts away from the $+$.  It is easy to see that this is actually a symmetric monoidal functor, and so its adjoint $\iota^{op}: \Cofil \to \Cofil^+$ by right Kan extension is lax monoidal.  Concretely, this is the functor which takes a cofiltered spectrum and adds in its limit.  As a result, we obtain an $\E_n$-algebra $\iota^{op}Y \in \Alg_{\E_n}(\Cofil^+)$ with image $\lim Y\in \Alg_{\E_n}(\Sp).$  
+
+Condition (1) in the statement of the theorem guarantees that $\iota X$ and $\iota^{op}Y$ determine an element $\mathcal{X} \in \Alg_{\E_n}(\C_{\infty})$.  Condition (2) then ensures that $\mathcal{X}$ is in the essential image of the fully faithful functor $\Alg_{\E_n}(\mathcal{G}_\infty) \to \Alg_{\E_n}(\C_\infty)$; consequently, we regard $\mathcal{X}$ as an $\E_n$-algebra in $\mathcal{G}_{\infty}$.  Finally, we chase through the diagram of Proposition \ref{prop:MonRet} to see that $I\pi \mathcal{X} \simeq \varpi I^+ \mathcal{X} \simeq \varpi \iota X \simeq X$ as $\E_n$-algebras in $\Fil$.   Hence, $X$ is $\E_n$ split, as desired. 
 \end{proof}
 
 
