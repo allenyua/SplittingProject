@@ -29,8 +29,6 @@ Recall that the Day convolution is defined classically via left Kan extension.  
 
 As stated before, Proposition \ref{prop:dayconvsmc} is sufficient to construct symmetric monoidal $\infty$-categories $\Fil(\Sp)$ and $\Gr(\Sp)$.  However, we wish to understand the interaction of the Weiss calculus with multiplicative structure; there, the filtrations go the other way.
 
-\begin{dfn}Let $\D$ be an $\infty$-category.  Let $\Cofil(\Sp^{\D})$ denote the functor category $\Fun(\Z_{\geq 0}^{op}, \Sp^{\D}).$  We shall refer to $\Cofil(\Sp^{\D})$ as the category of cofiltered objects in $\Sp^{\D}$.  Its objects can be thought of as towers of functors $Y_0\leftarrow Y_1\leftarrow Y_2 \leftarrow \cdots \in \Sp^{\D}$.
-\end{dfn}
 
 We would like to make $\Cofil(\Sp)$ a symmetric monoidal $\infty$-category by putting the Day convolution on its opposite, $\Fun(\Z_{\geq 0}, \Sp^{op}).$  However, the smash product of spectra does not preserve small colimits separately in each variable.  Nevertheless, it does preserve \emph{finite} colimits separately in each variable.  In fact, these are the only colimits that are needed in the case at hand and so we have the following variant of Proposition \ref{prop:dayconvsmc}:
 
@@ -47,7 +45,7 @@ Then $\Fun(\C, \D)^{\otimes}$ is a symmetric monoidal $\infty$-category.
 This follows directly from the same arguments as Proposition \ref{prop:dayconvsmc}.  In \cite[Corollary 2.2.6.14]{HA}, the assumptions are used to guarantee the existence of a left Kan extension; this again exists by assumptions (1) and (2) and \cite[Lemma 4.3.2.13]{HTT}.  Similarly, the proof of \cite[Proposition 2.2.6.16]{HA} only makes reference to commuting tensor products in $\D$ with finite colimits, which is ensured by assumption (3).  
 \end{proof}
 
-In Section \ref{sec:SplittingMachine}, we will need to consider not only the Day convolution monoidal structure on $\Fun(\C,\D)$ but its functoriality as $\C$ varies.  For instance, we would for symmetric monoidal functors $\C_1 \to \C_2$ to induce symmetric monoidal functors $\Fun(\C_1,\D) \to \Fun(\C_2,\D)$ via left Kan extension.  
+In Section \ref{app:SplittingMachine}, we will need to consider not only the Day convolution monoidal structure on $\Fun(\C,\D)$ but its functoriality as $\C$ varies.  For instance, we would for symmetric monoidal functors $\C_1 \to \C_2$ to induce symmetric monoidal functors $\Fun(\C_1,\D) \to \Fun(\C_2,\D)$ via left Kan extension.  
 
 We give a very close variant of \cite[Corollary 3.8]{Nikolaus} in our current framework:
 
