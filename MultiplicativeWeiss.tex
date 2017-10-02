@@ -32,7 +32,7 @@ Suppose $F \in \Sp^{\J}$ is a functor together with an increasing filtration $$0
 \end{thm}
 %we need to at some point deal with the fact that Weiss doesn't actually deal with homog. functors to spectra
 
-In \cite{Arone}, this result is applied to the functor $F\in \Sp^{\J}$ defined by the formula $$F_V(W) = \Sigma^{\infty}_+ \Omega \J(V,V\oplus W)$$ where $V\in \J$ is a fixed finite dimensional complex vector space.  Arone provides a filtration $F^{(0)}_V(W) \subset F^{(1)}_V(W) \subset \cdots F_V(W)$ which is functorial in both $V$ and $W$, and which satisfies the constraints of Theorem \ref{thm:aronesplit} for fixed $V$.  This provides a stable splitting of the space $\Omega \J(V,V\oplus W).$  Letting $W=\mathbb{C}$ and $V=\mathbb{C}^{n-1}$, he obtains splittings of the loop groups $\Omega SU(n)$, and for higher dimension $W$, this provides splittings of the loop spaces of Stiefel manifolds.  
+In \cite{Arone}, this result is applied to the functor $F_V \in \Sp^{\J}$ defined by the formula $$F_V(W) = \Sigma^{\infty}_+ \Omega \J(V,V\oplus W)$$ where $V\in \J$ is a fixed finite dimensional complex vector space.  Arone provides a filtration $F^{(0)}_V(W) \subset F^{(1)}_V(W) \subset \cdots F_V(W)$ which is functorial in both $V$ and $W$, and which satisfies the constraints of Theorem \ref{thm:aronesplit} for fixed $V$.  This provides a stable splitting of the space $\Omega \J(V,V\oplus W).$  Letting $W=\mathbb{C}$ and $V=\mathbb{C}^{n-1}$, he obtains splittings of the loop groups $\Omega SU(n)$, and for higher dimension $W$, this provides splittings of the loop spaces of Stiefel manifolds.  
 
 \subsection{The Taylor tower}
 In order to upgrade the results of \cite{Arone} to structured multiplicative splittings, we must understand the multiplicative properties of the polynomial approximation functors.  More precisely, for a functor $F\in \Sp^{\J}$, we aim to understand the Taylor tower of $F\wedge F$ in terms of the tower for $F.$  The results in this section are likely known to experts, but the authors were not able to locate it in the literature.  They thank Jacob Lurie for suggesting that Proposition \ref{prop:weissmonoidal} is true.  
@@ -106,6 +106,11 @@ In order to show that $\text{Tow}$ is a symmetric monoidal functor, one would ne
 Let $F\in \Sp^{\J}$ be a functor.  Call $F$ \emph{rapidly convergent} if $F$ takes values in connective spectra and there exist real numbers $c,\alpha>0$ such that the natural map $F(W) \to P_nF(W)$ is $(\alpha n)\text{dim}(W) - c$ connected.  We denote by $\Sp^{\J}_{\text{conv}}$ the category of rapidly convergent functors.  
 \end{dfn}
 
+\begin{exm} \label{ex:aronefunctor}
+Let $V\in \J$ be a complex vector space.  
+The functor $F_V\in \Sp^{\J}$ defined by $$F_V(W) = \Sigma^{\infty}_+ \Omega \J(V, V\oplus W)$$ is rapidly convergent.  Indeed, \cite{Arone} shows that its homogeneous layers are given by $$D_nF_V(W) = \Omega^{\infty}(s_n(V) \smsh S^{nW})_{hU(n)}$$ where $s_n(V)$ is the suspension spectrum of a space.  Since colimits do not lower connectivity, this implies $D_nF_V(W)$ is at least $(2n)\text{dim}(W)-1$-connected.  It follows from the Milnor sequence that $F_V$ is rapidly convergent, where $\alpha$ can be taken to be $2$.  
+\end{exm}
+
 Observe that rapidly convergent functors in particular have convergent Weiss towers.  However, the following lemma of Weiss about functors ``agreeing up to order $n$'' allows us to say more:
 
 \begin{lem}\label{lem:ordernagree}%***CITE THIS***
@@ -114,7 +119,7 @@ Let $F,G\in \Sp^{\J}$ be functors, $\eta: F\to G$ a natural transformation, and 
 
 The following corollary is immediate:
 
-\begin{cor}\label{cor:rapidconv}
+\begin{cor} \label{cor:rapidconv}
 Let $F,G\in \Sp^{\J}_{\text{conv}}$ be rapidly convergent and $n>0$ an integer.  Then there exists an integer $M$ such that for $m>M$, the natural transformation $F\smsh G \to P_m F\smsh P_m G$ is an equivalence after applying $P_k$ for all integers $0\leq k \leq n.$  
 \end{cor}
 
@@ -142,6 +147,13 @@ The Weiss tower defines a symmetric monoidal functor $$\text{Tow}: \Sp^{\J}_{\te
 \begin{rmk}
 Proposition \ref{prop:weissmonoidal} is written in the language of Weiss calculus as that is the present application, but the proof works equally well in Goodwillie calculus - there, the rapidly convergent condition is analogous to being $\rho$-analytic in the language of **CITE CALC2 or 3**.  In fact, simplifications may be made due to the technology being more fully developed.  
 \end{rmk}
+
+Combining this with Example \ref{ex:aronefunctor}, we obtain:
+
+\begin{cor}\label{cor:aronemonoidal}
+Let $V\in \J$ be a complex vector space.  
+The functor $F_V\in \Sp^{\J}$ defined by $$F_V(W) = \Sigma^{\infty}_+ \Omega \J(V, V\oplus W)$$ determines a cofiltered associative algebra $\text{Tow}(F_V) \in \Alg_{\mathbb{A}_{\infty}}(\Cofil(\Sp^{\J})).$
+\end{cor}
 
 
 We finish with a proof omitted earlier:

@@ -1,0 +1,14 @@
+\contentsline {section}{\tocsection {}{1}{Introduction}}{1}{section.1}
+\contentsline {section}{\tocsection {}{2}{Filtered and Graded Ring Spectra}}{4}{section.2}
+\contentsline {subsection}{\tocsubsection {}{2.1}{Definitions}}{4}{subsection.2.1}
+\contentsline {subsection}{\tocsubsection {}{2.2}{Monoidal structures}}{4}{subsection.2.2}
+\contentsline {subsection}{\tocsubsection {}{2.3}{Square zero rings}}{5}{subsection.2.3}
+\contentsline {section}{\tocsection {}{3}{The (Segal-Mitchell-Richter?) Filtration on $\Omega SU(n)$}}{7}{section.3}
+\contentsline {section}{\tocsection {}{4}{An $\mathbb {A}_\infty $-splitting by Weiss Calculus}}{7}{section.4}
+\contentsline {subsection}{\tocsubsection {}{4.1}{Weiss Calculus}}{8}{subsection.4.1}
+\contentsline {subsection}{\tocsubsection {}{4.2}{General splitting machinery}}{12}{subsection.4.2}
+\contentsline {section}{\tocsection {}{5}{An $\mathbb {E}_2$-splitting in Complex Cobordism}}{12}{section.5}
+\contentsline {section}{\tocsection {}{6}{Obstructions to a General $\mathbb {E}_2$-splitting}}{14}{section.6}
+\contentsline {section}{\tocsection {}{7}{Snaith's Construction of Periodic Complex Bordism}}{15}{section.7}
+\contentsline {section}{\tocsection {}{8}{Miscellaneous stuff here}}{15}{section.8}
+\contentsline {section}{\tocsection {}{}{References}}{15}{section*.2}
