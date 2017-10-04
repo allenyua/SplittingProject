@@ -1,17 +1,16 @@
 
-In this brief section, we remark that the $\mathbb{A}_\infty$ splitting $$\Sigma^{\infty}_+ \Omega SU(n) \simeq gr(\Sigma^{\infty}_+ \{F_{n,k}\})$$ becomes $\mathbb{E}_2$ after base-change to complex bordism.  More precisely, we show that there is an equivalence of $\mathbb{E}_2$-$MU$-algebras
+We remark in this section that the $\mathbb{A}_\infty$ splitting $$\Sigma^{\infty}_+ \Omega SU(n) \simeq gr(\Sigma^{\infty}_+ \{F_{n,k}\})$$ becomes $\mathbb{E}_2$ after base-change to complex bordism.  More precisely, suppose that $gr(\Sigma^{\infty}_+ \{F_{n,k}\})$ is equipped with some graded $\mathbb{E}_2$-ring structure extending the natural graded $\mathbb{A}_\infty$-ring structure.  Construction \ref{cnstr:E2GrConstruction} provides one possible way to do this.  We will by abuse of notation use $gr(\Sigma^{\infty}_+ \{F_{n,k}\})$ also to denote the underlying \textit{ungraded} $\mathbb{E}_2$-algebra, and our main theorem is that there is an equivalence of (ungraded) $\mathbb{E}_2$-$MU$-algebras:
+
 $$MU \smsh \Sigma^{\infty}_+ \Omega SU(n) \simeq MU \smsh gr(\Sigma^{\infty}_+ \{F_{n,k}\}).$$
 
-Though it is true that this is an equivalence of graded $\mathbb{E}_2$-$MU$-algebras, for simplicity we do not prove that here.  We content ourselves with an argument that the underlying $\mathbb{E}_2$-$MU$-algebras are equivalent, and leave to the reader the straightforward modifications necessary to prove the graded statement.
-
-The $\mathbb{A}_\infty$-$MU$-algebra equivalence obtained by base-change from the results of Section \ref{sec:AooSplit} is realized by a map of $\mathbb{A}_\infty$-$\mathbb{S}$-algebras
+Notice that the results of Section \ref{sec:AooSplit} give an $\mathbb{A}_\infty$-equivalence between these two $MU$-algebras.  This $\mathbb{A}_\infty$-$MU$-algebra equivalence is adjoint to a map of $\mathbb{A}_\infty$-$\mathbb{S}$-algebras
 \begin{equation} \label{SplittingMap}
 \Sigma_+^{\infty} \Omega SU(n) \longrightarrow MU \smsh gr(\Sigma^{\infty}_+ \{F_{n,k}\}).
 \end{equation}
 
-Our task is to show that (\ref{SplittingMap}) may be refined to a morphism of $\mathbb{E}_2$-ring spectra.  We do so by obstruction theory--the key fact powering our proof is that 
+Our task in this section will be to show that (\ref{SplittingMap}) may be refined to a morphism of $\mathbb{E}_2$-ring spectra.  We do so by obstruction theory--the key fact powering our proof is that 
 $$MU_{2*+1}\left(\Omega SU(n)\right) \cong 0.$$
-This classical vanishing result may be proven via Atiyah--Hirzerburch spectral sequence, using the even cell-decomposition of $Gr_{SL_n}(\mathbb{C})$ via Iwahori orbits.  Inspired by \cite{ChadwickMandell}, we prove the following general result:
+This classical vanishing result may be proven via Atiyah--Hirzerburch spectral sequence, using the even cell-decomposition of $Gr_{SL_n}(\mathbb{C})$.  Inspired by \cite{ChadwickMandell}, we prove the following general result:
 
 \begin{thm}
 Suppose that $R$ is an $\mathbb{E}_2$-ring spectrum with no homotopy groups in odd degrees.  Then any homotopy commutative ring homomorphism
