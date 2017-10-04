@@ -117,9 +117,19 @@ The graded $\mathbb{A}_\infty$-algebra $gr(\Sigma^{\infty}_+ \{F_{n,k}\})$ may b
 \end{cnstr}
 
 \begin{proof}[Proof sketch]
-Consider the sequence of $\mathbb{E}_2$-algebras in spaces
-$$\coprod F_{n,k} \longrightarrow \Omega U(n) \longrightarrow BU \times \mathbb{Z},$$
-where the first arrow is given by group completion.  Taking Thom spectra, one obtains a graded $\mathbb{E}_2$-ring spectrum
-$\text{Thom}(\coprod F_{n,k}).$
-It is proven in \cite[1.7]{Segal} that this Thom spectrum is equivalent (as a spectrum) to $gr(\Sigma^{\infty}_+ \{F_{n,k}\})$.  We need to show that this is the case as $\mathbb{A}_\infty$-ring spectra.  \textbf{TODO: Finish this!}
+As explained above, the $\mathbb{E}_2$-algebra in spaces $\coprod F_{n,k}$ receives a natural $\mathbb{E}_2$-map from $\mathbb{Z}^{ds}_{\ge 0}$.  We may thus view $\coprod F_{n,k}$ as an $\mathbb{E}_2$-algebra over $\mathbb{Z}^{ds}_{\ge 0}$ (by, e.g., the straightening and unstraightening correspondence).  There is a diagram of $\mathbb{E}_2$-algebras:
+$$
+\begin{tikzcd}
+\coprod_k F_{n,k} \arrow{d} \arrow{r} & \Omega U(n) \arrow{r} & \Omega U \simeq BU \times \mathbb{Z} \arrow{r}{J} & \textbf{Spectra} \\
+\mathbb{Z}^{ds}_{\ge 0}.
+\end{tikzcd}
+$$
+In \cite[1.7]{Segal}, it is proven that the colimit of the functor $\coprod F_{n,k} \longrightarrow \textbf{Spectra}$ is equivalent (as a spectrum) to $gr(\Sigma^{\infty}_+ \{F_{n,k}\})$.  Note that this colimit is more classically described as the Thom spectrum of the map $\coprod F_{n,k} \longrightarrow BU \times \mathbb{Z}$.
+
+One may also compute this colimit by first making a left Kan extension along the map $$\coprod F_{n,k} \rightarrow \mathbb{Z}^{ds}_{\ge 0},$$ and then taking the coproduct of the images of the resulting map $$\mathbb{Z}^{ds}_{\ge 0} \rightarrow \textbf{Spectra}.$$  Taking an operadic left Kan extension as in \cite[3.1.2]{HA}, one learns that the left Kan extension $\mathbb{Z}^{ds}_{\ge 0} \longrightarrow \textbf{Spectra}$ is lax $\mathbb{E}_2$-monoidal.  The properties of Day convolution (explained in, e.g., Appendix \ref{app:day}) then imply that the Thom spectrum is naturally an $\mathbb{E}_2$-graded spectrum.
+
+To see that the underlying $\mathbb{A}_\infty$-graded spectrum agrees with the associated graded of the Bott filtration, notice that the zero-section of the Thom construction is a map of graded $\mathbb{E}_2$-algebras.  This zero-section is (on the $k$th graded piece), a model for the map $$\Sigma^{\infty} F_{n,k} \longrightarrow \Sigma^{\infty} F_{n,k}/F_{n,k-1}.$$
+The sequence of graded $\mathbb{E}_2$-algebra maps
+$$\Sigma^{\infty}_+ \mathbb{Z}^{ds}_{\ge 0} \longrightarrow \Sigma^{\infty}_+ \coprod_k F_{n,k} \longrightarrow \text{Thom}\left( \coprod_k F_{n,k} \right)$$
+then implies the result.
 \end{proof}

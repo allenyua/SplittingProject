@@ -1,5 +1,17 @@
-The main result of \cite{Arone} shows that the Mitchell-Richter filtration on $\Omega SU(n)$ (and more generally, for loops on a Stiefel manifold) stably splits.  In this section, we show how to produce $\mathbb{A}_\infty$ stable splittings of $\Omega SU(n)$.  %and stiefel mflds?? 
+In this brief section, we assemble results proved above in order to obtain what is labeled Theorem \ref{thm:MainAoo} in the Introduction:
 
-%segue
+\begin{thm} \label{thm:MainAooInText}
+As an $\mathbb{A}_\infty$-algebra object in filtered spectra, the Bott filtration of $\Sigma^{\infty}_+ \Omega SU(n)$ is equivalent to its associated graded.
+\end{thm}
 
-Arone's key insight is that this filtration has extra structure: it is a particular value of a \emph{functor} which has a natural filtration.  Weiss calculus then allows him to exploit this structure by producing splitting maps.  To produce $\mathbb{A}_\infty$ splittings, it is no longer sufficient to simply produce splitting maps backward; instead we need the criterion of Theorem \ref{thm:SplitMachine}.  It requires two inputs: an $\mathbb{A}_{\infty}$ filtered spectrum and an $\mathbb{A}_{\infty}$ cofiltered spectrum.  The first of these is given by Theorem \ref{thm:AooFil} and the latter of these by Corollary \ref{cor:aronemonoidal}.  %they match because they're both loops SU(n). 
+\begin{proof}
+The construction of the stable Bott filtration as an $\mathbb{A}_\infty$-filtered spectrum is our Theorem \ref{thm:AooFil}.  According to our Theorem \ref{thm:SplitMachine}, to complete the proof of Theorem \ref{thm:MainAooInText} it suffices to produce an $\mathbb{A}_\infty$-cofiltered spectrum with limit $\Sigma^{\infty}_+ \Omega SU(n)$ and with the property that certain composites are equivalences.
+
+As explained in the Introduction, we follow Arone \cite{Arone} in producing the desired cofiltered spectrum by means of Weiss calculus.  Consider, in the notation of Section \ref{sec:MultWeiss} and particularly Example \ref{ex:aronefunctor}, the functor $$F_V:\mathcal{J} \longrightarrow \textbf{Spectra}$$ given by $F_V(W) = \Sigma^{\infty}_+ \Omega \mathcal{J}(V, V \oplus W)$.  Corollary \ref{cor:aronemonoidal} implies that the Taylor tower of $F_V$, applied to $W$, is an $\mathbb{A}_\infty$-cofiltered spectrum with limit $\Sigma^{\infty}_+ \Omega \mathcal{J}(V,V \oplus W)$.
+
+Specializing to the case $V=\mathbb{C}^{n-1}$, $W=\mathbb{C}$, it is straightforward to see that $\mathcal{J}(\mathbb{C}^{n-1},\mathbb{C}^{n-1} \oplus \mathbb{C})$ is equivalent to $SU(n)$.  Roughly speaking, this is because any embedding of $\mathbb{C}^{n-1}$ into $\mathbb{C}^n$ may be extended in a unique way to an automorphism of $\mathbb{C}^n$ that is unitary of determinant one.  Thus, applying Corollary \ref{cor:aronemonoidal} in the case $V=\mathbb{C}^{n-1}$, $W=\mathbb{C}$ gives an $\mathbb{A}_\infty$-cofiltered spectrum with the desired limit.  To complete the proof of Theorem \ref{thm:MainAooInText} it suffices then to check that certain composites are equivalences.  In fact, one of the main results of \cite{Arone} is that those composites are equivalences (see the proof of \cite[Theorem 1.2]{Arone}).
+\end{proof}
+
+\begin{rmk}
+Mitchell and Richter constructed \cite{CrabbBarcelona} a filtration not just of $$\Omega SU(n) \simeq \Omega \mathcal{J}(\mathbb{C}^{n-1},\mathbb{C}^n),$$ but also of $\Omega \mathcal{J}(V,V\oplus W)$ for a general $V$ and $W$.  Arone showed in \cite[Theorem 1.2]{Arone} that this Mitchell--Richter filtration always stably splits, and Corollary \ref{cor:aronemonoidal} provides an $\mathbb{A}_\infty$-cofiltered spectrum inducing this splitting.  We do not know, however, whether the Mitchell--Richter filtration is always $\mathbb{A}_\infty$-split. 
+\end{rmk}
