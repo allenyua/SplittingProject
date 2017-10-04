@@ -1,4 +1,4 @@
-
+\begin{comment}
 Let $3< n\leq \infty$ be an integer.  We will now show that the $\mathbb{A}_\infty$ splitting $$\Sigma^{\infty}_+ \Omega SU(n) \simeq ???$$ cannot be promoted to an $\mathbb{E}_2$-splitting before smashing with $MU$.  
 
 Suppose that such a splitting existed.  By Remark \ref{rmk:maptosq0}, we would obtain an $\mathbb{E}_2$-ring homomorphism $\Sigma^{\infty}_+ \Omega SU(n) \rightarrow \Sigma^{\infty}_+ \mathbb{CP}^{n-1}$, where $\Sigma^{\infty}_+ \mathbb{CP}^{n-1}$ is given the square-zero multiplication.  Furthermore, the precomposition with the inclusion $\Sigma^{\infty}_+ \mathbb{CP}^{n-1} \longrightarrow \Sigma^{\infty}_+ \Omega SU(n)$ must yield the identity map.  In particular, the map sends the generator of $\pi_2(\Sigma^{\infty}\CP^{n-1})$ to the generator of $\pi_2(\Sigma^{\infty}\Omega SU(n)).$  
@@ -35,24 +35,29 @@ Taking the limit as $n\to\infty$, we obtain the statement that the map $BU\to Q\
 %maybe remark that BU -> QCP^\infty not being E_2 is still true after taking \Sigma^\infty_+, and remark that this is like a version of the splitting principle. perhaps also remark about stuff being known about this map, its place in the weiss tower, etc.
 
 
-**************below is the new version that I am currently writing*************
+\end{comment}
 
-Let $3< n\leq \infty$ be an integer.  We will now show that the $\mathbb{A}_\infty$ splitting $$\Sigma^{\infty}_+ \Omega SU(n) \simeq gr(\Sigma^{\infty}_+ \{ F_{n,k} \})$$ cannot be promoted to an $\mathbb{E}_2$-splitting before smashing with $MU$.  The proof is via a power operation computation.  In particular, the $\mathbb{A}_\infty$ splitting map takes the stabilization of the bottom cell $\beta_l : S^2 \to  \CP^{n-1} \to \Omega SU(n)$ on the left-hand side to the stabilization of the bottom cell $\beta_r: S^2 \to F_{n,1} \simeq \CP^{n-1}$ on the right-hand side.  We construct a power operation $\nu^{s}$ and show that $\nu^{s}(\Sigma^{\infty} \beta_l) \neq \nu^s(\Sigma^{\infty} \beta_r).$  
+Let $3< n\leq \infty$ be an integer.  We have demonstrated in Theorem \ref{thm:MainAoo} an $\mathbb{A}_\infty$ splitting $$\Sigma^{\infty}_+ \Omega SU(n) \simeq \bigvee gr(\Sigma^{\infty}_+ \{ F_{n,k} \}).$$  The right-hand side is the associated graded of the Bott filtration $\{ F_{n,k} \}$, which we showed is $\mathbb{A}_\infty$ in Theorem \ref{thm:BottIsAoo}, but which is not known to be $\E_2$ (see Question \ref{qst:BottE2}).  We show here that even if it is $\E_2$, the splitting cannot be promoted to an $\mathbb{E}_2$ splitting before smashing with $MU$.  The proof is via a power operation computation.  In particular, the $\mathbb{A}_\infty$ splitting map takes the stabilization of the bottom cell $\beta_l : S^2 \to  \CP^{n-1} \to \Omega SU(n)$ on the left-hand side to the stabilization of the bottom cell $\beta_r: S^2 \to F_{n,1} \simeq \CP^{n-1}$ on the right-hand side.  We construct a power operation $\nu^{s}$ and show that $\nu^{s}(\Sigma^{\infty} \beta_l) \neq \nu^s(\Sigma^{\infty} \beta_r).$  The obstruction will be $2$-primary, so we will implicitly complete at $2$ for the remainder of the section.  
 
-\begin{obs}Let $Y\in \Alg_{\E_2}(\cS)$, and suppose we are given a map $ S^2\to Y$.  This extends to an $\E_2$ map $\Omega^2 S^4 \to Y.$  We may precompose with the map $h: S^5 \to \Omega^2 S^4$ adjoint to the Hopf map $S^7\to S^4$.  This procedure determines a natural operation $$\nu^u: \pi_2(Y) \to \pi_5(Y)$$ in the homotopy of any $\E_2$-algebra in spaces.  
+\begin{obs}Let $Y\in \Alg_{\E_2}(\cS)$, and suppose we are given a map $S^2\to Y$.  This extends to an $\E_2$ map $\Omega^2 S^4 \to Y.$  We may precompose with the map $h: S^5 \to \Omega^2 S^4$ adjoint to the Hopf map $S^7\to S^4$.  This procedure determines a natural operation $$\nu^u: \pi_2(Y) \to \pi_5(Y)$$ in the homotopy of any $\E_2$-algebra in spaces.  
 
-Correspondingly, for any $X\in \Alg_{\E_2}{\Sp}$, a class in $\pi_2(X)$ determines an $\E_2$ map $\Sigma^{\infty}_+ \Omega^2 S^4 \to X$.  The above map $h$ then determines an operation $\nu^s :\pi_2(X) \to \pi_5(X)$ via precomposition.  This has the property that for $Y\in \Alg_{\E_2}(\cS)$ and $\beta \in \pi_2(Y)$, we have $\nu^s(\Sigma^{\infty} \beta) = \Sigma^{\infty} \nu^u (\beta).$
+Correspondingly, for any $X\in \Alg_{\E_2}(\Sp)$, a class in $\pi_2(X)$ determines an $\E_2$ map $\Sigma^{\infty}_+ \Omega^2 S^4 \to X$.  The above map $h$ then determines an operation $\nu^s :\pi_2(X) \to \pi_5(X)$ via precomposition.  This has the property that for $Y\in \Alg_{\E_2}(\cS)$ and $\beta \in \pi_2(Y)$, we have $\nu^s(\Sigma^{\infty} \beta) = \Sigma^{\infty} \nu^u (\beta).$
 \end{obs}
 
 \begin{rmk} \label{rmk:multnu}
-The notation is meant to hint at the fact that if $Y = \Omega^\infty X$ comes from a spectrum, then the operation $\nu^u$ is given by multiplication by the element $\nu \in \pi_3(\mathbb{S})^{\wedge}_2$ from the $2$-primary homotopy groups of the sphere spectrum.  Thus, $\nu^u$ is an unstable version of $\nu$ that is already seen in any $\E_2$ algebra in spaces.    
+The notation is meant to hint at the fact that if $Y = \Omega^\infty X$ comes from a spectrum, then the operation $\nu^u$ is given by multiplication by the element $\nu \in \pi_3(\mathbb{S})^{\wedge}_2$ from the $2$-primary homotopy groups of the sphere spectrum.  Thus, $\nu^u$ is an unstable version of $\nu$ that is already seen in any $\E_2$ algebra in spaces.    %indeed, any "unstable power operation" is simply a multiplication of this form
 \end{rmk}
 
-We now compute the operation $\nu^s$ in the two cases.  
+We now compute the operation $\nu^s$ on $\Sigma^{\infty} \beta_l$ and $\Sigma^{\infty} \beta_r$.  
 \begin{enumerate}
-\item For $n>3$, observe that the natural map $\Omega SU(n) \to BU$ is an isomorphism in homology up to degree $7$.  This implies that $\pi_5(\Omega SU(n)) \simeq \pi_5(BU) \simeq 0$ because $BU$ is even.  Consequently, $\nu^u(\beta) = 0$ and so $\nu^s(\Sigma^{\infty} \beta) = 0.$  
+\item For $n>3$, observe that the natural map $\Omega SU(n) \to BU$ is an isomorphism in homology up to degree $7$.  This implies that $\pi_5(\Omega SU(n)) \simeq \pi_5(BU) \simeq 0$ because $BU$ is even.  Consequently, $\nu^u(\beta_l) = 0$ and so $\nu^s(\Sigma^{\infty} \beta_l) = 0.$  
 
-\item rest goes here
+\item For $\beta_r$, we use the assumption that $\Sigma^{\infty}_+ \{ F_{n,k} \}$ is an $\E_2$-filtered spectrum, which implies that $gr(\Sigma^{\infty}_+ \{ F_{n,k} \})$ is an $\E_2$ graded spectrum.  In particular, this means that $\beta_r: S^2 \to F_{n,1}$ extends to an $\E_2$ map of underlying spectra $$\Sigma^{\infty}_+ \Omega^2 S^4 \to \bigvee gr(\Sigma^{\infty}_+ \{ F_{n,k} \}).$$  However, observe that since $\Sigma^{\infty} \beta_r$ hits the degree 1 piece, we may lift this map to an $\E_2$ map of graded spectra $$F_{\E_2}(\Sigma^\infty S^2[1]) \to gr(\Sigma^{\infty}_+ \{ F_{n,k} \})$$ from the free $\E_2$ algebra on $\Sigma^{\infty} S^2$ in degree 1 (see Example \ref{exm:snaith}).  %need to explain this and the notation
+
+We aim to show that $\nu^s(\Sigma^\infty \beta_r)$ is nonzero.  From the graded statement, it suffices to see that its component in grading $1$ is nonzero; it is given by the composite $$\Sigma^{\infty} S^5 \to \Sigma^{\infty}_+ \Omega^2 S^4 \to \Sigma^{\infty} S^2 \xrightarrow{\Sigma^{\infty} \beta_r} \Sigma^{\infty} F_{n,1} = \CP^{n-1}$$ where the middle map is given by projection onto the first graded piece (it's the map from the Snaith splitting).  It is easy to see that the first composite $\Sigma^{\infty} S^5 \to \Sigma^{\infty} S^2$ is simply $\nu \in \pi_3(\mathbb{S})^{\wedge}_2.$  Therefore, the whole composite is given by the product $\nu\cdot (\Sigma^{\infty} \beta_r).$  
+However, it was computed in \cite[Theorem II.8]{Liulevicius} that $\pi_5(\Sigma^{\infty}\CP^{\infty})=\mathbb{Z}/2$ generated by $\nu \cdot (\Sigma^{\infty}\beta_r).$  Moreover, the natural map $\Sigma^{\infty}\CP^{n-1} \to \Sigma^{\infty}\CP^\infty$ is an isomorphism on $\pi_5$ for $n>3$.  We conclude that $\nu \cdot (\Sigma^{\infty}\beta_r )\neq 0$ and thus $\nu^s(\Sigma^{\infty} \beta_r) \neq 0$.  This contradicts the existence of an $\E_2$ splitting.  
+
+
 
 \end{enumerate}
 
