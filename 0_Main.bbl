@@ -1,10 +1,15 @@
-\begin{thebibliography}{May77}
+\begin{thebibliography}{{Tyn}17}
 
 \bibitem[Aro01]{Arone}
 Greg Arone.
 \newblock The {M}itchell-{R}ichter filtration of loops on {S}tiefel manifolds
   stably splits.
 \newblock {\em Proc. Amer. Math. Soc.}, 129(4):1207--1211, 2001.
+
+\bibitem[Bot58]{Bott}
+Raoul Bott.
+\newblock The space of loops on a {L}ie group.
+\newblock {\em Michigan Math. J.}, 5:35--61, 1958.
 
 \bibitem[CM88]{CrabbMitchell}
 M.~C. Crabb and S.~A. Mitchell.
@@ -17,16 +22,21 @@ Steven~Greg Chadwick and Michael~A. Mandell.
 \newblock {$E_n$} genera.
 \newblock {\em Geom. Topol.}, 19(6):3193--3232, 2015.
 
+\bibitem[Cra87]{CrabbBarcelona}
+M.~C. Crabb.
+\newblock On the stable splitting of {${\rm U}(n)$} and {$\Omega {\rm U}(n)$}.
+\newblock In {\em Algebraic topology, {B}arcelona, 1986}, volume 1298 of {\em
+  Lecture Notes in Math.}, pages 35--53. Springer, Berlin, 1987.
+
 \bibitem[Gla13]{Glasman}
 Saul Glasman.
 \newblock Day convolution for infinity-categories.
 \newblock {\em \newline {P}reprint {\tt arXiv:1308.4940}}, Aug 2013.
 
-\bibitem[GS09]{GepnerSnaith}
-David Gepner and Victor Snaith.
-\newblock On the motivic spectra representing algebraic cobordism and algebraic
-  {$K$}-theory.
-\newblock {\em Doc. Math.}, 14:359--396, 2009.
+\bibitem[Goo92]{GoodwillieII}
+Thomas~G. Goodwillie.
+\newblock Calculus. {II}. {A}nalytic functors.
+\newblock {\em $K$-Theory}, 5(4):295--332, 1991/92.
 
 \bibitem[Kit01]{Kitchloo}
 Nitu Kitchloo.
@@ -57,13 +67,6 @@ Jacob Lurie.
 \newblock {\em \newline {A}vailable at http://www.math.harvard.edu/~lurie/},
   2017.
 
-\bibitem[May77]{MQRT}
-J.~Peter May.
-\newblock {\em {$E_{\infty }$} ring spaces and {$E_{\infty }$} ring spectra}.
-\newblock Lecture Notes in Mathematics, Vol. 577. Springer-Verlag, Berlin-New
-  York, 1977.
-\newblock With contributions by Frank Quinn, Nigel Ray, and J\o rgen Tornehave.
-
 \bibitem[Mil85]{MillerSplitting}
 Haynes Miller.
 \newblock Stable splittings of {S}tiefel manifolds.
@@ -74,30 +77,61 @@ Stephen~A. Mitchell.
 \newblock A filtration of the loops on {${\rm SU}(n)$} by {S}chubert varieties.
 \newblock {\em Math. Z.}, 193(3):347--362, 1986.
 
+\bibitem[Mit87]{MitchellLoopGroup}
+S.~A. Mitchell.
+\newblock The {B}ott filtration of a loop group.
+\newblock In {\em Algebraic topology, {B}arcelona, 1986}, volume 1298 of {\em
+  Lecture Notes in Math.}, pages 215--226. Springer, Berlin, 1987.
+
+\bibitem[MR93]{MahowaldRichter}
+Mark Mahowald and William Richter.
+\newblock {$\Omega{\rm SU}(n)$} does not split in 2 suspensions, for {$n\geq
+  3$}.
+\newblock In {\em Algebraic topology ({O}axtepec, 1991)}, volume 146 of {\em
+  Contemp. Math.}, pages 225--235. Amer. Math. Soc., Providence, RI, 1993.
+
 \bibitem[Nik16]{Nikolaus}
 Thomas Nikolaus.
-\newblock Stable $\infty$-operads and the multiplicative yoneda lemma.
+\newblock Stable $\infty$-operads and the multiplicative {Y}oneda lemma.
 \newblock {\em \newline {P}reprint {\tt arXiv:1608.02901}}, Aug 2016.
 
-\bibitem[Sna77]{SnaithNotMultiplicative}
-Victor Snaith.
-\newblock The total {C}hern and {S}tiefel-{W}hitney classes are not infinite
-  loop maps.
-\newblock {\em Illinois J. Math.}, 21(2):300--304, 1977.
+\bibitem[Seg89]{Segal}
+Graeme Segal.
+\newblock Loop groups and harmonic maps.
+\newblock In {\em Advances in homotopy theory ({C}ortona, 1988)}, volume 139 of
+  {\em London Math. Soc. Lecture Note Ser.}, pages 153--164. Cambridge Univ.
+  Press, Cambridge, 1989.
 
 \bibitem[Sna79]{SnaithBook}
 Victor~P. Snaith.
 \newblock Algebraic cobordism and {$K$}-theory.
 \newblock {\em Mem. Amer. Math. Soc.}, 21(221):vii+152, 1979.
 
-\bibitem[Sna81]{SnaithOriginal}
-Victor Snaith.
-\newblock Localized stable homotopy of some classifying spaces.
-\newblock {\em Math. Proc. Camb. Phil. Soc.}, 89(2):325--330, 1981.
+\bibitem[{Tyn}17]{Tynan}
+P.~D. {Tynan}.
+\newblock {Equivariant Weiss Calculus and Loop Spaces of Stiefel Manifolds}.
+\newblock {\em ArXiv e-prints}, February 2017.
+
+\bibitem[Ull12]{Ullman}
+Harry~E. Ullman.
+\newblock An equivariant generalization of the {M}iller splitting theorem.
+\newblock {\em Algebr. Geom. Topol.}, 12(2):643 --684, 2012.
 
 \bibitem[Wei95]{Weiss}
 Michael Weiss.
 \newblock Orthogonal calculus.
 \newblock {\em Trans. Amer. Math. Soc.}, 347(10):3743--3796, 1995.
+
+\bibitem[Wei98]{WeissErratum}
+Michael~S. Weiss.
+\newblock Erratum: ``{O}rthogonal calculus'' [{T}rans.\ {A}mer.\ {M}ath.\
+  {S}oc.\ {\bf 347} (1995), no.\ 10, 3743--3796; {MR}1321590 (96m:55018)].
+\newblock {\em Trans. Amer. Math. Soc.}, 350(2):851--855, 1998.
+
+\bibitem[Zhu16]{Zhu}
+Xinwen Zhu.
+\newblock An introduction to affine {G}rassmannians and the geometric {S}atake
+  equivalence.
+\newblock {\em \newline {P}reprint {\tt arXiv:1603.05593}}, Apr 2016.
 
 \end{thebibliography}

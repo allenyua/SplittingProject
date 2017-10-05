@@ -3,16 +3,14 @@
 \contentsline {section}{\tocsection {}{2}{Filtered and Graded Ring Spectra}}{4}{section.2}
 \contentsline {subsection}{\tocsubsection {}{2.1}{First definitions}}{5}{subsection.2.1}
 \contentsline {subsection}{\tocsubsection {}{2.2}{Monoidal structures}}{5}{subsection.2.2}
-\contentsline {subsection}{\tocsubsection {}{2.3}{Free algebras and the Snaith filtration}}{7}{subsection.2.3}
 \contentsline {section}{\tocsection {}{3}{The Bott filtration on $\Omega SU(n)$}}{7}{section.3}
 \contentsline {section}{\tocsection {}{4}{Multiplicative Aspects of Weiss Calculus}}{11}{section.4}
-\contentsline {subsection}{\tocsubsection {}{4.1}{Review of Weiss calculus and Arone's splitting theorem}}{11}{subsection.4.1}
+\contentsline {subsection}{\tocsubsection {}{4.1}{Review of Weiss calculus}}{11}{subsection.4.1}
 \contentsline {subsection}{\tocsubsection {}{4.2}{The Taylor tower}}{12}{subsection.4.2}
 \contentsline {subsection}{\tocsubsection {}{4.3}{Multiplicativity of Tow}}{14}{subsection.4.3}
 \contentsline {section}{\tocsection {}{5}{Stable $\mathbb {A}_\infty $ Splittings}}{16}{section.5}
-\contentsline {section}{\tocsection {}{6}{$\mathbb {E}_2$ Splittings in Complex Cobordism}}{16}{section.6}
+\contentsline {section}{\tocsection {}{6}{$\mathbb {E}_2$ Splittings in Complex Cobordism}}{17}{section.6}
 \contentsline {section}{\tocsection {}{7}{Obstructions to a General $\mathbb {E}_2$ Splitting}}{18}{section.7}
 \contentsline {section}{\tocsection {Appendix}{A}{Further Properties of Day Convolution}}{19}{appendix.A}
 \contentsline {section}{\tocsection {Appendix}{B}{Proof of Theorem \ref {thm:SplitMachine}}}{21}{appendix.B}
-\contentsline {section}{\tocsection {Appendix}{C}{Square Zero Algebras}}{24}{appendix.C}
-\contentsline {section}{\tocsection {Appendix}{}{References}}{26}{section*.3}
+\contentsline {section}{\tocsection {Appendix}{}{References}}{24}{section*.3}

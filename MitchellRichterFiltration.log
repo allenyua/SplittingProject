@@ -1,20 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.9.4)  4 OCT 2017 10:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.6.19)  5 OCT 2017 02:25
 entering extended mode
-**MitchellRichterFiltration.tex
-
-("C:\Users\Jeremy\Dropbox\Fall 2017\2_Filtrations of the E2 kind\Filtrations\Je
-remyEdits\MitchellRichterFiltration.tex"
-LaTeX2e <2011/06/27>
-Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
-abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
-croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
-lician, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, iceland
-ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
- lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
-german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
-ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
-an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
-ishmax, welsh, loaded.
+**./MitchellRichterFiltration.tex
+(MitchellRichterFiltration.tex
+LaTeX2e <2016/03/31>
+Babel <3.9r> and hyphenation patterns for 75 language(s) loaded.
 
 ! LaTeX Error: Missing \begin{document}.
 
@@ -24,7 +13,6 @@ Type  H <return>  for immediate help.
                                                   
 l.1 I
      n this section we recall the Mitchell--Segal Bott filtration \cite{Mitc...
-
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -96,7 +84,6 @@ and I'll forget about whatever was undefined.
 
 
 LaTeX Warning: Citation `MitchellLoopGroup' on page  undefined on input line 1.
-
 
 Missing character: There is no ] in font nullfont!
 Missing character: There is no o in font nullfont!
@@ -297,7 +284,6 @@ Type  H <return>  for immediate help.
                                                   
 l.3 I
      t is most efficient to describe the filtration in the language of algeb...
-
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -701,8 +687,7 @@ Overfull \hbox (8.55695pt too wide) in paragraph at lines 3--4
 
 
 Overfull \hbox (51.08594pt too wide) in paragraph at lines 3--4
-[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 C\OT1/cmr/m/n/10 [[\OML/cmm/m/it/10 t\OT1/c
-mr/m/n/10 ]])$
+[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 C\OT1/cmr/m/n/10 [[\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ]])$
  []
 
 
@@ -712,8 +697,7 @@ Overfull \hbox (13.15417pt too wide) in paragraph at lines 3--4
 
 
 Overfull \hbox (55.5304pt too wide) in paragraph at lines 3--4
-[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 C\OT1/cmr/m/n/10 ((\OML/cmm/m/it/10 t\OT1/c
-mr/m/n/10 )))$
+[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 C\OT1/cmr/m/n/10 ((\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 )))$
  []
 
 
@@ -733,8 +717,8 @@ Overfull \hbox (14.83925pt too wide) in paragraph at lines 3--4
 
 
 Overfull \hbox (66.53389pt too wide) in paragraph at lines 3--4
-[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 C\OT1/cmr/m/n/10 [[\OML/cmm/m/it/10 t\OT1/c
-mr/m/n/10 ]][]\OML/cmm/m/it/10 R\OT1/cmr/m/n/10 )$
+[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 C\OT1/cmr/m/n/10 [[\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ]][]\OML/cmm/m/it/10 R\OT1/cmr/
+m/n/10 )$
  []
 
 
@@ -744,8 +728,8 @@ Overfull \hbox (14.83925pt too wide) in paragraph at lines 3--4
 
 
 Overfull \hbox (70.97835pt too wide) in paragraph at lines 3--4
-[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 C\OT1/cmr/m/n/10 ((\OML/cmm/m/it/10 t\OT1/c
-mr/m/n/10 ))[]\OML/cmm/m/it/10 R\OT1/cmr/m/n/10 )$ 
+[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 C\OT1/cmr/m/n/10 ((\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ))[]\OML/cmm/m/it/10 R\OT1/cmr/
+m/n/10 )$ 
  []
 
 
@@ -770,7 +754,6 @@ Type  H <return>  for immediate help.
                                                   
 l.6 L
      et $G$ denote a smooth affine algebraic group over $\mathbb{C}$ (we wil...
-
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -965,9 +948,8 @@ and I'll forget about whatever was undefined.
 
 
 Overfull \hbox (114.19585pt too wide) detected at line 7
-\OML/cmm/m/it/10 Gr[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 R\OT1/cmr/m/n/10 ) = \OM
-S/cmsy/m/n/10 f\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 E\OML/cmm/m/it/10 ; \OT1/cmr/
-m/n/10 )\OMS/cmsy/m/n/10 g\OML/cmm/m/it/10 ; []
+\OML/cmm/m/it/10 Gr[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 R\OT1/cmr/m/n/10 ) = \OMS/cmsy/m/n/10 f\OT1/cmr/m/n/10 (\OMS/cmsy
+/m/n/10 E\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 )\OMS/cmsy/m/n/10 g\OML/cmm/m/it/10 ; []
  []
 
 Missing character: There is no i in font nullfont!
@@ -1066,7 +1048,6 @@ Type  H <return>  for immediate help.
                                                   
 l.11 T
       he complex points $Gr_G(\mathbb{C})$ are a model for the topological s...
-
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -1299,9 +1280,8 @@ and I'll forget about whatever was undefined.
 
 
 Overfull \hbox (88.67233pt too wide) detected at line 12
-\OML/cmm/m/it/10 G\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 C\OT1/cmr/m/n/10 ((\OML/cmm
-/m/it/10 t\OT1/cmr/m/n/10 )))\OML/cmm/m/it/10 =G\OT1/cmr/m/n/10 (\OML/cmm/m/it/
-10 C\OT1/cmr/m/n/10 [[\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ]])\OML/cmm/m/it/10 ;
+\OML/cmm/m/it/10 G\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 C\OT1/cmr/m/n/10 ((\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 )))\OML/cmm/m/i
+t/10 =G\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 C\OT1/cmr/m/n/10 [[\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ]])\OML/cmm/m/it/10 ;
  []
 
 Missing character: There is no w in font nullfont!
@@ -1387,7 +1367,6 @@ Type  H <return>  for immediate help.
                                                   
 l.15 W
       e use $\mathbb{X}^{\bullet}$ to denote the lattice of weights $\Hom(G,...
-
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -1775,11 +1754,9 @@ and I'll forget about whatever was undefined.
 
 
 Overfull \hbox (158.16116pt too wide) detected at line 16
-\OML/cmm/m/it/10 X[] [] G\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 C\OT1/cmr/m/n/10 [[\
-OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ]])\OMS/cmsy/m/n/10 n\OML/cmm/m/it/10 G\OT1/cm
-r/m/n/10 (\OML/cmm/m/it/10 C\OT1/cmr/m/n/10 ((\OML/cmm/m/it/10 t\OT1/cmr/m/n/10
- )))\OML/cmm/m/it/10 =G\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 C\OT1/cmr/m/n/10 [[\OM
-L/cmm/m/it/10 t\OT1/cmr/m/n/10 ]])
+\OML/cmm/m/it/10 X[] [] G\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 C\OT1/cmr/m/n/10 [[\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ]])\OMS/
+cmsy/m/n/10 n\OML/cmm/m/it/10 G\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 C\OT1/cmr/m/n/10 ((\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ))
+)\OML/cmm/m/it/10 =G\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 C\OT1/cmr/m/n/10 [[\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ]])
  []
 
 Missing character: There is no o in font nullfont!
@@ -2063,10 +2040,9 @@ and I'll forget about whatever was undefined.
 
 
 Overfull \hbox (112.86023pt too wide) detected at line 22
-[] \OML/cmm/m/it/10 G\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 C\OT1/cmr/m/n/10 [[\OML/
-cmm/m/it/10 t\OT1/cmr/m/n/10 ]])\OML/cmm/m/it/10 t[]G\OT1/cmr/m/n/10 (\OML/cmm/
-m/it/10 C\OT1/cmr/m/n/10 [[\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ]])\OML/cmm/m/it/1
-0 :
+[] \OML/cmm/m/it/10 G\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 C\OT1/cmr/m/n/10 [[\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ]])\OML/cmm/
+m/it/10 t[]G\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 C\OT1/cmr/m/n/10 [[\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ]])\OML/cmm/m/it/10 :
+
  []
 
 Missing character: There is no P in font nullfont!
@@ -2283,8 +2259,7 @@ Missing character: There is no f in font nullfont!
 Missing character: There is no . in font nullfont!
 
 Overfull \hbox (38.22504pt too wide) in paragraph at lines 22--24
-         $\OML/cmm/m/it/10 G\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 C\OT1/cmr/m/n/10 
-[[\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ]])$
+         $\OML/cmm/m/it/10 G\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 C\OT1/cmr/m/n/10 [[\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ]])$
  []
 
 
@@ -2344,8 +2319,7 @@ Overfull \hbox (10.51161pt too wide) in paragraph at lines 22--24
 
 
 Overfull \hbox (55.83507pt too wide) in paragraph at lines 22--24
-\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 Gr[]\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10  \OM
-S/cmsy/m/n/10 2
+\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 Gr[]\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10  \OMS/cmsy/m/n/10 2
  []
 
 
@@ -2405,7 +2379,6 @@ Type  H <return>  for immediate help.
                                                   
 l.26 S
       uppose $G=SL_2(\mathbb{C})$.  Then a coweight $\mu \in \mathbb{X}_\bul...
-
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -2722,8 +2695,7 @@ Overfull \hbox (40.86253pt too wide) in paragraph at lines 26--27
 
 
 Overfull \hbox (30.5718pt too wide) in paragraph at lines 26--27
-\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a; \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 a\OT1/c
-mr/m/n/10 )$
+\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a; \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 a\OT1/cmr/m/n/10 )$
  []
 
 
@@ -2738,8 +2710,7 @@ Overfull \hbox (5.00002pt too wide) in paragraph at lines 26--27
 
 
 Overfull \hbox (30.5718pt too wide) in paragraph at lines 26--27
-\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a; \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 a\OT1/c
-mr/m/n/10 )$
+\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a; \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 a\OT1/cmr/m/n/10 )$
  []
 
 
@@ -3296,14 +3267,12 @@ or  <return>  to continue without it.
 
 
 Overfull \hbox (30.5718pt too wide) in paragraph at lines 29--32
-    $\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a; \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 a\
-OT1/cmr/m/n/10 )$
+    $\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a; \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 a\OT1/cmr/m/n/10 )$
  []
 
 
 Overfull \hbox (28.58333pt too wide) in paragraph at lines 29--32
-\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 b; \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 b\OT1/c
-mr/m/n/10 )$
+\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 b; \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 b\OT1/cmr/m/n/10 )$
  []
 
 
@@ -3319,8 +3288,7 @@ Overfull \hbox (5.28589pt too wide) in paragraph at lines 29--32
 
 Overfull \hbox (51.41805pt too wide) in paragraph at lines 29--32
 \OT1/cmr/m/n/10 
-\OML/cmm/m/it/10 SL[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 C\OT1/cmr/m/n/10 ) \OMS/
-cmsy/m/n/10 '
+\OML/cmm/m/it/10 SL[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 C\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 '
  []
 
 
@@ -3346,8 +3314,7 @@ Overfull \hbox (43.19641pt too wide) in paragraph at lines 29--32
 
 
 Overfull \hbox (30.5718pt too wide) in paragraph at lines 29--32
-\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a; \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 a\OT1/c
-mr/m/n/10 )$
+\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a; \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 a\OT1/cmr/m/n/10 )$
  []
 
 
@@ -3395,7 +3362,7 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
+[1{C:/Users/Muirhead/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 ! Undefined control sequence.
 <write> \newlabel{sl2example}{{}{\thepage 
                                           }}
@@ -3418,7 +3385,6 @@ Type  H <return>  for immediate help.
                                                   
 l.33 T
       he $\mathbb{E}_2$-algebra structure on $\Omega G$ is elegantly encoded...
-
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -3580,7 +3546,6 @@ Type  H <return>  for immediate help.
                                                   
 l.36 T
       he \textit{Ran space} $\text{Ran}(\mathbb{A}^1)$ is the presheaf that ...
-
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -4000,8 +3965,7 @@ Overfull \hbox (7.67015pt too wide) in paragraph at lines 36--38
 
 
 Overfull \hbox (34.73813pt too wide) in paragraph at lines 36--38
-\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x; \OMS/cmsy/m/n/10 E\OML/cmm/m/it/10 ; \OT1
-/cmr/m/n/10 )$
+\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x; \OMS/cmsy/m/n/10 E\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 )$
  []
 
 
@@ -4011,8 +3975,7 @@ Overfull \hbox (15.15967pt too wide) in paragraph at lines 36--38
 
 
 Overfull \hbox (54.17029pt too wide) in paragraph at lines 36--38
-[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 A[]\OT1/cmr/m/n/10 )(\OML/cmm/m/it/10 R\OT1
-/cmr/m/n/10 )$
+[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 A[]\OT1/cmr/m/n/10 )(\OML/cmm/m/it/10 R\OT1/cmr/m/n/10 )$
  []
 
 
@@ -4069,7 +4032,6 @@ Type  H <return>  for immediate help.
                                                   
 l.39 O
       ne thinks of the Beilinson--Drinfeld Grassmannian as fibered over the ...
-
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -4530,7 +4492,7 @@ LaTeX Warning: Citation `Zhu' on page  undefined on input line 39.
 Missing character: There is no , in font nullfont!
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 39.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
-File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 39.
@@ -4611,7 +4573,6 @@ Type  H <return>  for immediate help.
                                                   
 l.41 T
       he connection of the above structure with the notion of $\mathbb{E}_2$...
-
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -5162,7 +5123,6 @@ Type  H <return>  for immediate help.
                                                   
 l.43 I
       t is through the Beilinson--Drinfeld perspective that we can most easi...
-
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -5485,7 +5445,6 @@ Type  H <return>  for immediate help.
                                                   
 l.45 T
       hat is already enough to prove that, for example, the Schubert filtrat...
-
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -6104,7 +6063,6 @@ Type  H <return>  for immediate help.
                                                   
 l.48 C
       onsider the affine Grassmannian $Gr_{GL_n}$.  We denote by $F_{n,k}$ t...
-
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -6227,8 +6185,7 @@ Overfull \hbox (29.49019pt too wide) in paragraph at lines 48--49
 
 
 Overfull \hbox (50.47394pt too wide) in paragraph at lines 48--49
-\OML/cmm/m/it/10 GL[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 C\OT1/cmr/m/n/10 [[\OML/
-cmm/m/it/10 t\OT1/cmr/m/n/10 ]])$
+\OML/cmm/m/it/10 GL[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 C\OT1/cmr/m/n/10 [[\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ]])$
  []
 
 Missing character: There is no . in font nullfont!
@@ -6294,7 +6251,6 @@ Type  H <return>  for immediate help.
                                                   
 l.53 W
       e draw the following lemma, affirming a conjecture of Mahowald and Ric...
-
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -6774,7 +6730,6 @@ Type  H <return>  for immediate help.
                                                   
 l.61 A
       s explained by Segal \cite{Segal}, the coproduct $\coprod_k F_{n,k}$ m...
-
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -7027,7 +6982,6 @@ Type  H <return>  for immediate help.
                                                   
 l.64 F
       or any $n$, $F_{n,1}$ is equivalent to $\mathbb{CP}^{n-1}$.  The space...
-
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -7204,7 +7158,6 @@ Type  H <return>  for immediate help.
                                                   
 l.67 I
       t is not at all obvious from the above construction that there should ...
-
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -7667,7 +7620,6 @@ Type  H <return>  for immediate help.
                                                   
 l.72 T
       he Bott filtration on $\Omega SL_n(\mathbb{C})$ is the filtration with...
-
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -7816,9 +7768,8 @@ and I'll forget about whatever was undefined.
 
 
 Overfull \hbox (226.41791pt too wide) detected at line 73
-\OML/cmm/m/it/10 S \OMS/cmsy/m/n/10 ! \OT1/cmr/m/n/10 []\OML/cmm/m/it/10 []F[
-] \OMS/cmsy/m/n/10 ' \OT1/cmr/m/n/10 [][][] \OMS/cmsy/m/n/10 ! \OT1/cmr/m/n/10
- []\OML/cmm/m/it/10 []F[] \OMS/cmsy/m/n/10 ! []
+\OML/cmm/m/it/10 S \OMS/cmsy/m/n/10 ! \OT1/cmr/m/n/10 []\OML/cmm/m/it/10 []F[] \OMS/cmsy/m/n/10 ' \OT1/cmr/m/n/10 [][
+][] \OMS/cmsy/m/n/10 ! \OT1/cmr/m/n/10 []\OML/cmm/m/it/10 []F[] \OMS/cmsy/m/n/10 ! []
  []
 
 Missing character: There is no b in font nullfont!
@@ -7851,7 +7802,6 @@ Type  H <return>  for immediate help.
                                                   
 l.77 T
       he above constructions make $\Sigma^{\infty}_+ \{F_{n,k}\}$ into a fil...
-
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -8208,11 +8158,18 @@ Missing character: There is no r in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no m in font nullfont!
 Missing character: There is no , in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no a in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no i in font nullfont!
 Missing character: There is no m in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no i in font nullfont!
 Missing character: There is no e in font nullfont!
-Missing character: There is no d in font nullfont!
+Missing character: There is no s in font nullfont!
 Missing character: There is no T in font nullfont!
 Missing character: There is no h in font nullfont!
 Missing character: There is no e in font nullfont!
@@ -8223,8 +8180,8 @@ Missing character: There is no m in font nullfont!
 ! Undefined control sequence.
 <write> ...rence `thm:BottIsAoo' on page \thepage 
                                                   \space undefined\on@line .
-l.77 ...theorem, named Theorem \ref{thm:BottIsAoo}
-                                                   in the Introduction, whic...
+l.77 ... which implies Theorem \ref{thm:BottIsAoo}
+                                                   from the Introduction, an...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -8234,8 +8191,10 @@ and I'll forget about whatever was undefined.
 
 LaTeX Warning: Reference `thm:BottIsAoo' on page  undefined on input line 77.
 
-Missing character: There is no i in font nullfont!
-Missing character: There is no n in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no m in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no h in font nullfont!
 Missing character: There is no e in font nullfont!
@@ -8252,6 +8211,9 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no , in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
 Missing character: There is no w in font nullfont!
 Missing character: There is no h in font nullfont!
 Missing character: There is no i in font nullfont!
@@ -8481,8 +8443,8 @@ and I'll forget about whatever was undefined.
 
 
 Overfull \hbox (129.00923pt too wide) detected at line 81
-\OML/cmm/m/it/10 A \OMS/cmsy/m/n/10 ' \OT1/cmr/m/n/10 []\OML/cmm/m/it/10 Z[] [
-][]\OMS/cmsy/m/n/10 ! \OT1/cmr/m/n/10 [] [] \OML/cmm/m/it/10 F[]:
+\OML/cmm/m/it/10 A \OMS/cmsy/m/n/10 ' \OT1/cmr/m/n/10 []\OML/cmm/m/it/10 Z[] [][]\OMS/cmsy/m/n/10 ! \OT1/cmr/m/n/10 []
+ [] \OML/cmm/m/it/10 F[]:
  []
 
 Missing character: There is no I in font nullfont!
@@ -8628,7 +8590,6 @@ Type  H <return>  for immediate help.
                                                   
 l.86 T
       he $\mathbb{E}_2$-algebra map $A \rightarrow \Sigma^{\infty}_+ \coprod...
-
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -8822,10 +8783,9 @@ or  <return>  to continue without it.
 
 
 Overfull \hbox (148.59187pt too wide) detected at line 92
-\OML/cmm/m/it/10 Adr\OT1/cmr/m/n/10 [] [] \OML/cmm/m/it/10 F[]d[] \OT1/cmr/m/n
-/10 []\OML/cmm/m/it/10 Zr\OT1/cmr/m/n/10 []
-\OML/cmm/m/it/10 U\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 n\OT1/cmr/m/n/10 )\OML/cmm/
-m/it/10 :
+\OML/cmm/m/it/10 Adr\OT1/cmr/m/n/10 [] [] \OML/cmm/m/it/10 F[]d[] \OT1/cmr/m/n/10 []\OML/cmm/m/it/10 Zr\OT1/cmr/m/n/10
+ []
+\OML/cmm/m/it/10 U\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 n\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 :
  []
 
 Missing character: There is no T in font nullfont!
@@ -8901,8 +8861,8 @@ Overfull \hbox (44.61488pt too wide) in paragraph at lines 92--94
 
 Overfull \hbox (96.38702pt too wide) detected at line 94
 \OT1/cmr/m/n/10 
-[](\OML/cmm/m/it/10 BU\OT1/cmr/m/n/10 (1) \OMS/cmsy/m/n/10 ! \OML/cmm/m/it/10 B
-U\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 n\OT1/cmr/m/n/10 ))\OML/cmm/m/it/10 :
+[](\OML/cmm/m/it/10 BU\OT1/cmr/m/n/10 (1) \OMS/cmsy/m/n/10 ! \OML/cmm/m/it/10 BU\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 n\OT1/
+cmr/m/n/10 ))\OML/cmm/m/it/10 :
  []
 
 
@@ -8940,7 +8900,6 @@ Type  H <return>  for immediate help.
                                                   
 l.98 T
       he fact that there is an $\mathbb{E}_2$-algebra map $A \rightarrow \Si...
-
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -9212,7 +9171,6 @@ Type  H <return>  for immediate help.
                                                   
 l.100 T
        he machinery of Beilinson--Drinfeld Grassmannians proves that the coa...
-
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -9614,7 +9572,6 @@ Overfull \hbox (11.86807pt too wide) in paragraph at lines 100--102
 
 Overfull \hbox (55.47466pt too wide) in paragraph at lines 100--102
 \OT1/cmr/m/n/10 [] []\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 F[]\OMS/cmsy/m/n/10 g$
-
  []
 
 
@@ -9634,8 +9591,7 @@ and I'll forget about whatever was undefined.
 
 Overfull \hbox (91.25758pt too wide) detected at line 102
 \OML/cmm/m/it/10 Z [][]\OMS/cmsy/m/n/10 ! \OT1/cmr/m/n/10 (
-\OML/cmm/m/it/10 U\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 n\OT1/cmr/m/n/10 ))[]\OML/c
-mm/m/it/10 :
+\OML/cmm/m/it/10 U\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 n\OT1/cmr/m/n/10 ))[]\OML/cmm/m/it/10 :
  []
 
 Missing character: There is no W in font nullfont!
@@ -10176,7 +10132,6 @@ Type  H <return>  for immediate help.
                                                   
 l.110 N
        ow, the map of groups $\mathbb{G}_m \rightarrow SL_n(\mathbb{C})$ giv...
-
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -10372,8 +10327,7 @@ Overfull \hbox (34.5975pt too wide) in paragraph at lines 110--112
 
 
 Overfull \hbox (49.44432pt too wide) in paragraph at lines 110--112
-\OT1/cmr/m/n/10 (1\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 0\OML/cmm/m/it/10 ; [] ; \
-OT1/cmr/m/n/10 0)$
+\OT1/cmr/m/n/10 (1\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 0\OML/cmm/m/it/10 ; [] ; \OT1/cmr/m/n/10 0)$
  []
 
 
@@ -10390,7 +10344,6 @@ Type  H <return>  for immediate help.
                                                   
 l.113 W
        e end this section by sketching what is named Construction \ref{cnstr...
-
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -10508,7 +10461,6 @@ Type  H <return>  for immediate help.
                                                   
 l.116 T
        he graded $\mathbb{A}_\infty$-algebra $gr(\Sigma^{\infty}_+ \{F_{n,k}...
-
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -10623,8 +10575,7 @@ Overfull \hbox (15.97226pt too wide) in paragraph at lines 116--118
 
 
 Overfull \hbox (62.05919pt too wide) in paragraph at lines 116--118
-\OML/cmm/m/it/10 gr\OT1/cmr/m/n/10 ([]\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 F[]\O
-MS/cmsy/m/n/10 g\OT1/cmr/m/n/10 )$
+\OML/cmm/m/it/10 gr\OT1/cmr/m/n/10 ([]\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 F[]\OMS/cmsy/m/n/10 g\OT1/cmr/m/n/10 )$
  []
 
 
@@ -10971,8 +10922,8 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 ! Undefined control sequence.
-l.123 \coprod F_{n,k} \arrow
-                            {d} \arrow{r} & \Omega U(n) \arrow{r} & \Omega U...
+l.123 \coprod_k F_{n,k} \arrow
+                              {d} \arrow{r} & \Omega U(n) \arrow{r} & \Omega...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -10980,8 +10931,8 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.123 \coprod F_{n,k} \arrow{d} \arrow
-                                      {r} & \Omega U(n) \arrow{r} & \Omega U...
+l.123 \coprod_k F_{n,k} \arrow{d} \arrow
+                                        {r} & \Omega U(n) \arrow{r} & \Omega...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -10989,8 +10940,8 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Misplaced alignment tab character &.
-l.123 \coprod F_{n,k} \arrow{d} \arrow{r} &
-                                            \Omega U(n) \arrow{r} & \Omega U...
+l.123 \coprod_k F_{n,k} \arrow{d} \arrow{r} &
+                                              \Omega U(n) \arrow{r} & \Omega...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -11072,10 +11023,8 @@ or  <return>  to continue without it.
 
 Overfull \hbox (206.5295pt too wide) detected at line 126
 [] \OML/cmm/m/it/10 F[]dr\OT1/cmr/m/n/10 
-\OML/cmm/m/it/10 U\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 n\OT1/cmr/m/n/10 )\OML/cmm/
-m/it/10 r\OT1/cmr/m/n/10 
-\OML/cmm/m/it/10 U \OMS/cmsy/m/n/10 ' \OML/cmm/m/it/10 BU \OMS/cmsy/m/n/10  \O
-ML/cmm/m/it/10 ZrJ[][] Z[]:
+\OML/cmm/m/it/10 U\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 n\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 r\OT1/cmr/m/n/10 
+\OML/cmm/m/it/10 U \OMS/cmsy/m/n/10 ' \OML/cmm/m/it/10 BU \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 ZrJ[][] Z[]:
  []
 
 Missing character: There is no I in font nullfont!
@@ -11263,8 +11212,7 @@ Overfull \hbox (38.27757pt too wide) in paragraph at lines 126--128
 
 
 Overfull \hbox (62.05919pt too wide) in paragraph at lines 126--128
-\OML/cmm/m/it/10 gr\OT1/cmr/m/n/10 ([]\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 F[]\O
-MS/cmsy/m/n/10 g\OT1/cmr/m/n/10 )$
+\OML/cmm/m/it/10 gr\OT1/cmr/m/n/10 ([]\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 F[]\OMS/cmsy/m/n/10 g\OT1/cmr/m/n/10 )$
  []
 
 
@@ -11291,7 +11239,6 @@ Type  H <return>  for immediate help.
                                                   
 l.129 O
        ne may also compute this colimit by first making a left Kan extension...
-
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -11542,17 +11489,10 @@ Missing character: There is no s in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no n in font nullfont!
-Missing character: There is no f in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no r in font nullfont!
 ! Undefined control sequence.
 <recently read> \mathbb 
                         
-l.129 ...t the left Kan extension functor $\mathbb
+l.129 ...arns that the left Kan extension $\mathbb
                                                   {Z}^{ds}_{\ge 0} \longrigh...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -11763,7 +11703,6 @@ Type  H <return>  for immediate help.
                                                   
 l.131 T
        o see that the underlying $\mathbb{A}_\infty$-graded spectrum agrees ...
-
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -11999,6 +11938,122 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no m in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no p in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 131--131
+[]
+ []
+
+
+Overfull \hbox (15.97226pt too wide) in paragraph at lines 131--131
+\OML/cmm/m/it/10 A[]$
+ []
+
+
+Overfull \hbox (11.86807pt too wide) in paragraph at lines 131--131
+\OML/cmm/m/it/10 E[]$
+ []
+
+
+Overfull \hbox (5.52084pt too wide) in paragraph at lines 131--131
+\OML/cmm/m/it/10 k$
+ []
+
+
+Overfull \hbox (127.07666pt too wide) detected at line 131
+\OT1/cmr/m/n/10 []\OML/cmm/m/it/10 F[] [][]\OMS/cmsy/m/n/10 ! \OT1/cmr/m/n/10 []\OML/cmm/m/it/10 F[]=F[]:
+ []
+
+Missing character: There is no T in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no q in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+! Undefined control sequence.
+<recently read> \mathbb 
+                        
+l.132 The sequence of graded $\mathbb
+                                     {E}_2$-algebra maps
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no - in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no s in font nullfont!
+
+Overfull \hbox (11.86807pt too wide) in paragraph at lines 131--133
+    $\OML/cmm/m/it/10 E[]$
+ []
+
+! Undefined control sequence.
+l.133 $$\Sigma^{\infty}_+ \mathbb
+                                 {Z}^{ds}_{\ge 0} \longrightarrow \Sigma^{\i...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.133 ...+ \coprod_k F_{n,k} \longrightarrow \text
+                                                  {Thom}\left( \coprod_k F_{...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (204.2999pt too wide) detected at line 133
+\OT1/cmr/m/n/10 []\OML/cmm/m/it/10 Z[] [][]\OMS/cmsy/m/n/10 ! \OT1/cmr/m/n/10 [] [] \OML/cmm/m/it/10 F[] [][]\OMS/cmsy
+/m/n/10 ! [] []
+ []
+
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no t in font nullfont!
 Missing character: There is no . in font nullfont!
 
 ! LaTeX Error: \begin{document} ended by \end{proof}.
@@ -12007,7 +12062,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.132 \end{proof}
+l.135 \end{proof}
                  
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -12015,17 +12070,17 @@ or  <return>  to continue without it.
 
 )
 ! Emergency stop.
-<*> MitchellRichterFiltration.tex
-                                 
+<*> ./MitchellRichterFiltration.tex
+                                   
 *** (job aborted, no legal \end found)
 
  
 Here is how much of TeX's memory you used:
- 64 strings out of 493921
- 1091 string characters out of 3144874
- 63031 words of memory out of 3000000
- 3450 multiletter control sequences out of 15000+200000
+ 63 strings out of 493335
+ 830 string characters out of 3136671
+ 68211 words of memory out of 3000000
+ 3685 multiletter control sequences out of 15000+200000
  4294 words of font info for 16 fonts, out of 3000000 for 9000
- 841 hyphenation exceptions out of 8191
- 20i,9n,26p,820b,113s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 1141 hyphenation exceptions out of 8191
+ 20i,9n,26p,822b,113s stack positions out of 5000i,500n,10000p,200000b,50000s
 !  ==> Fatal error occurred, no output PDF file produced!

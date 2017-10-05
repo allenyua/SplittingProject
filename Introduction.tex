@@ -1,11 +1,11 @@
 We study the homotopy type of the affine Grassmannian of $SL_n(\mathbb{C})$, which is equivalent to the space $\Omega SU(n)$ of based loops in $SU(n)$.  There are essentially two multiplications on this homotopy type, one arising from the composition of loops and the other from the group multiplication on $SL_n(\mathbb{C})$.  Together, these two multiplications interact to give $\Omega SU(n)$ the structure of an $\mathbb{E}_2$ or fusion algebra.  In geometric representation theory, this structure is witnessed by the existence of the Beilinson--Drinfeld Grassmannian.
 
-Using either of the above (homotopy equivalent) products, it is possible to make $H_*(\Omega SU(n);\mathbb{Z})$ into a graded ring.  To describe this ring, let us first name some of its elements.  For each one-dimensional subspace $V \subset \mathbb{C}^n$, there is a loop $\lambda_V:S^1 \rightarrow U(n)$ given by the formula
+Either of the above (homotopy equivalent) products make $H_*(\Omega SU(n);\mathbb{Z})$ into a graded ring.  To describe this ring, let us first name some of its elements.  For each one-dimensional subspace $V \subset \mathbb{C}^n$, there is a loop $\lambda_V:S^1 \rightarrow U(n)$ given by the formula
 $$\lambda_V(z)=\left( \begin{array}{cc} z & 0 \\ 0 & I \end{array} \right),$$
 with the matrix presented in terms of the decomposition $\mathbb{C}^n \cong V \oplus V^{\perp}$.  Fixing a particular line $W \subset \mathbb{C}^n$, the construction $V \mapsto \lambda_W^{-1} \cdot \lambda_V$ defines a well-known map
 $$\mathbb{CP}^{n-1} \rightarrow \Omega SU(n).$$
-Let $b_1,b_2,...,b_{n-1}$, $|b_i|=2i$, denote the images in $H_*(\Omega SU(n);\mathbb{Z})$ of the generators of $H_*(\mathbb{CP}^{n-1};\mathbb{Z})$.  It is a result of Bott \cite{Bott} that
-$$H_*(\Omega SU(n);\mathbb{Z}) \cong \mathbb{Z}[b_1,b_2,\cdots],$$
+For $1 \le i \le n-1$, let $b_i \in H_{2i}(\Omega SU(n);\mathbb{Z})$ denote the image of the generator of $H_{2i}(\mathbb{CP}^{n-1};\mathbb{Z})$.  It is a result of Bott \cite{Bott} that
+$$H_*(\Omega SU(n);\mathbb{Z}) \cong \mathbb{Z}[b_1,b_2,\cdots,b_{n-1}],$$
 with the latter denoting the polynomial algebra on the classes $b_i$.
 
 Notice, in particular, that $H_*(\Omega SU(n);\mathbb{Z})$ is naturally a \textit{bigraded} ring, one grading being given by $*$ and the other by assigning each $b_i$ degree $1$.  Mahowald observed that the action of the Steenrod algebra on $H_*(\Omega SU(n);\mathbb{F}_2)$ preserves this second degree, and he conjectured a geometric splitting to be responsible.  Indeed, it was eventually proven by Mitchell and Richter \cite[Theorem 2.1]{CrabbMitchell}, that the suspension spectrum $\Sigma^{\infty} \Omega SU(n)$ splits as an infinite wedge sum:
@@ -94,22 +94,20 @@ It is Construction \ref{cnstr:IntroGr} that gives Theorem \ref{thm:MainMUE2} its
 Our proof of Theorem \ref{thm:MainMUE2} is by obstruction theory.  We show in Section \ref{sec:MUE2} that all obstructions to an $\mathbb{E}_2$-equivalence vanish.  On the other hand, we prove Theorem \ref{thm:MainObstruction} by explicitly calculating a non-zero obstruction in Section \ref{sec:Obstruction}.  It remains to discuss Theorem \ref{thm:MainAoo}, the $\mathbb{A}_\infty$ splitting, which is the major result of our paper.
 
 To prove that a filtered spectrum
-$$A_1 \longrightarrow A_2 \longrightarrow A_3 \longrightarrow \cdots$$
-splits, it suffices to provide splitting maps
-$$A_1 \longleftarrow A_2 \longleftarrow A_3 \longleftarrow \cdots$$
+$$A_0 \longrightarrow A_1 \longrightarrow A_2 \longrightarrow A_3 \longrightarrow \cdots$$
+splits, it suffices to provide splitting maps in the form of a cofiltered spectrum
+$$A_0 \longleftarrow A_1 \longleftarrow A_2 \longleftarrow A_3 \longleftarrow \cdots$$
+In Appendix \ref{app:SplittingMachine} we make this statement precise (for rigorous definitions of the terms below, see Section \ref{sec:FilGra}):
 
-such that each composite $A_i \rightarrow A_{i+1} \rightarrow A_i$ is the identity.  In Appendix \ref{app:SplittingMachine} we upgrade this to a multiplicative, coherent statement:
-
-\textbf{***lets be careful, this isn't exactly the same thing we're saying unless things converge properly; what's going on? also need to introduce cofiltered spectra and filtered spectra}
-
-\begin{thm}
-Let $X\in \Alg_{\E_n}(\Fil)$ be an $\E_n$ filtered spectrum.  Suppose there exists an $\E_n$ cofiltered spectrum $Y\in \Alg_{\E_n}(\Cofil)$ with the following two properties:
+\begin{thm} %maybe this is an iff
+Let $X\in \Alg_{\E_n}(\Fil(\Sp))$ be an $\E_n$ filtered spectrum.  Suppose there exists an $\E_n$ cofiltered spectrum $Y\in \Alg_{\E_n}(\Cofil(\Sp))$ with the following two properties:
 \begin{enumerate}
-\item There is an equivalence $\colim X \simeq \lim Y$ of $\E_n$-algebras in spectra.
+\item There is an equivalence $\mathrm{colim } X \simeq \lim Y$ of $\E_n$-algebras in spectra.
 \item The resulting natural maps $X_i \to Y_i$ are equivalences.  
 \end{enumerate}
 Then, the filtered spectrum $X$ is $\E_n$-split.
 \end{thm}
+
 
 We proceed in Sections \ref{sec:MultWeiss} and \ref{sec:AooSplit} to produce an $\mathbb{A}_\infty$ cofiltered spectrum splitting the Bott filtration of $\Sigma^{\infty}_+ \Omega SU(n)$.  The idea here is to exploit a beautiful idea of \cite{Arone}, who used Weiss calculus to give a second proof of the (unstructured) Mitchell--Richter splitting.
 
