@@ -50,6 +50,11 @@
 \newtheorem*{cor*}{Corollary}
 \newtheorem*{lem*}{Lemma}
 \newtheorem*{cnj*}{Conjecture}
+\newtheorem{innercustomthm}{Theorem}
+\newenvironment{customthm}[1]
+  {\renewcommand\theinnercustomthm{#1}\innercustomthm}
+  {\endinnercustomthm}
+
 
 
 %----------------------------------------------------------------------%
