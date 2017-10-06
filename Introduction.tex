@@ -8,7 +8,7 @@ For $1 \le i \le n-1$, let $b_i \in H_{2i}(\Omega SU(n);\mathbb{Z})$ denote the 
 $$H_*(\Omega SU(n);\mathbb{Z}) \cong \mathbb{Z}[b_1,b_2,\cdots,b_{n-1}],$$
 with the latter denoting the polynomial algebra on the classes $b_i$.
 
-Notice, in particular, that $H_*(\Omega SU(n);\mathbb{Z})$ is naturally a \textit{bigraded} ring, one grading being given by $*$ and the other by word length, assigning each $b_i$ degree $1$.  Mahowald observed that the action of the Steenrod algebra on $H_*(\Omega SU(n);\mathbb{F}_2)$ preserves this second degree, and he conjectured a geometric splitting to be responsible.  Indeed, it was eventually proven by Mitchell and Richter \cite[Theorem 2.1]{CrabbMitchell}, that the suspension spectrum $\Sigma^{\infty} \Omega SU(n)$ splits as an infinite wedge sum:
+Notice, in particular, that $H_*(\Omega SU(n);\mathbb{Z})$ is a \textit{bigraded} ring: one grading is given by $*$, and the other by word length (assigning each $b_i$ degree $1$).  Mahowald observed that the action of the Steenrod algebra on $H_*(\Omega SU(n);\mathbb{F}_2)$ preserves word length, and he conjectured a geometric splitting to be responsible.  Indeed, it was eventually proven by Mitchell and Richter \cite[Theorem 2.1]{CrabbMitchell} that the suspension spectrum $\Sigma^{\infty} \Omega SU(n)$ splits as an infinite wedge sum:
 $$\Sigma^{\infty}_+ \Omega SU(n) \simeq \mathbb{S} \vee \Sigma^{\infty} \mathbb{CP}^{n-1} \vee \cdots.$$
 
 In order to prove this splitting, Mitchell \cite{MitchellSU(n)} (and, independently, Segal \cite{Segal}) first constructed a filtration of the space $\Omega SU(n)$.  Following Mitchell, we name this the \textit{Bott filtration} of $\Omega SU(n)$.  The first filtered piece is given by the above map $\mathbb{CP}^{n-1} \rightarrow \Omega SU(n)$, and the theorem of Mitchell and Richter is that the filtration stably splits.  The construction of the Bott filtration is somewhat involved, and we review it in Section \ref{sec:MRFil}--it is a subfiltration of the Bruhat ordering on (closures of) Iwahori orbits.
@@ -17,7 +17,7 @@ In order to prove this splitting, Mitchell \cite{MitchellSU(n)} (and, independen
 In the case $n=2$, the Bott filtration of $\Omega SU(2) \simeq \Omega S^3$ is the classical James filtration of $\Omega \Sigma S^2$.
 \end{exm}
 
-In Section \ref{sec:FilGra}, we review the symmetric monoidal structures on the ($\infty$)-categories of filtered and graded spectra; they are given by Day convolution.  This allows us to talk about $\E_n$-algebras in filtered and graded spectra.  We may now state our first main theorem, proven in Section \ref{sec:MRFil}:
+In Section \ref{sec:FilGra}, we review the symmetric monoidal structures on the ($\infty$)-categories of filtered and graded spectra; they are given by Day convolution.  This allows us to talk about $\E_n$-algebras in filtered and graded spectra, providing the language necessary to state our first main theorem (proven in Section \ref{sec:MRFil}):
 
 \begin{thm} \label{thm:BottIsAoo}
 The suspension of the Bott filtration 
@@ -48,44 +48,27 @@ $$
 do not commute on the nose, but only up to non-canonical homotopy.
 \end{exm}
 
-There are, however, cases where the filtered spectrum is more accessible.  In general, an $\E_n$-algebra in filtered spectra induces a canonical $\E_n$-algebra structure on its associated graded spectrum.  One may then ask whether this $\E_n$-algebra structure agrees with the $\E_n$-algebra structure on the original spectrum.  This is the situation of an $\E_n$ splitting.  
+In Section \ref{sec:FilGra}, we discuss an \textit{associated graded} construction that transforms filtered $\mathbb{E}_n$-algebras into graded $\mathbb{E}_n$-algebras.  Combined with Theorem \ref{thm:BottIsAoo}, this endows the associated graded of the stable Bott filtration with a graded $\mathbb{A}_\infty$-algebra structure.
 
 \begin{exm}
 In the situation of Example \ref{exm:BottFil}, the associated graded of the stable Bott filtration is given by
+$$\bigvee_n \Sigma^{\infty} BU(n+1)/BU(n) \simeq \bigvee_n MU(n),$$
+where $MU(n)$ is the Thom spectrum of the canonical bundle over $BU(n)$.  In this case, the Mitchell--Richter splitting recovers an older splitting due to Snaith \cite{SnaithBook}
 \begin{equation}\label{eqn:MunSplitting}
-\bigvee_n \Sigma^{\infty} BU(n+1)/BU(n) \simeq \bigvee_n MU(n),
+\Sigma^{\infty}_+ BU \simeq \bigvee_n MU(n). %it feels awkward to not mention the total Chern class and Snaith's MUP construction, now that we're here
 \end{equation}
-where $MU(n)$ is the Thom spectrum of the canonical bundle over $BU(n)$.  In this case, the Mitchell-Richter splitting recovers an older splitting due to Snaith \cite{SnaithBook}
-$$\Sigma^{\infty}_+ BU \simeq \bigvee_n MU(n).$$ %it feels awkward to not mention the total Chern class and Snaith's MUP construction, now that we're here
-
-The left-hand side of (\ref{eqn:MunSplitting}) inherits an $\mathbb{A}_\infty$ structure from Theorem \ref{thm:BottIsAoo}.  Although we do not know that the Bott filtration is $\mathbb{E}_2$, the right-hand side has a natural $\E_2$ (in fact, $\E_\infty$) structure coming from the Thom construction applied to the $J$-homomorphism:
+The left-hand side of (\ref{eqn:MunSplitting}) is an $\mathbb{A}_\infty$-algebra by virtue of the fact that $BU$ is a loop space.  On the other hand, the right-hand side obtains its $\mathbb{A}_\infty$-algebra structure from the Bott filtration.  As it turns out, this latter $\mathbb{A}_\infty$-structure essentially arises from the Thom construction applied to the $J$-homomorphism
 $$\coprod BU(n) \stackrel{J}{\longrightarrow} Pic(\mathbb{S}).$$
+In other words, the right-hand side of (\ref{eqn:MunSplitting}) admits an $\mathbb{A}_\infty$-algebra structure by virtue of the fact that the $J$ homomorphism is a loop map.
+
+Of course, $BU$ is not just a loop space, but in fact an infinite loop space.  Similarly, $J$ is not just a loop map, but furthermore an infinite loop map.  Thus, both sides of (\ref{eqn:MunSplitting}) are naturally $\mathbb{E}_\infty$-ring spectra.  Perhaps surprisingly, these $\mathbb{E}_\infty$-rings are \textbf{not} equivalent.
 \end{exm}
 
-We show that this construction gives, in general, a natural $\E_2$-algebra structure on the associated graded of the Bott filtration (whether or not the filtration is $\E_2$).  We make this more precise and sketch its construction at the end of Section \ref{sec:MRFil}:
+Though we do not know if the Bott filtration is $\mathbb{E}_2$, in the above example we find a natural graded $\mathbb{E}_2$-algebra structure on its associated graded.  We sketch, at the end of Section \ref{sec:MRFil}, a construction showing that something similar always happens:
 
 \begin{cnstr} \label{cnstr:IntroGr}
 Let $\text{gr}(\Sigma^{\infty}_+\{F_{n,k}\})$ denote the associated graded of the Bott filtration of $\Sigma^{\infty}_+ \Omega SU(n)$.  There exists a graded $\mathbb{E}_2$-algebra structure on the graded spectrum $\text{gr}(\Sigma^{\infty}_+ \{F_{n,k}\})$ that extends the canonical graded $\mathbb{A}_\infty$-algebra structure.
 \end{cnstr}
-
-
-\begin{comment}
-***commented out**
-\begin{exm}
-Recall once more that, as $n$ tends to $\infty$, the Bott filtration is given by
-$$* \longrightarrow BU(1) \longrightarrow BU(2) \longrightarrow BU(3) \longrightarrow \cdots \longrightarrow BU \simeq \Omega SU.$$
-The associated graded of the stable Bott filtration is then given by
-$$
-\bigvee_n \Sigma^{\infty} BU(n+1)/BU(n) \simeq \bigvee_n MU(n),
-$$
-where $MU(n)$ is the Thom spectrum of the canonical bundle over $BU(n)$.  In this case, the Mitchell-Richter splitting recovers an older splitting due to Snaith \cite{SnaithBook}
-$$\Sigma^{\infty}_+ BU \simeq \bigvee_n MU(n).$$
-The $\mathbb{E}_2$-algebra structure described in Construction \ref{cnstr:IntroGr} is that arising from the Thom construction applied to 
-$$\coprod BU(n) \stackrel{J}{\longrightarrow} Pic(\mathbb{S}).$$
-This should be compared with the $\mathbb{E}_2$-ring structure on $\Sigma^{\infty}_+ BU$ that arises from the double loop space structure on $BU$.
-\end{exm}
-**end**
-\end{comment}
 
 The remainder of the paper is concerned with the stable splitting of the Bott filtration.  Our main results are as follows:
 
@@ -130,22 +113,20 @@ Then, the filtered spectrum $X$ is $\E_n$-split.
 
 We wish to apply this theorem in the case where $X$ is the $\mathbb{A}_\infty$ filtered spectrum in Theorem \ref{thm:BottIsAoo}.  In Section \ref{sec:MultWeiss}, we produce the corresponding $\mathbb{A}_\infty$ cofiltered spectrum; the proof is then finished in Section \ref{sec:AooSplit}.  To do this, we extend the methods of \cite{Arone}, who used Weiss calculus to give an elegant second proof of the Mitchell--Richter splitting (without multiplicative structure).  
 
-Arone's idea is to use additional functoriality on the filtration on $\Omega SU(n)$.  Letting $\J$ denote the topological category of complex vector spaces and embeddings, observe that the special unitary groups $SU(n)$ arise from the functor from $\J$ to spaces $$G(V,W) = \J (V,V\oplus W)$$  when $G$ is evaluated at a one-dimensional vector space $W$.  Weiss calculus studies precisely such functors $G$ - a brief review of the theory is provided at the beginning of Section \ref{sec:MultWeiss}.  %is the argument actually reviewed?
+Arone's idea is to use additional functoriality present in the filtration of $\Omega SU(n)$.  Let $\J$ denote the topological category of complex vector spaces and embeddings, fix a complex vector space $V$, and consider the functor $$G:\J \longrightarrow \mathcal{S}\text{paces}$$
+given by $G(W)=\J(V,V \oplus W)$.  Observe that the special unitary group $SU(V \oplus \mathbb{C})$ arises as the value $G(\mathbb{C}) = \J (V,V\oplus \mathbb{C})$.  Weiss calculus provides a toolbox with which to study functors similar to $G$ -- a brief review of the theory is provided at the beginning of Section \ref{sec:MultWeiss}.  %is the argument actually reviewed?
 
-The Bott filtration then arises from a sequence of functors $$F_0(V,W) \to F_1(V,W) \to F_2(V,W) \to \cdots \to F(V,W) := \Sigma^{\infty}_+ \Omega \J(V, V\oplus W)$$ from $\J$ to spectra.  The crux is that the polynomial approximation $P_n F(V,W)$ is precisely the functor $F_n(V,W).$  This provides the splitting map.   
+The Bott filtration in fact arises from a sequence of functors $$F_0(W) \to F_1(W) \to F_2(W) \to \cdots \to F(W) := \Sigma^{\infty}_+ \Omega \J(V, V\oplus W)$$ from $\J$ to spectra.  The crux of Arone's argument is that the Weiss polynomial approximation $P_n F(W)$ is precisely the functor $F_n(W)$ \cite{Arone}.  The approximations $$P_n F(W) \rightarrow P_{n-1} P_n F(W) \simeq P_{n-1} F(W)$$ provide Arone with splitting maps.
 
-To obtain an $\mathbb{A}_\infty$ splitting, it is no longer sufficient to merely provide splitting maps.  As explained by Theorem \ref{thm:SplitMachine}, we instead require an $\mathbb{A}_\infty$ structure on the whole system of splitting maps, considered as a cofiltered spectrum.  This will arise from combining two statements: the first is that the functor $F(V,W)$ takes values in $\mathbb{A}_\infty$ ring spectra, and thus gives an $\mathbb{A}_\infty$ object in the category $\Sp^{\J}$ of functors from $\J$ to spectra.  The second is that the Weiss tower can be viewed as a symmetric monoidal functor from $\Sp^{\J}$ to cofiltered objects in $\Sp^{\J}$.  This observation, which may be of independent interest, is likely known to experts and was suggested to us by Jacob Lurie, but we could not locate in the literature.  We have proven it in the following form, where $\Sp^{\J}_{\text{conv}}$ denotes restriction to certain conveniently convergent functors:
+To obtain an $\mathbb{A}_\infty$ splitting, it is no longer sufficient to merely provide splitting maps.  As explained by Theorem \ref{thm:SplitMachine}, we instead require an $\mathbb{A}_\infty$ structure on the whole system of splitting maps, considered as a cofiltered spectrum.  This will arise from combining two statements: the first is that the functor $F(W)$ takes values in $\mathbb{A}_\infty$ ring spectra, and thus gives an $\mathbb{A}_\infty$ object in the category $\Sp^{\J}$ of functors from $\J$ to spectra.  The second is that the Weiss tower can be viewed as a symmetric monoidal functor from $\Sp^{\J}$ to cofiltered objects in $\Sp^{\J}$.  This observation, which may be of independent interest, is likely known to experts and was suggested to us by Jacob Lurie, but we could not locate in the literature.  We have proven it in the following form, where $\Sp^{\J}_{\text{conv}}$ denotes restriction to certain conveniently convergent functors:
 \begin{customthm}{\ref{thm:weissmonoidal}}
 The Weiss tower defines a symmetric monoidal functor $$\text{Tow}: \Sp^{\J}_{\text{conv}} \to \Cofil(\Sp^{\J}_{\text{conv}}).$$
 \end{customthm}
-
-The proof works in the Goodwillie calculus context as well (see Remark \ref{rmk:goodwilliecase}).  
+\begin{rmk*}
+The proof works just as well in the context of Goodwillie calculus (see Remark \ref{rmk:goodwilliecase}).  
+\end{rmk*}
 
 There are a number of natural and presumably approachable open questions suggested by our work here.  In addition to Question \ref{qst:BottE2}, we highlight the following:
-
-\begin{qst}
-What are the optimal hypotheses for Theorem \ref{thm:weissmonoidal}?  We have opted for a version that is easy to prove and sufficient for our purposes, but we believe that the convergence conditions are overly stringent.  
-\end{qst}
 
 \begin{qst}
 Is the Mitchell--Richter filtration of the loop space of a Stiefel manifold always filtered $\mathbb{A}_\infty$?  This is the only obstruction to promoting Theorem \ref{thm:MainAoo} to a result about all such loop spaces.
@@ -162,5 +143,4 @@ What are the proper equivariant analogues of our result?  See for example \cite{
 \subsection*{Acknowledgements}
 The authors thank Greg Arone, Lukas Brantner, Dennis Gaitsgory, Akhil Mathew, and Haynes Miller for helpful conversations.  We were saddened to learn of the passing of Steve Mitchell during the preparation of this manuscript--his papers were a deep inspiration.  Special thanks are due to the authors' PhD advisors, Mike Hopkins and Jacob Lurie, both for their mathematical expertise and their consistent encouragement; many of the ideas in this paper grew out of their suggestions.  Special thanks are also due to Justin Campbell, James Tao, David Yang, and Yifei Zhao, all of whom spent numerous and invaluable hours answering naive questions about the Beilinson--Drinfeld Grassmannian.  The authors were supported by NSF Graduate Fellowships under Grants DGE-114415 and 1122374.
 
-%Notations, todo?
-%\Sp for spectra, S for spaces? should also say that by default, these are given \smsh, and \times.
+\subsection*{Notation:} We use $\Sp$ to denote the category of spectra, and $\mathcal{S}$ the category of spaces.  As through the introduction, we will freely use the word category to refer to a not-necessarily truncated $\infty$-category.
