@@ -18,9 +18,9 @@ Let $\Fil(\Sp^{\D})$ denote the functor category $\Fun(\Z_{\geq 0}, \Sp^{\D}).$ 
 
 The obvious map $\Z_{\geq 0}^{ds} \to \Z_{\geq 0}$ induces a restriction functor $\text{res}: \Fil(\Sp^{\D}) \to \Gr(\Sp^{\D})$ which can be thought of as forgetting the maps in the filtered object.  The restriction fits into an adjunction  
 $$I:\Gr(\Sp^{\D}) \xrightleftharpoons{\quad} \Fil(\Sp^{\D}) : \text{res}$$
-where the left adjoint $I: \Gr(\Sp^{\D}) \to \Fil(\Sp^{\D})$ is given by left Kan extension.  The functor $I$ can be described explicitly as taking a graded object $X_0,X_1,X_2,\cdots$ to the filtered object $$I(X_0, X_1, \cdots) = (X_0\to X_0\oplus X_1\to X_0 \oplus X_1\oplus X_2\to \cdots).$$   
+where the left adjoint $I: \Gr(\Sp^{\D}) \to \Fil(\Sp^{\D})$ is given by left Kan extension.  The functor $I$ can be described explicitly as taking a graded object $X_0,X_1,X_2,\cdots$ to the filtered object $$I(X_0, X_1, \cdots) = (X_0\to X_0 \vee X_1\to X_0 \vee X_1 \vee X_2\to \cdots).$$   
 
-Inverse to this, there is an associated graded functor $\text{gr }: \Fil(\Sp^{\D}) \to \Gr(\Sp^{\D})$ such that the composite $\text{gr }\circ I : \Gr(\Sp^{\D}) \to \Gr(\Sp^{\D})$ is an equivalence.   This can be thought of pointwise by the formula $$\text{gr}(X_0\to X_1\to X_2\to \cdots) = X_0, X_1/X_0, X_2/X_1, \cdots.$$
+Inverse to this, there is an associated graded functor $\text{gr }: \Fil(\Sp^{\D}) \to \Gr(\Sp^{\D})$ such that the composite $\text{gr }\circ I : \Gr(\Sp^{\D}) \to \Gr(\Sp^{\D})$ is an equivalence.   This can be thought of pointwise by the formula $$\text{gr}(X_0\to X_1\to X_2\to \cdots) = (X_0, X_1/X_0, X_2/X_1, \cdots).$$
 
 As the names suggest, one may recover from a filtered or graded functor the underlying object.  For filtered objects, this is a functor $$\colim : \Fil(\Sp^{\D}) \to \Sp^{\D}$$ given by Kan extending along $\Z_{\geq 0}\to *.$   It can be thought of as taking the colimit.  For graded objects, the underlying object is simply the direct sum of all the graded piece. We will systematically abuse notation by conflating a graded spectrum with its underlying spectrum; however, when there is any ambiguity, we will specify whether we are referring to the graded object or the underlying.
 
@@ -61,14 +61,14 @@ A filtered $\mathbb{E}_n$-algebra $X\in \Alg_{\E_n}(\Fil(\Sp^{\D}))$ is called \
 Given an $\E_n$-split filtered spectrum $X$, we can recover the underlying graded spectrum by taking the associated graded.  
 
 \begin{exm}\label{exm:snaith}
-Let $X\in \cS$ be connected and $n>0$.  The Snaith splitting can be seen as giving $\Sigma^{\infty}_+ \Omega^n \Sigma^n X$ the structure of a split $\E_n$ filtered space.  To see this, first note that there is a commutative square of $\infty$-categories:
+Let $X\in \cS$ be a connected space and $n>0$.  The Snaith splitting can be seen as giving $\Sigma^{\infty}_+ \Omega^n \Sigma^n X$ the structure of a $\E_n$-split filtered spectrum.  To see this, first note that there is a commutative square of $\infty$-categories:
 $$
 \begin{tikzcd}
 \Gr(\Sp) \arrow[d]\arrow[r,"F_{\E_n}"]&  \Alg_{\E_n}(\Gr(\Sp)) \arrow[d]\\
 \Sp \arrow[r,"F_{\E_n}"] & \Alg_{\E_n}(\Sp) 
 \end{tikzcd}
 $$
-where the downward arrows forget the grading and the rightward arrows take free algebras.  This is essentially because the formula for the free graded $\E_n$ algebra on a graded spectrum is the same as in the ungraded case.  Now consider $\Sigma^{\infty}X[1]$, the graded space with $\Sigma^{\infty} X$ in degree 1.  We then get a map by freeness $$\bigvee F_{\E_n} \Sigma^{\infty} X[1] \simeq  F_{\E_n} \Sigma^{\infty} X \to \Sigma^{\infty}_+ \Omega^n \Sigma^n X$$ which is an equivalence by the Snaith splitting.  As a result, the filtered spectrum $I(F_{\E_n} \Sigma^{\infty} X[1])$ exhibits $\Sigma^{\infty}_+ \Omega^n \Sigma^n X$ as an $\E_n$-split $\E_n$ filtered spectrum.  
+where the downward arrows forget the grading and the rightward arrows take free algebras.  This is essentially because the formula for the free graded $\E_n$-algebra on a graded spectrum is the same as in the ungraded case.  Let $\Sigma^{\infty} X[1]$ denote the graded spectrum with $\Sigma^{\infty} X$ in degree 1.  The above square implies that $F_{\E_n}(\Sigma^{\infty} X[1] )\in \Alg_{\E_n}(\Gr)$ is a lift of the $\E_n$ ring spectrum $F_{\E_n}(\Sigma^{\infty} X) \simeq \Sigma^{\infty}_+ \Omega^n \Sigma^n X.$  As a result, the filtered spectrum $I(F_{\E_n} \Sigma^{\infty} X[1])$ exhibits the Snaith filtration on $\Sigma^{\infty}_+ \Omega^n \Sigma^n X$ as an $\E_n$-split $\E_n$ filtered spectrum.  
 \end{exm}
 
 In this paper, we will be interested in when a given $\E_n$ filtered spectrum is $\E_n$-split.  Disregarding the multiplicative structure, a filtered spectrum $$X_0\longrightarrow X_1 \longrightarrow X_2 \longrightarrow \cdots ,$$ will split if and only if there are maps going the other way: $$X_0 \longleftarrow X_1 \longleftarrow X_2 \longleftarrow \cdots,$$ with the property that the relevant composites are equivalences.   To systematically talk about these backwards maps, we need the following definition:
@@ -93,9 +93,9 @@ Then, the filtered spectrum $X$ is $\E_n$-split.
 As a final remark, we note that the category of filtered spectra may be recovered as a module category inside the category of graded spectra.  Specifically, consider $A=\Sigma^{\infty}_+ \mathbb{Z}^{ds}_{\ge 0}$, the suspension of the nerve of the symmetric monoidal category $\mathbb{Z}^{ds}_{\ge 0}$, as an $\mathbb{E}_\infty$-algebra in $\Gr(\Sp)$.  The spectrum underlying $A$ is an infinite wedge of copies of $\mathbb{S}^0$.  Then the following may be shown by the argument in \cite[Proposition 3.1.6]{LurieRot}:
 
 \begin{lem} \label{lem:FilAsGrMod}
-There is an equivalence of symmetric monoidal categories
-$$\Fil(\Sp) \stackrel{\simeq}{\longrightarrow} \textbf{Mod}_{A}(\Gr(\Sp)),$$
-given by the forgetful functor.
+The functor $\mathrm{res}$ lifts to an equivalence
+$$\Fil(\Sp) \stackrel{\simeq}{\longrightarrow} \textbf{Mod}_{A}(\Gr(\Sp))$$
+of symmetric monoidal $\infty$-categories.
 \end{lem}
 
 
