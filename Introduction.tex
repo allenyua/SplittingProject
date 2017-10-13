@@ -1,6 +1,6 @@
-We study the homotopy type of the affine Grassmannian of $SL_n(\mathbb{C})$, which is equivalent to the space $\Omega SU(n)$ of based loops in $SU(n)$.  There are essentially two such multiplications, one arising from the composition of loops and the other from the group multiplication on $SL_n(\mathbb{C})$.  Together, these two multiplications interact to give $\Omega SU(n)$ the structure of an $\mathbb{E}_2$ or chiral algebra.  In geometric representation theory, this structure is witnessed by the existence of the Beilinson--Drinfeld Grassmannian.
+We study the homotopy type of the affine Grassmannian of $SL_n(\mathbb{C})$, which is equivalent to the space $\Omega SU(n)$ of based loops in $SU(n)$.  There are essentially two multiplications on this homotopy type, one arising from the composition of loops and the other from the group multiplication on $SL_n(\mathbb{C})$.  Together, these two multiplications interact to give $\Omega SU(n)$ the structure of an $\mathbb{E}_2$ or chiral algebra.  In geometric representation theory, this structure is witnessed by the existence of the Beilinson--Drinfeld Grassmannian.
 
-The above products are equivalent up to homotopy, and make $H_*(\Omega SU(n);\mathbb{Z})$ into a graded ring.  To describe this ring, let us first name some of its elements.  For each one-dimensional subspace $V \subset \mathbb{C}^n$, there is a loop $\lambda_V:S^1 \rightarrow U(n)$ given by the formula
+Either of the above (homotopy equivalent) products make $H_*(\Omega SU(n);\mathbb{Z})$ into a graded ring.  To describe this ring, let us first name some of its elements.  For each one-dimensional subspace $V \subset \mathbb{C}^n$, there is a loop $\lambda_V:S^1 \rightarrow U(n)$ given by the formula
 $$\lambda_V(z)=\left( \begin{array}{cc} z & 0 \\ 0 & I \end{array} \right),$$
 with the matrix presented in terms of the decomposition $\mathbb{C}^n \cong V \oplus V^{\perp}$.  Fixing a particular line $W \subset \mathbb{C}^n$, the construction $V \mapsto \lambda_W^{-1} \cdot \lambda_V$ defines a well-known map
 $$\mathbb{CP}^{n-1} \rightarrow \Omega SU(n).$$
@@ -8,20 +8,19 @@ For $1 \le i \le n-1$, let $b_i \in H_{2i}(\Omega SU(n);\mathbb{Z})$ denote the 
 $$H_*(\Omega SU(n);\mathbb{Z}) \cong \mathbb{Z}[b_1,b_2,\cdots,b_{n-1}],$$
 with the latter denoting the polynomial algebra on the classes $b_i$.
 
-Notice, in particular, that $H_*(\Omega SU(n);\mathbb{Z})$ is a \textit{bigraded} ring: in addition to the usual homological grading by $*$, there is a grading by word length (assigning each $b_i$ degree $1$).  In fact, Mahowald observed that the action of the Steenrod algebra on $H_*(\Omega SU(n);\mathbb{F}_2)$ preserves this word length filtration, and he conjectured a geometric splitting to be responsible.  This is indeed the case.  
+Notice that $H_*(\Omega SU(n);\mathbb{Z})$ is a \textit{bigraded} ring: there is, in addition to the usual homological grading $*$, a word length grading that assigns each $b_i$ degree $1$.  Mahowald observed that the action of the Steenrod algebra on $H_*(\Omega SU(n);\mathbb{F}_2)$ preserves word length, and he conjectured a geometric splitting to be responsible.
 
-Mitchell \cite{MitchellSU(n)} (and, independently, Segal \cite{Segal}) constructed a filtration $$* =F_{n,0} \longrightarrow F_{n,1} \longrightarrow F_{n,2}\longrightarrow \cdots \longrightarrow \Omega SU(n)$$ which Mitchell and Richter \cite[Theorem 2.1]{CrabbMitchell} showed splits as an infinite wedge sum after applying suspension spectrum:
+Motivated by Mahowald's conjecture, Mitchell \cite{MitchellSU(n)} (and, independently, Segal \cite{Segal}) constructed a filtration $$* =F_{n,0} \longrightarrow F_{n,1} \longrightarrow F_{n,2}\longrightarrow \cdots \longrightarrow \Omega SU(n).$$
+Following Mitchell, we name this the \textit{Bott filtration} of $\Omega SU(n)$.  The homology of $F_{n,k}$ consists of words of length at most $k$, and the inclusion $F_{n,1} \rightarrow \Omega SU(n)$ is given by the above map $\mathbb{CP}^{n-1} \rightarrow \Omega SU(n)$.  For $k>1$, the homotopy type $F_{n,k}$ may be modeled as a singular algebraic variety, and there is a surjective resolution of singularities $(\mathbb{CP}^{n-1})^{\times k} \longrightarrow F_{n,k}$.  The exact construction of the Bott filtration is somewhat involved, and we review it in Section \ref{sec:MRFil}--it is a subfiltration of the Bruhat ordering on (closures of) Iwahori orbits.
+
+Confirming Mahowald's intuition, Mitchell and Richter \cite[Theorem 2.1]{CrabbMitchell} proved that the Bott filtration splits after taking suspension spectra.  In short, there is a wedge sum decomposition
 $$\Sigma^{\infty}_+ \Omega SU(n) \simeq \bigvee_k \Sigma^{\infty} F_{n,k}/F_{n,k-1} \simeq \mathbb{S} \vee \Sigma^{\infty} \mathbb{CP}^{n-1} \vee \cdots.$$
 
-This filtration is the first object of study in this paper; following Mitchell, we name it the \textit{Bott filtration} of $\Omega SU(n)$.  The first nontrivial filtered piece $F_{n,1}$ is given by the map $\mathbb{CP}^{n-1} \rightarrow \Omega SU(n)$ constructed above.  ***??**For higher $k$, the piece $F_{n,k}$ instead receives a map from $(\CP^{n-1})^k$ which is a resolution of singularities.  
-
-We review the construction of the Bott filtration in Section \ref{sec:MRFil}--it is a subfiltration of the Bruhat ordering on (closures of) Iwahori orbits.
-
 \begin{exm}
-In the case $n=2$, the Bott filtration of $\Omega SU(2) \simeq \Omega S^3$ is the classical James filtration of $\Omega \Sigma S^2$.
+In the case $n=2$, the Bott filtration of $\Omega SU(2) \simeq \Omega S^3$ is the classical James filtration of $\Omega \Sigma S^2$.  The Mitchell--Richter splitting recovers the stable James splitting.
 \end{exm}
 
-We will be interested in the \emph{multiplicative} aspects of this filtration and its splitting.  In Section \ref{sec:FilGra}, we review the symmetric monoidal structures on the ($\infty$)-categories of filtered and graded spectra; they are given by Day convolution.  This allows us to talk about $\E_n$-algebras in filtered and graded spectra, providing the language necessary to state our first main theorem (proven in Section \ref{sec:MRFil}):
+In this paper, we will be interested in \emph{multiplicative} aspects of the Bott filtration and its splitting.  In Section \ref{sec:FilGra}, we review the symmetric monoidal structures on the ($\infty$)-categories of filtered and graded spectra; they are given by Day convolution.  This allows us to talk about $\E_n$-algebras in filtered and graded spectra, providing the language necessary to state our first main theorem (proven in Section \ref{sec:MRFil}):
 
 \begin{thm} \label{thm:BottIsAoo}
 The suspension of the Bott filtration 
@@ -52,7 +51,7 @@ $$
 do not commute on the nose, but only up to non-canonical homotopy.
 \end{exm}
 
-In Section \ref{sec:FilGra}, we discuss an \textit{associated graded} construction that transforms filtered $\mathbb{E}_n$-algebras into graded $\mathbb{E}_n$-algebras.  Combined with Theorem \ref{thm:BottIsAoo}, this endows the associated graded of the stable Bott filtration with a graded $\mathbb{A}_\infty$-algebra structure.  We may then ask if the associated graded is equivalent to the original spectrum $\Sigma^{\infty}_+ \Omega SU(n)$  as $\mathbb{A}_\infty$ algebras.   This is the main result of our paper, which can be thought of as a multiplicatively structured version of the Mitchell--Richter splitting:
+In Section \ref{sec:FilGra}, we discuss an \textit{associated graded} construction that transforms filtered $\mathbb{E}_n$-algebras into graded $\mathbb{E}_n$-algebras.  The central result of our paper may be thought of as a multiplicatively structured version of the Mitchell--Richter splitting:
 
 \begin{thm} \label{thm:MainAoo}
 As an $\mathbb{A}_\infty$-algebra object in filtered spectra, the Bott filtration of $\Sigma^{\infty}_+ \Omega SU(n)$ is equivalent to its associated graded.
@@ -62,51 +61,49 @@ As an $\mathbb{A}_\infty$-algebra object in filtered spectra, the Bott filtratio
 For any multiplicative homology theory $E$, $E_*(\Omega SU(n))$ is a bigraded ring.  One grading is given by $*$, and the other by the associated graded of the Bott filtration.
 \end{cor}
 
-In fact, this is the best possible theorem in general:
+\begin{exm} \label{exm:Thom}
+In the case $n=\infty$ of Example \ref{exm:BottFil}, the Mitchell--Richter splitting
+\begin{equation} \label{eqn:MunSplitting}
+\Sigma^{\infty}_+ BU \simeq \bigvee_n \Sigma^{\infty} BU(n)/BU(n-1).
+\end{equation}
+recovers an older result of Snaith \cite{SnaithBook}.  Snaith further showed that (\ref{eqn:MunSplitting}) is an equivalence of homotopy commutative ring spectra, and our Theorem \ref{thm:MainAoo} gives an equivalence of $\mathbb{A}_\infty$-ring spectra.
+ 
+The left-hand side of (\ref{eqn:MunSplitting}) is an $\mathbb{A}_\infty$-algebra by virtue of the fact that $BU$ is a loop space, while the right-hand side acquires its $\mathbb{A}_\infty$-algebra structure from an associated graded construction. To understand this latter $\mathbb{A}_\infty$ structure, it may help to know that $BU(n)/BU(n-1) \simeq MU(n),$ the Thom space of the canonical bundle over $BU(n)$.  We therefore recognize the right-hand side of (\ref{eqn:MunSplitting}) as the Thom spectrum of the $J$-homomorphism
+$$\coprod BU(n) \stackrel{J}{\longrightarrow} Pic(\mathbb{S}).$$
+Since $J$ is a loop map, its Thom spectrum acquires an $\mathbb{A}_\infty$-algebra structure, and this turns out to agree with the $\mathbb{A}_\infty$ associated graded of the Bott filtration.
+
+Of course, $BU$ is not just a loop space, but in fact an infinite loop space.  Similarly, $J$ is not just a loop map, but furthermore an infinite loop map.  Thus, both sides of (\ref{eqn:MunSplitting}) are naturally $\mathbb{E}_\infty$-ring spectra.  Perhaps surprisingly, these $\mathbb{E}_\infty$-rings are \textbf{not} equivalent.
+\end{exm}
+
+\begin{rmk}
+Snaith used his splitting $(\ref{eqn:MunSplitting})$ to give an equivalence of homotopy commutative ring spectra
+\begin{equation}
+\Sigma^{\infty}_+ BU[\beta^{-1}] \simeq MUP, \label{eqn:MUP}
+\end{equation}
+where $MUP$ denotes periodic complex bordism.  We will have more to say about the coherence of (\ref{eqn:MUP}) in forthcoming work.
+\end{rmk}
+
+In fact, the $\mathbb{A}_\infty$-splitting provided by Theorem \ref{thm:MainAoo} is the best result possible:
 
 \begin{thm} \label{thm:MainObstruction}
 Suppose $n \ge 4$.  If the Bott filtration of $\Sigma^{\infty}_+ \Omega SU(n)$ may be made into an $\mathbb{E}_2$-algebra object in filtered spectra, then it is \textbf{not} equivalent to its $\mathbb{E}_2$ associated graded.  More generally, any extension of the graded $\mathbb{A}_\infty$-algebra of Theorem \ref{thm:MainAoo} to a graded $\mathbb{E}_2$-algebra must fail to have the usual $\mathbb{E}_2$-algebra structure on its underlying ungraded $\mathbb{E}_2$-ring.
 \end{thm}
 
-However, if one is willing to work in a complex-oriented theory such as ordinary homology, the situation improves:
+However, if one is willing to work in a complex-oriented theory, such as ordinary homology, the situation improves:
 
 \begin{thm} \label{thm:MainMUE2}
-Let $MU$ denote the $\mathbb{E}_\infty$-ring spectrum of complex bordism.  For any $\mathbb{E}_2$-algebra structure on the underlying (ungraded) $\mathbb{A}_\infty$-ring $\gr (\Sigma^{\infty}_+\{F_{n,k}\})$, there is an equivalence of $\mathbb{E}_2$-$MU$-algebras
-$$MU \smsh \Sigma^{\infty}_+ \Omega SU(n) \simeq MU \smsh \gr (\Sigma^{\infty}_+\{F_{n,k}\}).$$
+Let $MU$ denote the $\mathbb{E}_\infty$-ring spectrum of complex bordism.  Suppose that $R_1$ and $R_2$ are any two (ungraded) $\mathbb{E}_2$-algebras with the same underlying $\mathbb{A}_\infty$-ring $\Sigma^{\infty}_+ \Omega SU(n)$.  Then there there is an equivalence of $\mathbb{E}_2$-$MU$-algebras
+$$MU \smsh R_1 \simeq MU \smsh R_2.$$
 \end{thm}
 
-One may now worry that Theorem \ref{thm:MainMUE2} is not very useful if the $\E_2$ filtration of Question \ref{qst:BottE2} is not known; however, it computes the $\E_2$-algebra $MU \smsh \Sigma^{\infty}_+ \Omega SU(n)$ given \emph{any} refinement of $\gr (\Sigma^{\infty}_+\{F_{n,k}\})$ to an $\E_2$ graded spectrum.  This is something that always exists, as we will now illustrate through an example.  
-
-\begin{exm}
-In the situation of Example \ref{exm:BottFil}, Theorem \ref{thm:MainAoo} gives an equivalence of $\mathbb{A}_\infty$-ring spectra:
-$$\Sigma^{\infty}_+ BU \simeq \bigvee_n \Sigma^{\infty} BU(n)/BU(n-1)$$
-where the left-hand side is an $\mathbb{A}_\infty$-algebra by virtue of the fact that $BU$ is a loop space, and the right-hand side inherits its $\mathbb{A}_\infty$-algebra structure as the associated graded of the Bott filtration.  This makes multiplicative an older splitting due to Snaith \cite{SnaithBook}.
-
-%this would be a good place to remark on BU -> MUP; say that noting MU(n) is a thom spectrum ....
-
-This hints at another way to build the $\mathbb{A}_\infty$
-\begin{align}\label{eqn:MunSplitting}
-\Sigma^{\infty}_+ BU &\simeq \bigvee_n \Sigma^{\infty} BU(n)/BU(n-1) \nonumber \\
- &\simeq \bigvee_n MU(n)
-\end{align} 
-where $MU(n)$ is the Thom spectrum of the canonical bundle over $BU(n)$, recovering an older splitting due to Snaith \cite{SnaithBook}.  
-
-The left-hand side of (\ref{eqn:MunSplitting}) is an $\mathbb{A}_\infty$-algebra by virtue of the fact that $BU$ is a loop space.  On the other hand, the right-hand side inherits its $\mathbb{A}_\infty$-algebra structure from the Bott filtration.  As it turns out, this latter $\mathbb{A}_\infty$-structure can be constructed another way.  One may construct $\bigvee_n MU(n)$ as a ring spectrum via Thom construction applied to the $J$-homomorphism
-$$\coprod BU(n) \stackrel{J}{\longrightarrow} Pic(\mathbb{S}).$$  The right-hand side of (\ref{eqn:MunSplitting}) can then be realized as an $\mathbb{A}_\infty$-algebra by virtue of the fact that the $J$-homomorphism is a loop map.
-
-Of course, $BU$ is not just a loop space, but in fact an infinite loop space.  Similarly, $J$ is not just a loop map, but furthermore an infinite loop map.  Thus, both sides of (\ref{eqn:MunSplitting}) are naturally $\mathbb{E}_\infty$-ring spectra.  Perhaps surprisingly, these $\mathbb{E}_\infty$-rings are \textbf{not} equivalent.
-\end{exm}
-
-Though we do not know if the Bott filtration is $\mathbb{E}_2$, in the above example we find a natural graded $\mathbb{E}_2$-algebra structure on its associated graded.  We sketch, at the end of Section \ref{sec:MRFil}, a construction showing that something similar always happens:
+For Theorem \ref{thm:MainMUE2} to be of interest, it is necessary to exhibit exotic $\mathbb{E}_2$-algebra structures on $\Sigma^{\infty}_+ \Omega SU(n)$.  Example \ref{exm:Thom} gives some idea of how this may be accomplished via Thom spectra, and we end Section \ref{sec:MRFil} with a sketch of the following:
 
 \begin{cnstr} \label{cnstr:IntroGr}
-Let $\gr (\Sigma^{\infty}_+\{F_{n,k}\})$ denote the associated graded of the Bott filtration of $\Sigma^{\infty}_+ \Omega SU(n)$.  There exists a graded $\mathbb{E}_2$-algebra structure on the graded spectrum $\gr (\Sigma^{\infty}_+ \{F_{n,k}\})$ that extends the canonical graded $\mathbb{A}_\infty$-algebra structure.
+There exists a graded $\mathbb{E}_2$-algebra structure on $\text{gr}(\Sigma^{\infty}_+ \{F_{n,k}\})$ extending the canonical graded $\mathbb{A}_\infty$-algebra structure.
 \end{cnstr}
 
-
-
 \begin{rmk}
-As we have seen, it is Construction \ref{cnstr:IntroGr} that gives Theorem \ref{thm:MainMUE2} its teeth.  The result may be seen as a once-looped analogue of work of Kitchloo \cite{Kitchloo}.   Kitchloo studied a splitting, due to Miller \cite{MillerSplitting}, of $\Sigma^{\infty}_+ SU(n)$.  His theorem is that, \textit{for complex-oriented $E$}, the corresponding direct sum decomposition of $E_*(SU(n))$ is multiplicative.
+Theorem \ref{thm:MainMUE2}, combined with Construction \ref{cnstr:IntroGr}, may be seen as a once-looped analogue of work of Kitchloo \cite{Kitchloo}.   Kitchloo studied a splitting, due to Miller \cite{MillerSplitting}, of $\Sigma^{\infty}_+ SU(n)$.  His theorem is that, \textit{for complex-oriented $E$}, the corresponding direct sum decomposition of $E_*(SU(n))$ is multiplicative.
 \end{rmk}
 
 Our proof of Theorem \ref{thm:MainMUE2} is by obstruction theory.  We show in Section \ref{sec:MUE2} that all obstructions to an $\mathbb{E}_2$-equivalence vanish.  On the other hand, we prove Theorem \ref{thm:MainObstruction} by explicitly calculating a non-zero obstruction in Section \ref{sec:Obstruction}.  It remains to discuss Theorem \ref{thm:MainAoo}, the $\mathbb{A}_\infty$ splitting of $\Sigma^{\infty}_+ \Omega SU(n)$, which is the central result of our paper.
@@ -139,7 +136,7 @@ To obtain an $\mathbb{A}_\infty$ splitting, it is no longer sufficient to merely
 The Weiss tower defines a symmetric monoidal functor $$\text{Tow}: \Sp^{\J}_{\text{conv}} \to \Cofil(\Sp^{\J}_{\text{conv}}).$$
 \end{customthm}
 \begin{rmk*}
-The proof works just as well in the context of Goodwillie calculus (see Remark \ref{rmk:goodwilliecase}).  
+The proof works just as well in the context of Goodwillie calculus (see Remark \ref{rmk:goodwilliecase}).  **FIX ME ALLEN**
 \end{rmk*}
 
 There are a number of natural and presumably approachable open questions suggested by our work here.  In addition to Question \ref{qst:BottE2}, we highlight the following:
@@ -157,6 +154,6 @@ What are the proper equivariant analogues of our result?  See for example \cite{
 \end{qst}
 
 \subsection*{Acknowledgements}
-The authors thank Greg Arone, Lukas Brantner, Denis Nardin, Dennis Gaitsgory, Akhil Mathew, and Haynes Miller for helpful conversations.  We were saddened to learn of the passing of Steve Mitchell during the preparation of this manuscript--his papers were a deep inspiration.  Special thanks are due to the authors' PhD advisors, Mike Hopkins and Jacob Lurie, both for their mathematical expertise and their consistent encouragement; many of the ideas in this paper grew out of their suggestions.  Special thanks are also due to Justin Campbell, James Tao, David Yang, and Yifei Zhao, all of whom spent numerous and invaluable hours answering naive questions about the Beilinson--Drinfeld Grassmannian.  The authors were supported by NSF Graduate Fellowships under Grants DGE-114415 and 1122374.
+The authors thank Greg Arone, Tom Bachmann, Lukas Brantner, Denis Nardin, Dennis Gaitsgory, Akhil Mathew, Haynes Miller, and Bill Richter for helpful conversations.  We were saddened to learn of the passing of Steve Mitchell during the preparation of this manuscript--his papers were a deep inspiration.  Special thanks are due to the authors' PhD advisors, Mike Hopkins and Jacob Lurie, both for their mathematical expertise and their consistent encouragement; many of the ideas in this paper grew out of their suggestions.  Special thanks are also due to Justin Campbell, James Tao, David Yang, and Yifei Zhao, all of whom spent numerous and invaluable hours answering naive questions about the Beilinson--Drinfeld Grassmannian.  The authors were supported by NSF Graduate Fellowships under Grants DGE-114415 and 1122374.
 
 \subsection*{Notation:} We use $\Sp$ to denote the category of spectra, and $\mathcal{S}$ the category of spaces.  As through the introduction, we will freely use the word category to refer to a not-necessarily truncated $\infty$-category.
