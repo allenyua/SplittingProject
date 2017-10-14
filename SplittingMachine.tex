@@ -8,12 +8,12 @@
 We will need a few preliminary definitions.  We start by fixing a positive integer $n$.  
 Let $[n]$ denote the linearly ordered set of integers $0\leq i\leq n$. For any indexing 1-category $\mathcal{D}$, denote by $\mathcal{D}^{ds}$ the underlying discrete category, and denote by $\mathcal{D}^+$ the the category formed by formally adding a final object, which we will refer to as ``$+$''.  Define $\Fil_n^+ = \Fun([n]^+, \Sp)$ and $\Cofil_n^+ = \Fun(([n]^+)^{op},\Sp).$  These categories admit functors to $\Sp$ by restriction to the distinguished point.  We define $\C_n$ by the following pullback:
 
-$$
+\begin{equation}\label{dia:fundpb}
 \begin{tikzcd}
 \C_n \arrow[r] \arrow[d]&  \Cofil_n^+ \arrow[d]\\
 \Fil_n^+ \arrow[r]& \Sp
 \end{tikzcd}
-$$
+\end{equation}
 
 
 %2. Write down the pullback; identify the full subcategory as the image of Gr_n x Sp^J.
@@ -31,8 +31,7 @@ and so we shall refer to general elements by these names below.
 Define the subcategory $\mathcal{G}_n\subset \C_n$ as the full subcategory such that for each integer $0\leq i\leq n$, the composite $X_i \longrightarrow Y_i$ is an equivalence.  
 
 \begin{lem}
-There is an equivalence $$\mathcal{G}_n \simeq \Gr_n^+ := \Fun(([n]^{+})^{ds}, \Sp),$$
-where $([n]^+)^{ds}$ is, as usual, the underlying set of $[n]^+$.  
+There is an equivalence $$\mathcal{G}_n \simeq \Gr_n^+ := \Fun(([n]^{+})^{ds}, \Sp).$$
 \end{lem}
 \begin{proof}
 We proceed by induction on $n$.  
@@ -79,7 +78,7 @@ $$
 $$
 and as before, we have an identification $ \Fun((\Z_{\geq 0}^{+})^{op}, \Sp) =: \Cofil^+ \simeq \lim_n \Cofil_n^+$ by Variant \ref{var:day} and Proposition \ref{prop:kanmonoidal}.
 
-Thus, taking the limit in $n$ in the original picture yields a diagram of symmetric monoidal functors:
+Thus, taking the limit in $n$ in the diagram (\ref{dia:fundpb}) yields a diagram of symmetric monoidal functors:
 
 \begin{equation}\label{dia:fund}
 \begin{tikzcd}
@@ -97,7 +96,7 @@ where the square is Cartesian.
 While $\mathcal{G}_\infty \simeq \lim \Gr_n^{+}$, we warn the reader that $\mathcal{G}_\infty$ is not simply $\Fun((\Z_{\geq 0}^+)^{ds}, \Sp)$ because the maps in the inverse system for $\mathcal{G}_\infty$ are not just the ones induced by the inclusions $([n]^+)^{ds} \to ([n+1]^+)^{ds}.$
 \end{rmk}
 
-The functor $\mathcal{G}_\infty \to \mathcal{C}_\infty$ is fully faithful because it is the inverse limit of fully faithful functors.  Moreover, the essential image consists of those pairs $(X,Y)\in \Fil^+\times_{\Sp} \Cofil^+ = \C_{\infty}$ such that the natural maps $X_i\to Y_i$ are equivalences for all $i\geq 0$.   Since all the functors in the diagram \ref{dia:fund} were symmetric monoidal, this will remain the case on the level of algebras.  We therefore have for each integer $n\geq 0$ a diagram:
+The functor $\mathcal{G}_\infty \to \mathcal{C}_\infty$ is fully faithful because it is the inverse limit of fully faithful functors.  Moreover, the essential image consists of those pairs $(X,Y)\in \Fil^+\times_{\Sp} \Cofil^+ = \C_{\infty}$ such that the natural maps $X_i\to Y_i$ are equivalences for all $i\geq 0$.   Since all the functors in the diagram (\ref{dia:fund}) were symmetric monoidal, we have for each integer $n\geq 0$ a diagram at the level of algebras:
 
 \begin{equation}\label{dia:fundmon}
 \begin{tikzcd}
