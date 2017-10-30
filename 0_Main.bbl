@@ -1,4 +1,4 @@
-\begin{thebibliography}{{Tyn}17}
+\begin{thebibliography}{Tyn17}
 
 \bibitem[Aro01]{Arone}
 Greg Arone.
@@ -33,10 +33,10 @@ Saul Glasman.
 \newblock Day convolution for infinity-categories.
 \newblock {\em \newline {P}reprint {\tt arXiv:1308.4940}}, Aug 2013.
 
-\bibitem[Goo92]{GoodwillieII}
+\bibitem[Goo03]{GoodwillieIII}
 Thomas~G. Goodwillie.
-\newblock Calculus. {II}. {A}nalytic functors.
-\newblock {\em $K$-Theory}, 5(4):295--332, 1991/92.
+\newblock Calculus. {III}. {T}aylor series.
+\newblock {\em Geom. Topol.}, 7:645--711, 2003.
 
 \bibitem[Kit01]{Kitchloo}
 Nitu Kitchloo.
@@ -107,10 +107,11 @@ Victor~P. Snaith.
 \newblock Algebraic cobordism and {$K$}-theory.
 \newblock {\em Mem. Amer. Math. Soc.}, 21(221):vii+152, 1979.
 
-\bibitem[{Tyn}17]{Tynan}
-P.~D. {Tynan}.
-\newblock {Equivariant Weiss Calculus and Loop Spaces of Stiefel Manifolds}.
-\newblock {\em ArXiv e-prints}, February 2017.
+\bibitem[Tyn17]{Tynan}
+P.~D. Tynan.
+\newblock Equivariant {W}eiss {C}alculus and {L}oop {S}paces of {S}tiefel
+  {M}anifolds.
+\newblock {\em \newline {P}reprint {\tt arXiv:1702.02928}}, Feb 2017.
 
 \bibitem[Ull12]{Ullman}
 Harry~E. Ullman.
