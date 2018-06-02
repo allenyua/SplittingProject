@@ -161,6 +161,66 @@ The space of based loops in $SL_n(\mathbb{C})$, also known as the affine Grassma
 
 \input{FilteredAndGraded.tex}
 
+\section{Allen's revision}
+
+\begin{dfn}
+The \textit{Ran space} $\text{Ran}(\mathbb{A}^1)$ is the presheaf that assigns to every $\mathbb{C}$-algebra $R$ the set of non-empty finite subsets of $\text{Spec}(R) \times \mathbb{A}^1$.   The Beilinson--Drinfeld Grassmannian is the presheaf $Gr_{G,Ran}$ that assigns to each $\mathbb{C}$-algebra $R$ the set of triplets $(x,\mathcal{E},\beta)$, where $x \in \text{Ran}(\mathbb{A}^1)(R)$, $\mathcal{E}$ is a $G$-torsor on $\mathbb{A}^1 \times \text{Spec}(R)$, and $\beta$ is a trivialization of $\mathcal{E}$ away from the graph of $x$ in $\text{Spec}(R) \times \mathbb{A}^1 $.
+\end{dfn}
+
+%Goals: set up Jacob's theorem: describe Disk algebra, Fact algebra
+
+%Add a remark that describes the Ran space in topology?
+%maybe just add a digression section that explains how this machinery works
+
+One thinks of the Beilinson--Drinfeld Grassmannian as fibered over the Ran space.  In other words, for every finite collection of points $I \subset \mathbb{A}^1$, there is a corresponding point $x$ in the Ran space.  The fiber of the Beilinson--Drinfeld Grassmannian over $x$ is the moduli of $G$-bundles on $\mathbb{A}^1$ equipped with a trivialization away from the points in $I$.  This fiber is naturally isomorphic to the product of $|I|$ copies of $Gr_G$.  The multiplication on $Gr_G$ is encoded by degeneration of fibers as points collide in $\mathbb{A}^1$.  For more details, see \cite[\S 3]{Zhu}.
+
+The connection of the above structure with the notion of $\mathbb{E}_2$-algebra in homotopy theory was spelled out explicitly by Jacob Lurie in \cite[\S 5.5]{HA}.  Our next goal is to explain this connection; we refer the reader to \cite[\S 5.5]{HA} for the precise definitions.  
+
+Let $\C$ be a symmetric monoidal $\infty$-category.  In homotopy theory, the notion of an $\mathbb{E}_2$ algebra in $\C$ can be thought of as an object with multiplications parametrized by rectilinear embeddings of disjoint unions of the cube $I^2$ into itself.  In the language of $\infty$-operads, this is the notion of an algebra over the operad $\mathbb{E}_2^{\otimes}$, whose operations correspond to the rectilinear embeddings above.  There is a related $\infty$-operad $\mathrm{Disk}(\mathbb{C})^\otimes$ whose algebras $A$ can be thought of as giving an object $A(D)\in\C$ for each disk $D\subset \mathbb{C}$ and coherent maps $A(D_1)\otimes A(D_2)\otimes \cdots \otimes A(D_k) \to A(D)$ for inclusions $D_1\coprod \cdots \coprod D_n \to D$ of disks. The following theorem relates these to $\mathbb{E}_2$-algebras\footnote{For technical reasons, we will work with the non-unital (abbreviated `$\mathrm{nu}$') variants of $\mathbb{E}_2$ and $\mathrm{Disk}(\mathbb{C})$-algebras from now on.}:
+
+\begin{thm}[Proposition 5.4.5.15, \cite{HA}]\label{thm:lcdisk}
+There is a fully faithful functor $\Alg^{\mathrm{nu}}_{\mathbb{E}_2}(\C) \to \Alg^{\mathrm{nu}}_{\mathrm{Disk}(\mathbb{C})}(\C)$ with essential image the full subcategory of $\mathrm{Disk}(\mathbb{C})_{\mathrm{nu}}$-algebras $A$ which are \emph{locally constant} in the sense that for every embedding $D\hookrightarrow D'$ of disks, the natural map $A(D)\to A(D')$ is an equivalence.  
+\end{thm}
+
+There is a dual way to encode an $\mathbb{E}_2$ algebra that has a closer relation to algebraic geometry.  We first explain the situation in topology.  An $\mathbb{E}_2$ algebra 
+
+There is an $\infty$-operad $\mathrm{Fact}(\mathbb{C})^{\otimes}$ whose algebras $A$ are the data of an object $A(U)\in\C$ functorially for every open set $U\subset \mathrm{Ran}(\mathbb{C})$ together with \emph{factorization} maps $A(U)\otimes A(V) \to A(U\times V)$ whenever $U$ and $V$ are independent subsets of $\mathrm{Ran}(\mathbb{C})$.\footnote{The reader unfamiliar with the Ran space can keep in mind the example when $U=\mathrm{Ran}(D_1)$, $V=\mathrm{Ran}(D_2)$ for disjoint disks $D_1,D_2\subset \mathbb{C}$, in which case $U\times V = \mathrm{Ran}(D_1\coprod D_2).$}
+
+The notions of $\mathrm{Fact}(\mathbb{C})$ algebra and $\mathrm{Disk}(\mathbb{C})_{\mathrm{nu}}$ algebra are closely related.  There is a map of $\infty$-operads $\mathrm{Disk}(\mathbb{C})_{\mathrm{nu}}^\otimes \to \mathrm{Fact}(\mathbb{C})^\otimes.$  Concretely, this means that one can extract from any $\mathrm{Fact}(\mathbb{C})$ algebra $A$ an underlying $\mathrm{Disk}(\mathbb{C})_{\mathrm{nu}}$ algebra $\overline{A}$ by the formula $\overline{A}(D) = A(\mathrm{Ran}(D)).$  The following theorem of Lurie describes the relationship more precisely:
+
+\begin{thm}[Theorem 5.5.4.10, \cite{HA}]
+Let $\C$ be a symmetric monoidal $\infty$-category which admits all colimits and such that the tensor product preserves colimits separately in each variable.  Then operadic left Kan extension along the functor $\mathrm{Disk}(\mathbb{C})_{\mathrm{nu}}^\otimes \to \mathrm{Fact}(\mathbb{C})^\otimes$ defines a fully faithful functor $F: \Alg_{\mathrm{Disk}(\mathbb{C})_{\mathrm{nu}}}(\C) \to \Alg_{\mathrm{Fact}(\mathbb{C})}(\C)$.  Moreover, $F$ restricts to an equivalence between the full subcategory of locally constant $\mathrm{Disk}(\mathbb{C})_{\mathrm{nu}}$ algebras and the full subcategory of $\mathrm{Fact}(\mathbb{C})$ algebras $A$ which are constructible cosheaves and for which the factorization maps $A(U)\otimes A(V) \to A(U\times V)$ are equivalences.  
+\end{thm}
+
+\begin{rmk}
+In fact, this theorem will be logically unnecessary for what follows and we include it only for completeness.  As such, we omit the definition of the term \emph{constructible cosheaf}.  
+\end{rmk}
+
+We summarize the preceding discussion by drawing the following corollary of Theorem~\ref{thm:lcdisk}:
+\begin{cor} \label{cor:E2crit}
+Let $\C$ be a symmetric monoidal $\infty$-category and $A \in \C$ be a $\mathrm{Fact}(\mathbb{C})$ algebra.  Suppose that $A$ has the property that for any inclusion $D\subset D' \subset \mathbb{C}$ of disks, the natural map $A(\mathrm{Ran}(D))\to A(\mathrm{Ran}(D'))$ is an equivalence.  Then, for any disk $D\subset \mathbb{C}$, $A(\mathrm{Ran}(D))$ inherits the structure of a non-unital $\mathbb{E}_2$ algebra.  
+\end{cor}
+
+
+%Cite Zhu: BD Gr gives a Fact algebra valued in filtered spaces ...need to display for each open U, it's giving
+\begin{thm}
+hm?ß
+\end{thm}
+By taking complex points, the Beilinson-Drinfeld Grassmannian $Gr_G(\mathbb{A}^1)$ provides an example of a factorizable cosheaf on $Ran(\mathbb{C}).$  
+
+
+%Jeremy - can you do this part?
+%cite Zhu: the fact that the thing is proper 
+%check that the fiber at a point is the same as the fiber over a disk, simultaneously verifying the hypothesis in \ref{cor:E2crit} and identifying the filtered space A(Ran(D)) as the fiber over a point, which we know to be \Omega SU(n) with the filtration we're asking for.  
+
+The connection of the above structure with the notion of $\mathbb{E}_2$-algebra in homotopy theory was spelled out explicitly by Jacob Lurie in \cite[\S 5.5]{HA}.  In the language of Lurie's work, the complex points of the Beilinson--Drinfeld Grassmannian form a factorizable cosheaf, valued in spaces, on $\mathrm{Ran}(\mathbb{C})$.  Lurie proves \cite[Theorem 5.5.4.10]{HA} that this is enough to equip the complex points of $Gr_G$ (namely $\Omega G$) with the structure of a non-unital $\mathbb{E}_2$ algebra.  This in turn makes $\Sigma^{\infty}_+ \Omega G$ into a unital (in fact augmented) $\mathbb{E}_2$-ring spectrum.
+
+It is through the Beilinson--Drinfeld perspective that we can most easily see the interaction of the Schubert filtration on $Gr_G$ with its $\mathbb{E}_2$-algebra structure.  The key point is the fact (see, e.g., \cite[3.1.14]{Zhu}) that, as points collide in the Beilinson--Drinfeld Grassmannian, the fiber $Gr_{G,\le \mu_1} \times Gr_{G,\le \mu_2}$ degenerates to $Gr_{G, \le \mu_1+\mu_2}$.
+
+That is already enough to prove that, for example, the Schubert filtration on $\Sigma^{\infty}_+ \Omega SU(2)$ described in Example \ref{sl2example} is an $\mathbb{E}_2$-filtered spectrum in the sense of Section \ref{sec:FilGra}.  What we will actually want to be $\mathbb{E}_2$, or at least $\mathbb{A}_\infty$, is the James filtration on $\Sigma^{\infty}_+ \Omega SU(2)$.  In general, it turns out that the Schubert filtration on the Beilinson--Drinfeld Grassmannian for $SL_n(\mathbb{C})$ provides only direct access to every $n$th piece of the Bott filtration on $\Sigma^{\infty}_+ \Omega SL_n(\mathbb{C})$.  We will follow Segal \cite{Segal} and access the Bott filtration on $Gr_{SL_n}$ in a somewhat indirect manner, by considering not $Gr_{SL_n}$ but $Gr_{GL_n}$:
+
+
+
 \section{The Bott filtration on \texorpdfstring{$\Omega SU(n)$}{OmegaSU(n)}} \label{sec:MRFil}
 
 \input{MitchellRichterFiltration.tex} 
