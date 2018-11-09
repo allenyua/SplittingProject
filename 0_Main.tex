@@ -202,19 +202,23 @@ Let $\C$ be a symmetric monoidal $\infty$-category and $A \in \C$ be a $\mathrm{
 \end{cor}
 
 
-%Cite Zhu: BD Gr gives a Fact algebra valued in filtered spaces ...need to display for each open U, it's giving
 \begin{thm}
-hm?ß
+Cite Zhu: BD Gr gives a Fact algebra valued in filtered spaces by taking complex points...need to check this (Allen will add this)
 \end{thm}
-By taking complex points, the Beilinson-Drinfeld Grassmannian $Gr_G(\mathbb{A}^1)$ provides an example of a factorizable cosheaf on $Ran(\mathbb{C}).$  
+%By taking complex points, the Beilinson-Drinfeld Grassmannian $Gr_G(\mathbb{A}^1)$ provides an example of a factorizable cosheaf on $Ran(\mathbb{C}).$  (should I 
+
+%fact algebra means that for each open in Ran, you get a thing, and you have these factorization maps.  
+%say you knew you had an actual space living over Ran(C)...Gr(C) -> Ran(C).  We need to see the structure of the factorization map; say for every two opens in Ran, how do you get the fact map?  Well, you take the isomorphism "a" from Thm 3.3.3 and you restrict it to those two opens.  
+%Q1: what about the higher maps?  Well, you have the cocycle condition so everything is coherent higher up
+%Q2: What about the filtration?  That should be Thm 3.1.14
+***
 
 
-%Jeremy - can you do this part?
-%cite Zhu: the fact that the thing is proper 
-%check that the fiber at a point is the same as the fiber over a disk, simultaneously verifying the hypothesis in \ref{cor:E2crit} and identifying the filtered space A(Ran(D)) as the fiber over a point, which we know to be \Omega SU(n) with the filtration we're asking for.  
+cite Zhu: the fact that the thing is proper: Jeremy - can you do this part?
+check that the fiber at a point is the same as the fiber over a disk, simultaneously verifying the hypothesis in Corollary \ref{cor:E2crit} and identifying the filtered space A(Ran(D)) as the fiber over a point, which we know to be $\Omega SU(n)$ with the filtration we're asking for.  
 
-The connection of the above structure with the notion of $\mathbb{E}_2$-algebra in homotopy theory was spelled out explicitly by Jacob Lurie in \cite[\S 5.5]{HA}.  In the language of Lurie's work, the complex points of the Beilinson--Drinfeld Grassmannian form a factorizable cosheaf, valued in spaces, on $\mathrm{Ran}(\mathbb{C})$.  Lurie proves \cite[Theorem 5.5.4.10]{HA} that this is enough to equip the complex points of $Gr_G$ (namely $\Omega G$) with the structure of a non-unital $\mathbb{E}_2$ algebra.  This in turn makes $\Sigma^{\infty}_+ \Omega G$ into a unital (in fact augmented) $\mathbb{E}_2$-ring spectrum.
-
+%The connection of the above structure with the notion of $\mathbb{E}_2$-algebra in homotopy theory was spelled out explicitly by Jacob Lurie in \cite[\S 5.5]{HA}.  In the language of Lurie's work, the complex points of the Beilinson--Drinfeld Grassmannian form a factorizable cosheaf, valued in spaces, on $\mathrm{Ran}(\mathbb{C})$.  Lurie proves \cite[Theorem 5.5.4.10]{HA} that this is enough to equip the complex points of $Gr_G$ (namely $\Omega G$) with the structure of a non-unital $\mathbb{E}_2$ algebra.  This in turn makes $\Sigma^{\infty}_+ \Omega G$ into a unital (in fact augmented) $\mathbb{E}_2$-ring spectrum.
+*****
 It is through the Beilinson--Drinfeld perspective that we can most easily see the interaction of the Schubert filtration on $Gr_G$ with its $\mathbb{E}_2$-algebra structure.  The key point is the fact (see, e.g., \cite[3.1.14]{Zhu}) that, as points collide in the Beilinson--Drinfeld Grassmannian, the fiber $Gr_{G,\le \mu_1} \times Gr_{G,\le \mu_2}$ degenerates to $Gr_{G, \le \mu_1+\mu_2}$.
 
 That is already enough to prove that, for example, the Schubert filtration on $\Sigma^{\infty}_+ \Omega SU(2)$ described in Example \ref{sl2example} is an $\mathbb{E}_2$-filtered spectrum in the sense of Section \ref{sec:FilGra}.  What we will actually want to be $\mathbb{E}_2$, or at least $\mathbb{A}_\infty$, is the James filtration on $\Sigma^{\infty}_+ \Omega SU(2)$.  In general, it turns out that the Schubert filtration on the Beilinson--Drinfeld Grassmannian for $SL_n(\mathbb{C})$ provides only direct access to every $n$th piece of the Bott filtration on $\Sigma^{\infty}_+ \Omega SL_n(\mathbb{C})$.  We will follow Segal \cite{Segal} and access the Bott filtration on $Gr_{SL_n}$ in a somewhat indirect manner, by considering not $Gr_{SL_n}$ but $Gr_{GL_n}$:
