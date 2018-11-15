@@ -1,135 +1,52 @@
-In this section we recall the Mitchell--Segal Bott filtration \cite{MitchellLoopGroup} on $\Omega SU(n)$.  We prove that the Bott filtration is at least $\mathbb{A}_\infty$, meaning in particular that its suspension is an $\mathbb{A}_\infty$-filtered spectrum in the sense of Section \ref{sec:FilGra}.
 
-It is most efficient to describe the filtration in the language of algebraic geometry, and in particular we will need to recall the theory of affine and Beilinson--Drinfeld Grassmannians.  A good general reference is \cite{Zhu}.  We use $D$ to denote the formal disk $\text{Spec}(\mathbb{C}[[t]])$ and $D^*$ to denote the punctured disk $\text{Spec}(\mathbb{C}((t)))$.  For $R$ a $\mathbb{C}$-algebra, we use $D_R$ to denote $\text{Spec}(\mathbb{C}[[t]] \hat{\otimes} R)$ and $D^*_R$ to denote $\text{Spec}(\mathbb{C}((t)) \hat{\otimes} R)$.
+In the next section we will define the Mitchell--Richter Bott filtration on $\Omega SU(n)$.  This filtration is most naturally described in the language of algebraic geometry, and our aim in this section is to recall the relevant algebraic geometry and draw from it the topological consequences we will need.  None of the ideas in this section are original: the objects we study are due to Beilinson and Drinfeld \textbf{CITE}, and their translation into algebraic topology is due to Jacob Lurie \textbf{CITE}.  
+
+Fix for the moment a smooth, reductive, affine algebraic group $G$ over $\mathbb{C}$.  Through the rest of the paper, we will be interested only in the cases $G=\mathbb{G}_m,SL_n,$ or $GL_n$, and so the reader may safely restrict his attention to those cases for concreteness.  As we will explain in detail, an algebro-geometric model for $\Omega G(\mathbb{C})$ is the \textit{affine Grassmannian} $Gr_G$.  The $\mathbb{E}_2$-algebra structure present on $\Omega G(\mathbb{C})$ is encoded by a more elaborate object, the \textit{Beilinson--Drinfeld Grassmannian}.  A good general reference for both of these objects is \cite{Zhu}, whose presentation we will more or less follow below.
+
+We use $D$ to denote the formal disk $\text{Spec}(\mathbb{C}[[t]])$ and $D^*$ to denote the punctured disk $\text{Spec}(\mathbb{C}((t)))$.  For $R$ a $\mathbb{C}$-algebra, we use $D_R$ to denote $\text{Spec}(\mathbb{C}[[t]] \hat{\otimes} R)$ and $D^*_R$ to denote $\text{Spec}(\mathbb{C}((t)) \hat{\otimes} R)$.  We refer to a point in the space $G(D^*)=G(\mathbb{C}((t)))$ as an algebraic free (i.e., unbased) loop in $G$.  Such points are exactly automorphism of the trivial $G$-torsor $\mathcal{E}^0$ over $D^*$.
 
 \begin{dfn}
-Let $G$ denote a smooth affine algebraic group over $\mathbb{C}$ (we will be interested only in the cases $G=SL_n,GL_n$).  The \textit{affine Grassmannian} $Gr_G$ of $G$ is the Ind-scheme with functor of points
+The \textit{affine Grassmannian} $Gr_G$ of $G$ is the Ind-scheme with functor of points
 $$Gr_G(R) = \{(\mathcal{E},\beta)\},\text{ where}$$
 $\mathcal{E}$ is a $G$-torsor over $D_{R}$ and $\beta:\mathcal{E}|_{D^*_{R}} \cong \mathcal{E}^0_{D^*_{R}}$ is a trivialization over $D^*_{R}$.
 \end{dfn}
 
-The complex points $Gr_G(\mathbb{C})$ are a model for the topological space $\Omega G$.  The idea is that $\Hom(D^*,G) \cong G(\mathbb{C}((t)))$ is the space of algebraic free (i.e., unbased) loops in $G$.  A point in this algebraic free loop space is a trivialization of a $G$-bundle over the punctured disk $D^*$, while $G(\mathbb{C}[[t]])$ parametrizes those trivializations that extend over the entire disk.  One may therefore think of the complex points of $Gr_G$ as the homogeneous space
+The complex points $Gr_G(\mathbb{C})$ are a model for the topological space $\Omega G$ CITE.  These complex points are given by the homogeneous space CITE
 $$G(\mathbb{C}((t)))/G(\mathbb{C}[[t]]),$$
 which up to homotopy is the quotient of the free loop space on $G$ by the action of $G$.
 
-We use $\mathbb{X}^{\bullet}$ to denote the lattice of weights $\Hom(G,\mathbb{G}_m)$, and $\mathbb{X}_{\bullet}$ to denote the dual lattice of coweights.  Inside $\mathbb{X}^{\bullet}$ is the set $\Phi$ of roots.  We fix a particular Borel subgroup $B \subset G$, determining a choice of positive roots $\Phi^+ \subset \Phi$ and a semi-group of dominant coweights $\mathbb{X}^+_\bullet \subset \mathbb{X}_\bullet$.  There is a natural bijection
-$$\mathbb{X}_{\bullet}^+ \cong G(\mathbb{C}[[t]])\backslash G(\mathbb{C}((t)))/G(\mathbb{C}[[t]])$$
-of dominant coweights with the above double cosets.  Each coweight $\mu \in \Hom(\mathbb{G}_m,G)$ may be thought of as a point $t^{\mu}$ in the free loop space of $G$, and hence under projection as a point in $\Omega G$.
+The above functor of points is not representable by a scheme, but it is a filtered colimit of schemes $Gr_{G,\le \mu}$.  We will define below at least the complex points $Gr_{G, \le \mu}(\mathbb{C})$ of these schemes, which are specific topological subspaces of $Gr_G(\mathbb{C})$.  First, it is necessary to introduce a bit more notation.
 
-There is a double-coset decomposition of the algebraic free loop space
+Let $T$ denote a maximal torus inside $G$.  We use $\mathbb{X}^{\bullet}$ to denote the lattice of weights $\Hom(T,\mathbb{G}_m)$, and $\mathbb{X}_{\bullet}$ to denote the dual lattice of coweights.  Inside $\mathbb{X}^{\bullet}$ is the set $\Phi$ of roots.  We fix a particular Borel subgroup $B \subset G$, determining a choice of positive roots $\Phi^+ \subset \Phi$ and a semi-group of dominant coweights $\mathbb{X}^+_\bullet \subset \mathbb{X}_\bullet$.  There is a natural bijection
+$$\mathbb{X}_{\bullet}^+ \cong G(\mathbb{C}[[t]])\backslash G(\mathbb{C}((t)))/G(\mathbb{C}[[t]])$$
+of dominant coweights with the above double cosets.  Each coweight $\mu \in \Hom(\mathbb{G}_m,T)$ defines via the inclusion of $T$ into $G$ an element $t^{\mu}$ in $G(\mathbb{C}((t)))$.  There is a double-coset decomposition of the algebraic free loop space
 $$
 G(\mathbb{C}((t))) \cong \coprod_{\mu \in \mathbb{X}_{\bullet}^+} G(\mathbb{C}[[t]]) t^{\mu} G(\mathbb{C}[[t]]).
 $$
 Projecting onto the affine Grassmannian, one learns that the $G(\mathbb{C}[[t]])$-orbits of $Gr_G$ are indexed by $\mu \in \mathbb{X}_{\bullet}^+$.  We will use $Gr_{G,\le \mu}$ to denote the \textit{closure} of the orbit corresponding to $\mu$.  The closure $Gr_{G, \le \mu_1}$ contains $Gr_{G, \le \mu_2}$ if and only if $\mu_1-\mu_2$ is a sum of dominant coroots.  We call $\{Gr_{G,\le \mu}|\mu \in \mathbb{X}^+_{\bullet}\}$ the \textit{Schubert filtration} of $Gr_G$. 
 
 \begin{exm} \label{sl2example}
-Suppose $G=SL_2(\mathbb{C})$.  Then a coweight $\mu \in \mathbb{X}_\bullet$ consists of a pair $(a,b)$ of integers with $a+b=0$.  We choose a Borel so that a coweight is dominant if $a \ge b$.  The conjugation action of $SL_2(\mathbb{C})$ on $\Omega SL_2(\mathbb{C})$ has one orbit for each pair $(a,-a)$ with $a \ge 0$.  The orbit corresponding to $(a,-a)$ contains the loop $\mathbb{G}_m \rightarrow \Omega SL_2(\mathbb{C})$ given by
+Suppose $G=SL_2(\mathbb{C})$ with its usual maximal torus.  A coweight $\mu \in \mathbb{X}_\bullet$ consists of a pair $(a,b)$ of integers with $a+b=0$.  We choose a Borel so that a coweight is dominant if $a \ge b$.  The conjugation action of $SL_2(\mathbb{C})$ on $\Omega SL_2(\mathbb{C})$ has one orbit for each pair $(a,-a)$ with $a \ge 0$.  The orbit corresponding to $(a,-a)$ contains the loop $\mathbb{G}_m \rightarrow \Omega SL_2(\mathbb{C})$ given by
 $$
 t \mapsto \left( \begin{array}{cc} t^a & 0 \\ 0 & t^{-a}  \end{array} \right).
 $$
-The closure of the $(a,-a)$ orbit contains the $(b,-b)$ orbit if and only if $b \le a$.  To topologists, $\Omega SL_2(\mathbb{C}) \simeq \Omega \Sigma S^2$ is recognizable as the free $\mathbb{A}_\infty$-algebra on the pointed space $S^2$.  In particular, $Gr_{SL_2}(\mathbb{C})$ is naturally equipped with the James filtration by word length.  The closure of the $(a,-a)$ orbit turns out to be the $(2a)$th component of the James filtration, so that the Schubert filtration is strictly coarser than the James filtration.  In other words, the $S^2$ that appears as the first James filtered piece of $\Omega SL_2(\mathbb{C})$ is not closed under the $SL_2(\mathbb{C})$ conjugation action.  Only the collection of words of length $2$ or less is closed under the $SL_2(\mathbb{C})$ action. 
+The closure of the $(a,-a)$ orbit contains the $(b,-b)$ orbit if and only if $b \le a$.  To topologists, $\Omega SL_2(\mathbb{C}) \simeq \Omega \Sigma S^2$ is recognizable as the free $\mathbb{A}_\infty$-algebra on the pointed space $S^2$.  In particular, $Gr_{SL_2}(\mathbb{C})$ is naturally equipped with the James filtration by word length.  The closure of the $(a,-a)$ orbit, denoted $Gr_{SL_2,\le (a,-a)}(\mathbb{C})$, turns out to be the $(2a)$th component of the James filtration.
+
+Thus, the Schubert filtration is strictly coarser than the James filtration.  In particular, the $S^2$ that appears as the first James filtered piece of $\Omega SL_2(\mathbb{C})$ is not closed under the $SL_2(\mathbb{C})$ conjugation action.  Only the collection of words of length $2$ or less is closed under the $SL_2(\mathbb{C})$ action.
+
+The Bott filtration on $\Omega SL_2(\mathbb{C})$ corresponds to the James filtration on $\Omega S^3$, and in particular is \textbf{not} given by the Schubert filtration on $Gr_{SL_2}(\mathbb{C})$.  In Section CITE, we will explain how to obtain the Bott filtration from the Schubert filtration, while in the remainder of this section we will explain how the Schubert filtration interacts with the $\mathbb{E}_2$-algebra structure on $\Omega SL_2(\mathbb{C})$.
 \end{exm}
 
 The $\mathbb{E}_2$-algebra structure on $\Omega G$ is elegantly encoded in algebraic geometry through the notion of the Beilinson--Drinfeld Grassmannian:
 
 \begin{dfn}
-The \textit{Ran space} $\text{Ran}(\mathbb{A}^1)$ is the presheaf that assigns to every $\mathbb{C}$-algebra $R$ the set of non-empty finite subsets of $\text{Spec}(R) \times \mathbb{A}^1$.   The Beilinson--Drinfeld Grassmannian is the presheaf $Gr_{G,Ran}$ that assigns to each $\mathbb{C}$-algebra $R$ the set of triplets $(x,\mathcal{E},\beta)$, where $x \in \text{Ran}(\mathbb{A}^1)(R)$, $\mathcal{E}$ is a $G$-torsor on $\mathbb{A}^1 \times \text{Spec}(R)$, and $\beta$ is a trivialization of $\mathcal{E}$ away from the graph of $x$ in $\text{Spec}(R) \times \mathbb{A}^1 $.
+The \textit{Ran space} $\text{Ran}_{\mathbb{A}^1}$ is the presheaf that assigns to every $\mathbb{C}$-algebra $R$ the set of non-empty finite subsets of $\text{Spec}(R) \times \mathbb{A}^1$ over $\text{Spec}(R)$.   The Beilinson--Drinfeld Grassmannian is the presheaf $Gr_{G,\text{Ran}}$ that assigns to each $\mathbb{C}$-algebra $R$ the set of triplets $(x,\mathcal{E},\beta)$, where $x \in \text{Ran}(\mathbb{A}^1)(R)$, $\mathcal{E}$ is a $G$-torsor on $\mathbb{A}^1 \times \text{Spec}(R)$, and $\beta$ is a trivialization of $\mathcal{E}$ away from the graph of $x$ in $\text{Spec}(R) \times \mathbb{A}^1$.
 \end{dfn}
 
-One thinks of the Beilinson--Drinfeld Grassmannian as fibered over the Ran space.  In other words, for every finite collection of points $I \subset \mathbb{A}^1$, there is a corresponding point $x$ in the Ran space.  The fiber of the Beilinson--Drinfeld Grassmannian over $x$ is the moduli of $G$-bundles on $\mathbb{A}^1$ equipped with a trivialization away from the points in $I$.  This fiber is naturally isomorphic to the product of $|I|$ copies of $Gr_G$.  The multiplication on $Gr_G$ is encoded by degeneration of fibers as points collide in $\mathbb{A}^1$.  For more details, see \cite[\S 3]{Zhu}.
+The Beilinson--Drinfeld Grassmannian is naturally fibered over the Ran space.  Again, we shall be primarily interested in complex points.  A point $x$ in $\text{Ran}_{\mathbb{A}^1}(\mathbb{C})$ consists of a non-empty finite subset $I \subset \mathbb{C}$ of points in $\mathbb{C}$.  The fiber of the Beilinson--Drinfeld Grassmannian $Gr_{G,\text{Ran}}(\mathbb{C})$ over $x$ is the moduli of $G$-bundles on $\mathbb{A}^1$ equipped with a trivialization away from the points in $I$.  This fiber is non-canonically isomorphic to the product of $|I|$ copies of $Gr_G(\mathbb{C})$.
 
-The connection of the above structure with the notion of $\mathbb{E}_2$-algebra in homotopy theory was spelled out explicitly by Jacob Lurie in \cite[\S 5.5]{HA}.  In the language of Lurie's work, the complex points of the Beilinson--Drinfeld Grassmannian form a factorizable cosheaf, valued in spaces, on $\mathrm{Ran}(\mathbb{C})$.  Lurie proves \cite[Theorem 5.5.4.10]{HA} that this is enough to equip the complex points of $Gr_G$ (namely $\Omega G$) with the structure of a non-unital $\mathbb{E}_2$ algebra.  This in turn makes $\Sigma^{\infty}_+ \Omega G$ into a unital (in fact augmented) $\mathbb{E}_2$-ring spectrum.
+As we will explain, the $\mathbb{E}_2$ multiplication on $Gr_G(\mathbb{C})$ is encoded by degeneration of fibers in $Gr_{G,\text{Ran}}(\mathbb{C})$ as points collide in $\mathbb{A}^1$.  First, we will explain how to filter $Gr_{G,\text{Ran}}(\mathbb{C})$ by compact spaces, just as one filters $Gr_{G}(\mathbb{C})$ by the $Gr_{G, \le \mu}(\mathbb{C})$.
 
-It is through the Beilinson--Drinfeld perspective that we can most easily see the interaction of the Schubert filtration on $Gr_G$ with its $\mathbb{E}_2$-algebra structure.  The key point is the fact (see, e.g., \cite[3.1.14]{Zhu}) that, as points collide in the Beilinson--Drinfeld Grassmannian, the fiber $Gr_{G,\le \mu_1} \times Gr_{G,\le \mu_2}$ degenerates to $Gr_{G, \le \mu_1+\mu_2}$.
-
-That is already enough to prove that, for example, the Schubert filtration on $\Sigma^{\infty}_+ \Omega SU(2)$ described in Example \ref{sl2example} is an $\mathbb{E}_2$-filtered spectrum in the sense of Section \ref{sec:FilGra}.  What we will actually want to be $\mathbb{E}_2$, or at least $\mathbb{A}_\infty$, is the James filtration on $\Sigma^{\infty}_+ \Omega SU(2)$.  In general, it turns out that the Schubert filtration on the Beilinson--Drinfeld Grassmannian for $SL_n(\mathbb{C})$ provides only direct access to every $n$th piece of the Bott filtration on $\Sigma^{\infty}_+ \Omega SL_n(\mathbb{C})$.  We will follow Segal \cite{Segal} and access the Bott filtration on $Gr_{SL_n}$ in a somewhat indirect manner, by considering not $Gr_{SL_n}$ but $Gr_{GL_n}$:
-
-\begin{dfn}
-Consider the affine Grassmannian $Gr_{GL_n}$.  We denote by $F_{n,k}$ the subset of $Gr_{GL_n}$ that is the closure of the $GL_n(\mathbb{C}[[t]])$ orbit containing:
-$$t \mapsto \left( \begin{array}{cccc} t^k & 0 & \cdots & 0 \\ 0 & 1 & \cdots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & \cdots & 1 \end{array} \right).$$
-In other words, $F_{n,k} = Gr_{GL_n, \le (k,0,\cdots,0)}$.
-\end{dfn}
-
-We draw the following lemma, affirming a conjecture of Mahowald and Richter, as an immediate corollary of the abstract machinery of Beilinson--Drinfeld \cite[3.1.14]{Zhu} and \cite[5.5.4.10]{HA}:
-
-\begin{lem} [Conjecture of Mahowald--Richter \cite{MahowaldRichter}] 
-The inclusion 
-$$\coprod_k F_{n,k} \subset \Omega GL_n(\mathbb{C})$$
-may be made into a map of non-unital $\mathbb{E}_2$-algebras.  The suspension $$\Sigma^{\infty}_+ \coprod_k F_{n,k}$$ is a graded $\mathbb{E}_2$-algebra in the sense of Section \ref{sec:FilGra}.
-\end{lem}
-
-As explained by Segal \cite{Segal}, the coproduct $\coprod_k F_{n,k}$ may be viewed as the subspace of loops in $U(n)$ `of positive winding number.'  The $k$th piece $F_{n,k}$ consists of loops of winding number exactly $k$, and the group completion of $\coprod_k F_{n,k}$ is $\Omega U(n)$.
-
-\begin{exm}
-For any $n$, $F_{n,1}$ is equivalent to $\mathbb{CP}^{n-1}$.  The space $F_{2,k}$ is the $k$th stage of the James filtration of $\Omega S^3$, consisting of all words of length $\le k$.
-\end{exm}
-
-It is not at all obvious from the above construction that there should exist maps $F_{n,k} \rightarrow F_{n,k+1}$.  To make such maps requires some way of identifying the various connected components of $\Omega U(n)$, each of which is individually equivalent to $\Omega SU(n)$.  Following Segal \cite[pg. 3--4]{Segal}, one makes this identification by multiplying by powers of 
-$$\lambda = \left( \begin{array}{cccc} t & 0 & \cdots & 0 \\ 0 & 1 & \cdots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & \cdots & 1 \end{array} \right).$$
-In other words, there is a map from the space of loops of winding number $k$ to loops of winding number $0$ given by multiplication by $\lambda^{-k}$.
-
-\begin{dfn}
-The Bott filtration on $\Omega SL_n(\mathbb{C})$ is the filtration with $k$th piece given by $\lambda^{-k} F_{n,k}$.  We will refer to the associated filtered spectrum 
-$$\mathbb{S} \rightarrow \Sigma^{\infty} \lambda^{-1} F_{n,1} \simeq \Sigma^{\infty} \mathbb{CP}^{n-1} \rightarrow \Sigma^{\infty} \lambda^{-2} F_{n,2} \rightarrow \cdots$$
-by $\Sigma^{\infty}_+ \{F_{n,k}\}$.
-\end{dfn}
-
-The above constructions make $\Sigma^{\infty}_+ \{F_{n,k}\}$ into a filtered spectrum whose underlying graded spectrum is $\mathbb{E}_2$.  We will now discuss the problem of making the filtered spectrum itself $\mathbb{E}_2$, or at least $\mathbb{A}_\infty$.  For this, recall from Lemma \ref{lem:FilAsGrMod} that there is a graded $\mathbb{E}_\infty$ ring $A=\Sigma^{\infty}_+ \mathbb{Z}^{ds}_{\ge 0}$ so that filtered spectra may be described as $A$-modules in graded spectra.  We now discuss the following theorem, which implies Theorem \ref{thm:BottIsAoo} from the Introduction, and which again follows easily from the machinery of Beilinson--Drinfeld Grassmannians:
-
-\begin{thm} \label{thm:AooFil}
-There is a map of $\mathbb{E}_2$-algebra objects in graded spectra
-$$A \simeq \Sigma^{\infty}_+ \mathbb{Z}^{ds}_{\ge 0} \longrightarrow \Sigma^{\infty}_+ \coprod_k F_{n,k}.$$
-In particular, $\Sigma^{\infty}_+ \coprod_k F_{n,k}$ is an $\mathbb{A}_\infty$-algebra in $A$-modules, and so $\Sigma^{\infty}_+ \{F_{n,k}\}$ is a filtered $\mathbb{A}_\infty$-algebra.
-\end{thm}
-
-\begin{rmk}
-The $\mathbb{E}_2$-algebra map $A \rightarrow \Sigma^{\infty}_+ \coprod_k F_{n,k}$ sits in a commutative diagram of $\mathbb{E}_2$-algebras
-$$
-\begin{tikzcd}
-A \arrow{d} \arrow{r} & \Sigma^{\infty}_+ \coprod_k F_{n,k} \arrow{d} \\
-\Sigma^{\infty}_+ \mathbb{Z} \arrow{r} & \Sigma^{\infty}_+ \Omega U(n).
-\end{tikzcd}
-$$
-The map $\Sigma^{\infty}_+ \mathbb{Z} \rightarrow \Sigma^{\infty}_+ \Omega U(n)$ may be described as the suspension of the natural map
-$$\Omega^2(BU(1) \rightarrow BU(n)).$$
-\end{rmk}
-
-\begin{rmk} \label{rmk:E2fil}
-The fact that there is an $\mathbb{E}_2$-algebra map $A \rightarrow \Sigma^{\infty}_+ \coprod_k F_{n,k}$ is stronger than the fact that $\Sigma^{\infty}_+ \{F_{n,k}\}$ is $\mathbb{A}_\infty$ filtered, but it is weaker than the claim that $\Sigma^{\infty}_+ \{F_{n,k}\}$ is $\mathbb{E}_2$ filtered.  We do not know if the Bott filtration is $\mathbb{E}_2$ or not, but would be very interested to learn the answer.
-
-The machinery of Beilinson--Drinfeld Grassmannians proves that the coarsened filtration consisting of every $n$th piece of the Bott filtration (i.e. $\Sigma^{\infty}_+ \{F_{n,nk}\}$) is an $\mathbb{E}_2$-filtration.  The question is equivalent to the production of an $\mathbb{E}_3$-algebra map from $A$ to the $\mathbb{E}_3$-center of the $\mathbb{E}_2$-algebra $\Sigma^{\infty}_+ \coprod \{F_{n,k}\}$. 
-After group completion, this would in particular imply the existence of an $\mathbb{E}_3$-algebra map
-$$\mathbb{Z} \longrightarrow (\Omega U(n))^{hU(n)}.$$
-We do not know whether even this last map exists.
-\end{rmk}
+A point in .
 
 
-\begin{proof}[Proof of Theorem \ref{thm:AooFil}]
-Consider $Gr_{\mathbb{G}_m}$, the affine Grassmannian for the multiplicative group.  This is a model for $\Omega S^1$ and so has $\mathbb{Z}$ many contractible connected components.  Choosing a dominant coweight corresponding to a loop of winding number $1$ identifies a copy of $\mathbb{Z}^{ds}_{\ge 0}$ inside of $Gr_{\mathbb{G}_m}$.  The Beilinson--Drinfeld Grassmannian for the group $G=\mathbb{G}_m$ then describes $\Sigma^{\infty}_+ \mathbb{Z}^{ds}_{\ge 0}$ as a sub-$\mathbb{E}_2$-algebra of $\Sigma^{\infty}_+ Gr_{\mathbb{G}_m}$.
-
-Now, the map of groups $\mathbb{G}_m \rightarrow GL_n(\mathbb{C})$ given by the dominant coweight $(1,0,\cdots,0)$ induces a map of Beilinson--Drinfeld Grassmannians.  Applying Lurie's Theorem \cite[Theorem 5.5.4.10]{HA}, we obtain the desired map of graded $\mathbb{E}_2$-algebras.
-\end{proof}
-
-We end this section by sketching what is named Construction \ref{cnstr:IntroGr} in the Introduction:
-
-\begin{cnstr} \label{cnstr:E2GrConstruction}
-The graded $\mathbb{A}_\infty$-algebra $gr(\Sigma^{\infty}_+ \{F_{n,k}\})$ may be equipped with the structure of a graded $\mathbb{E}_2$-algebra.
-\end{cnstr}
-
-\begin{proof}[Proof sketch]
-As explained above, the $\mathbb{E}_2$-algebra in spaces $\coprod F_{n,k}$ receives a natural $\mathbb{E}_2$-map from $\mathbb{Z}^{ds}_{\ge 0}$.  We may thus view $\coprod F_{n,k}$ as an $\mathbb{E}_2$-algebra over $\mathbb{Z}^{ds}_{\ge 0}$ (by, e.g., the straightening and unstraightening correspondence).  There is a diagram of $\mathbb{E}_2$-algebras:
-$$
-\begin{tikzcd}
-\coprod_k F_{n,k} \arrow{d} \arrow{r} & \Omega U(n) \arrow{r} & \Omega U \simeq BU \times \mathbb{Z} \arrow{r}{J} & Pic(\mathbb{S}) \subset \Sp \\
-\mathbb{Z}^{ds}_{\ge 0}.
-\end{tikzcd}
-$$
-In \cite[1.7]{Segal}, it is proven that the colimit of the functor $\coprod F_{n,k} \longrightarrow \Sp$ is equivalent (as a spectrum) to $gr(\Sigma^{\infty}_+ \{F_{n,k}\})$.  Note that this colimit is more classically described as the Thom spectrum of the map $\coprod F_{n,k} \longrightarrow BU \times \mathbb{Z}$.
-
-One may also compute this colimit by first making a left Kan extension along the map $$\coprod F_{n,k} \rightarrow \mathbb{Z}^{ds}_{\ge 0},$$ and then taking the coproduct of the images of the resulting map $$\mathbb{Z}^{ds}_{\ge 0} \rightarrow \Sp.$$  Taking an operadic left Kan extension as in \cite[3.1.2]{HA}, one learns that the left Kan extension $\mathbb{Z}^{ds}_{\ge 0} \longrightarrow \Sp$ is lax $\mathbb{E}_2$-monoidal.  The properties of Day convolution (explained in, e.g., Appendix \ref{app:day}) then imply that the Thom spectrum is naturally an $\mathbb{E}_2$-graded spectrum.
-
-To see that the underlying $\mathbb{A}_\infty$-graded spectrum agrees with the associated graded of the Bott filtration, notice that the zero-section of the Thom construction is a map of graded $\mathbb{E}_2$-algebras.  This zero-section is, on the $k$th graded piece, a model for the map $$\Sigma^{\infty} F_{n,k} \longrightarrow \Sigma^{\infty} F_{n,k}/F_{n,k-1}.$$
-The sequence of graded $\mathbb{E}_2$-algebra maps
-$$\Sigma^{\infty}_+ \mathbb{Z}^{ds}_{\ge 0} \longrightarrow \Sigma^{\infty}_+ \coprod_k F_{n,k} \longrightarrow \text{Thom}\left( \coprod_k F_{n,k} \right)$$
-then implies the result.
-\end{proof}
