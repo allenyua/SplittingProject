@@ -1,9 +1,9 @@
 
-In the next section we will define the Mitchell--Richter Bott filtration on $\Omega SU(n)$.  This filtration is most naturally described in the language of algebraic geometry, and our aim in this section is to recall the relevant algebraic geometry and draw from it the topological consequences we will need.  None of the ideas in this section are original: the objects we study are due to Beilinson and Drinfeld \textbf{CITE}, and their translation into algebraic topology is due to Jacob Lurie \textbf{CITE}.  
+In the next section we will define the Mitchell--Richter Bott filtration on $\Omega SU(n)$ and prove that it makes $\Sigma^{\infty}_+ \Omega SU(n)$ into a filtered $\mathbb{A}_\infty$-ring spectrum.  The filtration, especially as a multiplicative object, is most naturally described in the language of algebraic geometry.  Our aim in this section will be to recall the complex points of these algebro-geometric objects, and extract from both the algebro-geometric and topological literature all of the basic facts about these complex points that we will later need.  None of the ideas in this section are original: the objects we study are due to Beilinson and Drinfeld \textbf{CITE}, and their translation into algebraic topology is due to Jacob Lurie \textbf{CITE}.
 
 Fix for the moment a smooth, reductive, affine algebraic group $G$ over $\mathbb{C}$.  Through the rest of the paper, we will be interested only in the cases $G=\mathbb{G}_m,SL_n,$ or $GL_n$, and so the reader may safely restrict his attention to those cases for concreteness.  As we will explain in detail, an algebro-geometric model for $\Omega G(\mathbb{C})$ is the \textit{affine Grassmannian} $Gr_G$.  The $\mathbb{E}_2$-algebra structure present on $\Omega G(\mathbb{C})$ is encoded by a more elaborate object, the \textit{Beilinson--Drinfeld Grassmannian}.  A good general reference for both of these objects is \cite{Zhu}, whose presentation we will more or less follow below.
 
-We use $D$ to denote the formal disk $\text{Spec}(\mathbb{C}[[t]])$ and $D^*$ to denote the punctured disk $\text{Spec}(\mathbb{C}((t)))$.  For $R$ a $\mathbb{C}$-algebra, we use $D_R$ to denote $\text{Spec}(\mathbb{C}[[t]] \hat{\otimes} R)$ and $D^*_R$ to denote $\text{Spec}(\mathbb{C}((t)) \hat{\otimes} R)$.  We refer to a point in the space $G(D^*)=G(\mathbb{C}((t)))$ as an algebraic free (i.e., unbased) loop in $G$.  Such points are exactly automorphism of the trivial $G$-torsor $\mathcal{E}^0$ over $D^*$.
+We use $D$ to denote the formal disk $\text{Spec}(\mathbb{C}[[t]])$ and $D^*$ to denote the punctured disk $\text{Spec}(\mathbb{C}((t)))$.  For $R$ a $\mathbb{C}$-algebra, we use $D_R$ to denote $\text{Spec}(\mathbb{C}[[t]] \hat{\otimes} R)$ and $D^*_R$ to denote $\text{Spec}(\mathbb{C}((t)) \hat{\otimes} R)$.  We refer to a point in the space $G(D^*)=G(\mathbb{C}((t)))$ as an algebraic free (i.e., unbased) loop in $G$.  Such points are exactly automorphisms of the trivial $G$-torsor $\mathcal{E}^0$ over $D^*$.
 
 \begin{dfn}
 The \textit{affine Grassmannian} $Gr_G$ of $G$ is the Ind-scheme with functor of points
@@ -23,7 +23,23 @@ of dominant coweights with the above double cosets.  Each coweight $\mu \in \Hom
 $$
 G(\mathbb{C}((t))) \cong \coprod_{\mu \in \mathbb{X}_{\bullet}^+} G(\mathbb{C}[[t]]) t^{\mu} G(\mathbb{C}[[t]]).
 $$
-Projecting onto the affine Grassmannian, one learns that the $G(\mathbb{C}[[t]])$-orbits of $Gr_G$ are indexed by $\mu \in \mathbb{X}_{\bullet}^+$.  We will use $Gr_{G,\le \mu}$ to denote the \textit{closure} of the orbit corresponding to $\mu$.  The closure $Gr_{G, \le \mu_1}$ contains $Gr_{G, \le \mu_2}$ if and only if $\mu_1-\mu_2$ is a sum of dominant coroots.  We call $\{Gr_{G,\le \mu}|\mu \in \mathbb{X}^+_{\bullet}\}$ the \textit{Schubert filtration} of $Gr_G$. 
+
+Projecting onto the affine Grassmannian, one learns that the $G(\mathbb{C}[[t]])$-orbits of $Gr_G$ are indexed by $\mu \in \mathbb{X}_{\bullet}^+$.
+We will use $Gr_{G,\le \mu}$ to denote the \textit{closure} of the orbit corresponding to $\mu$.  The closure $Gr_{G, \le \mu_1}$ contains $Gr_{G, \le \mu_2}$ if and only if $\mu_1-\mu_2$ is a sum of dominant coroots.
+
+\begin{dfn} \label{def:coweightfiltered}
+An $\mathbb{X}_{\bullet}^+$-filtered topological space $K$ is a poset of topological subspaces of $K$, indexed by $\mathbb{X}_{\bullet}^+$.
+\end{dfn}
+
+An example is of course given by $Gr_{G}(\mathbb{C})$, filtered by the $Gr_{G,\le \mu}(\mathbb{C})$.  We will refer to this filtration on $Gr_{G}(\mathbb{C})$ as the \textit{Schubert filtration}.
+
+\begin{rmk} \label{rem:monodromy}
+Suppose that $\gamma$ is a principal $G$-bundle on $\mathbb{A}^1$, and that $p$ is the origin in $\mathbb{A}^1$.  Then restriction of $\gamma$ to an infinitesimal neighborhood of $p$ gives a principal $G$-bundle on the formal disk $D$.  If one is then further given a trivialization of $\gamma$ away from $p$, there is then an associated point $x \in Gr_{G}(\mathbb{C})$.  This point $x$ lives in a certain $G(\mathbb{C}[[t]])$-orbit, and thus has well-defined \textit{monodromy} $\mu \in \mathbb{X}_{\bullet}^+$.
+
+Now, if $p$ is \textit{any} point in $\mathbb{A}^1$, then a formal neighborhood of $p$ is isomorphic but not equal to the formal disk $D$.  If given a trivialization of $\gamma$ away from $p$, this means that one does not get a well-defined point $x \in Gr_{G}(\mathbb{C})$, but one \textit{does} obtain a well-defined $G(\mathbb{C}[[t]])$-orbit inside of $Gr_{G}(\mathbb{C})$.  In other words, the trivialization of $\gamma$ away from $p$ has well-defined monodromy $\mu \in \mathbb{X}_{\bullet}^+$.  Notice, in fact, that to define $\mu$ one needs not a trivialization on all of $\mathbb{A}^1 \backslash \{ p \}$, but only a trivialization defined away from $p$ in a neighborhood of $p$.
+\end{rmk}
+
+
 
 \begin{exm} \label{sl2example}
 Suppose $G=SL_2(\mathbb{C})$ with its usual maximal torus.  A coweight $\mu \in \mathbb{X}_\bullet$ consists of a pair $(a,b)$ of integers with $a+b=0$.  We choose a Borel so that a coweight is dominant if $a \ge b$.  The conjugation action of $SL_2(\mathbb{C})$ on $\Omega SL_2(\mathbb{C})$ has one orbit for each pair $(a,-a)$ with $a \ge 0$.  The orbit corresponding to $(a,-a)$ contains the loop $\mathbb{G}_m \rightarrow \Omega SL_2(\mathbb{C})$ given by
@@ -43,10 +59,23 @@ The $\mathbb{E}_2$-algebra structure on $\Omega G$ is elegantly encoded in algeb
 The \textit{Ran space} $\text{Ran}_{\mathbb{A}^1}$ is the presheaf that assigns to every $\mathbb{C}$-algebra $R$ the set of non-empty finite subsets of $\text{Spec}(R) \times \mathbb{A}^1$ over $\text{Spec}(R)$.   The Beilinson--Drinfeld Grassmannian is the presheaf $Gr_{G,\text{Ran}}$ that assigns to each $\mathbb{C}$-algebra $R$ the set of triplets $(x,\mathcal{E},\beta)$, where $x \in \text{Ran}(\mathbb{A}^1)(R)$, $\mathcal{E}$ is a $G$-torsor on $\mathbb{A}^1 \times \text{Spec}(R)$, and $\beta$ is a trivialization of $\mathcal{E}$ away from the graph of $x$ in $\text{Spec}(R) \times \mathbb{A}^1$.
 \end{dfn}
 
-The Beilinson--Drinfeld Grassmannian is naturally fibered over the Ran space.  Again, we shall be primarily interested in complex points.  A point $x$ in $\text{Ran}_{\mathbb{A}^1}(\mathbb{C})$ consists of a non-empty finite subset $I \subset \mathbb{C}$ of points in $\mathbb{C}$.  The fiber of the Beilinson--Drinfeld Grassmannian $Gr_{G,\text{Ran}}(\mathbb{C})$ over $x$ is the moduli of $G$-bundles on $\mathbb{A}^1$ equipped with a trivialization away from the points in $I$.  This fiber is non-canonically isomorphic to the product of $|I|$ copies of $Gr_G(\mathbb{C})$.
+The Beilinson--Drinfeld Grassmannian is naturally fibered over the Ran space.  Again, we shall be primarily interested in complex points.  A point $x$ in $\text{Ran}_{\mathbb{A}^1}(\mathbb{C})$ consists of a non-empty finite subset $I \subset \mathbb{C}$ of points in $\mathbb{C}$.  \textbf{INTRODUCE TOPOLOGY ON RAN SPACE} The fiber of the Beilinson--Drinfeld Grassmannian $Gr_{G,\text{Ran}}(\mathbb{C})$ over $x$ is the moduli of $G$-bundles on $\mathbb{A}^1$ equipped with a trivialization away from the points in $I$.  This fiber is non-canonically isomorphic to the product of $|I|$ copies of $Gr_G(\mathbb{C})$.
 
-As we will explain, the $\mathbb{E}_2$ multiplication on $Gr_G(\mathbb{C})$ is encoded by degeneration of fibers in $Gr_{G,\text{Ran}}(\mathbb{C})$ as points collide in $\mathbb{A}^1$.  First, we will explain how to filter $Gr_{G,\text{Ran}}(\mathbb{C})$ by compact spaces, just as one filters $Gr_{G}(\mathbb{C})$ by the $Gr_{G, \le \mu}(\mathbb{C})$.
+Let us now explain how to filter $Gr_{G,\text{Ran}}(\mathbb{C})$ by spaces $Gr_{G,\text{Ran},\le \mu}$, allowing us to view $Gr_{G,\text{Ran}}(\mathbb{C})$ as an $\mathbb{X}_{\bullet}^+$-filtered topological space in the sense of Definition \ref{def:coweightfiltered}.  
 
-A point in .
+To do so, consider an arbitrary point $p \in \text{Gr}_{G,\text{Ran}}(\mathbb{C})$, consisting of a $G$-bundle $\gamma$ on $\mathbb{A}^1$ trivialized away from a collection of points $I=(i_1,i_2,...,i_\ell) \subset \mathbb{C}$.  For each point $i_k \in \mathbb{C}$, the restriction of $\gamma$ to a formal neighborhood of $i_k$ has well-defined monodromy $\mu_k$, in the sense of Remark \ref{rem:monodromy}.  We say that $p$ lives in $\text{Gr}_{G,\text{Ran},\le \mu}(\mathbb{C})$ if and only if
+$$\sum_{i=1}^{k} \mu_k \le \mu.$$
 
+The following fact is key to us:
 
+\begin{lem} Suppose that $G$ is reductive.  For each positive integer $n$ and each $\mu \in \mathbb{X}_{\bullet}^+$, define $P$ to make the following square into a pullback in the category of topological spaces:
+$$
+\begin{tikzcd}
+P \arrow{r} \arrow{d}{f} & Gr_{G,\text{Ran},\le \mu}(\mathbb{C}) \arrow{d} \\
+\mathbb{C}^n \arrow{r} & \text{Ran}_{\mathbb{A}^1}(\mathbb{C}).
+\end{tikzcd}
+$$
+Then the map $f$ is a proper map of topological spaces.
+\end{lem}
+
+The authors understand the above fact to be folklore in the geometric representation theory literature.  A reference is BLAH.  A sketch of a proof in the algebro-geometric context can be found in BLAH.  \textbf{Figure out a better way to sell this}
