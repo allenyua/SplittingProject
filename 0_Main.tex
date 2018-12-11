@@ -1,7 +1,9 @@
 \documentclass[reqno, oneside]{amsart}
+\usepackage{etex}
+\usepackage{hyperref}
 
 \usepackage{chemarr}
-\usepackage{hyperref}
+\usepackage{amssymb}
 \usepackage{comment}
 
 \usepackage[a4paper]{geometry}
@@ -93,8 +95,10 @@
 \DeclareMathOperator{\cS}{\mathcal{S}}
 \DeclareMathOperator{\Ring}{\textbf{Ring}}
 \DeclareMathOperator{\Aff}{\textbf{Aff}}
+\DeclareMathOperator{\Ran}{\mathrm{Ran}}
 \DeclareMathOperator{\Spec}{\text{Spec}}
 \DeclareMathOperator{\Poly}{\text{Poly}}
+\DeclareMathOperator{\Fin}{\mathrm{Fin}}
 \DeclareMathOperator{\Ext}{\text{Ext}}
 \DeclareMathOperator{\nil}{\text{nil}}
 \DeclareMathOperator{\fin}{\text{fin}}
@@ -161,12 +165,16 @@ The space of based loops in $SL_n(\mathbb{C})$, also known as the affine Grassma
 
 \input{FilteredAndGraded.tex}
 
+\section{Revision Merge}
+
+\input{RevisionMerge.tex}
+
 \section{Jeremy's revision}
 
 \input{JeremyRevision.tex}
 
 \section{Allen's revision}
-
+\begin{comment}
 \begin{dfn}
 The \textit{Ran space} $\text{Ran}(\mathbb{A}^1)$ is the presheaf that assigns to every $\mathbb{C}$-algebra $R$ the set of non-empty finite subsets of $\text{Spec}(R) \times \mathbb{A}^1$.   The Beilinson--Drinfeld Grassmannian is the presheaf $Gr_{G,Ran}$ that assigns to each $\mathbb{C}$-algebra $R$ the set of triplets $(x,\mathcal{E},\beta)$, where $x \in \text{Ran}(\mathbb{A}^1)(R)$, $\mathcal{E}$ is a $G$-torsor on $\mathbb{A}^1 \times \text{Spec}(R)$, and $\beta$ is a trivialization of $\mathcal{E}$ away from the graph of $x$ in $\text{Spec}(R) \times \mathbb{A}^1 $.
 \end{dfn}
@@ -202,7 +210,7 @@ In fact, this theorem will be logically unnecessary for what follows and we incl
 
 We summarize the preceding discussion by drawing the following corollary of Theorem~\ref{thm:lcdisk}:
 \begin{cor} \label{cor:E2crit}
-Let $\C$ be a symmetric monoidal $\infty$-category and $A \in \C$ be a $\mathrm{Fact}(\mathbb{C})$ algebra.  Suppose that $A$ has the property that for any inclusion $D\subset D' \subset \mathbb{C}$ of disks, the natural map $A(\mathrm{Ran}(D))\to A(\mathrm{Ran}(D'))$ is an equivalence.  Then, for any disk $D\subset \mathbb{C}$, $A(\mathrm{Ran}(D))$ inherits the structure of a non-unital $\mathbb{E}_2$ algebra.  
+Let $\C$ be a symmetric monoidal $\infty$-category and $A \in \C$ be a $\mathrm{Fact}(\mathbb{C})$ algebra.  Suppose that $A$ has the property that for any inclusion $D\subset D' \subset \mathbb{C}$ of disks, the natural map $A(\mathrm{Ran}(D))\to A(\mathrm{Ran}(D'))$ is an equivalence.  Then, for any disk $D\subset \mathbb{C}$, $A(\mathrm{Ran}(D))$ inherits the structure of a non-unital $\mathbb{E}_2$-algebra in $\C$.  
 \end{cor}
 
 
@@ -215,7 +223,44 @@ Cite Zhu: BD Gr gives a Fact algebra valued in filtered spaces by taking complex
 %say you knew you had an actual space living over Ran(C)...Gr(C) -> Ran(C).  We need to see the structure of the factorization map; say for every two opens in Ran, how do you get the fact map?  Well, you take the isomorphism "a" from Thm 3.3.3 and you restrict it to those two opens.  
 %Q1: what about the higher maps?  Well, you have the cocycle condition so everything is coherent higher up
 %Q2: What about the filtration?  That should be Thm 3.1.14
-***
+
+\begin{rmk}
+add some remark about how it suffices to define over the colimit
+\end{rmk}
+
+We also need the following point-set lemma:
+
+\begin{lem}\label{lem:colimproper}
+Let $I$ be a finite indexing category and $\{X_i\}_{i\in I}$ be a diagram of topological spaces indexed by $I$.  Let $X = \colim_{i\in I} X_i$ and suppose $f: Y \to X$ is a map of topological spaces with the property that the natural map $f_i: Y\times_X X_i \to X_i$ is proper.  Then the map $f$ is itself proper.
+\end{lem}
+\begin{proof}
+write some shit or not?
+\end{proof}
+
+For any $X\subset \mathbb{C}$, $\mathrm{Ran}^{\leq n}(X)$ is a finite colimit of spaces of the form $X^J$ for a finite set $J$.  By **REF**, the restriction of the Beilinson-Drinfeld Grassmannian over each $X^J$ is proper; we obtain the following corollary of Lemma \ref{lem:colimproper}:
+
+\begin{cor}
+Let $X\subset \mathbb{C}$.  Then, the restriction of the Beilinson-Drinfeld Grassmannian $\mathrm{Gr}(X)^{\leq n} \to \mathrm{Ran}^{\leq n}(X)$ is proper.
+\end{cor}
+
+\begin{thm}
+Let $D\subset \mathbb{C}$ be a disk and $\{x \} \hookrightarrow D$ be a point.  Then, the natural map $\mathrm{Gr}(\{x\}) \to \mathrm{Gr}(D)$ is an equivalence of filtered spaces.  
+\end{thm}
+\begin{proof}
+
+%reduce to the case of a single filtration (weight) and Ran^{leq n} somehow...
+
+For any $X\subset \mathbb{C}$, $\mathrm{Ran}^{\leq n}(X)$ is a finite colimit of 
+%the thing you know is that it's proper over each X^I ; then it should imply that it's proper over any finite colimit...in particular, Ran^{\leq n}(X)
+
+
+
+%use the proper base change theorem
+\end{proof}
+
+
+%filtered space mapping to Ran C, call it Gr(C)
+%pull back to C^I it's proper
 
 
 cite Zhu: the fact that the thing is proper: Jeremy - can you do this part?
@@ -226,7 +271,7 @@ check that the fiber at a point is the same as the fiber over a disk, simultaneo
 It is through the Beilinson--Drinfeld perspective that we can most easily see the interaction of the Schubert filtration on $Gr_G$ with its $\mathbb{E}_2$-algebra structure.  The key point is the fact (see, e.g., \cite[3.1.14]{Zhu}) that, as points collide in the Beilinson--Drinfeld Grassmannian, the fiber $Gr_{G,\le \mu_1} \times Gr_{G,\le \mu_2}$ degenerates to $Gr_{G, \le \mu_1+\mu_2}$.
 
 That is already enough to prove that, for example, the Schubert filtration on $\Sigma^{\infty}_+ \Omega SU(2)$ described in Example \ref{sl2example} is an $\mathbb{E}_2$-filtered spectrum in the sense of Section \ref{sec:FilGra}.  What we will actually want to be $\mathbb{E}_2$, or at least $\mathbb{A}_\infty$, is the James filtration on $\Sigma^{\infty}_+ \Omega SU(2)$.  In general, it turns out that the Schubert filtration on the Beilinson--Drinfeld Grassmannian for $SL_n(\mathbb{C})$ provides only direct access to every $n$th piece of the Bott filtration on $\Sigma^{\infty}_+ \Omega SL_n(\mathbb{C})$.  We will follow Segal \cite{Segal} and access the Bott filtration on $Gr_{SL_n}$ in a somewhat indirect manner, by considering not $Gr_{SL_n}$ but $Gr_{GL_n}$:
-
+\end{comment}
 
 
 \section{The Bott filtration on \texorpdfstring{$\Omega SU(n)$}{OmegaSU(n)}} \label{sec:MRFil}
