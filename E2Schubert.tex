@@ -99,15 +99,15 @@ Let $\C$ be a symmetric monoidal $\infty$-category and $A \in \C$ be a $\mathrm{
 
 
 \subsection{The Beilinson-Drinfeld Grassmannian}
-The structure described in the previous section arises naturally in algebraic geometry.  
+The structure described in the previous section arises naturally in algebraic geometry in the form of the Beilinson-Drinfeld Grassmannian.  Our goal in this section is to set up this object and describe the $\mathbb{E}_2$ algebras it produces via Corollary \ref{cor:E2crit}.
 
 \begin{dfn}
 The \textit{Ran space} $\text{Ran}_{\mathbb{A}^1}$ is the presheaf that assigns to every $\mathbb{C}$-algebra $R$ the set of non-empty finite subsets of $\text{Spec}(R) \times \mathbb{A}^1$ over $\text{Spec}(R)$.   The Beilinson--Drinfeld Grassmannian is the presheaf $Gr_{G,\text{Ran}}$ that assigns to each $\mathbb{C}$-algebra $R$ the set of triplets $(x,\mathcal{E},\beta)$, where $x \in \text{Ran}(\mathbb{A}^1)(R)$, $\mathcal{E}$ is a $G$-torsor on $\mathbb{A}^1 \times \text{Spec}(R)$, and $\beta$ is a trivialization of $\mathcal{E}$ away from the graph of $x$ in $\text{Spec}(R) \times \mathbb{A}^1$.
 \end{dfn}
 
-The Beilinson--Drinfeld Grassmannian is naturally fibered over the Ran space.  Again, we shall be primarily interested in complex points.  As explained above, a point $x$ in $\text{Ran}_{\mathbb{A}^1}(\mathbb{C})$ consists of a non-empty finite subset $I \subset \mathbb{C}$ of points in $\mathbb{C}$.  The fiber of the Beilinson--Drinfeld Grassmannian $Gr_{G,\text{Ran}}(\mathbb{C})$ over $x$ is the moduli of $G$-bundles on $\mathbb{A}^1$ equipped with a trivialization away from the points in $I$.  This fiber is non-canonically isomorphic to the product of $|I|$ copies of affine Grassmannian $Gr_G(\mathbb{C})$.
+The Beilinson--Drinfeld Grassmannian is naturally fibered over the Ran space.  Again, we shall be primarily interested in complex points.  As explained above, a point $x$ in $\text{Ran}_{\mathbb{A}^1}(\mathbb{C})$ consists of a non-empty finite subset $I \subset \mathbb{C}$ of points in $\mathbb{C}$.  The fiber of the Beilinson--Drinfeld Grassmannian $Gr_{G,\text{Ran}}(\mathbb{C})$ over $x$ is the moduli of $G$-bundles on $\mathbb{A}^1$ equipped with a trivialization away from the points in $I$.  This fiber is non-canonically isomorphic to the product of $|I|$ copies of affine Grassmannian $Gr_G(\mathbb{C})$.  
 
-Let us now explain how to filter $Gr_{G,\text{Ran}}(\mathbb{C})$ by spaces $Gr_{G,\text{Ran},\le \mu}$, allowing us to view $Gr_{G,\text{Ran}}(\mathbb{C})$ as an $\mathbb{X}_{\bullet}^+$-filtered topological space in the sense of Definition \ref{def:coweightfiltered}.  
+Via the machinery in the previous section (as we will explain in more detail later), $Gr_{G,\text{Ran}}(\mathbb{C})$ describes the $\mathbb{E}_2$-algebra structure on the affine Grassmannian.  However, we are interested in the compatibility of this $\mathbb{E}_2$ structure with certain filtrations on $Gr_G(\mathbb{C})$.  We must therefore exhibit a filtration on the whole Beilinson-Drinfeld Grassmannian.  In particular, we filter $Gr_{G,\text{Ran}}(\mathbb{C})$ by spaces $Gr_{G,\text{Ran},\le \mu}$, allowing us to view $Gr_{G,\text{Ran}}(\mathbb{C})$ as an $\mathbb{X}_{\bullet}^+$-filtered topological space in the sense of Definition \ref{def:coweightfiltered}.  
 
 To do so, consider an arbitrary point $p \in \text{Gr}_{G,\text{Ran}}(\mathbb{C})$, consisting of a $G$-bundle $\gamma$ on $\mathbb{A}^1$ trivialized away from a collection of points $I=(i_1,i_2,...,i_\ell) \subset \mathbb{C}$.  For each point $i_k \in \mathbb{C}$, the restriction of $\gamma$ to a formal neighborhood of $i_k$ has well-defined monodromy $\mu_k$, in the sense of Remark \ref{rem:monodromy}.  We say that $p$ lives in $\text{Gr}_{G,\text{Ran},\le \mu}(\mathbb{C})$ if and only if
 $$\sum_{i=1}^{k} \mu_k \le \mu.$$
@@ -125,3 +125,7 @@ Then the map $f$ is a proper map of topological spaces.
 \end{lem}
 
 The authors understand the above fact to be folklore in the geometric representation theory literature.  A reference is BLAH.  A sketch of a proof in the algebro-geometric context can be found in BLAH.  \textbf{Figure out a better way to sell this}
+
+\begin{cor}
+Gives E2 filtered spaces...Allen will add this.  
+\end{cor}
