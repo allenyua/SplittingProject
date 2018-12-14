@@ -114,17 +114,63 @@ $$\sum_{i=1}^{k} \mu_k \le \mu.$$
 
 The following fact is key to us:
 
-\begin{lem} Suppose that $G$ is reductive.  For each positive integer $n$ and each $\mu \in \mathbb{X}_{\bullet}^+$, define $P$ to make the following square into a pullback in the category of topological spaces:
+\begin{lem} \label{lem:grproper}
+Suppose that $G$ is reductive.  For each finite set $I$ and each $\mu \in \mathbb{X}_{\bullet}^+$, define $P$ to make the following square into a pullback in the category of topological spaces:
 $$
 \begin{tikzcd}
 P \arrow{r} \arrow{d}{f} & Gr_{G,\text{Ran},\le \mu}(\mathbb{C}) \arrow{d} \\
-\mathbb{C}^n \arrow{r} & \text{Ran}_{\mathbb{A}^1}(\mathbb{C}).
+\mathbb{C}^I \arrow{r} & \text{Ran}_{\mathbb{A}^1}(\mathbb{C}).
 \end{tikzcd}
 $$
 Then the map $f$ is a proper map of topological spaces.
 \end{lem}
 
 The authors understand the above fact to be folklore in the geometric representation theory literature.  A reference is BLAH.  A sketch of a proof in the algebro-geometric context can be found in BLAH.  \textbf{Figure out a better way to sell this}
+
+
+
+
+\begin{prop}\label{prop:schubertE2}
+%Choose a (cofinal??) dominant coweight. 
+Let $\mu \in \mathbb{X}_{\bullet}^+$ be a %cofinal? dominant coweight.
+Let $\Gr_{G, \bullet \mu}$ denote the filtered space with $n$th filtered piece $\Gr_{G, \leq n\mu}.$  
+Then $\Gr_{G,\bullet \mu}$ is an $\mathbb{E}_2$-algebra in filtered spaces.  
+\end{prop}
+
+%say something about why you get a fact algebra.
+%can you just directly get a disk algebra?
+Our strategy will be to apply Corollary \ref{cor:E2crit}.
+
+We also need the following point-set lemma:
+
+\begin{lem}\label{lem:colimproper}
+Let $I$ be a finite indexing category and $\{X_i\}_{i\in I}$ be a diagram of topological spaces indexed by $I$.  Let $X = \colim_{i\in I} X_i$ and suppose $f: Y \to X$ is a map of topological spaces with the property that for all $i\in I$, the natural map $f_i: Y\times_X X_i \to X_i$ is proper.  Then the map $f$ is proper.
+\end{lem}
+\begin{proof}
+write some shit or not?
+\end{proof}
+
+For any $X\subset \mathbb{C}$, $\mathrm{Ran}^{\leq n}(X)$ is a finite colimit of spaces of the form $X^J$ for a finite set $J$.  By \ref{lem:grproper}, the restriction of the Beilinson-Drinfeld Grassmannian over each $X^J$ is proper; we obtain the following corollary of Lemma \ref{lem:colimproper}:
+
+\begin{cor}
+Let $X\subset \mathbb{C}$.  Then, the restriction of the Beilinson-Drinfeld Grassmannian $\Gra(X)_{G,\bullet}^{\leq n} \to \mathrm{Ran}^{\leq n}(X)$ is proper.
+\end{cor}
+
+\begin{thm}
+Let $D\subset \mathbb{C}$ be a disk and $\{x \} \hookrightarrow D$ be a point.  Then, the natural map $\Gra(\{x\}) \to \Gra(D)$ is an equivalence of filtered spaces.  
+\end{thm}
+\begin{proof}
+We would like to show that for each $k\in \mathbb{Z}_{\geq 0}$, the natural map $\Gra_{G,\leq k \mu}(\{ x\}) \to \Gra_{G,\leq k\mu}(D)$ is an equivalence of spaces.  It suffices to show that this is true upon restricting to $\Ran^{\leq n}$ for each $n$, because $\Gra_{G, \leq k \mu} = \colim_n \Gra^{\leq n}_{G,\leq k\mu}$ is a filtered colimit of closed inclusions.  For ease of notation, fix $n,k\in \mathbb{Z}_{\geq 0}$ and let $\Gra$ stand in for $\Gra^{\leq n}_{G,\leq k \mu}$ for the remainder of the proof.  
+
+We have a square
+ 
+\begin{tikzcd}
+\Gra (\{ x\}) \arrow[r]\arrow[d] & \Gra (D) \arrow[d]\\
+\{x \} = \Ran(\{ x\} ) & \Ran (D)
+\end{tikzcd}
+
+\end{proof}
+
 
 \begin{cor}
 Gives E2 filtered spaces...Allen will add this.  
