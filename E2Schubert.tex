@@ -55,7 +55,7 @@ Thus, the Schubert filtration is strictly coarser than the James filtration.  In
 In this paper, we are interested in a filtration called the \emph{Bott filtration} of $\Omega SL_n(\mathbb{C}).$  For $\Omega SL_2(\mathbb{C}),$ the Bott filtration corresponds to the James filtration on $\Omega S^3$, and in particular is \textbf{not} given by the Schubert filtration on $Gr_{SL_2}(\mathbb{C})$.  However, in Section CITE, we will explain how to obtain the Bott filtration from the Schubert filtration, while in the remainder of this section we will explain how the Schubert filtration interacts with the $\mathbb{E}_2$-algebra structure on $\Omega SL_2(\mathbb{C})$.
 \end{exm}
 
-\subsection{$\mathbb{E}_2$-algebras via factorization algebras}
+\subsection{$\mathbb{E}_2$-algebras via disk algebras}
 
 The $\mathbb{E}_2$-algebra structure on $\Omega G$ is elegantly encoded in algebraic geometry through the notion of the Beilinson--Drinfeld Grassmannian.  In this section we explain this structure and why it gives $\mathbb{E}_2$ algebras in topology.  We start by explaining the picture in topology following \cite[\S 5.5]{HA}.
 
@@ -66,18 +66,23 @@ Let $\Fin^{\leq n}_{\mathrm{surj}}$ denote the category of finite sets of cardin
 \end{dfn}
 
 \begin{rmk}
-There is another topology on the Ran space, given for instance in \cite{HA}.  The results that we cite from \cite{HA} work equally well for either topology, so we will use the colimit topology throughout.  
+There is another topology on the Ran space, given for instance in \cite[\S 5.5]{HA}.  For our purposes, it will not matter which topology we use, so we will use the colimit topology throughout.  
 \end{rmk}
 
-Classically, given a symmetric monoidal category $\C$, one thinks of an $\mathbb{E}_2$-algebra $A$ as an object with multiplications parametrized by embeddings of disjoint unions of disks.  We can think of this as giving for each point in the plane $x\in \mathbb{C}$ a copy $A_x$ of $A$.  On an infinitesimal scale, the embeddings of disks can be thought of as the collision of points in the plane.  The Ran space precisely tracks this collision data, and it is through this that the Ran space gives another way of thinking about an $\mathbb{E}_2$-algebra.  More precisely, given an $\mathbb{E}_2$-algebra $A$ and a finite set of points in the plane $\{x_i\}_{i\in I} \in \Ran(\mathbb{C})$, one can form the tensor product $\bigotimes_{x\in X} A_x.$  These tensor products turn out to be stalks of a cosheaf on $\Ran(\mathbb{C})$; the functoriality in the Ran space is expresses the idea of points colliding determining the multiplicative structure.  
+Classically, given a symmetric monoidal category $\C$, one thinks of an $\mathbb{E}_2$-algebra $A$ as an object with multiplications parametrized by embeddings of disjoint unions of disks.  We can think of this as giving for each point in the plane $x\in \mathbb{C}$ a copy $A_x$ of $A$.  On an infinitesimal scale, the embeddings of disks can be thought of as the collision of points in the plane.  The Ran space precisely tracks this collision data, and it is through this that the Ran space gives another way of thinking about an $\mathbb{E}_2$-algebra.  More precisely, given an $\mathbb{E}_2$-algebra $A$ and a finite set of points in the plane $\{x_i\}_{i\in I} \in \Ran(\mathbb{C})$, one can form the tensor product $\bigotimes_{x\in X} A_x.$  These tensor products turn out to be stalks of a cosheaf on $\Ran(\mathbb{C})$; the functoriality in the Ran space expresses the idea of points colliding determining the multiplicative structure.  
 
-This story can be made precise in the language of $\infty$-operads.  The disk philosophy is captured by an $\infty$-operad  $\mathrm{Disk}(\mathbb{C})^\otimes$ whose algebras $A$ can be thought of as giving an object $A(D)\in\C$ for each disk $D\subset \mathbb{C}$ and coherent maps $A(D_1)\otimes A(D_2)\otimes \cdots \otimes A(D_k) \to A(D)$ for inclusions $D_1\coprod \cdots \coprod D_n \to D$ of disks.  The following theorem relates these to $\mathbb{E}_2$-algebras\footnote{For technical reasons, we will work with the non-unital (abbreviated `$\mathrm{nu}$') variants of $\mathbb{E}_2$ and $\mathrm{Disk}(\mathbb{C})$-algebras from now on.}:
+This story can be made precise in the language of $\infty$-operads as in \cite[\S 5.4.5]{HA}.  There is a colored operad $\mathrm{Disk}(\mathbb{C})$ whose colors are disks (open subspaces of $\mathbb{C}$ which are homeomorphic to $\mathbb{R}^2$).  The set of operations from $(D_1, D_2, \cdots, D_n)$ to $D$ is the singleton if the $D_i$ are disjoint and contained in $D$, and empty otherwise.  From this colored operad, we may obtain an $\infty$-operad $\N(\mathrm{Disk}(\mathbb{C}))^{\otimes}$ whose algebras we will refer to as $\N(\mathrm{Disk}(\mathbb{C}))$-algebras.  A $\N(\mathrm{Disk}(\mathbb{C}))$ algebra $A$ is the data of an object $A(D)\in\C$ for each disk $D\subset \mathbb{C}$ and coherent maps $A(D_1)\otimes A(D_2)\otimes \cdots \otimes A(D_n) \to A(D)$ for inclusions $D_1\coprod \cdots \coprod D_n \to D$ of disks.  %We will produce a $N(\mathrm{Disk}(\mathbb{C}))$ algebra by 
+
+The following theorem relates these to $\mathbb{E}_2$-algebras\footnote{For technical reasons, we will work with the non-unital (abbreviated `$\mathrm{nu}$') variants of $\mathbb{E}_2$ and $\mathrm{Disk}(\mathbb{C})$-algebras from now on.}:
 
 \begin{thm}[Proposition 5.4.5.15, \cite{HA}]\label{thm:lcdisk}
-There is a fully faithful functor $\Alg^{\mathrm{nu}}_{\mathbb{E}_2}(\C) \to \Alg^{\mathrm{nu}}_{\mathrm{Disk}(\mathbb{C})}(\C)$ with essential image the full subcategory of $\mathrm{Disk}(\mathbb{C})_{\mathrm{nu}}$-algebras $A$ which are \emph{locally constant} in the sense that for every embedding $D\hookrightarrow D'$ of disks, the natural map $A(D)\to A(D')$ is an equivalence.  
+There is a fully faithful functor $\Alg^{\mathrm{nu}}_{\mathbb{E}_2}(\C) \to \Alg^{\mathrm{nu}}_{\N(\mathrm{Disk}(\mathbb{C}))}(\C)$ with essential image the full subcategory of $\N(\mathrm{Disk}(\mathbb{C}))_{\mathrm{nu}}$-algebras $A$ which are \emph{locally constant} in the sense that for every embedding $D\hookrightarrow D'$ of disks, the natural map $A(D)\to A(D')$ is an equivalence.  
 \end{thm}
 
-The Ran viewpoint is captured by an $\infty$-operad $\mathrm{Fact}(\mathbb{C})^{\otimes}$ whose algebras $A$ are the data of an object $A(U)\in\C$ functorially for every open set $U\subset \mathrm{Ran}(\mathbb{C})$ together with structure of \emph{factorization} maps $A(U)\otimes A(V) \to A(U\times V)$ whenever $U$ and $V$ are independent subsets of $\mathrm{Ran}(\mathbb{C})$ (and similar data for more opens).\footnote{The reader unfamiliar with the Ran space can keep in mind the example when $U=\mathrm{Ran}(D_1)$, $V=\mathrm{Ran}(D_2)$ for disjoint disks $D_1,D_2\subset \mathbb{C}$, in which case $U\times V = \mathrm{Ran}(D_1\coprod D_2).$}  
+We will make our $\mathbb{E}_2$-algebras by constructing a $\N(\mathrm{Disk}(\mathbb{C}))_{\mathrm{nu}}$-algebra and checking the condition of Theorem \ref{thm:lcdisk}.  
+
+\begin{comment}
+The Ran viewpoint is captured by an $\infty$-operad $\mathrm{Fact}(\mathbb{C})^{\otimes}$ whose algebras $A$ are the data of an object $A(U)\in\C$ functorially for every open set $U\subset \mathrm{Ran}(\mathbb{C})$ together with structure of \emph{factorization} maps $A(U)\otimes A(V) \to A(U\times V)$ whenever $U$ and $V$ are independent subsets of $\mathrm{Ran}(\mathbb{C})$ (and similar data for more opens).\footnote{The reader unfamiliar with the Ran space can keep in mind the example when $U=\mathrm{Ran}(D_1)$, $V=\mathrm{Ran}(D_2)$ for disjoint disks $D_1,D_2\subset \mathbb{C}$, in which case $U\times V = \mathrm{Ran}(D_1\coprod D_2).$}  %NOPE THIS IS WRONG!
 
 %\begin{rmk}Given a space $f: X \to \Ran(\mathbb{C})$, one can provide part of the data of
 %We emphasize that these factorization maps are \emph{extra structure}.  somehow we should emphasize this when talking about the BDGr, since the referee asked about it
@@ -96,26 +101,47 @@ We summarize the preceding discussion by drawing the following corollary of Theo
 \begin{cor} \label{cor:E2crit}
 Let $\C$ be a symmetric monoidal $\infty$-category and $A \in \C$ be a $\mathrm{Fact}(\mathbb{C})$ algebra.  Suppose that $A$ has the property that for any inclusion $D\subset D' \subset \mathbb{C}$ of disks, the natural map $A(\mathrm{Ran}(D))\to A(\mathrm{Ran}(D'))$ is an equivalence.  Then, for any disk $D\subset \mathbb{C}$, $A(\mathrm{Ran}(D))$ inherits the structure of a non-unital $\mathbb{E}_2$-algebra in $\C$.  
 \end{cor}
+\end{comment}
 
 
 \subsection{The Beilinson-Drinfeld Grassmannian}
-The structure described in the previous section arises naturally in algebraic geometry in the form of the Beilinson-Drinfeld Grassmannian.  Our goal in this section is to set up this object and describe the $\mathbb{E}_2$ algebras it produces via Corollary \ref{cor:E2crit}.
+The structure described in the previous section arises naturally in algebraic geometry in the form of the Beilinson-Drinfeld Grassmannian.  Our goal in this section is to set up this object and describe the $\mathbb{E}_2$ algebras it produces via Theorem \ref{thm:lcdisk}.
 
 \begin{dfn}
-The \textit{Ran space} $\text{Ran}_{\mathbb{A}^1}$ is the presheaf that assigns to every $\mathbb{C}$-algebra $R$ the set of non-empty finite subsets of $\text{Spec}(R) \times \mathbb{A}^1$ over $\text{Spec}(R)$.   The Beilinson--Drinfeld Grassmannian is the presheaf $Gr_{G,\text{Ran}}$ that assigns to each $\mathbb{C}$-algebra $R$ the set of triplets $(x,\mathcal{E},\beta)$, where $x \in \text{Ran}(\mathbb{A}^1)(R)$, $\mathcal{E}$ is a $G$-torsor on $\mathbb{A}^1 \times \text{Spec}(R)$, and $\beta$ is a trivialization of $\mathcal{E}$ away from the graph of $x$ in $\text{Spec}(R) \times \mathbb{A}^1$.
+The \textit{Ran space} $\text{Ran}_{\mathbb{A}^1}$ is the presheaf that assigns to every $\mathbb{C}$-algebra $R$ the set of non-empty finite subsets of $\text{Spec}(R) \times \mathbb{A}^1$ over $\text{Spec}(R)$.   The Beilinson--Drinfeld Grassmannian is the presheaf $Gr_{G,\text{Ran}}$ that assigns to each $\mathbb{C}$-algebra $R$ the set of triplets $(x,\mathcal{E},\beta)$, where $x \in \text{Ran}_{\mathbb{A}^1}(R)$, $\mathcal{E}$ is a $G$-torsor on $\mathbb{A}^1 \times \text{Spec}(R)$, and $\beta$ is a trivialization of $\mathcal{E}$ away from the graph of $x$ in $\text{Spec}(R) \times \mathbb{A}^1$.
 \end{dfn}
 
-The Beilinson--Drinfeld Grassmannian is naturally fibered over the Ran space.  Again, we shall be primarily interested in complex points.  As explained above, a point $x$ in $\text{Ran}_{\mathbb{A}^1}(\mathbb{C})$ consists of a non-empty finite subset $I \subset \mathbb{C}$ of points in $\mathbb{C}$.  The fiber of the Beilinson--Drinfeld Grassmannian $Gr_{G,\text{Ran}}(\mathbb{C})$ over $x$ is the moduli of $G$-bundles on $\mathbb{A}^1$ equipped with a trivialization away from the points in $I$.  This fiber is non-canonically isomorphic to the product of $|I|$ copies of affine Grassmannian $Gr_G(\mathbb{C})$.  
+The Beilinson--Drinfeld Grassmannian is naturally fibered over the Ran space.  Again, we shall be primarily interested in complex points.  Let us denote the map on complex points by $$\Gra_{G,\Ran}(\mathbb{C}) \xrightarrow{p} \Ran(\mathbb{C})$$ and for an open set $U\in \mathbb{C}$, let $\Gra_{G,\Ran}(U):= p^{-1}(\Ran(U)).$   As explained above, a point $x$ in $\text{Ran}(\mathbb{C})$ consists of a non-empty finite subset $I \subset \mathbb{C}$ of points in $\mathbb{C}$.  The fiber of the Beilinson--Drinfeld Grassmannian $Gr_{G,\text{Ran}}(\mathbb{C})$ over $x$ is the moduli of $G$-bundles on $\mathbb{A}^1$ equipped with a trivialization away from the points in $I$.  This fiber is non-canonically isomorphic to the product of $|I|$ copies of affine Grassmannian $Gr_G(\mathbb{C})$.  
 
 Via the machinery in the previous section (as we will explain in more detail later), $Gr_{G,\text{Ran}}(\mathbb{C})$ describes the $\mathbb{E}_2$-algebra structure on the affine Grassmannian.  However, we are interested in the compatibility of this $\mathbb{E}_2$ structure with certain filtrations on $Gr_G(\mathbb{C})$.  We must therefore exhibit a filtration on the whole Beilinson-Drinfeld Grassmannian.  In particular, we filter $Gr_{G,\text{Ran}}(\mathbb{C})$ by spaces $Gr_{G,\text{Ran},\le \mu}$, allowing us to view $Gr_{G,\text{Ran}}(\mathbb{C})$ as an $\mathbb{X}_{\bullet}^+$-filtered topological space in the sense of Definition \ref{def:coweightfiltered}.  
 
 To do so, consider an arbitrary point $p \in \text{Gr}_{G,\text{Ran}}(\mathbb{C})$, consisting of a $G$-bundle $\gamma$ on $\mathbb{A}^1$ trivialized away from a collection of points $I=(i_1,i_2,...,i_\ell) \subset \mathbb{C}$.  For each point $i_k \in \mathbb{C}$, the restriction of $\gamma$ to a formal neighborhood of $i_k$ has well-defined monodromy $\mu_k$, in the sense of Remark \ref{rem:monodromy}.  We say that $p$ lives in $\text{Gr}_{G,\text{Ran},\le \mu}(\mathbb{C})$ if and only if
-$$\sum_{i=1}^{k} \mu_k \le \mu.$$
+$$\sum_{i=1}^{k} \mu_k \le \mu.$$  This defines $\Gra_{G,\Ran}(\mathbb{C})$ as a $\mathbb{X}^+_{\bullet}$-filtered topological space.
 
-The following fact is key to us:
+We will ultimately be concerned with certain filtered spectra that one can extract from $\Gra_{G}(\mathbb{C})$ and its coweight filtration.  Given a dominant coweight $\mu \in \mathbb{X}^+_{\bullet}$, one obtains a filtered spectrum $ \{ \Sigma^{\infty}_+ \Gra_{G,\leq k\mu}(\mathbb{C})\}_{k\in \mathbb{Z}_{\geq 0}}$. In the case when the sublattice of $\mathbb{X}^+_{\bullet}$ generated by $\mu$ is cofinal, the filtration is exhaustive.  We will now choose and fix such a dominant coweight $\mu$.  Our goal for the remainder of the section is to prove the following fact:
+
+\begin{prop}\label{prop:schubertE2}
+The filtered spectrum $\{\Sigma^{\infty}_+ \Gra_{G, k \mu} \}_{k\in \mathbb{Z}_{\geq 0}}$ naturally admits the structure of an $\mathbb{E}_2$-algebra in filtered spectra.
+\end{prop}
+
+\begin{cnstr}\label{cnstr:diskalg}
+We proceed by defining a $\mathrm{Disk}(\mathbb{C})_{\mathrm{nu}}$ algebra $\bar{A}$ valued in filtered topological spaces.  This will arise from the map $p:\Gra_{G,\Ran}(\mathbb{C}) \to \Ran(\mathbb{C})$ constructed above.  For a disk $D\subset \mathbb{C}$, we define $\bar{A}(D) := \Gra_{G,\Ran}(D).$  Explicitly, the points of $\bar{A}(D)$ are given by the data of a pair $(I, \mathcal{F}_I)$ where $I\subset D$ is a nonempty finite subset and $\mathcal{F}_I$ is a principal $G$-bundle with a trivialization away from $I$.  Let $D_1 \coprod D_2\coprod \cdots \coprod D_n \hookrightarrow D$ be the nonempty inclusion of disjoint disks into a larger disk $D$.  To define a $\mathrm{Disk}(\mathbb{C})_{\mathrm{nu}}$ algebra, we need to exhibit maps $\bar{A}(D_1)\times \cdots \times \bar{A}(D_n) \to \bar{A}(D)$ satisfying the obvious coherences.  %This is the key extra structure that the Beilinson-Drinfeld Grassmannian possesses
+This map sends the point determined by $(I_1, \mathcal{F}_1), \cdots, (I_n, \mathcal{F}_n)$ to the point $(I, \mathcal{F})$ where $I= I_1 \coprod \cdots \coprod I_n$ and $\mathcal{F}$ is obtained by gluing the $\mathcal{F}_i$ along the trivializations away from $I$.  
+\end{cnstr}
+\begin{rmk}
+More generally, the Beilinson-Drinfeld Grassmannian yields the structure of a \emph{factorizable cosheaf} on the Ran space.  The key structure present is that of \emph{factorization}, which roughly says that the Grassmannian over two disjoint subsets $U,V\subset \mathbb{C}$ is equivalent to the product of the Grassmannians over the two sets separately.  One sees this is also the structure that is giving us the disk algebras in Construction \ref{cnstr:diskalg}.  However, we have chosen to work directly with the underlying $\mathrm{Disk}(\mathbb{C})$-algebra and avoid directly discussing factorization algebras; the interested reader can refer to \cite[\S 5.5.4.10]{HA} for a comparison of these concepts.  
+\end{rmk}
+
+Passing to $\infty$-categories and stabilizing, we obtain a $\N(\mathrm{Disk}(\mathbb{C}))_{\mathrm{nu}}$-algebra $A$ valued in filtered spectra whose value on a disk $D$ is $A(D) = \Sigma^{\infty}_+ \bar{A}(D) = \Sigma^{\infty}_+ \Gra_{G,\Ran}(D)$.  The following theorem is the essential non-formal input to producing an $\mathbb{E}_2$-algebra.  
+
+\begin{prop}\label{prop:diskequiv}
+Suppose that $G$ is reductive and let $D\subset \mathbb{C}$ be a disk and $\{x \} \hookrightarrow D$ be a point.  Then, the natural map $\Gra_{G,\Ran}(\{x\}) \to \Gra_{G,\Ran}(D)$ induces an equivalence of filtered spectra.  
+\end{prop}
+
+The theorem will come down to the following key fact:
 
 \begin{lem} \label{lem:grproper}
-Suppose that $G$ is reductive.  For each finite set $I$ and each $\mu \in \mathbb{X}_{\bullet}^+$, define $P$ to make the following square into a pullback in the category of topological spaces:
+Suppose that $G$ is reductive.  For each finite set $I$ and each $\mu \in \mathbb{X}_{\bullet}^+$, define $P$ so that the following square is a pullback in the category of topological spaces:
 $$
 \begin{tikzcd}
 P \arrow{r} \arrow{d}{f} & Gr_{G,\text{Ran},\le \mu}(\mathbb{C}) \arrow{d} \\
@@ -128,50 +154,37 @@ Then the map $f$ is a proper map of topological spaces.
 The authors understand the above fact to be folklore in the geometric representation theory literature.  A reference is BLAH.  A sketch of a proof in the algebro-geometric context can be found in BLAH.  \textbf{Figure out a better way to sell this}
 
 
-
-
-\begin{prop}\label{prop:schubertE2}
-%Choose a (cofinal??) dominant coweight. 
-Let $\mu \in \mathbb{X}_{\bullet}^+$ be a %cofinal? dominant coweight.
-Let $\Gr_{G, \bullet \mu}$ denote the filtered space with $n$th filtered piece $\Gr_{G, \leq n\mu}.$  
-Then $\Gr_{G,\bullet \mu}$ is an $\mathbb{E}_2$-algebra in filtered spaces.  
-\end{prop}
-
-%say something about why you get a fact algebra.
-%can you just directly get a disk algebra?
-Our strategy will be to apply Corollary \ref{cor:E2crit}.
-
 We also need the following point-set lemma:
 
 \begin{lem}\label{lem:colimproper}
 Let $I$ be a finite indexing category and $\{X_i\}_{i\in I}$ be a diagram of topological spaces indexed by $I$.  Let $X = \colim_{i\in I} X_i$ and suppose $f: Y \to X$ is a map of topological spaces with the property that for all $i\in I$, the natural map $f_i: Y\times_X X_i \to X_i$ is proper.  Then the map $f$ is proper.
 \end{lem}
 \begin{proof}
-write some shit or not?
+****write some shit or not?****
 \end{proof}
 
-For any $X\subset \mathbb{C}$, $\mathrm{Ran}^{\leq n}(X)$ is a finite colimit of spaces of the form $X^J$ for a finite set $J$.  By \ref{lem:grproper}, the restriction of the Beilinson-Drinfeld Grassmannian over each $X^J$ is proper; we obtain the following corollary of Lemma \ref{lem:colimproper}:
+For any $X\subset \mathbb{C}$, $\mathrm{Ran}^{\leq n}(X)$ is a finite colimit of spaces of the form $X^J$ for a finite set $J$.  Combining this with Lemma \ref{lem:grproper}, we obtain the following corollary:
 
-\begin{cor}
+\begin{cor}\label{cor:ranproper}
 Let $X\subset \mathbb{C}$.  Then, the restriction of the Beilinson-Drinfeld Grassmannian $\Gra(X)_{G,\bullet}^{\leq n} \to \mathrm{Ran}^{\leq n}(X)$ is proper.
 \end{cor}
 
-\begin{thm}
-Let $D\subset \mathbb{C}$ be a disk and $\{x \} \hookrightarrow D$ be a point.  Then, the natural map $\Gra(\{x\}) \to \Gra(D)$ is an equivalence of filtered spaces.  
-\end{thm}
-\begin{proof}
-We would like to show that for each $k\in \mathbb{Z}_{\geq 0}$, the natural map $\Gra_{G,\leq k \mu}(\{ x\}) \to \Gra_{G,\leq k\mu}(D)$ is an equivalence of spaces.  It suffices to show that this is true upon restricting to $\Ran^{\leq n}$ for each $n$, because $\Gra_{G, \leq k \mu} = \colim_n \Gra^{\leq n}_{G,\leq k\mu}$ is a filtered colimit of closed inclusions.  For ease of notation, fix $n,k\in \mathbb{Z}_{\geq 0}$ and let $\Gra$ stand in for $\Gra^{\leq n}_{G,\leq k \mu}$ for the remainder of the proof.  
+\begin{proof}[Proof of Proposition \ref{prop:diskequiv}]
+In order to show an equivalence of filtered spectra, we would like to show that for each $k\in \mathbb{Z}_{\geq 0}$, the natural map $\Gra_{G,\leq k \mu}(\{ x\}) \to \Gra_{G,\leq k\mu}(D)$ induces an equivalence of spectra.  It suffices to show that this is true upon restricting to $\Ran^{\leq n}$ for each $n$, because $\Gra_{G, \leq k \mu} = \colim_n \Gra^{\leq n}_{G,\leq k\mu}$ is a filtered colimit of closed inclusions.  For ease of notation, fix $n,k\in \mathbb{Z}_{\geq 0}$ and let $\Gra$ stand in for $\Gra^{\leq n}_{G,\leq k \mu}$ for the remainder of the proof.  
 
-We have a square
- 
+We have a pullback square of topological spaces %is p some sort of fibration?
+\begin{equation*}
 \begin{tikzcd}
-\Gra (\{ x\}) \arrow[r]\arrow[d] & \Gra (D) \arrow[d]\\
-\{x \} = \Ran(\{ x\} ) & \Ran (D)
-\end{tikzcd}
+\Gra (\{ x\}) \arrow[r,"i"]\arrow[d,"p_x"] & \Gra (D) \arrow[d,"p"]\\
+\{x \} = \Ran^{\leq n}(\{ x\} )\arrow[r,"j"] & \Ran^{\leq n}(D)
+\end{tikzcd} \end{equation*}
+where $p$ and $p_x$ are proper by Corollary \ref{cor:ranproper}.  We show that the upper map $i$ induces an isomorphism on cohomology.  %why is that enough? can we show Gr(D) is simply connected? seems fine if you know p is a fibration; well we only need an equivalence of spectra
 
-\end{proof}
+Applying the proper base change theorem to the constant sheaf $\underline{\mathbb{Z}}$ on $\Gra(D)$, we find that there is a natural equivalence $j^*p_*(\underline{\mathbb{Z}}) \xrightarrow{\sim} (p_x)_{*}i^*(\underline{\mathbb{Z}}).$  The right-hand side is $C^*(\Gra(\{x\}) ;\mathbb{Z})$, the integral cohomology of the fiber at $x$.  On the other hand, the left-hand side is by definition $$\colim_{x\in U} C^*(p^{-1}(U);\mathbb{Z})$$ where the colimit is taken over $U\subset \Ran^{\leq n}(D)$ containing $x$.  We may compute this colimit by extracting a cofinal sequence of opens $$x \subset \cdots \subset \Ran^{\leq n}(D_k) \subset \cdots \subset \Ran^{\leq n}(D_0)$$ where $D_i$ are disks such that $D_0=D$.  The transition maps in this system induce equivalences because there is a deformation retraction of $D_k$ onto $D_{k+1}$.  Therefore, we conclude that $$\colim_{x\in U} C^*(p^{-1}(U);\mathbb{Z}) \simeq C^*(\Gra(D); \mathbb{Z})$$ and so the map $i$ induces a cohomology isomorphism as desired.  
+\end{proof} 
 
+Proposition \ref{prop:diskequiv} simultaneously checks that our $\N (\mathrm{Disk}(\mathbb{C}))_{\mathrm{nu}}$-algebra $A$ satisfies the condition of Theorem \ref{thm:lcdisk} and identifies the underlying spectrum of the resulting non-unital $\mathbb{E}_2$-algebra as the fiber of the Beilinson-Drinfeld Grassmannian over a point of the Ran space.  This is precisely the filtered spectrum $\{ \Sigma^{\infty}_+ \Gra_{G,\leq k\mu}\}_{k \in \mathbb{Z}_{\geq 0}}$ determined by the affine Grassmannian and choice of coweight $\mu$.  
 
-\begin{cor}
-Gives E2 filtered spaces...Allen will add this.  
-\end{cor}
+***insert some stuff about unitality***
+
+This completes the proof of Proposition \ref{prop:schubertE2}.  
