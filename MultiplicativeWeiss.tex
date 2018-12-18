@@ -118,7 +118,7 @@ We will show that this implies the following further corollary:
 \begin{cor}\label{cor:varphiequiv}
 The map $\varphi_n$ constructed above is an equivalence for all $n$ when $F,G\in \Sp^{\J}_{\text{conv}}$ are rapidly convergent functors.  
 \end{cor}
-The proof will require the following basic lemma whose proof we will record at the end of this section: 
+The proof will require the following basic lemma whose proof we will record at the end of Appendix \ref{sect:monoidal2}.  
 \begin{lem}\label{lem:cubes}
 Let $X$, $Y \in \Cofil(\Sp^{\J})$ and $n>0$ an integer.  Then we have the following formula for the successive fibers: $$\fib ((X\otimes Y)_{n} \to (X\otimes Y)_{n-1}) \simeq \coprod_{p+q=n} \fib (X_p\to X_{p-1}) \wedge \fib (Y_q \to Y_{q-1}).$$
 \end{lem}
@@ -145,23 +145,4 @@ Let $V\in \J$ be a complex vector space.
 The functor $F_V\in \Sp^{\J}$ defined by $$F_V(W) = \Sigma^{\infty}_+ \Omega \J(V, V\oplus W)$$ determines a cofiltered associative algebra $\mathrm{Tow}(F_V) \in \Alg_{\mathbb{A}_{\infty}}(\Cofil(\Sp^{\J})).$
 \end{cor}
 
-
-We finish with a proof omitted earlier:
-\begin{proof}[Proof of Lemma \ref{lem:cubes}]
-Let $A_n\subset \Z^{op}_{\geq 0} \times \Z^{op}_{\geq 0} $ be the full subcategory spanned by pairs $(p,q)$ with $p+q \leq n$.  
-
-Define a functor $T:\Z^{op}_{\geq 0} \times \Z^{op}_{\geq 0}  \to \Sp^{\J}$ by the formula $T(p,q) = X_p \wedge Y_q.$  We have by definition that $\lim T|_{A_n} \simeq (X\otimes Y)_{n}$.%, so we wish to calculate the fiber of the natural map $\lim T|_{A_n} \to \lim T|_{A_{n-1}}.$  
-
-Define the functor $\overline{T_n}: A_n \to \Sp^{\J}$ as the right Kan extension of $T|_{A_{n-1}}$ along the inclusion $A_{n-1} \to A_{n}.$   Then, $\overline{T_n}$ has the following properties:
-\begin{enumerate}
-\item $\lim \overline{T_n} = \lim T|_{A_{n-1}}.$
-\item $\overline{T_n}|_{A_{n-1}} = T|_{A_{n-1}}.$
-\item $\overline{T_n}(n,0) = X_{n-1} \wedge Y_0$ and $\overline{T_n}(0,n) = X_0\wedge Y_{n-1}.$
-\item $\overline{T_n}(p,q) = X_{p-1}\wedge Y_{q} \times_{X_{p-1}\wedge Y_{q-1}} X_p\wedge Y_{q-1}$ for $p+q=n$, $p,q\geq 1$.  
-\end{enumerate}
-
-We may therefore compute $$\text{fib}\big(\lim_{A_n} T|_{A_n} \to \lim_{A_{n-1}} T|_{A_{n-1}}\big) = \text{fib}\big(\lim_{A_n} T|_{A_n} \to \lim_{A_n} \overline{T_n}\big) = \lim_{A_n} \text{fib}\big(T|_{A_n} \to \overline{T_n}\big).$$
-
-The conclusion now follows immediately from the usual fact that $$\text{fib}(X_p\wedge Y_q \to X_{p-1}\wedge Y_{q} \times_{X_{p-1}\wedge Y_{q-1}} X_p\wedge Y_{q-1}) = \text{fib}(X_p\to X_{p-1}) \wedge \text{fib}(Y_q \to Y_{q-1}).$$
-\end{proof}
 

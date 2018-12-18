@@ -5,8 +5,6 @@ It will be important for us to have a precise language for discussing filtered a
 \subsection{First definitions}
 Let $\D$ be an $\infty$-category which we will regard as the diagram category.  Our filtered objects will be valued in the functor category $\Sp^{\D}.$  This will be no more difficult than just ordinary spectra because limits, colimits, and smash products will be considered pointwise; in any case, we will refer to objects of $\Sp^{\D}$ as functors or simply as spectra.  
 
-Denote by $\Z_{\geq 0}$ the poset of non-negative integers thought of as an ordinary category where $\Hom(a,b)$ is a singleton if $a\leq b$, and empty otherwise.  Denote by $\Z_{\geq 0}^{ds}$ the corresponding discrete category.  We will implicitly take nerves to obtain $\infty$-categories which will serve as the indexing sets for filtered and graded spectra.  The reader is warned that our numbering conventions are opposite the ones in \cite{LurieRot}.
-
 \begin{dfn} 
 Let $\Gr(\Sp^{\D})$ denote the functor category $\Fun(\Z_{\geq 0}^{ds}, \Sp^{\D}).$  We shall refer to $\Gr(\Sp^{\D})$ as the category of graded objects in $\Sp^{\D}$.  Its objects can be thought of as sequences $X_0, X_1,X_2,\cdots \in \Sp^{\D}$.
 \end{dfn}
@@ -26,7 +24,7 @@ where the left adjoint $I: \Gr(\Sp^{\D}) \to \Fil(\Sp^{\D})$ is given by left Ka
 
 Inverse to this, there is an associated graded functor $\text{gr }: \Fil(\Sp^{\D}) \to \Gr(\Sp^{\D})$ such that the composite $\text{gr }\circ I : \Gr(\Sp^{\D}) \to \Gr(\Sp^{\D})$ is an equivalence.   This can be thought of pointwise by the formula $$\text{gr}(X_0\to X_1\to X_2\to \cdots) = (X_0, X_1/X_0, X_2/X_1, \cdots).$$
 
-As the names suggest, one may recover from a filtered or graded functor the underlying object.  For filtered objects, this is a functor $$\colim : \Fil(\Sp^{\D}) \to \Sp^{\D}$$ given by Kan extending along $\Z_{\geq 0}\to *.$   It can be thought of as taking the colimit.  For graded objects, the underlying object is simply the direct sum of all the graded piece. We will systematically abuse notation by conflating a graded spectrum with its underlying spectrum; however, when there is any ambiguity, we will specify whether we are referring to the graded object or the underlying.
+As the names suggest, one may recover from a filtered or graded functor the underlying object.  For filtered objects, this is a functor $$\colim : \Fil(\Sp^{\D}) \to \Sp^{\D}$$ given by Kan extending along $\Z_{\geq 0}\to *.$   It can be thought of as taking the colimit.  For graded objects, the underlying object is simply the direct sum of all the graded pieces. We will systematically abuse notation by conflating a graded spectrum with its underlying spectrum; however, when there is any ambiguity, we will specify whether we are referring to the graded object or the underlying.
 
 %, and will be written $$\bigvee : \Gr(\Sp^{\D}) \to \Sp^{\D}.$$
 
@@ -53,7 +51,17 @@ For graded spectra, the analogous formula is:
 $$(A_0,A_1,A_2,\cdots) \otimes (B_0,B_1,B_2,\cdots) \simeq \left( A_0 \smsh B_0, (A_1 \smsh B_0) \vee (A_0 \smsh B_1), \cdots, \bigvee_{i+j=n} A_i \smsh B_j, \cdots \right).$$
 
 
-The unit $\mathbb{S}^{gr}_{\D}$ of $\otimes$ in $\Gr(\Sp^{\D})$ is the constant diagram at $S^0$ in degree 0 and $*$ otherwise; the unit $\mathbb{S}^{fil}_{\D}$ in $\Fil(\Sp^{\D})$ is $I\mathbb{S}^{gr}_{\D}.$  We may then talk about $\E_n$-algebras in $\Gr(\Sp^{\D})$ and $\Fil(\Sp^{\D})$.  
+The unit $\mathbb{S}^{gr}_{\D}$ of $\otimes$ in $\Gr(\Sp^{\D})$ is the constant diagram at $S^0$ in degree 0 and $*$ otherwise; the unit $\mathbb{S}^{fil}_{\D}$ in $\Fil(\Sp^{\D})$ is $I\mathbb{S}^{gr}_{\D}.$  We may then talk about $\E_n$-algebras in $\Gr(\Sp^{\D})$ and $\Fil(\Sp^{\D})$ and their modules.
+
+\begin{rmk}
+One consequence of this is that one can recover filtered spectra as a module category inside the category of graded spectra.  There is a symmetric monoidal functor $\mathbb{Z}^{ds}_{\ge 0} \to \Sp$ sending each integer to $S^0$; this yields an $\mathbb{E}_\infty$-algebra $A=\Sigma^{\infty}_+ \mathbb{Z}^{ds}_{\ge 0}$ in $\Gr(\Sp)$.  The spectrum underlying $A$ is an infinite wedge of copies of $\mathbb{S}^0$.  Given a filtered spectrum $X$, $\mathrm{res }(X)$ acquires an action of $A$ where the $S^0$ in degree $1$ acts by ``shifting filtration.''  In fact, we have the following, as proven in \cite[Proposition 3.1.6]{LurieRot}:
+
+\begin{lem} \label{lem:FilAsGrMod}
+The functor $\mathrm{res}$ lifts to an equivalence
+$$\Fil(\Sp) \stackrel{\simeq}{\longrightarrow} \mathbf{Mod}_{A}(\Gr(\Sp))$$
+of symmetric monoidal $\infty$-categories.
+\end{lem}
+\end{rmk}  
 
 
 The functors $I$ and $\text{gr}$ can be given symmetric monoidal structures such that the composite $\text{gr}\circ I : \Gr(\Sp^{\D}) \to \Gr(\Sp^{\D})$ is a symmetric monoidal equivalence by \cite[Proposition 3.2.1]{LurieRot}.  It follows in particular that they extend to functors between the categories of $\E_n$-algebras in $\Gr(\Sp^{\D})$ and $\Fil(\Sp^{\D})$.  Thus, given an $\E_n$-algebra $Y$ in filtered spectra, we obtain a canonical $\E_n$ structure on its associated graded $\text{gr}(Y).$  Conversely, given $X\in \Alg_{\E_n}(\Gr(\Sp^{\D}))$, we obtain $IX\in \Alg_{\E_n}(\Fil(\Sp^{\D})).$  
@@ -93,14 +101,6 @@ Then, the filtered spectrum $X$ is $\E_n$-split.
 
 
 
-
-As a final remark, we note that the category of filtered spectra may be recovered as a module category inside the category of graded spectra.  Specifically, consider $A=\Sigma^{\infty}_+ \mathbb{Z}^{ds}_{\ge 0}$, the suspension of the nerve of the symmetric monoidal category $\mathbb{Z}^{ds}_{\ge 0}$, as an $\mathbb{E}_\infty$-algebra in $\Gr(\Sp)$.  The spectrum underlying $A$ is an infinite wedge of copies of $\mathbb{S}^0$.  Then the following may be shown by the argument in \cite[Proposition 3.1.6]{LurieRot}:
-
-\begin{lem} \label{lem:FilAsGrMod}
-The functor $\mathrm{res}$ lifts to an equivalence
-$$\Fil(\Sp) \stackrel{\simeq}{\longrightarrow} \mathbf{Mod}_{A}(\Gr(\Sp))$$
-of symmetric monoidal $\infty$-categories.
-\end{lem}
 
 
 

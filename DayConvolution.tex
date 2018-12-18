@@ -65,5 +65,23 @@ The universal property of $\Fun(\C_1, \D)^{\otimes}$ immediately implies the exi
 Assumptions (1) and (2) of Proposition \ref{prop:dayconvsmc} guarantee that the adjunction exists at the level of $\infty$-categories.  The rest of the proof from \cite[Corollary 3.8]{Nikolaus} carries over verbatim.  
 \end{proof}
 
+\subsection{Proof of Lemma \ref{lem:cubes}}
+Let $A_n\subset \Z^{op}_{\geq 0} \times \Z^{op}_{\geq 0} $ be the full subcategory spanned by pairs $(p,q)$ with $p+q \leq n$.  
+
+Define a functor $T:\Z^{op}_{\geq 0} \times \Z^{op}_{\geq 0}  \to \Sp^{\J}$ by the formula $T(p,q) = X_p \wedge Y_q.$  We have by definition that $\lim T|_{A_n} \simeq (X\otimes Y)_{n}$.%, so we wish to calculate the fiber of the natural map $\lim T|_{A_n} \to \lim T|_{A_{n-1}}.$  
+
+Define the functor $\overline{T_n}: A_n \to \Sp^{\J}$ as the right Kan extension of $T|_{A_{n-1}}$ along the inclusion $A_{n-1} \to A_{n}.$   Then, $\overline{T_n}$ has the following properties:
+\begin{enumerate}
+\item $\lim \overline{T_n} = \lim T|_{A_{n-1}}.$
+\item $\overline{T_n}|_{A_{n-1}} = T|_{A_{n-1}}.$
+\item $\overline{T_n}(n,0) = X_{n-1} \wedge Y_0$ and $\overline{T_n}(0,n) = X_0\wedge Y_{n-1}.$
+\item $\overline{T_n}(p,q) = X_{p-1}\wedge Y_{q} \times_{X_{p-1}\wedge Y_{q-1}} X_p\wedge Y_{q-1}$ for $p+q=n$, $p,q\geq 1$.  
+\end{enumerate}
+
+We may therefore compute $$\text{fib}\big(\lim_{A_n} T|_{A_n} \to \lim_{A_{n-1}} T|_{A_{n-1}}\big) = \text{fib}\big(\lim_{A_n} T|_{A_n} \to \lim_{A_n} \overline{T_n}\big) = \lim_{A_n} \text{fib}\big(T|_{A_n} \to \overline{T_n}\big).$$
+
+The conclusion now follows immediately from the usual fact that $$\text{fib}(X_p\wedge Y_q \to X_{p-1}\wedge Y_{q} \times_{X_{p-1}\wedge Y_{q-1}} X_p\wedge Y_{q-1}) = \text{fib}(X_p\to X_{p-1}) \wedge \text{fib}(Y_q \to Y_{q-1}).$$
+
+
 
 %should check I wrote lax *symmetric* monoidal, not just lax monoidal everywhere

@@ -128,10 +128,10 @@ Let $X\in \Alg_{\E_n}(\Fil(\Sp))$ be an $\E_n$ filtered spectrum.  Suppose there
 Then, the filtered spectrum $X$ is $\E_n$-split.
 \end{customthm}
 
-We wish to apply this theorem in the case where $X$ is the $\mathbb{A}_\infty$ filtered spectrum in Theorem \ref{thm:BottIsAoo}.  In Section \ref{sec:MultWeiss}, we produce the corresponding $\mathbb{A}_\infty$ cofiltered spectrum; the proof is then finished in Section \ref{sec:AooSplit}.  To do this, we extend the methods of \cite{Arone}, who used Weiss calculus to give an elegant second proof of the Mitchell--Richter splitting (without multiplicative structure).  
+We wish to apply this theorem in the case $n=1$, where $X$ is the $\mathbb{E}_1 = \mathbb{A}_\infty$ filtered spectrum in Theorem \ref{thm:BottIsAoo}.  In Section \ref{sec:MultWeiss}, we produce the corresponding $\mathbb{A}_\infty$ cofiltered spectrum; the proof is then finished in Section \ref{sec:AooSplit}.  To do this, we extend the methods of \cite{Arone}, who used Weiss calculus to give an elegant second proof of the Mitchell--Richter splitting (without multiplicative structure).  
 
-Arone's idea is to use additional functoriality present in the filtration of $\Omega SU(n)$.  Let $\J$ denote the topological category of complex vector spaces and embeddings, fix a complex vector space $V$, and consider the functor $$G:\J \longrightarrow \mathcal{S}\text{paces}$$
-given by $G(W)=\J(V,V \oplus W)$.  Observe that the special unitary group $SU(V \oplus \mathbb{C})$ arises as the value $G(\mathbb{C}) = \J (V,V\oplus \mathbb{C})$.  Weiss calculus provides a toolbox with which to study functors similar to $G$ -- a brief review of the theory is provided at the beginning of Section \ref{sec:MultWeiss}.  
+Arone's idea is to use additional functoriality present in the filtration of $\Omega SU(n)$.  Let $\J$ denote the topological category of complex vector spaces and embeddings, fix a complex vector space $V$, and consider the functor $$G_V:\J \longrightarrow \mathcal{S}\text{paces}$$
+given by $G_V(W)=\J(V,V \oplus W)$.  Observe that the special unitary group $SU(V \oplus \mathbb{C})$ arises as the value $G_V(\mathbb{C}) = \J (V,V\oplus \mathbb{C})$.  Weiss calculus provides a toolbox with which to study functors similar to $G_V$ -- a brief review of the theory is provided at the beginning of Section \ref{sec:MultWeiss}.  
 
 The Bott filtration in fact arises from a sequence of functors $$F_0(W) \to F_1(W) \to F_2(W) \to \cdots \to F(W) := \Sigma^{\infty}_+ \Omega \J(V, V\oplus W)$$ from $\J$ to spectra.  This filtration has the key property that the successive quotients $F_n/F_{n-1}$ are \emph{homogeneous functors of degree n}.  Arone then applies an argument of Goodwillie \cite[Example 1.20]{GoodwillieIII} to see that in this situation, the Weiss polynomial approximation $P_n F(W)$ is precisely the functor $F_n(W)$.  The approximations $$P_n F(W) \rightarrow P_{n-1} P_n F(W) \simeq P_{n-1} F(W)$$ provide Arone with splitting maps.
 
@@ -150,7 +150,7 @@ Is the Mitchell--Richter filtration of the loop space of a Stiefel manifold alwa
 \end{qst}
 
 \begin{qst}
-What are the proper motivic analogues of our results, phrased in the category of $\mathbb{A}^1$-invariant Nisnevich sheaves?
+What are the proper motivic analogues of our results, phrased in the category of $\mathbb{A}^1$-invariant Nisnevich sheaves? 
 \end{qst}
 
 \begin{qst}
@@ -160,4 +160,10 @@ What are the proper equivariant analogues of our result?  See for example \cite{
 \subsection*{Acknowledgements}
 The authors thank Greg Arone, Tom Bachmann, Lukas Brantner, Dennis Gaitsgory, Akhil Mathew, Haynes Miller, Denis Nardin, and Bill Richter for helpful conversations.  We were saddened to learn of the passing of Steve Mitchell during the preparation of this manuscript--his papers were a deep inspiration.  Special thanks are due to the authors' PhD advisors, Mike Hopkins and Jacob Lurie, both for their mathematical expertise and their consistent encouragement; many of the ideas in this paper grew out of their suggestions.  Special thanks are also due to Justin Campbell, James Tao, David Yang, and Yifei Zhao, all of whom spent numerous and invaluable hours answering naive questions about the Beilinson--Drinfeld Grassmannian.  The authors were supported by NSF Graduate Fellowships under Grants DGE-114415 and 1122374.
 
-\subsection*{Notation:} We use $\Sp$ to denote the category of spectra, and $\mathcal{S}$ the category of spaces.  As through the introduction, we will freely use the word category to refer to a not-necessarily truncated $\infty$-category.
+\subsection*{Notation and conventions:} 
+\begin{enumerate}
+\item As through the introduction, we will freely use the word category to refer to a not-necessarily truncated $\infty$-category and will specify when we explicitly work with $1$-categories.  
+\item $\Sp$ denotes the category of spectra and $\mathcal{S}$ denotes the category of spaces.  
+\item We will often conflate a graded spectrum with its underlying spectrum unless there is potential confusion.  
+\item $\Z_{\geq 0}$ denotes the poset of non-negative integers as an ordinary category where $\Hom(a,b)$ is a singleton if $a\leq b$, and empty otherwise.  Denote by $\Z_{\geq 0}^{ds}$ the underlying set considered as a category with no morphisms.  We will implicitly take nerves to obtain $\infty$-categories which will serve as the indexing sets for filtered and graded spectra.  The reader is warned that our numbering conventions are opposite the ones in \cite{LurieRot}.
+\end{enumerate}

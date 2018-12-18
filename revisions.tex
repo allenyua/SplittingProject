@@ -1,0 +1,160 @@
+\documentclass[reqno, oneside]{amsart}
+\usepackage{etex}
+\usepackage{hyperref}
+
+\usepackage{chemarr}
+\usepackage{amssymb}
+\usepackage{comment}
+
+\usepackage[a4paper]{geometry}
+
+
+%----------------------------------------------------------------------%
+
+
+\theoremstyle{definition}
+\newtheorem{nul}{}[section]
+\newtheorem{dfn}[nul]{Definition}
+\newtheorem{axm}[nul]{Axiom}
+\newtheorem{rmk}[nul]{Remark}
+\newtheorem{term}[nul]{Terminology}
+\newtheorem{cnstr}[nul]{Construction}
+\newtheorem{ntn}[nul]{Notation}
+\newtheorem{exm}[nul]{Example}
+\newtheorem{obs}[nul]{Observation}
+\newtheorem{ctrexm}[nul]{Counterexample}
+\newtheorem{rec}[nul]{Recollection}
+\newtheorem{exr}[nul]{Exercise}
+\newtheorem{wrn}[nul]{Warning}
+\newtheorem{qst}{Question}
+\newtheorem*{dfn*}{Definition}
+\newtheorem*{axm*}{Axiom}
+\newtheorem*{ntn*}{Notation}
+\newtheorem*{exm*}{Example}
+\newtheorem*{exr*}{Exercise}
+\newtheorem*{int*}{Intuition}
+\newtheorem*{qst*}{Question}
+\newtheorem*{rmk*}{Remark}
+
+
+\theoremstyle{plain}
+\newtheorem{sch}[nul]{Scholium}
+\newtheorem{claim}[nul]{Claim}
+\newtheorem{thm}[nul]{Theorem}
+\newtheorem{prop}[nul]{Proposition}
+\newtheorem{lem}[nul]{Lemma}
+\newtheorem{var}[nul]{Variant}
+\newtheorem{sublem}{Lemma}[nul]
+\newtheorem{por}[nul]{Porism}
+\newtheorem{cnj}[nul]{Conjecture}
+\newtheorem{cor}{Corollary}[nul]
+\newtheorem*{thm*}{Theorem}
+\newtheorem*{prop*}{Proposition}
+\newtheorem*{cor*}{Corollary}
+\newtheorem*{lem*}{Lemma}
+\newtheorem*{cnj*}{Conjecture}
+\newtheorem{innercustomthm}{Theorem}
+\newenvironment{customthm}[1]
+  {\renewcommand\theinnercustomthm{#1}\innercustomthm}
+  {\endinnercustomthm}
+
+
+
+%----------------------------------------------------------------------%
+
+\DeclareMathOperator{\Aut}{\text{Aut}}
+\DeclareMathOperator{\Tr}{\text{Tr}}
+\DeclareMathOperator{\Res}{\text{Res}}
+\DeclareMathOperator{\im}{\text{im}}
+\DeclareMathOperator*{\colim}{\mathrm{colim}}
+\DeclareMathOperator{\Map}{\text{Map}}
+\DeclareMathOperator{\cofiber}{\text{cofiber}}
+\DeclareMathOperator{\fiber}{\text{fiber}}
+\DeclareMathOperator{\gr}{\mathrm{gr}}
+\DeclareMathOperator{\fib}{\mathrm{fib}}
+\DeclareMathOperator{\Hom}{\text{Hom}} 
+\DeclareMathOperator{\Skel}{\text{Skel}}
+\DeclareMathOperator*{\hocolim}{\text{hocolim}}
+\DeclareMathOperator*{\holim}{\text{holim}}
+\DeclareMathOperator{\smsh}{\wedge}
+
+
+
+\DeclareMathOperator{\C}{\mathcal{C}}
+\DeclareMathOperator{\D}{\mathcal{D}}
+\DeclareMathOperator{\CP}{\mathbb{CP}}
+\DeclareMathOperator{\Z}{\mathbb{Z}}
+\DeclareMathOperator{\E}{\mathbb{E}}
+\DeclareMathOperator{\mE}{\mathcal{E}}
+\DeclareMathOperator{\N}{\mathrm{N}}
+\DeclareMathOperator{\Q}{\mathbb{Q}}
+\DeclareMathOperator{\m}{\mathfrak{m}}
+\DeclareMathOperator{\G}{\mathbb{G}}
+\DeclareMathOperator{\F}{\mathbb{F}}
+\DeclareMathOperator{\cG}{\mathcal{G}}
+\DeclareMathOperator{\cF}{\mathcal{F}}
+\DeclareMathOperator{\cS}{\mathcal{S}}
+\DeclareMathOperator{\Ring}{\textbf{Ring}}
+\DeclareMathOperator{\Aff}{\textbf{Aff}}
+\DeclareMathOperator{\Ran}{\mathrm{Ran}}
+\DeclareMathOperator{\Spec}{\text{Spec}}
+\DeclareMathOperator{\Poly}{\text{Poly}}
+\DeclareMathOperator{\Fin}{\mathrm{Fin}}
+\DeclareMathOperator{\Ext}{\text{Ext}}
+\DeclareMathOperator{\Gra}{\mathrm{Gr}}
+\DeclareMathOperator{\nil}{\text{nil}}
+\DeclareMathOperator{\fin}{\text{fin}}
+\DeclareMathOperator{\Gr}{\mathbf{Gr}}
+\DeclareMathOperator{\Fil}{\mathbf{Fil}}
+\DeclareMathOperator{\Fun}{\text{Fun}}
+\DeclareMathOperator{\Alg}{\mathrm{Alg}}
+\DeclareMathOperator{\Sp}{\mathrm{Sp}}
+\DeclareMathOperator{\Spaces}{\mathcal{S}}
+\DeclareMathOperator{\J}{\mathcal{J}}
+\DeclareMathOperator{\Cofil}{\mathbf{Cofil}}
+
+%----------------------------------------------------------------------%
+
+\usepackage{tikz}
+\usetikzlibrary{matrix,arrows,decorations}
+\usepackage{tikz-cd}
+
+\usepackage{adjustbox}
+
+%----------------------------------------------------------------------%
+
+\hyphenation{Mack-ey mon-oid-al Wald-hau-sen}
+
+%----------------------------------------------------------------------%
+%----------------------------------------------------------------------%
+
+
+\begin{document}
+
+\title{Revisions for paper ``Multiplicative Structure in the Stable Splitting of $\Omega SL_n(\mathbb{C})$"}
+\author{Jeremy Hahn}
+\address{Department of Mathematics, Harvard University, Cambridge, MA 02138}
+\email{jhahn01@math.harvard.edu}
+
+\author{Allen Yuan}
+\address{Department of Mathematics, Massachusetts Institute of Technology, Cambridge, MA 02139}
+\email{alleny@mit.edu}
+
+
+
+\maketitle
+\begin{enumerate}
+\item Clarified that $\mathbb{E}_1 = \mathbb{A}_{\infty}$ and we were applying the theorem in the case $n=1$.  
+\item Replaced $G$ by $G_V$ to make explicit the dependence on $V$.  
+\item Reworded to remove the ambiguous phrase ``discrete category" and moved to the notations and conventions section (cf. next revision).
+\item Expanded the notations section to include some conventions.  
+\item %add citation for sigma^infty to take free to free
+\item Made the statement a remark and clarified the grading on $A$.  We've placed the remark slightly later than suggested because one needs to set up the monoidal structure in order to make sense of the remark.  
+\item %hom(G,Gm)?
+\item %defn 3.3 not edited due to collision
+\item %defn 3.4 not edited due to possible collision
+\item We believe the statement is as intended; we include the disclaimer because the proofs there are only given in the real case.  
+\item We have moved the proof to the appendix as you have suggested.  
+
+
+\end{document}
