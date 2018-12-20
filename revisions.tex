@@ -143,6 +143,10 @@
 
 
 \maketitle
+
+We have made revisions according to the remarks that you provided for us.  Please see the following list which indicates our changes in response to these remarks.  
+
+\subsection{Stylistic remarks}
 \begin{enumerate}
 \item Clarified that $\mathbb{E}_1 = \mathbb{A}_{\infty}$ and we were applying the theorem in the case $n=1$.  
 \item Replaced $G$ by $G_V$ to make explicit the dependence on $V$.  
@@ -155,9 +159,24 @@
 \item %defn 3.4 not edited due to possible collision
 \item We believe the statement is as intended; we include the disclaimer because the proofs there are only given in the real case.  
 \item We have moved the proof to the appendix as you have suggested.  
-
-
 \end{enumerate}
+
+\subsection{Mathematical remarks}
+
+
+
+The diagram that you draw does indeed commute.  It arises from going around the following diagram of \emph{graded} spectra:
+$$
+\begin{tikzcd}
+ & F_{\E_2}( gr(\Sigma^{\infty}_+\{F_{n,k}\}) )\arrow[d,"\epsilon"] \\
+F_{\E_2}(\Sigma^{\infty}S^2[1]) \arrow[ru, "F_{\E_2}(\beta)"] \arrow[r]\arrow[d,"\pi_S"] & gr(\Sigma^{\infty}_+ \{ F_{n,k}\} ) \arrow[d,"\pi_1"] \\
+\Sigma^{\infty} S^2[1] \arrow[r,"\beta"]& F_{n,1}.\\
+\end{tikzcd}
+$$
+
+The top triangle commuting is the definition of the extension of $\beta: \Sigma^{\infty}S^2[1] \to gr(\Sigma^{\infty}_+ \{F_{n,k} \} )$ to the free algebra $F_{\E_2} (\Sigma^{\infty} S^2[1]$.  The bottom square commutes because both vertical maps are projections of a graded spectrum onto the degree $1$ piece.  We have reworded and expanded the writing here to try to clarify what we are doing.  
+
+
 
 
 

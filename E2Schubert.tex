@@ -119,40 +119,42 @@ Via the machinery in the previous section (as we will explain in more detail lat
 To do so, consider an arbitrary point $p \in \text{Gr}_{G,\text{Ran}}(\mathbb{C})$, consisting of a $G$-bundle $\gamma$ on $\mathbb{A}^1$ trivialized away from a collection of points $I=(i_1,i_2,...,i_\ell) \subset \mathbb{C}$.  For each point $i_k \in \mathbb{C}$, the restriction of $\gamma$ to a formal neighborhood of $i_k$ has well-defined monodromy $\mu_k$, in the sense of Remark \ref{rem:monodromy}.  We say that $p$ lives in $\text{Gr}_{G,\text{Ran},\le \mu}(\mathbb{C})$ if and only if
 $$\sum_{i=1}^{k} \mu_k \le \mu.$$  This defines $\Gra_{G,\Ran}(\mathbb{C})$ as a $\mathbb{X}^+_{\bullet}$-filtered topological space.
 
-We will ultimately be concerned with certain graded and filtered spectra that one can extract from $\Gra_{G}(\mathbb{C})$ and its coweight filtration.  
-
-Given a dominant coweight $\mu \in \mathbb{X}^+_{\bullet}$, one obtains a graded spectrum $ \{ \Sigma^{\infty}_+ \Gra_{G,\leq k\mu}(\mathbb{C})\}_{k\in \mathbb{Z}_{\geq 0}}$.  Let us now choose and fix a dominant coweight $\mu$. Our goal for the remainder of the section is to prove the following fact:
+We will ultimately be concerned with certain graded and filtered spectra that one can extract from $\Gra_{G}(\mathbb{C})$ and its coweight filtration.  In particular, given a dominant coweight $\mu \in \mathbb{X}^+_{\bullet}$, one obtains a graded spectrum $ \{ \Sigma^{\infty}_+ \Gra_{G,\leq k\mu}(\mathbb{C})\}_{k\in \mathbb{Z}_{\geq 0}}$.  Let us now choose and fix a dominant coweight $\mu$. Our goal for the remainder of the section is to prove the following fact:
 
 \begin{thm}\label{thm:schubertE2}
-Let $G$ be a smooth, reductive affine algebraic group over $\mathbb{C}$ and $\mu$ be a dominant coweight.  Then, the graded spectrum $\{\Sigma^{\infty}_+ \Gra_{G, k \mu} \}_{k\in \mathbb{Z}_{\geq 0}}$ naturally admits the structure of an $\mathbb{E}_2$-algebra in graded spectra. 
+Let $G$ be a smooth, reductive affine algebraic group over $\mathbb{C}$ and $\mu$ be a dominant coweight.  Then, the graded spectrum $\{\Sigma^{\infty}_+ \Gra_{G, \leq k \mu} \}_{k\in \mathbb{Z}_{\geq 0}}$ naturally admits the structure of an $\mathbb{E}_2$-algebra in graded spectra. 
 \end{thm}
 
 \begin{rmk}
-We have chosen to state our theorem in spectra because we do not set up the monoidal structure on the category of graded spaces (cf. Remark \ref{rmk:filtspaces}).  One could make sense of $\{ \Gra_{G, k \mu} \}_{k\in \mathbb{Z}_{\geq 0}}$ as a \emph{non-unital} $\mathbb{E}_2$ in graded spectra, but this is unnecessary for our applications.  Nevertheless, the proof of Theorem \ref{thm:schubertE2} goes through in ungraded spaces to show that $\coprod_{k\in \mathbb{Z}_{\geq 0}} \Gra_{G, k\mu}$ is an $\E_2$ algebra in pointed spaces.  
+We have chosen to state our theorem in spectra because we do not set up the monoidal structure on the category of graded spaces (cf. Remark \ref{rmk:filtspaces}).  One could make sense of $\{ \Gra_{G,\leq k \mu} \}_{k\in \mathbb{Z}_{\geq 0}}$ as a \emph{non-unital} $\mathbb{E}_2$ in graded spectra, but this is unnecessary for our applications.  Nevertheless, the proof of Theorem \ref{thm:schubertE2} goes through in ungraded spaces to show that $\coprod_{k\in \mathbb{Z}_{\geq 0}} \Gra_{G,\leq  k\mu}$ is an $\E_2$ algebra in pointed spaces.  
 \end{rmk}
 
 \begin{rmk}
 %The proof of Theorem \ref{thm:schubertE2} can also be trivially modified to show the following:
-In the case when $\mu \geq 0$, then $k\mu > k'\mu$ and the pieces of the graded spectrum $ \{ \Sigma^{\infty}_+ \Gra_{G,\leq k\mu}(\mathbb{C})\}_{k\in \mathbb{Z}_{\geq 0}}$ are naturally included in one another.  In this situation, one obtains a filtered spectrum which can similarly be shown to be an $\mathbb{E}_2$ object in filtered spectra.  
+It is not generally true that $\Gra_{G,\leq k\mu}$ is contained in $\Gra_{G, \leq j\mu}$ when $k<j$ because this doesn't imply that $k\mu \leq j\mu$ in the poset of coweights.  However, in the case when $\mu \geq 0$, then $k\mu < j\mu$ and the pieces of the graded spectrum $ \{ \Sigma^{\infty}_+ \Gra_{G,\leq k\mu}(\mathbb{C})\}_{k\in \mathbb{Z}_{\geq 0}}$ are naturally included in one another.  In this situation, one obtains a filtered spectrum which can similarly be shown to be an $\mathbb{E}_2$ object in filtered spectra.  
 \end{rmk}
 
 
 \begin{rmk} The proof of Theorem \ref{thm:schubertE2} will also make clear the functoriality of the construction.  In particular, suppose that $G_1 \longrightarrow G_2$ is a map of reductive groups, and further suppose that this map is compatible with choices of maximal tori and dominant coweights, so that it induces a map of dominant coweight lattices $\mathbb{X}_{1,\bullet}^+ \longrightarrow \mathbb{X}_{2,\bullet}^+$.  Then if a dominant coweight $\mu_1$ is sent to a dominant coweight $\mu_2$, there is an induced map of graded $\mathbb{E}_2$-algebras
-$$\{\Sigma^{\infty}_+ \Gra_{G_1, k \mu_1} \}_{k\in \mathbb{Z}_{\geq 0}} \longrightarrow \{\Sigma^{\infty}_+ \Gra_{G_2, k \mu_2} \}_{k\in \mathbb{Z}_{\geq 0}}.$$
+$$\{\Sigma^{\infty}_+ \Gra_{G_1, \leq k \mu_1} \}_{k\in \mathbb{Z}_{\geq 0}} \longrightarrow \{\Sigma^{\infty}_+ \Gra_{G_2, \leq k \mu_2} \}_{k\in \mathbb{Z}_{\geq 0}}.$$
 \end{rmk}
 
+\begin{dfn}
+The 1-category of graded topological spaces is the ordinary category of functors from $\mathbb{Z}_{\geq 0}^{\mathrm{ds}}$ to topological spaces.  It acquires the structure of a symmetric monoidal category by the Cartesian product $\times$ with the usual grading conventions.  
+\end{dfn}
+
 \begin{cnstr}\label{cnstr:diskalg}
-We proceed by defining a $\mathrm{Disk}(\mathbb{C})_{\mathrm{nu}}$ algebra $\bar{A}$ valued in filtered topological spaces.  This will arise from the map $p:\Gra_{G,\Ran}(\mathbb{C}) \to \Ran(\mathbb{C})$ constructed above.  For a disk $D\subset \mathbb{C}$, we define $\bar{A}(D) := \Gra_{G,\Ran}(D).$  Explicitly, the points of $\bar{A}(D)$ are given by the data of a pair $(I, \mathcal{F}_I)$ where $I\subset D$ is a nonempty finite subset and $\mathcal{F}_I$ is a principal $G$-bundle with a trivialization away from $I$.  Let $D_1 \coprod D_2\coprod \cdots \coprod D_n \hookrightarrow D$ be the nonempty inclusion of disjoint disks into a larger disk $D$.  To define a $\mathrm{Disk}(\mathbb{C})_{\mathrm{nu}}$ algebra, we need to exhibit maps $\bar{A}(D_1)\times \cdots \times \bar{A}(D_n) \to \bar{A}(D)$ satisfying the obvious coherences.  %This is the key extra structure that the Beilinson-Drinfeld Grassmannian possesses
-This map sends the point determined by $(I_1, \mathcal{F}_1), \cdots, (I_n, \mathcal{F}_n)$ to the point $(I, \mathcal{F})$ where $I= I_1 \coprod \cdots \coprod I_n$ and $\mathcal{F}$ is obtained by gluing the $\mathcal{F}_i$ along the trivializations away from $I$.  
+We proceed by defining a $\mathrm{Disk}(\mathbb{C})_{\mathrm{nu}}$ algebra $\bar{A}$ valued in graded topological spaces.  This will arise from the map $p:\Gra_{G,\Ran}(\mathbb{C}) \to \Ran(\mathbb{C})$ constructed above.  For a disk $D\subset \mathbb{C}$, we define the graded topological space $\bar{A}(D)$ by the formula $\bar{A}(D)_m := \Gra_{G,\Ran, \leq m\mu}(D).$  Explicitly, the points of $\bar{A}(D)_m$ are given by the data of a pair $(I, \mathcal{F})$ where $I\subset D$ is a nonempty finite subset and $\mathcal{F}$ is a principal $G$-bundle with a trivialization away from $I$ with monodromy less than or equal to $m\mu$ in the sense defined earlier.  Let $D_1 \coprod D_2\coprod \cdots \coprod D_n \hookrightarrow D$ be a nonempty inclusion of disjoint disks into a larger disk $D$.  To define a $\mathrm{Disk}(\mathbb{C})_{\mathrm{nu}}$ algebra, we need to exhibit maps $\bar{A}(D_1)\times \cdots \times \bar{A}(D_n) \to \bar{A}(D)$ satisfying the obvious coherences.  %This is the key extra structure that the Beilinson-Drinfeld Grassmannian possesses
+This map sends the point determined by $(I_1, \mathcal{F}_1), \cdots, (I_n, \mathcal{F}_n)$ to the point $(I, \mathcal{F})$ where $I= I_1 \coprod \cdots \coprod I_n$ and $\mathcal{F}$ is obtained by gluing the $\mathcal{F}_i$ along the trivializations away from $I$.  This defines a map respecting the grading because if the coweight corresponding to $(I_i,\mathcal{F}_i) \in \bar{A}(D)_{m_i}$ is $\alpha_i\leq m_i \mu$, then $\Sigma_i \alpha_i \leq (\Sigma_i m_i) \mu$ and so one naturally lands in grading $\Sigma_i m_i$.  
 \end{cnstr}
 \begin{rmk}
 More generally, the Beilinson-Drinfeld Grassmannian yields the structure of a \emph{factorizable cosheaf} on the Ran space.  The key structure present is that of \emph{factorization}, which roughly says that the Grassmannian over two disjoint subsets $U,V\subset \mathbb{C}$ is equivalent to the product of the Grassmannians over the two sets separately.  One sees this is also the structure that is giving us the disk algebras in Construction \ref{cnstr:diskalg}.  However, we have chosen to work directly with the underlying $\mathrm{Disk}(\mathbb{C})$-algebra and avoid directly discussing factorization algebras; the interested reader can refer to \cite[\S 5.5.4.10]{HA} for a comparison of these concepts.  
 \end{rmk}
 
-Passing to $\infty$-categories and stabilizing, we obtain a $\N(\mathrm{Disk}(\mathbb{C}))_{\mathrm{nu}}$-algebra $A$ valued in filtered spectra whose value on a disk $D$ is $A(D) = \Sigma^{\infty}_+ \bar{A}(D) = \Sigma^{\infty}_+ \Gra_{G,\Ran}(D)$.  The following theorem is the essential non-formal input to producing an $\mathbb{E}_2$-algebra.  
+Passing to $\infty$-categories and stabilizing, we obtain a $\N(\mathrm{Disk}(\mathbb{C}))_{\mathrm{nu}}$-algebra $A$ valued in graded spectra whose value on a disk $D$ is $A(D) = \Sigma^{\infty}_+ \bar{A}(D) = \Sigma^{\infty}_+ \Gra_{G,\Ran}(D)$.  The following theorem is the essential non-formal input to producing an $\mathbb{E}_2$-algebra.  
 
 \begin{prop}\label{prop:diskequiv}
-Suppose that $G$ is reductive and let $D\subset \mathbb{C}$ be a disk and $\{x \} \hookrightarrow D$ be a point.  Then, the natural map $\Gra_{G,\Ran}(\{x\}) \to \Gra_{G,\Ran}(D)$ induces an equivalence of filtered spectra.  
+Suppose that $G$ is reductive and let $D\subset \mathbb{C}$ be a disk and $\{x \} \hookrightarrow D$ be a point.  Then, the natural map $\Gra_{G,\Ran}(\{x\}) \to \Gra_{G,\Ran}(D)$ induces an equivalence of graded spectra.  
 \end{prop}
 
 The theorem will come down to the following key fact:
@@ -170,32 +172,32 @@ Then the map $f$ is a proper map of topological spaces.
 
 The authors understand the above fact to be folklore in the geometric representation theory literature.  A reference is BLAH.  A sketch of a proof in the algebro-geometric context can be found in BLAH.  \textbf{Figure out a better way to sell this}
 
-
+\begin{comment}
 We also need the following point-set lemma:
-
 \begin{lem}\label{lem:colimproper}
 Let $I$ be a finite indexing category and $\{X_i\}_{i\in I}$ be a diagram of topological spaces indexed by $I$.  Let $X = \colim_{i\in I} X_i$ and suppose $f: Y \to X$ is a map of topological spaces with the property that for all $i\in I$, the natural map $f_i: Y\times_X X_i \to X_i$ is proper.  Then the map $f$ is proper.
 \end{lem}
 \begin{proof}
 ****write some shit or not?****
 \end{proof}
+\end{comment}
 
-For any $X\subset \mathbb{C}$, $\mathrm{Ran}^{\leq n}(X)$ is a finite colimit of spaces of the form $X^J$ for a finite set $J$.  Combining this with Lemma \ref{lem:grproper}, we obtain the following corollary:
+For any $X\subset \mathbb{C}$, $\mathrm{Ran}^{\leq n}(X)$ is a finite colimit of spaces of the form $X^J$ for a finite set $J$.  Thus, we obtain the following corollary:
 
 \begin{cor}\label{cor:ranproper}
 Let $X\subset \mathbb{C}$.  Then, the restriction of the Beilinson-Drinfeld Grassmannian $\Gra(X)_{G,\bullet}^{\leq n} \to \mathrm{Ran}^{\leq n}(X)$ is proper.
 \end{cor}
 
 \begin{proof}[Proof of Proposition \ref{prop:diskequiv}]
-In order to show an equivalence of filtered spectra, we would like to show that for each $k\in \mathbb{Z}_{\geq 0}$, the natural map $\Gra_{G,\leq k \mu}(\{ x\}) \to \Gra_{G,\leq k\mu}(D)$ induces an equivalence of spectra.  It suffices to show that this is true upon restricting to $\Ran^{\leq n}$ for each $n$, because $\Gra_{G, \leq k \mu} = \colim_n \Gra^{\leq n}_{G,\leq k\mu}$ is a filtered colimit of closed inclusions.  For ease of notation, fix $n,k\in \mathbb{Z}_{\geq 0}$ and let $\Gra$ stand in for $\Gra^{\leq n}_{G,\leq k \mu}$ for the remainder of the proof.  
+In order to show an equivalence of graded spectra, we would like to show that for each $k\in \mathbb{Z}_{\geq 0}$, the natural map $\Gra_{G,\leq k \mu}(\{ x\}) \to \Gra_{G,\leq k\mu}(D)$ induces an equivalence of spectra.  It suffices to show that this is true upon restricting to $\Ran^{\leq n}$ for each $n$, because $\Gra_{G, \leq k \mu} = \colim_n \Gra^{\leq n}_{G,\leq k\mu}$ is a filtered colimit of closed inclusions.  For ease of notation, fix $n,k\in \mathbb{Z}_{\geq 0}$ and let $\Gra$ stand in for $\Gra^{\leq n}_{G,\leq k \mu}$ for the remainder of the proof.  
 
-We have a pullback square of topological spaces %is p some sort of fibration?
+We have a pullback square of topological spaces 
 \begin{equation*}
 \begin{tikzcd}
 \Gra (\{ x\}) \arrow[r,"i"]\arrow[d,"p_x"] & \Gra (D) \arrow[d,"p"]\\
 \{x \} = \Ran^{\leq n}(\{ x\} )\arrow[r,"j"] & \Ran^{\leq n}(D)
 \end{tikzcd} \end{equation*}
-where $p$ and $p_x$ are proper by Corollary \ref{cor:ranproper}.  We show that the upper map $i$ induces an isomorphism on cohomology.  %why is that enough? can we show Gr(D) is simply connected? seems fine if you know p is a fibration; well we only need an equivalence of spectra
+where $p$ and $p_x$ are proper by Corollary \ref{cor:ranproper}.  Certainly $\Gra(\{ x\})$ is finite type because we know it's just a piece of the affine Grassmannian.  One consequence of properness is that $\Gra(\mathbb{C})$, and thus $\Gra(D)$, is finite type because $\Ran^{\leq n}(\mathbb{C})$ is a finite colimit of things which are proper over spaces of the form $\mathbb{A}^n_{\mathbb{C}}$.  It therefore suffices to show that the upper map $i$ induces an isomorphism on cohomology.  
 
 Applying the proper base change theorem to the constant sheaf $\underline{\mathbb{Z}}$ on $\Gra(D)$, we find that there is a natural equivalence $j^*p_*(\underline{\mathbb{Z}}) \xrightarrow{\sim} (p_x)_{*}i^*(\underline{\mathbb{Z}}).$  The right-hand side is $C^*(\Gra(\{x\}) ;\mathbb{Z})$, the integral cohomology of the fiber at $x$.  On the other hand, the left-hand side is by definition $$\colim_{x\in U} C^*(p^{-1}(U);\mathbb{Z})$$ where the colimit is taken over $U\subset \Ran^{\leq n}(D)$ containing $x$.  We may compute this colimit by extracting a cofinal sequence of opens $$x \subset \cdots \subset \Ran^{\leq n}(D_k) \subset \cdots \subset \Ran^{\leq n}(D_0)$$ where $D_i$ are disks such that $D_0=D$.  The transition maps in this system induce equivalences because there is a deformation retraction of $D_k$ onto $D_{k+1}$.  Therefore, we conclude that $$\colim_{x\in U} C^*(p^{-1}(U);\mathbb{Z}) \simeq C^*(\Gra(D); \mathbb{Z})$$ and so the map $i$ induces a cohomology isomorphism as desired.  
 \end{proof} 
