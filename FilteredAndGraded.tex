@@ -13,8 +13,8 @@ Let $\Gr(\Sp^{\D})$ denote the functor category $\Fun(\Z_{\geq 0}^{ds}, \Sp^{\D}
 Let $\Fil(\Sp^{\D})$ denote the functor category $\Fun(\Z_{\geq 0}, \Sp^{\D}).$  We shall refer to $\Fil(\Sp^{\D})$ as the category of filtered objects in $\Sp^{\D}$.  Its objects can be thought of as sequences $Y_0\to Y_1\to Y_2 \to \cdots \in \Sp^{\D}$ filtering $\colim_i Y_i$.  
 \end{dfn}
 
-\begin{rmk}
-We will occasionally need to consider filtered objects in other categories, by which we mean functors from $\Z_{\geq 0}$, but in this section we consider only filtered objects in categories of the form $\Sp^{\D}$.  
+\begin{rmk}\label{rmk:filtspaces}
+We will occasionally also consider filtered objects in pointed spaces $\cS_*$, but we do not use them in an essential way in the paper so we restrict to spectra for the remainder of this section.  The issue is that the monoidal structure given by $\times$ does not preserve colimits separately in each variable, as it does not preserve the empty colimit.  The category $\Fil(\cS_*)$ of filtered pointed spaces nevertheless has a monoidal structure by Day convolution, but $\Gr(\cS_*)$ does not, and thus we do \emph{not} consider \emph{graded} pointed spaces.  
 \end{rmk}
 
 
@@ -73,14 +73,21 @@ A filtered $\mathbb{E}_n$-algebra $X\in \Alg_{\E_n}(\Fil(\Sp^{\D}))$ is called \
 Given an $\E_n$-split filtered spectrum $X$, we can recover the underlying graded spectrum by taking the associated graded.  
 
 \begin{exm}\label{exm:snaith}
-Let $X\in \cS$ be a connected space and $n>0$.  The Snaith splitting can be seen as giving $\Sigma^{\infty}_+ \Omega^n \Sigma^n X$ the structure of a $\E_n$-split filtered spectrum.  To see this, first note that there is a commutative square of $\infty$-categories:
+In this example, we relate the Snaith splitting to the above notions of $\E_n$-split filtered spectrum.  Since the functors $\mathrm{res}$ and $\Omega^{\infty}$ are lax monoidal, we may consider the commutative diagram of right adjoints
 $$
 \begin{tikzcd}
-\Gr(\Sp) \arrow[d]\arrow[r,"F_{\E_n}"]&  \Alg_{\E_n}(\Gr(\Sp)) \arrow[d]\\
-\Sp \arrow[r,"F_{\E_n}"] & \Alg_{\E_n}(\Sp) 
+\Gr(\Sp) & \Fil(\Sp) \arrow[l,"\mathrm{res}"] \arrow[r,"\Omega^{\infty}"] & \Fil(\cS_*) \\
+\Alg_{\E_n}(\Gr(\Sp)) \arrow[u] & \Alg_{\E_n}(\Fil(\Sp))  \arrow[l,"\mathrm{res}"] \arrow[r,"\Omega^{\infty}"] \arrow[u]& \Alg_{\E_n}(\Fil(\cS_*)) \arrow[u]
 \end{tikzcd}
 $$
-where the downward arrows forget the grading and the rightward arrows take free algebras.  This is essentially because the formula for the free graded $\E_n$-algebra on a graded spectrum is the same as in the ungraded case.  Let $\Sigma^{\infty} X[1]$ denote the graded spectrum with $\Sigma^{\infty} X$ in degree 1.  The above square implies that $F_{\E_n}(\Sigma^{\infty} X[1] )\in \Alg_{\E_n}(\Gr)$ is a lift of the $\E_n$ ring spectrum $F_{\E_n}(\Sigma^{\infty} X) \simeq \Sigma^{\infty}_+ \Omega^n \Sigma^n X.$  As a result, the filtered spectrum $I(F_{\E_n} \Sigma^{\infty} X[1])$ exhibits the Snaith filtration on $\Sigma^{\infty}_+ \Omega^n \Sigma^n X$ as an $\E_n$-split $\E_n$ filtered spectrum.  
+where the vertical maps forget the algebra structure.  This induces a corresponding commutative diagram of left adjoints
+$$
+\begin{tikzcd}
+\Gr(\Sp) \arrow[r,"I"] \arrow[d,"F_{\E_n}"] & \Fil(\Sp)\arrow[d,"F_{\E_n}"] & \Fil(\cS_*) \arrow[d,"F_{\E_n}"]\arrow[l,"\Sigma^{\infty}"]\\
+\Alg_{\E_n}(\Gr(\Sp))\arrow[r,"I"] & \Alg_{\E_n}(\Fil(\Sp))  & \Alg_{\E_n}(\Fil(\cS_*)) \arrow[l,"\Sigma^{\infty}_+"]
+\end{tikzcd}
+$$
+where the vertical maps take free algebras.  Let $E$ be a spectrum and consider $E[1]$, the graded spectrum with $E$ in degree $1$.  The commutativity of the left square shows that the free $\E_n$-algebra in filtered spectra on $I(E[1])$ is $\E_n$-split.  Moreover, let $X\in \cS_*$ be a pointed space and $n>0$; work of \cite{May} determines the free $\E_n$-algebra on $X$ in pointed spaces to be $\Omega^n \Sigma^n X$, which comes with a canonical filtration.  We claim without proof that this is the free $\E_n$-filtered space on $X$ placed in filtration $1$.  The right square in this diagram verifies that its suspension is the free $\E_n$-algebra in filtered spectra on $I(\Sigma^{\infty} X [1])$, and thus, by the previous remarks, yields an $\E_n$-split filtered spectrum, demonstrating a structured version of the Snaith splitting \cite{SnaithSplit}.
 \end{exm}
 
 In this paper, we will be interested in when a given $\E_n$ filtered spectrum is $\E_n$-split.  Disregarding the multiplicative structure, a filtered spectrum $$X_0\longrightarrow X_1 \longrightarrow X_2 \longrightarrow \cdots ,$$ will split if and only if there are maps going the other way: $$X_0 \longleftarrow X_1 \longleftarrow X_2 \longleftarrow \cdots,$$ with the property that the relevant composites are equivalences.   To systematically talk about these backwards maps, we need the following definition:
