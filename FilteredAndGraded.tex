@@ -14,7 +14,7 @@ Let $\Fil(\Sp^{\D})$ denote the functor category $\Fun(\Z_{\geq 0}, \Sp^{\D}).$ 
 \end{dfn}
 
 \begin{rmk}\label{rmk:filtspaces}
-We will occasionally also consider filtered objects in pointed spaces $\cS_*$, but we do not use them in an essential way in the paper so we restrict to spectra for the remainder of this section.  The issue is that the monoidal structure given by $\times$ does not preserve colimits separately in each variable, as it does not preserve the empty colimit.  The category $\Fil(\cS_*)$ of filtered pointed spaces nevertheless has a monoidal structure by Day convolution, but $\Gr(\cS_*)$ does not, and thus we do \emph{not} consider \emph{graded} pointed spaces.  
+We will occasionally also consider filtered objects in pointed spaces $\cS_*$, but we do not use them in an essential way in the paper so we restrict to spectra for the remainder of this section.  The issue is that the monoidal structure given by $\times$ does not preserve colimits separately in each variable -- for instance, it does not preserve the empty colimit.  The category $\Fil(\cS_*)$ of filtered pointed spaces nevertheless has a monoidal structure by Day convolution, but $\Gr(\cS_*)$ does not, and thus we do \emph{not} consider a monoidal structure on \emph{graded} pointed spaces.  
 \end{rmk}
 
 
@@ -24,7 +24,7 @@ where the left adjoint $I: \Gr(\Sp^{\D}) \to \Fil(\Sp^{\D})$ is given by left Ka
 
 Inverse to this, there is an associated graded functor $\text{gr }: \Fil(\Sp^{\D}) \to \Gr(\Sp^{\D})$ such that the composite $\text{gr }\circ I : \Gr(\Sp^{\D}) \to \Gr(\Sp^{\D})$ is an equivalence.   This can be thought of pointwise by the formula $$\text{gr}(X_0\to X_1\to X_2\to \cdots) = (X_0, X_1/X_0, X_2/X_1, \cdots).$$
 
-As the names suggest, one may recover from a filtered or graded functor the underlying object.  For filtered objects, this is a functor $$\colim : \Fil(\Sp^{\D}) \to \Sp^{\D}$$ given by Kan extending along $\Z_{\geq 0}\to *.$   It can be thought of as taking the colimit.  For graded objects, the underlying object is simply the direct sum of all the graded pieces. We will systematically abuse notation by conflating a graded spectrum with its underlying spectrum; however, when there is any ambiguity, we will specify whether we are referring to the graded object or the underlying.
+As the names suggest, one may recover from a filtered or graded functor the underlying object.  For filtered objects, this is a functor $$\colim : \Fil(\Sp^{\D}) \to \Sp^{\D}$$ given by Kan extending along $\Z_{\geq 0}\to *.$   It can be thought of as taking the colimit.  For graded objects, the underlying object is simply the direct sum of all the graded pieces. We will systematically abuse notation by conflating a graded spectrum with its underlying spectrum when we feel there is no potential for ambiguity.
 
 %, and will be written $$\bigvee : \Gr(\Sp^{\D}) \to \Sp^{\D}.$$
 
@@ -66,8 +66,11 @@ of symmetric monoidal $\infty$-categories.
 
 The functors $I$ and $\text{gr}$ can be given symmetric monoidal structures such that the composite $\text{gr}\circ I : \Gr(\Sp^{\D}) \to \Gr(\Sp^{\D})$ is a symmetric monoidal equivalence by \cite[Proposition 3.2.1]{LurieRot}.  It follows in particular that they extend to functors between the categories of $\E_n$-algebras in $\Gr(\Sp^{\D})$ and $\Fil(\Sp^{\D})$.  Thus, given an $\E_n$-algebra $Y$ in filtered spectra, we obtain a canonical $\E_n$ structure on its associated graded $\text{gr}(Y).$  Conversely, given $X\in \Alg_{\E_n}(\Gr(\Sp^{\D}))$, we obtain $IX\in \Alg_{\E_n}(\Fil(\Sp^{\D})).$  
 
+\subsection{Structured splittings}
+In this paper, we aim to study filtered spectra which are split in a way compatible with multiplicative structure.  This is captured by the following definition:
+
 \begin{dfn}
-A filtered $\mathbb{E}_n$-algebra $X\in \Alg_{\E_n}(\Fil(\Sp^{\D}))$ is called \emph{$\E_n$-split} if there exists some $Y \in \Alg_{\E_n}(\Gr(\Sp^{\D}))$ with an equivalence $X \simeq IY$ in $\Alg_{\E_n}(\Fil(\Sp^{\D}))$.  
+A filtered $\mathbb{E}_n$-algebra $X\in \Alg_{\E_n}(\Fil(\Sp^{\D}))$ is called \emph{$\E_n$-split} if there exists some $Y \in \Alg_{\E_n}(\Gr(\Sp^{\D}))$ and an equivalence $X \simeq IY$ in $\Alg_{\E_n}(\Fil(\Sp^{\D}))$.  
 \end{dfn}
 
 Given an $\E_n$-split filtered spectrum $X$, we can recover the underlying graded spectrum by taking the associated graded.  
@@ -89,6 +92,7 @@ $$
 $$
 where the vertical maps take free algebras.  Let $E$ be a spectrum and consider $E[1]$, the graded spectrum with $E$ in degree $1$.  The commutativity of the left square shows that the free $\E_n$-algebra in filtered spectra on $I(E[1])$ is $\E_n$-split.  Moreover, let $X\in \cS_*$ be a pointed space and $n>0$; work of \cite{May} determines the free $\E_n$-algebra on $X$ in pointed spaces to be $\Omega^n \Sigma^n X$, which comes with a canonical filtration.  We claim without proof that this is the free $\E_n$-filtered space on $X$ placed in filtration $1$.  The right square in this diagram verifies that its suspension is the free $\E_n$-algebra in filtered spectra on $I(\Sigma^{\infty} X [1])$, and thus, by the previous remarks, yields an $\E_n$-split filtered spectrum, demonstrating a structured version of the Snaith splitting \cite{SnaithSplit}.
 \end{exm}
+
 
 In this paper, we will be interested in when a given $\E_n$ filtered spectrum is $\E_n$-split.  Disregarding the multiplicative structure, a filtered spectrum $$X_0\longrightarrow X_1 \longrightarrow X_2 \longrightarrow \cdots ,$$ will split if and only if there are maps going the other way: $$X_0 \longleftarrow X_1 \longleftarrow X_2 \longleftarrow \cdots,$$ with the property that the relevant composites are equivalences.   To systematically talk about these backwards maps, we need the following definition:
 
