@@ -19,12 +19,11 @@ $$t \stackrel{\mu}{\mapsto} \left( \begin{array}{cccc} t^{a_1} & 0 & \cdots & 0 
 \begin{dfn}
 Consider the affine Grassmannian $Gr_{GL_n}(\mathbb{C})$.  We denote by $F_{n,k}$ the subset of $Gr_{GL_n}$ that is the closure of the $GL_n(\mathbb{C}[[t]])$ orbit containing:
 $$t \mapsto \left( \begin{array}{cccc} t^k & 0 & \cdots & 0 \\ 0 & 1 & \cdots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & \cdots & 1 \end{array} \right).$$
-In the language of Section \ref{Schubert}, we consider 
-$$\{ \Gra_{GL_n, (k,0,0,\cdots)} \}_{k\in \mathbb{Z}_{\geq 0}},$$
-and define $\{ F_{n,k}\}$ to be its associated graded.  
+Using the language of Section \ref{sec:Schubert}, define for each $k\geq 0$
+$$F_{n,k}  :=  \Gra_{GL_n, \leq (k,0,0,\cdots)}(\mathbb{C}).$$
 \end{dfn}
 
-The following lemma, affirming a conjecture of Mahowald and Richter, is then an immediate corollary of BLAH:
+The following lemma, affirming a conjecture of Mahowald and Richter, is then an immediate corollary of Theorem \ref{thm:schubertE2}:
 
 \begin{lem} [Conjecture of Mahowald--Richter \cite{MahowaldRichter}] 
 The inclusion 
