@@ -109,10 +109,10 @@ Let $\C$ be a symmetric monoidal $\infty$-category and $A \in \C$ be a $\mathrm{
 The structure described in the previous section arises naturally in algebraic geometry in the form of the Beilinson-Drinfeld Grassmannian.  Our goal in this section is to set up this object and describe the $\mathbb{E}_2$ algebras it produces via Theorem \ref{thm:lcdisk}.
 
 \begin{dfn}
-The \textit{Ran space} $\text{Ran}_{\mathbb{A}^1}$ is the presheaf that assigns to every $\mathbb{C}$-algebra $R$ the set of non-empty finite subsets of $\text{Spec}(R) \times \mathbb{A}^1$ over $\text{Spec}(R)$.   The Beilinson--Drinfeld Grassmannian is the presheaf $Gr_{G,\text{Ran}}$ that assigns to each $\mathbb{C}$-algebra $R$ the set of triplets $(x,\mathcal{E},\beta)$, where $x \in \text{Ran}_{\mathbb{A}^1}(R)$, $\mathcal{E}$ is a $G$-torsor on $\mathbb{A}^1 \times \text{Spec}(R)$, and $\beta$ is a trivialization of $\mathcal{E}$ away from the graph of $x$ in $\text{Spec}(R) \times \mathbb{A}^1$.
+The \textit{algebro-geometric Ran space} $\text{Ran}_{\mathbb{A}^1}$ is the presheaf that assigns to every $\mathbb{C}$-algebra $R$ the set of non-empty finite subsets of $\text{Spec}(R) \times \mathbb{A}^1$ over $\text{Spec}(R)$.   The Beilinson--Drinfeld Grassmannian is the presheaf $Gr_{G,\text{Ran}}$ that assigns to each $\mathbb{C}$-algebra $R$ the set of triplets $(x,\mathcal{E},\beta)$, where $x \in \text{Ran}_{\mathbb{A}^1}(R)$, $\mathcal{E}$ is a $G$-torsor on $\mathbb{A}^1 \times \text{Spec}(R)$, and $\beta$ is a trivialization of $\mathcal{E}$ away from the graph of $x$ in $\text{Spec}(R) \times \mathbb{A}^1$. 
 \end{dfn}
 
-The Beilinson--Drinfeld Grassmannian is naturally fibered over the Ran space.  Again, we shall be primarily interested in complex points.  Let us denote the map on complex points by $$\Gra_{G,\Ran}(\mathbb{C}) \xrightarrow{p} \Ran(\mathbb{C})$$ and for a subset $U\subset \mathbb{C}$, let $\Gra_{G,\Ran}(U\subset \mathbb{C}):= p^{-1}(\Ran(U)).$   As explained above, a point $x$ in $\text{Ran}(\mathbb{C})$ consists of a non-empty finite subset $I \subset \mathbb{C}$ of points in $\mathbb{C}$.  The fiber of the Beilinson--Drinfeld Grassmannian $Gr_{G,\text{Ran}}(\mathbb{C})$ over $x$ is the moduli of $G$-bundles on $\mathbb{A}^1$ equipped with a trivialization away from the points in $I$.  This fiber is non-canonically isomorphic to the product of $|I|$ copies of affine Grassmannian $Gr_G(\mathbb{C})$.  
+The Beilinson--Drinfeld Grassmannian is naturally fibered over the algebro-geometric Ran space.  Note that the complex points of the algebro-geometric Ran space are just the space $\Ran (\mathbb{C})$ that we have previously considered.  We shall be primarily interested in the resulting map on complex points $$\Gra_{G,\Ran}(\mathbb{C}) \xrightarrow{p} \Ran(\mathbb{C}).$$ For a subset $U\subset \mathbb{C}$, let $\Gra_{G,\Ran}(U\subset \mathbb{C}):= p^{-1}(\Ran(U)).$   As explained above, a point $x$ in $\text{Ran}(\mathbb{C})$ consists of a non-empty finite subset $I \subset \mathbb{C}$ of points in $\mathbb{C}$.  The fiber of the Beilinson--Drinfeld Grassmannian $Gr_{G,\text{Ran}}(\mathbb{C})$ over $x$ is the moduli of $G$-bundles on $\mathbb{A}^1$ equipped with a trivialization away from the points in $I$.  This fiber is non-canonically isomorphic to the product of $|I|$ copies of affine Grassmannian $Gr_G(\mathbb{C})$.  
 
 Via the machinery in the previous section (as we will explain in more detail later), $Gr_{G,\text{Ran}}(\mathbb{C})$ describes the $\mathbb{E}_2$-algebra structure on the affine Grassmannian.  However, we are interested in the compatibility of this $\mathbb{E}_2$ structure with certain filtrations on $Gr_G(\mathbb{C})$.  We must therefore exhibit a filtration on the whole Beilinson-Drinfeld Grassmannian.  In particular, we filter $Gr_{G,\text{Ran}}(\mathbb{C})$ by topological spaces $Gr_{G,\text{Ran},\le \mu}(\mathbb{C})$, allowing us to view $Gr_{G,\text{Ran}}(\mathbb{C})$ as an $\mathbb{X}_{\bullet}^+$-filtered topological space in the sense of Definition \ref{def:coweightfiltered}.  
 
@@ -146,14 +146,14 @@ The 1-category of graded topological spaces is the ordinary category of functors
 \end{dfn}
 
 \begin{cnstr}\label{cnstr:diskalg}
-We proceed by defining a $\mathrm{Disk}(\mathbb{C})_{\mathrm{nu}}$ algebra $\bar{A}$ valued in graded topological spaces.  This will arise from the map $p:\Gra_{G,\Ran}(\mathbb{C}) \to \Ran(\mathbb{C})$ constructed above.  For a disk $D\subset \mathbb{C}$, we define the graded topological space $\bar{A}(D)$ by the formula $\bar{A}(D)_m := \Gra_{G,\Ran, \leq m\mu}(D\subset \mathbb{C}).$  Explicitly, the points of $\bar{A}(D)_m$ are given by the data of a pair $(I, \mathcal{F})$ where $I\subset D$ is a nonempty finite subset and $\mathcal{F}$ is a principal $G$-bundle with a trivialization away from $I$ with monodromy less than or equal to $m\mu$ in the sense defined earlier.  Let $D_1 \coprod D_2\coprod \cdots \coprod D_n \hookrightarrow D$ be a nonempty inclusion of disjoint disks into a larger disk $D$.  To define a $\mathrm{Disk}(\mathbb{C})_{\mathrm{nu}}$ algebra, we need to exhibit maps $\bar{A}(D_1)\times \cdots \times \bar{A}(D_n) \to \bar{A}(D)$ satisfying the obvious coherences.  %This is the key extra structure that the Beilinson-Drinfeld Grassmannian possesses
-This map sends the point determined by $(I_1, \mathcal{F}_1), \cdots, (I_n, \mathcal{F}_n)$ to the point $(I, \mathcal{F})$ where $I= I_1 \coprod \cdots \coprod I_n$ and $\mathcal{F}$ is obtained by gluing the $\mathcal{F}_i$ along the trivializations away from $I$.  This defines a map respecting the grading because if the coweight corresponding to $(I_i,\mathcal{F}_i) \in \bar{A}(D)_{m_i}$ is $\alpha_i\leq m_i \mu$, then $\Sigma_i \alpha_i \leq (\Sigma_i m_i) \mu$ and so one naturally lands in grading $\Sigma_i m_i$.  
+We proceed by defining a $\mathrm{Disk}(\mathbb{C})_{\mathrm{nu}}$ algebra $\bar{A}$ valued in graded topological spaces.  This will arise from the map $p:\Gra_{G,\Ran}(\mathbb{C}) \to \Ran(\mathbb{C})$ constructed above.  For a disk $D\subset \mathbb{C}$, we define the graded topological space $\bar{A}(D)$ by the formula $\bar{A}(D)_k := \Gra_{G,\Ran, \leq k\mu}(D\subset \mathbb{C}).$  Explicitly, the points of $\bar{A}(D)_k$ are given by the data of a pair $(I, \mathcal{F})$ where $I\subset D$ is a nonempty finite subset and $\mathcal{F}$ is a principal $G$-bundle with a trivialization away from $I$ with monodromy less than or equal to $k\mu$ in the sense defined earlier.  Let $D_1 \coprod D_2\coprod \cdots \coprod D_n \hookrightarrow D$ be a nonempty inclusion of disjoint disks into a larger disk $D$.  To define a $\mathrm{Disk}(\mathbb{C})_{\mathrm{nu}}$ algebra, we need to exhibit maps $\bar{A}(D_1)\times \cdots \times \bar{A}(D_n) \to \bar{A}(D)$ satisfying the obvious coherences.  %This is the key extra structure that the Beilinson-Drinfeld Grassmannian possesses
+This map sends the point determined by $(I_1, \mathcal{F}_1), \cdots, (I_n, \mathcal{F}_n)$ to the point $(I, \mathcal{F})$ where $I= I_1 \coprod \cdots \coprod I_n$ and $\mathcal{F}$ is obtained by gluing the $\mathcal{F}_i$ along the trivializations away from $I$.  This defines a map respecting the grading because if the coweight corresponding to $(I_i,\mathcal{F}_i) \in \bar{A}(D)_{k_i}$ is $\alpha_i\leq k_i \mu$, then $\Sigma_i \alpha_i \leq (\Sigma_i k_i) \mu$ and so one naturally lands in grading $\Sigma_i k_i$.  
 \end{cnstr}
 \begin{rmk}
 More generally, the Beilinson-Drinfeld Grassmannian yields the structure of a \emph{factorizable cosheaf} on the Ran space.  The key structure present is that of \emph{factorization}, which roughly says that the Grassmannian over two disjoint subsets $U,V\subset \mathbb{C}$ is equivalent to the product of the Grassmannians over the two sets separately.  One sees this is also the structure that is giving us the disk algebras in Construction \ref{cnstr:diskalg}.  However, we have chosen to work directly with the underlying $\mathrm{Disk}(\mathbb{C})$-algebra and avoid directly discussing factorization algebras; the interested reader can refer to \cite[\S 5.5.4.10]{HA} for a comparison of these concepts.  
 \end{rmk}
 
-Passing to $\infty$-categories and stabilizing, we obtain a $\N(\mathrm{Disk}(\mathbb{C}))_{\mathrm{nu}}$-algebra $A$ valued in graded spectra whose value on a disk $D$ is $A(D) = \Sigma^{\infty}_+ \bar{A}(D) = \Sigma^{\infty}_+ \Gra_{G,\Ran}(D\subset \mathbb{C})$.  The following theorem is the essential non-formal input to producing an $\mathbb{E}_2$-algebra.  
+Passing to $\infty$-categories and stabilizing, we obtain a $\N(\mathrm{Disk}(\mathbb{C}))_{\mathrm{nu}}$-algebra $A$ valued in graded spectra whose value on a disk $D$ is $A(D)_k = \Sigma^{\infty}_+ \bar{A}(D)_k = \Sigma^{\infty}_+ \Gra_{G,\Ran,\leq k\mu }(D\subset \mathbb{C})$.  The following theorem is the essential non-formal input to producing an $\mathbb{E}_2$-algebra.  
 
 \begin{prop}\label{prop:diskequiv}
 Suppose that $G$ is reductive.  Let $D\subset \mathbb{C}$ be a disk and $\{x \} \hookrightarrow D$ be a point.  Then, for each $\mu\in \mathbb{X}_{\bullet}^+$, the natural map $\Gra_{G,\Ran, \leq \mu}(\{x\}\subset \mathbb{C}) \to \Gra_{G,\Ran, \leq \mu}(D\subset \mathbb{C})$ induces an equivalence of spaces.
@@ -167,7 +167,7 @@ Suppose that $G$ is reductive.  For each finite set $I$ and each $\mu \in \mathb
 $$
 \begin{tikzcd}
 P \arrow{r} \arrow{d}{f} & Gr_{G,\text{Ran},\le \mu}(\mathbb{C}) \arrow{d} \\
-\mathbb{C}^I \arrow{r} & \text{Ran}_{\mathbb{A}^1}(\mathbb{C}).
+\mathbb{C}^I \arrow{r} & \text{Ran}(\mathbb{C}).
 \end{tikzcd}
 $$
 Then the map $f$ is a proper map of topological spaces.
@@ -190,13 +190,13 @@ Let $I$ be a finite indexing category and $\{X_i\}_{i\in I}$ be a diagram of top
 For any $X\subset \mathbb{C}$, $\mathrm{Ran}^{\leq n}(X)$ is a finite colimit of spaces of the form $X^J$ for a finite set $J$.  Thus, we obtain the following corollary:
 
 \begin{cor}\label{cor:ranproper}
-Let $X\subset \mathbb{C}$ and $\mu \in \mathbb{X}_{\bullet}^+$.  Then, the restriction of the Beilinson-Drinfeld Grassmannian $\Gra^{\leq n}_{G,\Ran}(X\subset \mathbb{C}) \to \mathrm{Ran}^{\leq n}(X)$ is proper.
+Let $X\subset \mathbb{C}$ and $\mu \in \mathbb{X}_{\bullet}^+$.  Then, the restriction of the Beilinson-Drinfeld Grassmannian $\Gra^{\leq n}_{G,\Ran,\leq \mu}(X\subset \mathbb{C}) \to \mathrm{Ran}^{\leq n}(X)$ is proper.
 \end{cor}
 
 We now prove Proposition \ref{prop:diskequiv}.  
 
 \begin{proof}[Proof of Proposition \ref{prop:diskequiv}]
-In order to show an equivalence of graded spectra, we would like to show that for each $k\in \mathbb{Z}_{\geq 0}$, the natural map $\Gra_{G,\leq k \mu}(\{ x\}) \to \Gra_{G,\leq k\mu}(D)$ induces an equivalence of spectra.  It suffices to show that this is true upon restricting to $\Ran^{\leq n}$ for each $n$, because $\Gra_{G, \leq k \mu} = \colim_n \Gra^{\leq n}_{G,\leq k\mu}$ is a filtered colimit of closed inclusions.  For ease of notation, fix $n,k\in \mathbb{Z}_{\geq 0}$ and let $\Gra$ stand in for $\Gra^{\leq n}_{G,\leq k \mu}$ for the remainder of the proof.  
+It suffices to show that we have an equivalence upon restricting to $\Ran^{\leq n}$ for each $n$, because $\Gra_{G, \Ran, \leq  \mu}(\{ x\} \subset\mathbb{C}) = \colim_n \Gra^{\leq n}_{G,\Ran, \leq \mu}(\{x \} \subset \mathbb{C})$ and $\Gra_{G, \Ran, \leq  \mu}(D \subset\mathbb{C}) = \colim_n \Gra^{\leq n}_{G,\Ran, \leq \mu}(D \subset \mathbb{C})$ are filtered colimits of closed inclusions.  For ease of notation, for a subset $U\subset \mathbb{C}$, let $\Gra(U)$ stand in for $\Gra^{\leq n}_{G,\Ran, \leq  \mu}(U \subset \mathbb{C})$ for the remainder of the proof.  
 
 We have a pullback square of topological spaces 
 \begin{equation*}
@@ -204,7 +204,7 @@ We have a pullback square of topological spaces
 \Gra (\{ x\}) \arrow[r,"i"]\arrow[d,"p_x"] & \Gra (D) \arrow[d,"p"]\\
 \{x \} = \Ran^{\leq n}(\{ x\} )\arrow[r,"j"] & \Ran^{\leq n}(D)
 \end{tikzcd} \end{equation*}
-where $p$ and $p_x$ are proper by Corollary \ref{cor:ranproper}.  Certainly $\Gra(\{ x\})$ is finite type because it is a filtered piece of the affine Grassmannian.  One consequence of properness is that $\Gra(\mathbb{C})$, and thus $\Gra(D)$, is finite type because $\Ran^{\leq n}(\mathbb{C})$ is a finite colimit of things which are proper over spaces of the form $\mathbb{A}^n_{\mathbb{C}}$.  It therefore suffices to show that the upper map $i$ induces an isomorphism on cohomology.  
+where $p$ and $p_x$ are proper by Corollary \ref{cor:ranproper}.  Certainly $\Gra(\{ x\})$ is finite type because it is a filtered piece of the affine Grassmannian.  One consequence of properness is that $\Gra(\mathbb{C})$, and thus $\Gra(D)$, is finite type because $\Ran^{\leq n}(\mathbb{C})$ is a finite colimit of spaces which are proper over spaces of the form $\mathbb{A}^n_{\mathbb{C}}$.  It therefore suffices to show that the upper map $i$ induces an isomorphism on cohomology.  
 
 Applying the proper base change theorem to the constant sheaf $\underline{\mathbb{Z}}$ on $\Gra(D)$, we find that there is a natural equivalence $j^*p_*(\underline{\mathbb{Z}}) \xrightarrow{\sim} (p_x)_{*}i^*(\underline{\mathbb{Z}}).$  The right-hand side is $C^*(\Gra(\{x\}) ;\mathbb{Z})$, the integral cohomology of the fiber at $x$.  On the other hand, the left-hand side is by definition $$\colim_{x\in U} C^*(p^{-1}(U);\mathbb{Z})$$ where the colimit is taken over $U\subset \Ran^{\leq n}(D)$ containing $x$.  We may compute this colimit by extracting a cofinal sequence of opens $$x \subset \cdots \subset \Ran^{\leq n}(D_k) \subset \cdots \subset \Ran^{\leq n}(D_0)$$ where $D_i$ are disks such that $D_0=D$.  The transition maps in this system induce equivalences because there is a deformation retraction of $D_k$ onto $D_{k+1}$.  Therefore, we conclude that $$\colim_{x\in U} C^*(p^{-1}(U);\mathbb{Z}) \simeq C^*(\Gra(D); \mathbb{Z})$$ and so the map $i$ induces a cohomology isomorphism as desired.  
 \end{proof} 
@@ -212,17 +212,21 @@ Applying the proper base change theorem to the constant sheaf $\underline{\mathb
 With Proposition \ref{prop:diskequiv} in hand, we may now prove Theorem \ref{thm:lcdisk}.
 
 \begin{proof}[Proof of Theorem \ref{thm:lcdisk}]
-Let $A$ be the $\N (\mathrm{Disk}(\mathbb{C}))_{\mathrm{nu}}$-algebra we have been considering, where $A(D) = \Sigma^{\infty}_+ \Gra_{G,\Ran}(D)$.  Let $D \subset D'$ be an inclusion of disks and let $\{x \} \hookrightarrow D$ be any point of $D$.  Then we have the commutative triangle
-\begin{comment}
+Let $A$ be the $\N (\mathrm{Disk}(\mathbb{C}))_{\mathrm{nu}}$-algebra we have been considering, where $A(D)_k = \Sigma^{\infty}_+ \Gra_{G,\Ran,\leq k\mu}(D\subset \mathbb{C})$.  Let $D \subset D'$ be an inclusion of disks and let $\{x \} \hookrightarrow D$ be any point of $D$.  Then, we have for all $k$ the commutative triangle
 \begin{equation*}
 \begin{tikzcd}
-& \Gra_{G,\Ran}(D}\arrow[d] \\
-\Gra_{G,\Ran}(\{x\}) \arrow[ru]\arrow[r] &\Gra_{G,\Ran}(D') \\
+ & \Gra_{G,\Ran, \leq k\mu}(D\subset \mathbb{C})\arrow[d] \\
+\Gra_{G,\Ran,\leq k\mu}(\{x\}\subset \mathbb{C}) \arrow[ru]\arrow[r] &\Gra_{G,\Ran,\leq k\mu}(D'\subset \mathbb{C}) \\
 \end{tikzcd}
 \end{equation*}
+
+By Proposition \ref{prop:diskequiv}, the rightward maps are equivalences.  It follows that the vertical map is an equivalence, and so the natural map $A(D) \to A(D')$ is an equivalence of graded spectra.  Thus, by Theorem \ref{thm:lcdisk}, $A(D)$ acquires the structure of a non-unital $\mathbb{E}_2$ algebra in graded spectra.  Moreover, the underlying graded spectrum is given by $\{ \Sigma^{\infty}_+ \Gra_{G,\leq k \mu}(\mathbb{C})\}_{k \in \mathbb{Z}_{\geq 0}} $.  
+
+\begin{comment}
+Proposition \ref{prop:diskequiv} simultaneously checks that our $\N (\mathrm{Disk}(\mathbb{C}))_{\mathrm{nu}}$-algebra $A$ satisfies the condition of Theorem \ref{thm:lcdisk} and identifies the underlying spectrum of the resulting non-unital $\mathbb{E}_2$-algebra as the fiber of the Beilinson-Drinfeld Grassmannian over a point of the Ran space.  This is precisely the filtered spectrum $\{ \Sigma^{\infty}_+ \Gra_{G,\leq k\mu}\}_{k \in \mathbb{Z}_{\geq 0}}$ determined by the affine Grassmannian and choice of coweight $\mu$.  
 \end{comment}
+
+The above discussion produces $\{ \Sigma^{\infty}_+ \Gra_{G,\leq k\mu}(\mathbb{C})\}_{k \in \mathbb{Z}_{\geq 0}}$ as a \textit{non-unital} filtered $\mathbb{E}_2$-algebra.  To finish the proof of Theorem \ref{thm:schubertE2}, we must provide a unit.  By \cite[Theorem 5.4.4.5]{HA}, it suffices to produce a quasi-unit for $\{ \Sigma^{\infty}_+ \Gra_{G,\leq k\mu}(\mathbb{C})\}_{k \in \mathbb{Z}_{\geq 0}}$, which is a map $\mathbb{S} \longrightarrow  \Sigma^{\infty}_+ \Gra_{G,\leq 0}(\mathbb{C})$ that is both a left and a right unit up to non-canonical homotopy.  We may take, for example, the suspension of the point of the Beilinson-Drinfeld Grassmannian that is the trivial $G$-bundle over $\mathbb{A}^1$ together with its canonical trivialization away from the origin.
+
 \end{proof}
 
-Proposition \ref{prop:diskequiv} simultaneously checks that our $\N (\mathrm{Disk}(\mathbb{C}))_{\mathrm{nu}}$-algebra $A$ satisfies the condition of Theorem \ref{thm:lcdisk} and identifies the underlying spectrum of the resulting non-unital $\mathbb{E}_2$-algebra as the fiber of the Beilinson-Drinfeld Grassmannian over a point of the Ran space.  This is precisely the filtered spectrum $\{ \Sigma^{\infty}_+ \Gra_{G,\leq k\mu}\}_{k \in \mathbb{Z}_{\geq 0}}$ determined by the affine Grassmannian and choice of coweight $\mu$.  
-
-The above discussion produces $\{ \Sigma^{\infty}_+ \Gra_{G,\leq k\mu}\}_{k \in \mathbb{Z}_{\geq 0}}$ as a \textit{non-unital} filtered $\mathbb{E}_2$-algebra.  To finish the proof of Theorem \ref{thm:schubertE2}, we must provide a unit.  By \cite[Theorem 5.4.4.5]{HA}, it suffices to produce a quasi-unit for $\{ \Sigma^{\infty}_+ \Gra_{G,\leq k\mu}\}_{k \in \mathbb{Z}_{\geq 0}}$, which is a map $\mathbb{S} \longrightarrow \{ \Sigma^{\infty}_+ \Gra_{G,\leq 0}\}$ that is both a left and a right unit up to non-canonical homotopy.  We may take, for example, the suspension of the point of the Beilinson-Drinfeld Grassmannian that is the trivial $G$-bundle over $\mathbb{A}^1$ together with its canonical trivialization away from the origin.
