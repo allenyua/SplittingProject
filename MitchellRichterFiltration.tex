@@ -1,6 +1,6 @@
 In this section we recall and study the Bott filtration \cite{MitchellLoopGroup} on $\Omega SU(n)$.  Our main result is that the Bott filtration is at least $\mathbb{A}_\infty$, meaning in particular that its suspension is an $\mathbb{A}_\infty$-filtered spectrum in the sense of Section \ref{sec:FilGra}.
 
-In the previous section \ref{sec:Schubert}, we learned very general techniques to construct $\mathbb{E}_2$-filtrations.  To see why these techniques do not directly produce the Bott filtration, it is helpful to recall the very instructive Example \ref{sl2example}.  Let us briefly summarize our previous discussion of that example:
+In the previous Section \ref{sec:Schubert} we learned very general techniques to construct $\mathbb{E}_2$-filtrations.  To see why these techniques do not directly produce the Bott filtration, it is helpful to recall the very instructive Example \ref{sl2example}.  Let us briefly summarize our previous discussion of that example:
 
 \begin{rmk}
 Consider $Gr_{SL_2}(\mathbb{C}) \simeq \Omega SU(2) \simeq \Omega S^3$.  This has a natural James filtration
@@ -23,7 +23,7 @@ Using the language of Section \ref{sec:Schubert}, define for each $k\geq 0$
 $$F_{n,k}  :=  \Gra_{GL_n, \leq (k,0,0,\cdots)}(\mathbb{C}).$$
 \end{dfn}
 
-The following lemma, affirming a conjecture of Mahowald and Richter, is then an immediate corollary of Theorem \ref{thm:schubertE2}:
+The following lemma, affirming a conjecture of Mahowald and Richter, is then an immediate corollary of Theorem \ref{thm:schubertE2} and Remark \ref{rmk:choosespectra}:
 
 \begin{lem} [Conjecture of Mahowald--Richter \cite{MahowaldRichter}] 
 The inclusion 
@@ -80,7 +80,7 @@ We do not know whether even this last map exists.
 \begin{proof}[Proof of Theorem \ref{thm:AooFil}]
 Consider $Gr_{\mathbb{G}_m}$, the affine Grassmannian for the multiplicative group.  This is a model for $\Omega S^1$ and so has $\mathbb{Z}$ many contractible connected components.  Choosing a dominant coweight corresponding to a loop of winding number $1$ identifies a copy of $\mathbb{Z}^{ds}_{\ge 0}$ inside of $Gr_{\mathbb{G}_m}$.  The Beilinson--Drinfeld Grassmannian for the group $G=\mathbb{G}_m$ then describes $\Sigma^{\infty}_+ \mathbb{Z}^{ds}_{\ge 0}$ as a sub-$\mathbb{E}_2$-algebra of $\Sigma^{\infty}_+ Gr_{\mathbb{G}_m}$.
 
-Now, the map of groups $\mathbb{G}_m \rightarrow GL_n(\mathbb{C})$ given by the dominant coweight $(1,0,\cdots,0)$ induces a map of Beilinson--Drinfeld Grassmannians.  Applying Lurie's Theorem \cite[Theorem 5.5.4.10]{HA}, we obtain the desired map of graded $\mathbb{E}_2$-algebras.
+Now, the map of groups $\mathbb{G}_m \rightarrow GL_n(\mathbb{C})$ given by the dominant coweight $(1,0,\cdots,0)$ induces a map of Beilinson--Drinfeld Grassmannians.  Applying Remark \ref{rmk:bdgrfunct}, we obtain the desired map of graded $\mathbb{E}_2$-algebras.
 \end{proof}
 
 We end this section by sketching what is named Construction \ref{cnstr:IntroGr} in the Introduction:
