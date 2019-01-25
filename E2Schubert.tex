@@ -112,7 +112,7 @@ The structure described in the previous section arises naturally in algebraic ge
 The \textit{Ran space} $\text{Ran}_{\mathbb{A}^1}$ is the presheaf that assigns to every $\mathbb{C}$-algebra $R$ the set of non-empty finite subsets of $\text{Spec}(R) \times \mathbb{A}^1$ over $\text{Spec}(R)$.   The Beilinson--Drinfeld Grassmannian is the presheaf $Gr_{G,\text{Ran}}$ that assigns to each $\mathbb{C}$-algebra $R$ the set of triplets $(x,\mathcal{E},\beta)$, where $x \in \text{Ran}_{\mathbb{A}^1}(R)$, $\mathcal{E}$ is a $G$-torsor on $\mathbb{A}^1 \times \text{Spec}(R)$, and $\beta$ is a trivialization of $\mathcal{E}$ away from the graph of $x$ in $\text{Spec}(R) \times \mathbb{A}^1$.
 \end{dfn}
 
-The Beilinson--Drinfeld Grassmannian is naturally fibered over the Ran space.  Again, we shall be primarily interested in complex points.  Let us denote the map on complex points by $$\Gra_{G,\Ran}(\mathbb{C}) \xrightarrow{p} \Ran(\mathbb{C})$$ and for an open set $U\in \mathbb{C}$, let $\Gra_{G,\Ran}(U):= p^{-1}(\Ran(U)).$   As explained above, a point $x$ in $\text{Ran}(\mathbb{C})$ consists of a non-empty finite subset $I \subset \mathbb{C}$ of points in $\mathbb{C}$.  The fiber of the Beilinson--Drinfeld Grassmannian $Gr_{G,\text{Ran}}(\mathbb{C})$ over $x$ is the moduli of $G$-bundles on $\mathbb{A}^1$ equipped with a trivialization away from the points in $I$.  This fiber is non-canonically isomorphic to the product of $|I|$ copies of affine Grassmannian $Gr_G(\mathbb{C})$.  
+The Beilinson--Drinfeld Grassmannian is naturally fibered over the Ran space.  Again, we shall be primarily interested in complex points.  Let us denote the map on complex points by $$\Gra_{G,\Ran}(\mathbb{C}) \xrightarrow{p} \Ran(\mathbb{C})$$ and for a subset $U\subset \mathbb{C}$, let $\Gra_{G,\Ran}(U):= p^{-1}(\Ran(U)).$   As explained above, a point $x$ in $\text{Ran}(\mathbb{C})$ consists of a non-empty finite subset $I \subset \mathbb{C}$ of points in $\mathbb{C}$.  The fiber of the Beilinson--Drinfeld Grassmannian $Gr_{G,\text{Ran}}(\mathbb{C})$ over $x$ is the moduli of $G$-bundles on $\mathbb{A}^1$ equipped with a trivialization away from the points in $I$.  This fiber is non-canonically isomorphic to the product of $|I|$ copies of affine Grassmannian $Gr_G(\mathbb{C})$.  
 
 Via the machinery in the previous section (as we will explain in more detail later), $Gr_{G,\text{Ran}}(\mathbb{C})$ describes the $\mathbb{E}_2$-algebra structure on the affine Grassmannian.  However, we are interested in the compatibility of this $\mathbb{E}_2$ structure with certain filtrations on $Gr_G(\mathbb{C})$.  We must therefore exhibit a filtration on the whole Beilinson-Drinfeld Grassmannian.  In particular, we filter $Gr_{G,\text{Ran}}(\mathbb{C})$ by spaces $Gr_{G,\text{Ran},\le \mu}$, allowing us to view $Gr_{G,\text{Ran}}(\mathbb{C})$ as an $\mathbb{X}_{\bullet}^+$-filtered topological space in the sense of Definition \ref{def:coweightfiltered}.  
 
@@ -154,7 +154,8 @@ More generally, the Beilinson-Drinfeld Grassmannian yields the structure of a \e
 Passing to $\infty$-categories and stabilizing, we obtain a $\N(\mathrm{Disk}(\mathbb{C}))_{\mathrm{nu}}$-algebra $A$ valued in graded spectra whose value on a disk $D$ is $A(D) = \Sigma^{\infty}_+ \bar{A}(D) = \Sigma^{\infty}_+ \Gra_{G,\Ran}(D)$.  The following theorem is the essential non-formal input to producing an $\mathbb{E}_2$-algebra.  
 
 \begin{prop}\label{prop:diskequiv}
-Suppose that $G$ is reductive.  Let $D\subset \mathbb{C}$ be a disk and $\{x \} \hookrightarrow D$ be a point.  Then, the natural map $\Gra_{G,\Ran}(\{x\}) \to \Gra_{G,\Ran}(D)$ induces an equivalence of graded spectra.  
+Suppose that $G$ is reductive.  Let $D\subset \mathbb{C}$ be a disk and $\{x \} \hookrightarrow D$ be a point.  Then, for each dominant coweight $\mu$, the natural map $\Gra_{G,\Ran, \leq \mu}(\{x\}) \to \Gra_{G,\Ran, \leq \mu}(D)$ induces an equivalence of spaces.
+
 \end{prop}
 
 The theorem will come down to the following key fact from geometric representation theory, the proof of which appears in \cite{BDQuantization} immediately following \cite[5.3.10]{BDQuantization}:
@@ -201,7 +202,7 @@ We have a pullback square of topological spaces
 \Gra (\{ x\}) \arrow[r,"i"]\arrow[d,"p_x"] & \Gra (D) \arrow[d,"p"]\\
 \{x \} = \Ran^{\leq n}(\{ x\} )\arrow[r,"j"] & \Ran^{\leq n}(D)
 \end{tikzcd} \end{equation*}
-where $p$ and $p_x$ are proper by Corollary \ref{cor:ranproper}.  Certainly $\Gra(\{ x\})$ is finite type because we know it's just a piece of the affine Grassmannian.  One consequence of properness is that $\Gra(\mathbb{C})$, and thus $\Gra(D)$, is finite type because $\Ran^{\leq n}(\mathbb{C})$ is a finite colimit of things which are proper over spaces of the form $\mathbb{A}^n_{\mathbb{C}}$.  It therefore suffices to show that the upper map $i$ induces an isomorphism on cohomology.  
+where $p$ and $p_x$ are proper by Corollary \ref{cor:ranproper}.  Certainly $\Gra(\{ x\})$ is finite type because it is a filtered piece of the affine Grassmannian.  One consequence of properness is that $\Gra(\mathbb{C})$, and thus $\Gra(D)$, is finite type because $\Ran^{\leq n}(\mathbb{C})$ is a finite colimit of things which are proper over spaces of the form $\mathbb{A}^n_{\mathbb{C}}$.  It therefore suffices to show that the upper map $i$ induces an isomorphism on cohomology.  
 
 Applying the proper base change theorem to the constant sheaf $\underline{\mathbb{Z}}$ on $\Gra(D)$, we find that there is a natural equivalence $j^*p_*(\underline{\mathbb{Z}}) \xrightarrow{\sim} (p_x)_{*}i^*(\underline{\mathbb{Z}}).$  The right-hand side is $C^*(\Gra(\{x\}) ;\mathbb{Z})$, the integral cohomology of the fiber at $x$.  On the other hand, the left-hand side is by definition $$\colim_{x\in U} C^*(p^{-1}(U);\mathbb{Z})$$ where the colimit is taken over $U\subset \Ran^{\leq n}(D)$ containing $x$.  We may compute this colimit by extracting a cofinal sequence of opens $$x \subset \cdots \subset \Ran^{\leq n}(D_k) \subset \cdots \subset \Ran^{\leq n}(D_0)$$ where $D_i$ are disks such that $D_0=D$.  The transition maps in this system induce equivalences because there is a deformation retraction of $D_k$ onto $D_{k+1}$.  Therefore, we conclude that $$\colim_{x\in U} C^*(p^{-1}(U);\mathbb{Z}) \simeq C^*(\Gra(D); \mathbb{Z})$$ and so the map $i$ induces a cohomology isomorphism as desired.  
 \end{proof} 
@@ -209,7 +210,13 @@ Applying the proper base change theorem to the constant sheaf $\underline{\mathb
 With Proposition \ref{prop:diskequiv} in hand, we may now prove Theorem \ref{thm:lcdisk}.
 
 \begin{proof}[Proof of Theorem \ref{thm:lcdisk}]
-Let $A$ be the $\N (\mathrm{Disk}(\mathbb{C}))_{\mathrm{nu}}$-algebra we have been considering, where $A(D) = \Sigma^{\infty}_+ \Gra_{G,\Ran}(D)$.  Let $D \subset D'$ be an inclusion of disks
+Let $A$ be the $\N (\mathrm{Disk}(\mathbb{C}))_{\mathrm{nu}}$-algebra we have been considering, where $A(D) = \Sigma^{\infty}_+ \Gra_{G,\Ran}(D)$.  Let $D \subset D'$ be an inclusion of disks and let $\{x \} \hookrightarrow D$ be any point of $D$.  Then we have the commutative triangle
+
+$$\begin{tikzcd}
+& \Gra
+
+\end{tikzcd}
+$$
 
 \end{proof}
 
