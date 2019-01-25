@@ -6,6 +6,13 @@ Greg Arone.
   stably splits.
 \newblock {\em Proc. Amer. Math. Soc.}, 129(4):1207--1211, 2001.
 
+\bibitem[BD]{BDQuantization}
+A.~Beilinson and V.~Drinfeld.
+\newblock Quantization of {H}itchin’s integrable system and {H}ecke
+  eigensheaves.
+\newblock {\em \newline {P}reprint {\tt
+  https://www.math.uchicago.edu/~mitya/langlands/hitchin/BD-hitchin.pdf}}.
+
 \bibitem[Bot58]{Bott}
 Raoul Bott.
 \newblock The space of loops on a {L}ie group.
@@ -139,6 +146,12 @@ Michael~S. Weiss.
 \newblock Erratum: ``{O}rthogonal calculus'' [{T}rans.\ {A}mer.\ {M}ath.\
   {S}oc.\ {\bf 347} (1995), no.\ 10, 3743--3796; {MR}1321590 (96m:55018)].
 \newblock {\em Trans. Amer. Math. Soc.}, 350(2):851--855, 1998.
+
+\bibitem[Zhu09]{ZhuDemazure}
+Xinwen Zhu.
+\newblock Affine {D}emazure modules and {$T$}-fixed point subschemes in the
+  affine {G}rassmannian.
+\newblock {\em Adv. Math.}, 221(2):570--600, 2009.
 
 \bibitem[Zhu16]{Zhu}
 Xinwen Zhu.

@@ -4,7 +4,7 @@ In the next section we will define the Mitchell--Richter Bott filtration on $\Om
 
 \subsection{The Schubert filtration on the Affine Grassmannian}
 
-Fix for the moment a smooth, reductive, affine algebraic group $G$ over $\mathbb{C}$.  Through the rest of the paper, we will be interested only in the cases $G=\mathbb{G}_m,SL_n,$ or $GL_n$, and so the reader may safely restrict his attention to those cases for concreteness.  As we will explain in detail, an algebro-geometric model for $\Omega G(\mathbb{C})$ is the \textit{affine Grassmannian} $Gr_G$.  The $\mathbb{E}_2$-algebra structure present on $\Omega G(\mathbb{C})$ is encoded by a more elaborate object, the \textit{Beilinson--Drinfeld Grassmannian}.  A good general reference for both of these objects is \cite{Zhu}, whose presentation we will more or less follow below.
+Fix for the moment a smooth, reductive, affine algebraic group $G$ over $\mathbb{C}$.  Through the rest of the paper, we will be interested only in the cases $G=\mathbb{G}_m,SL_n,$ or $GL_n$, and so the reader may safely restrict their attention to those cases for concreteness.  As we will explain in detail, an algebro-geometric model for $\Omega G(\mathbb{C})$ is the \textit{affine Grassmannian} $Gr_G$.  The $\mathbb{E}_2$-algebra structure present on $\Omega G(\mathbb{C})$ is encoded by a more elaborate object, the \textit{Beilinson--Drinfeld Grassmannian}.  A good general reference for both of these objects is \cite{Zhu}, whose presentation we will more or less follow below.
 
 We use $D$ to denote the formal disk $\text{Spec}(\mathbb{C}[[t]])$ and $D^*$ to denote the punctured disk $\text{Spec}(\mathbb{C}((t)))$.  For $R$ a $\mathbb{C}$-algebra, we use $D_R$ to denote $\text{Spec}(\mathbb{C}[[t]] \hat{\otimes} R)$ and $D^*_R$ to denote $\text{Spec}(\mathbb{C}((t)) \hat{\otimes} R)$.  We refer to a point in the space $G(D^*)=G(\mathbb{C}((t)))$ as an algebraic free (i.e., unbased) loop in $G$.  Such points are exactly automorphisms of the trivial $G$-torsor $\mathcal{E}^0$ over $D^*$.
 
@@ -53,7 +53,7 @@ The closure of the $(a,-a)$ orbit contains the $(b,-b)$ orbit if and only if $b 
 
 Thus, the Schubert filtration is strictly coarser than the James filtration.  In particular, the $S^2$ that appears as the first James filtered piece of $\Omega SL_2(\mathbb{C})$ is not closed under the $SL_2(\mathbb{C})$ conjugation action.  Only the collection of words of length $2$ or less is closed under the $SL_2(\mathbb{C})$ action.
 
-In this paper, we are interested in a filtration called the \emph{Bott filtration} of $\Omega SL_n(\mathbb{C}).$  For $\Omega SL_2(\mathbb{C}),$ the Bott filtration corresponds to the James filtration on $\Omega S^3$, and in particular is \textbf{not} given by the Schubert filtration on $Gr_{SL_2}(\mathbb{C})$.  However, in Section CITE, we will explain how to obtain the Bott filtration from the Schubert filtration, while in the remainder of this section we will explain how the Schubert filtration interacts with the $\mathbb{E}_2$-algebra structure on $\Omega SL_2(\mathbb{C})$.
+In this paper, we are interested in a filtration called the \emph{Bott filtration} of $\Omega SL_n(\mathbb{C}).$  For $\Omega SL_2(\mathbb{C}),$ the Bott filtration corresponds to the James filtration on $\Omega S^3$, and in particular is \textbf{not} given by the Schubert filtration on $Gr_{SL_2}(\mathbb{C})$.  However, in Section \ref{sec:MRFil}, we will explain how to obtain the Bott filtration from the Schubert filtration, while in the remainder of this section we will explain how the Schubert filtration interacts with the $\mathbb{E}_2$-algebra structure on $\Omega SL_2(\mathbb{C})$.
 \end{exm}
 
 \subsection{$\mathbb{E}_2$-algebras via disk algebras}
@@ -154,10 +154,10 @@ More generally, the Beilinson-Drinfeld Grassmannian yields the structure of a \e
 Passing to $\infty$-categories and stabilizing, we obtain a $\N(\mathrm{Disk}(\mathbb{C}))_{\mathrm{nu}}$-algebra $A$ valued in graded spectra whose value on a disk $D$ is $A(D) = \Sigma^{\infty}_+ \bar{A}(D) = \Sigma^{\infty}_+ \Gra_{G,\Ran}(D)$.  The following theorem is the essential non-formal input to producing an $\mathbb{E}_2$-algebra.  
 
 \begin{prop}\label{prop:diskequiv}
-Suppose that $G$ is reductive and let $D\subset \mathbb{C}$ be a disk and $\{x \} \hookrightarrow D$ be a point.  Then, the natural map $\Gra_{G,\Ran}(\{x\}) \to \Gra_{G,\Ran}(D)$ induces an equivalence of graded spectra.  
+Suppose that $G$ is reductive.  Let $D\subset \mathbb{C}$ be a disk and $\{x \} \hookrightarrow D$ be a point.  Then, the natural map $\Gra_{G,\Ran}(\{x\}) \to \Gra_{G,\Ran}(D)$ induces an equivalence of graded spectra.  
 \end{prop}
 
-The theorem will come down to the following key fact from geometric representation, the proof of which appears in \cite{BDQuantization} immediately following \cite[5.3.10]{BDQuantization}:
+The theorem will come down to the following key fact from geometric representation theory, the proof of which appears in \cite{BDQuantization} immediately following \cite[5.3.10]{BDQuantization}:
 
 \begin{lem} \label{lem:grproper}
 Suppose that $G$ is reductive.  For each finite set $I$ and each $\mu \in \mathbb{X}_{\bullet}^+$, define $P$ so that the following square is a pullback in the category of topological spaces:
@@ -180,7 +180,7 @@ We also need the following point-set lemma:
 Let $I$ be a finite indexing category and $\{X_i\}_{i\in I}$ be a diagram of topological spaces indexed by $I$.  Let $X = \colim_{i\in I} X_i$ and suppose $f: Y \to X$ is a map of topological spaces with the property that for all $i\in I$, the natural map $f_i: Y\times_X X_i \to X_i$ is proper.  Then the map $f$ is proper.
 \end{lem}
 \begin{proof}
-****write some shit or not?****
+
 \end{proof}
 \end{comment}
 
@@ -189,6 +189,8 @@ For any $X\subset \mathbb{C}$, $\mathrm{Ran}^{\leq n}(X)$ is a finite colimit of
 \begin{cor}\label{cor:ranproper}
 Let $X\subset \mathbb{C}$.  Then, the restriction of the Beilinson-Drinfeld Grassmannian $\Gra(X)_{G,\bullet}^{\leq n} \to \mathrm{Ran}^{\leq n}(X)$ is proper.
 \end{cor}
+
+We now prove Proposition \ref{prop:diskequiv}.  
 
 \begin{proof}[Proof of Proposition \ref{prop:diskequiv}]
 In order to show an equivalence of graded spectra, we would like to show that for each $k\in \mathbb{Z}_{\geq 0}$, the natural map $\Gra_{G,\leq k \mu}(\{ x\}) \to \Gra_{G,\leq k\mu}(D)$ induces an equivalence of spectra.  It suffices to show that this is true upon restricting to $\Ran^{\leq n}$ for each $n$, because $\Gra_{G, \leq k \mu} = \colim_n \Gra^{\leq n}_{G,\leq k\mu}$ is a filtered colimit of closed inclusions.  For ease of notation, fix $n,k\in \mathbb{Z}_{\geq 0}$ and let $\Gra$ stand in for $\Gra^{\leq n}_{G,\leq k \mu}$ for the remainder of the proof.  
@@ -203,6 +205,13 @@ where $p$ and $p_x$ are proper by Corollary \ref{cor:ranproper}.  Certainly $\Gr
 
 Applying the proper base change theorem to the constant sheaf $\underline{\mathbb{Z}}$ on $\Gra(D)$, we find that there is a natural equivalence $j^*p_*(\underline{\mathbb{Z}}) \xrightarrow{\sim} (p_x)_{*}i^*(\underline{\mathbb{Z}}).$  The right-hand side is $C^*(\Gra(\{x\}) ;\mathbb{Z})$, the integral cohomology of the fiber at $x$.  On the other hand, the left-hand side is by definition $$\colim_{x\in U} C^*(p^{-1}(U);\mathbb{Z})$$ where the colimit is taken over $U\subset \Ran^{\leq n}(D)$ containing $x$.  We may compute this colimit by extracting a cofinal sequence of opens $$x \subset \cdots \subset \Ran^{\leq n}(D_k) \subset \cdots \subset \Ran^{\leq n}(D_0)$$ where $D_i$ are disks such that $D_0=D$.  The transition maps in this system induce equivalences because there is a deformation retraction of $D_k$ onto $D_{k+1}$.  Therefore, we conclude that $$\colim_{x\in U} C^*(p^{-1}(U);\mathbb{Z}) \simeq C^*(\Gra(D); \mathbb{Z})$$ and so the map $i$ induces a cohomology isomorphism as desired.  
 \end{proof} 
+
+With Proposition \ref{prop:diskequiv} in hand, we may now prove Theorem \ref{thm:lcdisk}.
+
+\begin{proof}[Proof of Theorem \ref{thm:lcdisk}]
+Let $A$ be the $\N (\mathrm{Disk}(\mathbb{C}))_{\mathrm{nu}}$-algebra we have been considering, where $A(D) = \Sigma^{\infty}_+ \Gra_{G,\Ran}(D)$.  Let $D \subset D'$ be an inclusion of disks
+
+\end{proof}
 
 Proposition \ref{prop:diskequiv} simultaneously checks that our $\N (\mathrm{Disk}(\mathbb{C}))_{\mathrm{nu}}$-algebra $A$ satisfies the condition of Theorem \ref{thm:lcdisk} and identifies the underlying spectrum of the resulting non-unital $\mathbb{E}_2$-algebra as the fiber of the Beilinson-Drinfeld Grassmannian over a point of the Ran space.  This is precisely the filtered spectrum $\{ \Sigma^{\infty}_+ \Gra_{G,\leq k\mu}\}_{k \in \mathbb{Z}_{\geq 0}}$ determined by the affine Grassmannian and choice of coweight $\mu$.  
 
