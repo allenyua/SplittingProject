@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  25 JAN 2019 14:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  25 JAN 2019 15:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -799,12 +799,20 @@ sb/m/n/10 G[]\OT1/cmr/m/n/10 )$,
  []
 
 [9] [10] Excluding 'comment' comment. [11] [12] [13]
-Excluding 'comment' comment. Excluding 'comment' comment. [14])
-(./MitchellRichterFiltration.tex [15] [16] [17]) (./MultiplicativeWeiss.tex
-[18] [19] [20] [21]) (./AInfinitySplitting.tex [22]) (./SplitInBordism.tex
-[23]) (./Obstructions.tex [24] [25]) (./DayConvolution.tex [26])
-(./SplittingMachine.tex [27] [28] [29] [30]) Excluding 'comment' comment.
-(./0_Main.bbl
+Excluding 'comment' comment.
+Overfull \hbox (17.38791pt too wide) in paragraph at lines 199--200
+[][]$ \OT1/cmr/m/n/10 for each $\OML/cmm/m/it/10 n$\OT1/cmr/m/n/10 , be-cause $
+[][](\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 x\OMS/cmsy/m/n/10 g ^^Z \U/msb/m/n/10 C
+\OT1/cmr/m/n/10 ) = [][] [][](\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 x\OMS/cmsy/m/n
+/10 g ^^Z \U/msb/m/n/10 C\OT1/cmr/m/n/10 )$ and $[][](\OML/cmm/m/it/10 D \OMS/c
+msy/m/n/10 ^^Z
+ []
+
+[14] Excluding 'comment' comment.) (./MitchellRichterFiltration.tex [15]
+[16] [17]) (./MultiplicativeWeiss.tex [18] [19] [20] [21])
+(./AInfinitySplitting.tex [22]) (./SplitInBordism.tex [23]) (./Obstructions.tex
+[24] [25]) (./DayConvolution.tex [26] [27]) (./SplittingMachine.tex [28]
+[29] [30]) Excluding 'comment' comment. (./0_Main.bbl
 Missing character: There is no â in font cmr8!
 Missing character: There is no € in font cmr8!
 Missing character: There is no ™ in font cmr8!
@@ -816,17 +824,13 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 248.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 248.
 Package rerunfilecheck Info: File `0_Main.out' has not changed.
 (rerunfilecheck)             Checksum: 864B844E8E639A5F67101EA8842075BD;743.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 248.
  ) 
 Here is how much of TeX's memory you used:
- 20726 strings out of 493089
- 404011 string characters out of 6134842
- 460349 words of memory out of 5000000
- 23470 multiletter control sequences out of 15000+600000
+ 20759 strings out of 493089
+ 404839 string characters out of 6134842
+ 465726 words of memory out of 5000000
+ 23503 multiletter control sequences out of 15000+600000
  12512 words of font info for 47 fonts, out of 8000000 for 9000
  1305 hyphenation exceptions out of 8191
  56i,18n,82p,1141b,1021s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -858,10 +862,10 @@ s/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2015/texmf-dist/
 fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2015/texmf-d
 ist/fonts/type1/public/amsfonts/symbols/msbm5.pfb></usr/local/texlive/2015/texm
 f-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on 0_Main.pdf (32 pages, 486093 bytes).
+Output written on 0_Main.pdf (32 pages, 486970 bytes).
 PDF statistics:
- 724 PDF objects out of 1000 (max. 8388607)
- 655 compressed objects within 7 object streams
+ 725 PDF objects out of 1000 (max. 8388607)
+ 656 compressed objects within 7 object streams
  201 named destinations out of 1000 (max. 500000)
  101 words of extra memory for PDF output out of 10000 (max. 10000000)
 
