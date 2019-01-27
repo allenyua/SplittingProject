@@ -6,7 +6,13 @@ Greg Arone.
   stably splits.
 \newblock {\em Proc. Amer. Math. Soc.}, 129(4):1207--1211, 2001.
 
-\bibitem[BD]{BDQuantization}
+\bibitem[BDa]{BD}
+A.~Beilinson and V.~Drinfeld.
+\newblock Chiral algebras.
+\newblock {\em \newline {P}reprint {\tt
+  https://www.math.utexas.edu/~benzvi/BD/CHA.ps.gz}}.
+
+\bibitem[BDb]{BDQuantization}
 A.~Beilinson and V.~Drinfeld.
 \newblock Quantization of {H}itchin’s integrable system and {H}ecke
   eigensheaves.
