@@ -55,6 +55,14 @@ $$A \simeq \Sigma^{\infty}_+ \mathbb{Z}^{ds}_{\ge 0} \longrightarrow \Sigma^{\in
 In particular, $\Sigma^{\infty}_+ \coprod_k F_{n,k}$ is an $\mathbb{A}_\infty$-algebra in $A$-modules, and so $\Sigma^{\infty}_+ \{F_{n,k}\}$ is a filtered $\mathbb{A}_\infty$-algebra.
 \end{thm}
 
+
+\begin{proof}[Proof of Theorem \ref{thm:AooFil}]
+Consider $Gr_{\mathbb{G}_m}(\mathbb{C})$, the affine Grassmannian for the multiplicative group.  This is a model for $\Omega S^1$ and so has $\mathbb{Z}$ many contractible connected components.  Choosing a dominant coweight corresponding to a loop of winding number $1$ identifies a copy of $\mathbb{Z}^{ds}_{\ge 0}$ inside of $Gr_{\mathbb{G}_m}(\mathbb{C})$.  The Beilinson--Drinfeld Grassmannian for the group $G=\mathbb{G}_m$ then describes $\Sigma^{\infty}_+ \mathbb{Z}^{ds}_{\ge 0}$ as a sub-$\mathbb{E}_2$-algebra of $\Sigma^{\infty}_+ Gr_{\mathbb{G}_m}(\mathbb{C})$.
+
+Now, the map of groups $\mathbb{G}_m \rightarrow GL_n(\mathbb{C})$ given by the dominant coweight $(1,0,\cdots,0)$ induces a map of Beilinson--Drinfeld Grassmannians.  Applying Remark \ref{rmk:bdgrfunct}, we obtain the desired map of graded $\mathbb{E}_2$-algebras.
+\end{proof}
+
+
 \begin{rmk}
 The $\mathbb{E}_2$-algebra map $A \rightarrow \Sigma^{\infty}_+ \coprod_k F_{n,k}$ sits in a commutative diagram of $\mathbb{E}_2$-algebras
 $$
@@ -77,11 +85,6 @@ We do not know whether even this last map exists.
 \end{rmk}
 
 
-\begin{proof}[Proof of Theorem \ref{thm:AooFil}]
-Consider $Gr_{\mathbb{G}_m}$, the affine Grassmannian for the multiplicative group.  This is a model for $\Omega S^1$ and so has $\mathbb{Z}$ many contractible connected components.  Choosing a dominant coweight corresponding to a loop of winding number $1$ identifies a copy of $\mathbb{Z}^{ds}_{\ge 0}$ inside of $Gr_{\mathbb{G}_m}$.  The Beilinson--Drinfeld Grassmannian for the group $G=\mathbb{G}_m$ then describes $\Sigma^{\infty}_+ \mathbb{Z}^{ds}_{\ge 0}$ as a sub-$\mathbb{E}_2$-algebra of $\Sigma^{\infty}_+ Gr_{\mathbb{G}_m}$.
-
-Now, the map of groups $\mathbb{G}_m \rightarrow GL_n(\mathbb{C})$ given by the dominant coweight $(1,0,\cdots,0)$ induces a map of Beilinson--Drinfeld Grassmannians.  Applying Remark \ref{rmk:bdgrfunct}, we obtain the desired map of graded $\mathbb{E}_2$-algebras.
-\end{proof}
 
 We end this section by sketching what is named Construction \ref{cnstr:IntroGr} in the Introduction:
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  27 JAN 2019 20:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  27 JAN 2019 21:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -807,11 +807,11 @@ Overfull \hbox (17.38791pt too wide) in paragraph at lines 178--179
 msy/m/n/10 ^^Z
  []
 
-[14] Excluding 'comment' comment.) (./MitchellRichterFiltration.tex [15]
-[16] [17]) (./MultiplicativeWeiss.tex [18] [19] [20] [21])
-(./AInfinitySplitting.tex [22]) (./SplitInBordism.tex [23]) (./Obstructions.tex
-[24] [25]) (./DayConvolution.tex [26] [27]) (./SplittingMachine.tex [28]
-[29] [30]) Excluding 'comment' comment. (./0_Main.bbl
+[14]) (./MitchellRichterFiltration.tex [15] [16] [17])
+(./MultiplicativeWeiss.tex [18] [19] [20] [21]) (./AInfinitySplitting.tex
+[22]) (./SplitInBordism.tex [23]) (./Obstructions.tex [24] [25])
+(./DayConvolution.tex [26] [27]) (./SplittingMachine.tex [28] [29] [30])
+Excluding 'comment' comment. (./0_Main.bbl
 Missing character: There is no â in font cmr8!
 Missing character: There is no € in font cmr8!
 Missing character: There is no ™ in font cmr8!
@@ -828,7 +828,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 248.
 Here is how much of TeX's memory you used:
  20764 strings out of 493089
  404886 string characters out of 6134842
- 464812 words of memory out of 5000000
+ 465812 words of memory out of 5000000
  23506 multiletter control sequences out of 15000+600000
  12512 words of font info for 47 fonts, out of 8000000 for 9000
  1305 hyphenation exceptions out of 8191
@@ -861,7 +861,7 @@ s/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2015/texmf-dist/
 fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2015/texmf-d
 ist/fonts/type1/public/amsfonts/symbols/msbm5.pfb></usr/local/texlive/2015/texm
 f-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on 0_Main.pdf (32 pages, 488608 bytes).
+Output written on 0_Main.pdf (32 pages, 488610 bytes).
 PDF statistics:
  728 PDF objects out of 1000 (max. 8388607)
  659 compressed objects within 7 object streams
