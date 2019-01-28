@@ -64,21 +64,21 @@ The following theorem relates these to $\mathbb{E}_2$-algebras\footnote{For tech
 There is a fully faithful functor $\Alg^{\mathrm{nu}}_{\mathbb{E}_2}(\C) \to \Alg^{\mathrm{nu}}_{\N(\mathrm{Disk}(\mathbb{C}))}(\C)$ with essential image the full subcategory of $\N(\mathrm{Disk}(\mathbb{C}))_{\mathrm{nu}}$-algebras $A$ which are \emph{locally constant} in the sense that for every embedding $D\hookrightarrow D'$ of disks, the natural map $A(D)\to A(D')$ is an equivalence.  
 \end{thm}
 
-In this paper, we will construct $\mathbb{E}_2$-algebras by constructing $\N(\mathrm{Disk}(\mathbb{C}))_{\mathrm{nu}}$-algebras and then checking the condition of Theorem \ref{thm:lcdisk}.  We will be particularly interested in equipping the Affine Grassmannian with the structure of an $\mathbb{E}_2$-algebra in filtered spaces.
+In this paper, we will construct $\mathbb{E}_2$-algebras by constructing $\N(\mathrm{Disk}(\mathbb{C}))_{\mathrm{nu}}$-algebras and then checking the condition of Theorem \ref{thm:lcdisk}.  We will be particularly interested in equipping the affine Grassmannian with the structure of an $\mathbb{E}_2$-algebra in filtered spaces.
 
-Before returning to the setting of the affine Grassmannian, it will helpful to record here one additional topological construction:  If $X$ is any topological space, it is possible to topologize the collection of points in $X$ into a second topological space, often denoted $\mathrm{Ran}(X)$ CITE?.  
+Before returning to the setting of the affine Grassmannian, it will be helpful to record here one additional topological construction.
 
-\begin{dfn}
-For any topological space $X$, consider the contravariant functor from the category $\Fin_{\text{surj}}$ of finite sets and surjections to the category $\mathrm{Top}$ of topological spaces carrying a finite set $S$ to $X^S$ and a surjection $S \twoheadrightarrow T$ to the natural diagonal map $X^T \to X^S.$
-Let $\Fin^{\leq n}_{\mathrm{surj}}$ denote the category of finite sets of cardinality at most $n$.  We define the topological spaces $$\Ran^{\leq n}(X) := \colim_{S\in \Fin^{\leq n}_{\mathrm{surj}}} X^S$$ and $$\Ran(X) := \colim_{n\to \infty} \Ran^{\leq n}(X)$$ where the colimits are taken in the 1-category of topological spaces.  
+\begin{dfn}[\S 3.4, \cite{BD}]
+For any topological space $X$, the collection of nonempty finite subsets of $X$ can be itself topologized as follows: consider the contravariant functor from the category $\Fin_{\text{surj}}$ of finite sets and surjections to the category of topological spaces carrying a finite set $S$ to $X^S$ and a surjection $S \twoheadrightarrow T$ to the natural diagonal map $X^T \to X^S.$
+Let $\Fin^{\leq n}_{\mathrm{surj}}$ denote the category of finite sets of cardinality at most $n$.  We define the topological spaces $$\Ran^{\leq n}(X) := \colim_{S\in \Fin^{\leq n}_{\mathrm{surj}}} X^S$$ and $$\Ran(X) := \colim_{n\to \infty} \Ran^{\leq n}(X)$$ where the colimits are taken in the 1-category of topological spaces.  We will refer to $\Ran(X)$ as the \emph{Ran space} of $X$.  
 \end{dfn}
 
 \begin{rmk}
 There is another topology on the Ran space, given for instance in \cite[\S 5.5]{HA}.  For our purposes, it will not matter which topology we use, so we will use the colimit topology throughout.  
 \end{rmk}
 
-\begin{rmk}
-Morally, the Ran space gives yet another way to think about $\mathbb{E}_2$-algebras.  Indeed, an $\E_2$ algebra $A$ can be thought of as consisting of a copy for $A$ for each disk in the plane and multiplications parametrized by embeddings of disjoint unions of disks.  On an infinitesimal scale, this can be thought of as giving for each point in the plane $x\in \mathbb{C}$ a copy $A_x$ of $A$.  The embeddings of disks correspond to collisions of points in the plane.  The Ran space is built exactly to track this collision data.  More precisely, given an $\mathbb{E}_2$-algebra $A$ and a finite set of points in the plane $\{x_i\}_{i\in I} \in \Ran(\mathbb{C})$, one can form the tensor product $\bigotimes_{x\in X} A_x.$  These tensor products turn out to be stalks of a cosheaf on $\Ran(\mathbb{C})$; the functoriality in the Ran space expresses the idea of points colliding determining the multiplicative structure.
+\begin{rmk}\label{rmk:factcosh}
+Morally, the Ran space gives yet another way to think about $\mathbb{E}_2$-algebras.  Indeed, an $\E_2$ algebra $A$ can be thought of as consisting of a copy for $A$ of each disk in the plane together with multiplications parametrized by embeddings of disjoint unions of disks.  On an infinitesimal scale, this can be thought of as giving for each point in the plane $x\in \mathbb{C}$ a copy $A_x$ of $A$.  The embeddings of disks correspond to collisions of points in the plane.  The Ran space is built exactly to track this collision data.  More precisely, given an $\mathbb{E}_2$-algebra $A$ and a finite set of points in the plane $\{x_i\}_{i\in I} \in \Ran(\mathbb{C})$, one can form the tensor product $\bigotimes_{x\in X} A_x.$  These tensor products turn out to be stalks of a cosheaf on $\Ran(\mathbb{C})$; the functoriality in the Ran space expresses the idea of points colliding determining the multiplicative structure.
 
 The more precise connection between the Ran space and disk algebras is given by the notion of a \emph{factorizable cosheaf} on the Ran space $\mathbb{C}$ \cite[Theorem 5.5.4.10]{HA}.  Instead of introducing the general theory, we will turn immediately to our example of interest, the Beilinson-Drinfeld Grassmannian.  
 \end{rmk}

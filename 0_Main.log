@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  27 JAN 2019 18:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  27 JAN 2019 19:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -783,15 +783,15 @@ egory and will spec-ify when we ex-plic-itly work with $1$-categories.
  []
 
 [5]) (./FilteredAndGraded.tex [6] [7] [8]) (./E2Schubert.tex
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 3.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 1.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 3.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1.
 
-Overfull \hbox (1.34207pt too wide) in paragraph at lines 23--24
+Overfull \hbox (1.34207pt too wide) in paragraph at lines 21--22
 []\OT1/cmr/m/n/10 Let $\OML/cmm/m/it/10 T$ \OT1/cmr/m/n/10 de-note a max-i-mal 
 torus in-side $\OML/cmm/m/it/10 G$\OT1/cmr/m/n/10 . We use $\U/msb/m/n/10 X[]$ 
 \OT1/cmr/m/n/10 to de-note the lat-tice of weights $[](\OML/cmm/m/it/10 T; \U/m
@@ -799,7 +799,7 @@ sb/m/n/10 G[]\OT1/cmr/m/n/10 )$,
  []
 
 [9] [10] [11] [12] [13] Excluding 'comment' comment.
-Overfull \hbox (17.38791pt too wide) in paragraph at lines 180--181
+Overfull \hbox (17.38791pt too wide) in paragraph at lines 178--179
 [][]$ \OT1/cmr/m/n/10 for each $\OML/cmm/m/it/10 n$\OT1/cmr/m/n/10 , be-cause $
 [][](\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 x\OMS/cmsy/m/n/10 g ^^Z \U/msb/m/n/10 C
 \OT1/cmr/m/n/10 ) = [][] [][](\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 x\OMS/cmsy/m/n
@@ -826,8 +826,8 @@ Package rerunfilecheck Info: File `0_Main.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 248.
  ) 
 Here is how much of TeX's memory you used:
- 20765 strings out of 493089
- 404900 string characters out of 6134842
+ 20764 strings out of 493089
+ 404886 string characters out of 6134842
  465812 words of memory out of 5000000
  23506 multiletter control sequences out of 15000+600000
  12512 words of font info for 47 fonts, out of 8000000 for 9000
@@ -861,10 +861,10 @@ s/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2015/texmf-dist/
 fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2015/texmf-d
 ist/fonts/type1/public/amsfonts/symbols/msbm5.pfb></usr/local/texlive/2015/texm
 f-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on 0_Main.pdf (32 pages, 488218 bytes).
+Output written on 0_Main.pdf (32 pages, 488211 bytes).
 PDF statistics:
- 730 PDF objects out of 1000 (max. 8388607)
- 661 compressed objects within 7 object streams
- 204 named destinations out of 1000 (max. 500000)
+ 729 PDF objects out of 1000 (max. 8388607)
+ 660 compressed objects within 7 object streams
+ 203 named destinations out of 1000 (max. 500000)
  101 words of extra memory for PDF output out of 10000 (max. 10000000)
 
