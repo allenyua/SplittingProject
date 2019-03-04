@@ -188,9 +188,9 @@ where $p$ and $p_x$ are proper by Corollary \ref{cor:ranproper}.  Certainly $\Gr
 Applying the proper base change theorem to the constant sheaf $\underline{\mathbb{Z}}$ on $\Gra(D)$, we find that there is a natural equivalence $j^*p_*(\underline{\mathbb{Z}}) \xrightarrow{\sim} (p_x)_{*}i^*(\underline{\mathbb{Z}}).$  The right-hand side is $C^*(\Gra(\{x\}) ;\mathbb{Z})$, the integral cohomology of the fiber at $x$.  On the other hand, the left-hand side is by definition $$\colim_{x\in U} C^*(p^{-1}(U);\mathbb{Z})$$ where the colimit is taken over $U\subset \Ran^{\leq n}(D)$ containing $x$.  We may compute this colimit by extracting a cofinal sequence of opens $$x \subset \cdots \subset \Ran^{\leq n}(D_k) \subset \cdots \subset \Ran^{\leq n}(D_0)$$ where $D_i$ are shrinking disks such that $D_0=D$.  The transition maps in this system induce equivalences because there is a deformation retraction of $D_k$ onto $D_{k+1}$.  Therefore, we conclude that $$\colim_{x\in U} C^*(p^{-1}(U);\mathbb{Z}) \simeq C^*(\Gra(D); \mathbb{Z})$$ and so the map $i$ induces a cohomology isomorphism as desired.  
 \end{proof} 
 
-With Proposition \ref{prop:diskequiv} in hand, we may now prove Theorem \ref{thm:lcdisk}.
+With Proposition \ref{prop:diskequiv} in hand, we may now prove Theorem \ref{thm:schubertE2}.
 
-\begin{proof}[Proof of Theorem \ref{thm:lcdisk}]
+\begin{proof}[Proof of Theorem \ref{thm:schubertE2}]
 Let $A$ be the $\N (\mathrm{Disk}(\mathbb{C}))_{\mathrm{nu}}$-algebra we have been considering, where $A(D)_k = \Sigma^{\infty}_+ \Gra_{G,\Ran,\leq k\mu}(D\subset \mathbb{C})$.  Let $D \subset D'$ be an inclusion of disks and let $\{x \} \hookrightarrow D$ be any point of $D$.  Then, we have for all $k$ the commutative triangle
 \begin{equation*}
 \begin{tikzcd}
@@ -201,7 +201,7 @@ Let $A$ be the $\N (\mathrm{Disk}(\mathbb{C}))_{\mathrm{nu}}$-algebra we have be
 
 By Proposition \ref{prop:diskequiv}, the rightward maps are equivalences.  It follows that the vertical map is an equivalence, and so the natural map $A(D) \to A(D')$ is an equivalence of graded spectra.  Thus, by Theorem \ref{thm:lcdisk}, $A(D)$ acquires the structure of a non-unital $\mathbb{E}_2$ algebra in graded spectra.  Moreover, the underlying graded spectrum is given by $\{ \Sigma^{\infty}_+ \Gra_{G,\leq k \mu}(\mathbb{C})\}_{k \in \mathbb{Z}_{\geq 0}} $.  
 
-The above discussion produces $\{ \Sigma^{\infty}_+ \Gra_{G,\leq k\mu}(\mathbb{C})\}_{k \in \mathbb{Z}_{\geq 0}}$ as a \textit{non-unital} filtered $\mathbb{E}_2$-algebra.  To finish the proof of Theorem \ref{thm:schubertE2}, we must provide a unit.  By \cite[Theorem 5.4.4.5]{HA}, it suffices to produce a quasi-unit for $\{ \Sigma^{\infty}_+ \Gra_{G,\leq k\mu}(\mathbb{C})\}_{k \in \mathbb{Z}_{\geq 0}}$, which is a map $\mathbb{S} \longrightarrow  \Sigma^{\infty}_+ \Gra_{G,\leq 0}(\mathbb{C})$ that is both a left and a right unit up to non-canonical homotopy.  We may take, for example, the suspension of the point of the Beilinson-Drinfeld Grassmannian that is the trivial $G$-bundle over $\mathbb{A}^1$ together with its canonical trivialization away from the origin.
+The above discussion produces $\{ \Sigma^{\infty}_+ \Gra_{G,\leq k\mu}(\mathbb{C})\}_{k \in \mathbb{Z}_{\geq 0}}$ as a \textit{non-unital} graded $\mathbb{E}_2$-algebra.  To finish the proof of Theorem \ref{thm:schubertE2}, we must provide a unit.  By \cite[Theorem 5.4.4.5]{HA}, it suffices to produce a quasi-unit for $\{ \Sigma^{\infty}_+ \Gra_{G,\leq k\mu}(\mathbb{C})\}_{k \in \mathbb{Z}_{\geq 0}}$, which is a map $\mathbb{S} \longrightarrow  \Sigma^{\infty}_+ \Gra_{G,\leq 0}(\mathbb{C})$ that is both a left and a right unit up to non-canonical homotopy.  We may take, for example, the suspension of the point of the Beilinson-Drinfeld Grassmannian that is the trivial $G$-bundle over $\mathbb{A}^1$ together with its canonical trivialization away from the origin.
 
 \end{proof}
 
