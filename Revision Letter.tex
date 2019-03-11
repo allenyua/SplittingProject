@@ -1,0 +1,191 @@
+\documentclass[reqno, oneside]{amsart}
+\usepackage{etex}
+\usepackage{hyperref}
+
+\usepackage{chemarr}
+\usepackage{amssymb}
+\usepackage{comment}
+
+\usepackage[a4paper]{geometry}
+
+
+%----------------------------------------------------------------------%
+
+
+\theoremstyle{definition}
+\newtheorem{nul}{}[section]
+\newtheorem{dfn}[nul]{Definition}
+\newtheorem{axm}[nul]{Axiom}
+\newtheorem{rmk}[nul]{Remark}
+\newtheorem{term}[nul]{Terminology}
+\newtheorem{cnstr}[nul]{Construction}
+\newtheorem{ntn}[nul]{Notation}
+\newtheorem{exm}[nul]{Example}
+\newtheorem{obs}[nul]{Observation}
+\newtheorem{ctrexm}[nul]{Counterexample}
+\newtheorem{rec}[nul]{Recollection}
+\newtheorem{exr}[nul]{Exercise}
+\newtheorem{wrn}[nul]{Warning}
+\newtheorem{qst}{Question}
+\newtheorem*{dfn*}{Definition}
+\newtheorem*{axm*}{Axiom}
+\newtheorem*{ntn*}{Notation}
+\newtheorem*{exm*}{Example}
+\newtheorem*{exr*}{Exercise}
+\newtheorem*{int*}{Intuition}
+\newtheorem*{qst*}{Question}
+\newtheorem*{rmk*}{Remark}
+
+
+\theoremstyle{plain}
+\newtheorem{sch}[nul]{Scholium}
+\newtheorem{claim}[nul]{Claim}
+\newtheorem{thm}[nul]{Theorem}
+\newtheorem{prop}[nul]{Proposition}
+\newtheorem{lem}[nul]{Lemma}
+\newtheorem{var}[nul]{Variant}
+\newtheorem{sublem}{Lemma}[nul]
+\newtheorem{por}[nul]{Porism}
+\newtheorem{cnj}[nul]{Conjecture}
+\newtheorem{cor}{Corollary}[nul]
+\newtheorem*{thm*}{Theorem}
+\newtheorem*{prop*}{Proposition}
+\newtheorem*{cor*}{Corollary}
+\newtheorem*{lem*}{Lemma}
+\newtheorem*{cnj*}{Conjecture}
+\newtheorem{innercustomthm}{Theorem}
+\newenvironment{customthm}[1]
+  {\renewcommand\theinnercustomthm{#1}\innercustomthm}
+  {\endinnercustomthm}
+
+
+
+%----------------------------------------------------------------------%
+
+\DeclareMathOperator{\Aut}{\text{Aut}}
+\DeclareMathOperator{\Tr}{\text{Tr}}
+\DeclareMathOperator{\Res}{\text{Res}}
+\DeclareMathOperator{\im}{\text{im}}
+\DeclareMathOperator*{\colim}{\mathrm{colim}}
+\DeclareMathOperator{\Map}{\text{Map}}
+\DeclareMathOperator{\cofiber}{\text{cofiber}}
+\DeclareMathOperator{\fiber}{\text{fiber}}
+\DeclareMathOperator{\gr}{\mathrm{gr}}
+\DeclareMathOperator{\fib}{\mathrm{fib}}
+\DeclareMathOperator{\Hom}{\text{Hom}} 
+\DeclareMathOperator{\Skel}{\text{Skel}}
+\DeclareMathOperator*{\hocolim}{\text{hocolim}}
+\DeclareMathOperator*{\holim}{\text{holim}}
+\DeclareMathOperator{\smsh}{\wedge}
+
+
+
+\DeclareMathOperator{\C}{\mathcal{C}}
+\DeclareMathOperator{\D}{\mathcal{D}}
+\DeclareMathOperator{\CP}{\mathbb{CP}}
+\DeclareMathOperator{\Z}{\mathbb{Z}}
+\DeclareMathOperator{\E}{\mathbb{E}}
+\DeclareMathOperator{\mE}{\mathcal{E}}
+\DeclareMathOperator{\N}{\mathrm{N}}
+\DeclareMathOperator{\Q}{\mathbb{Q}}
+\DeclareMathOperator{\m}{\mathfrak{m}}
+\DeclareMathOperator{\G}{\mathbb{G}}
+\DeclareMathOperator{\F}{\mathbb{F}}
+\DeclareMathOperator{\cG}{\mathcal{G}}
+\DeclareMathOperator{\cF}{\mathcal{F}}
+\DeclareMathOperator{\cS}{\mathcal{S}}
+\DeclareMathOperator{\Ring}{\textbf{Ring}}
+\DeclareMathOperator{\Aff}{\textbf{Aff}}
+\DeclareMathOperator{\Ran}{\mathrm{Ran}}
+\DeclareMathOperator{\Spec}{\text{Spec}}
+\DeclareMathOperator{\Poly}{\text{Poly}}
+\DeclareMathOperator{\Fin}{\mathrm{Fin}}
+\DeclareMathOperator{\Ext}{\text{Ext}}
+\DeclareMathOperator{\Gra}{\mathrm{Gr}}
+\DeclareMathOperator{\nil}{\text{nil}}
+\DeclareMathOperator{\fin}{\text{fin}}
+\DeclareMathOperator{\Gr}{\mathbf{Gr}}
+\DeclareMathOperator{\Fil}{\mathbf{Fil}}
+\DeclareMathOperator{\Fun}{\text{Fun}}
+\DeclareMathOperator{\Alg}{\mathrm{Alg}}
+\DeclareMathOperator{\Sp}{\mathrm{Sp}}
+\DeclareMathOperator{\Spaces}{\mathcal{S}}
+\DeclareMathOperator{\J}{\mathcal{J}}
+\DeclareMathOperator{\Cofil}{\mathbf{Cofil}}
+
+%----------------------------------------------------------------------%
+
+\usepackage{tikz}
+\usetikzlibrary{matrix,arrows,decorations}
+\usepackage{tikz-cd}
+
+\usepackage{adjustbox}
+
+%----------------------------------------------------------------------%
+
+\hyphenation{Mack-ey mon-oid-al Wald-hau-sen}
+
+%----------------------------------------------------------------------%
+%----------------------------------------------------------------------%
+
+
+\begin{document}
+
+\title{Revision Letter for paper ``Multiplicative Structure in the Stable Splitting of $\Omega SL_n(\mathbb{C})$"}
+\author{Jeremy Hahn}
+\address{Department of Mathematics, Harvard University, Cambridge, MA 02138}
+\email{jhahn01@math.harvard.edu}
+
+\author{Allen Yuan}
+\address{Department of Mathematics, Massachusetts Institute of Technology, Cambridge, MA 02139}
+\email{alleny@mit.edu}
+
+
+
+\maketitle
+
+This letter is a response to the document `report\_C\_on\_v1.pdf'.
+
+Thank you for the numerous clarifying comments.  We have made revisions according to the remarks that you provided for us.  Please see the following list of changes in response to these remarks.  
+
+\subsection{Stylistic remarks}
+\begin{enumerate}
+\item Clarified that $\mathbb{E}_1 = \mathbb{A}_{\infty}$ and we were applying the theorem in the case $n=1$.  
+\item Replaced $G$ by $G_V$ to make explicit the dependence on $V$.  
+\item Reworded to remove the ambiguous phrase ``discrete category" and moved to the notations and conventions section (cf. next revision).
+\item Expanded the notations section to include some conventions.  
+\item Rewrote the example to clarify what we are using; added citation for the fact that $\Omega^n \Sigma^n$ is the free $\E_n$-algebra in pointed spaces and included a proof and citation of the fact that its suspension is the free $\E_n$-algebra in spectra.   
+\item Made the statement a remark and clarified the grading on $A$.  We've placed the remark slightly later than suggested because one needs to set up the monoidal structure in order to make sense of the remark.  
+\item Replaced this by $\Hom(T, \mathbb{G}_m)$ for a maximal torus $T$ and made sure to identify the Bruhat decomposition and the Bruhat order.  
+\item  This is now part of definition 3.9, and we have specified that they are nonempty finite sets \emph{over} $\mathrm{Spec}(R)$.  
+\item This is now done immediately preceding definition 4.2.  
+\item We believe the statement is as intended; we include the disclaimer because the proofs in Weiss's paper are only given in the real case.  
+\item Moved the proof to the appendix as you have suggested.  
+\end{enumerate}
+
+\subsection{Mathematical remarks}
+
+
+
+\begin{itemize}
+
+\item We have added a new Section $3$ to the paper, titled `The $\mathbb{E}_2$-Schubert filtration,' as a response to the first two mathematical remarks of the reviewer.  This new section is an elaboration of the first half of Section $3$ of our original document--it contains no original results, but is an expanded exposition of work of Lurie, Beilinsion--Drinfeld, Zhu, and others.  We begin by defining the affine Grassmannian, discuss disk algebras as models for $\mathbb{E}_2$-algebras, and then explain how the Beilinson--Drinfeld Grassmannian equips the affine Grassmannian with an $\mathbb{E}_2$-algebra structure.
+
+
+We agree completely with the reviewer that the fibers of the Beilinson--Drinfeld Grassmannian are not obviously canonically equivalent to the affine Grassmannian.  Rather, the inclusion of each fiber into the total space of the Beilinson-Drinfeld Grassmannian is an equivalence, which produces canonical zig-zags identifying the various fibers.  We have included an additional exposition of Lurie's work to help clarify this point and taken care to point to the precise results of Beilinson and Drinfeld that we need to apply Lurie's topological theorems; the application involves a small argument with the proper base-change theorem.  This is done in Proposition 3.17.  
+
+\item The diagram that you draw does indeed commute.  It arises from going around the following diagram of \emph{graded} spectra:
+$$
+\begin{tikzcd}
+ & F_{\E_2}( gr(\Sigma^{\infty}_+\{F_{n,k}\}) )\arrow[d,"\epsilon"] \\
+F_{\E_2}(\Sigma^{\infty}S^2[1]) \arrow[ru, "F_{\E_2}(\beta)"] \arrow[r]\arrow[d,"\pi_S"] & gr(\Sigma^{\infty}_+ \{ F_{n,k}\} ) \arrow[d,"\pi_1"] \\
+\Sigma^{\infty} S^2[1] \arrow[r,"\beta"]& F_{n,1}.\\
+\end{tikzcd}
+$$
+
+The top triangle commuting is the definition of the extension of $\beta: \Sigma^{\infty}S^2[1] \to gr(\Sigma^{\infty}_+ \{F_{n,k} \} )$ to the free algebra $F_{\E_2} (\Sigma^{\infty} S^2[1])$ \emph{in graded spectra}.  The bottom square commutes because both vertical maps are projections of a graded spectrum onto the degree $1$ piece.  We have reworded and expanded the writing in Section $8$ (formerly Section $7$) of the document in an attempt to clarify these points.
+
+
+\end{itemize}
+
+\end{document}

@@ -1,49 +1,6 @@
-This is BibTeX, Version 0.99d (TeX Live 2015)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
-The top-level auxiliary file: 0_Main.aux
+This is BibTeX, Version 0.99dThe top-level auxiliary file: 0_Main.aux
 The style file: alpha.bst
 Database file #1: Bibliography.bib
 Warning--empty year in BD
 Warning--empty year in BDQuantization
-You've used 30 entries,
-            2543 wiz_defined-function locations,
-            768 strings with 8351 characters,
-and the built_in function-call counts, 10668 in all, are:
-= -- 1111
-> -- 306
-< -- 32
-+ -- 95
-- -- 84
-* -- 712
-:= -- 1707
-add.period$ -- 97
-call.type$ -- 30
-change.case$ -- 154
-chr.to.int$ -- 29
-cite$ -- 32
-duplicate$ -- 491
-empty$ -- 858
-format.name$ -- 138
-if$ -- 2196
-int.to.chr$ -- 2
-int.to.str$ -- 0
-missing$ -- 32
-newline$ -- 155
-num.names$ -- 90
-pop$ -- 140
-preamble$ -- 1
-purify$ -- 186
-quote$ -- 0
-skip$ -- 372
-stack$ -- 0
-substring$ -- 723
-swap$ -- 72
-text.length$ -- 32
-text.prefix$ -- 24
-top$ -- 0
-type$ -- 232
-warning$ -- 2
-while$ -- 107
-width$ -- 34
-write$ -- 392
 (There were 2 warnings)
