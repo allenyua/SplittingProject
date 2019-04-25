@@ -1,169 +1,92 @@
-We study the homotopy type of the affine Grassmannian of $SL_n(\mathbb{C})$, which is equivalent to the space $\Omega SU(n)$ of based loops in $SU(n)$.  There are essentially two multiplications on this homotopy type, one arising from the composition of loops and the other from the group multiplication on $SL_n(\mathbb{C})$.  Together, these two multiplications interact to give $\Omega SU(n)$ the structure of an $\mathbb{E}_2$ or chiral algebra.  In geometric representation theory, this structure is witnessed by the existence of the Beilinson--Drinfeld Grassmannian.
-
-Either of the above (homotopy equivalent) products make $H_*(\Omega SU(n);\mathbb{Z})$ into a graded ring.  To describe this ring, let us first name some of its elements.  For each one-dimensional subspace $V \subset \mathbb{C}^n$, there is a loop $\lambda_V:S^1 \rightarrow U(n)$ given by the formula
-$$\lambda_V(z)=\left( \begin{array}{cc} z & 0 \\ 0 & I \end{array} \right),$$
-with the matrix presented in terms of the decomposition $\mathbb{C}^n \cong V \oplus V^{\perp}$.  Fixing a particular line $W \subset \mathbb{C}^n$, the construction $V \mapsto \lambda_W^{-1} \cdot \lambda_V$ defines a well-known map
-$$\mathbb{CP}^{n-1} \rightarrow \Omega SU(n).$$
-For $1 \le i \le n-1$, let $b_i \in H_{2i}(\Omega SU(n);\mathbb{Z})$ denote the image of the generator of $H_{2i}(\mathbb{CP}^{n-1};\mathbb{Z})$.  It is a result of Bott \cite{Bott} that
-$$H_*(\Omega SU(n);\mathbb{Z}) \cong \mathbb{Z}[b_1,b_2,\cdots,b_{n-1}],$$
-with the latter denoting the polynomial algebra on the classes $b_i$.
-
-Notice that $H_*(\Omega SU(n);\mathbb{Z})$ is a \textit{bigraded} ring: there is, in addition to the usual homological grading $*$, a word length grading that assigns each $b_i$ degree $1$.  Mahowald observed that the action of the Steenrod algebra on $H_*(\Omega SU(n);\mathbb{F}_2)$ preserves word length, and he conjectured a geometric splitting to be responsible.
-
-Motivated by Mahowald's conjecture, Mitchell \cite{MitchellSU(n)} (and, independently, Segal \cite{Segal}) constructed a filtration $$* =F_{n,0} \longrightarrow F_{n,1} \longrightarrow F_{n,2}\longrightarrow \cdots \longrightarrow \Omega SU(n).$$
-Following Mitchell, we name this the \textit{Bott filtration} of $\Omega SU(n)$.  The homology of $F_{n,k}$ consists of words of length at most $k$, and the inclusion $F_{n,1} \rightarrow \Omega SU(n)$ is given by the above map $\mathbb{CP}^{n-1} \rightarrow \Omega SU(n)$.  For $k>1$, the homotopy type $F_{n,k}$ may be modeled as a singular algebraic variety, and there is a surjective resolution of singularities $(\mathbb{CP}^{n-1})^{\times k} \longrightarrow F_{n,k}$.  The exact construction of the Bott filtration is somewhat involved, and we review it in Section \ref{sec:MRFil}--it is a subfiltration of the Bruhat ordering on (closures of) Iwahori orbits.
-
-Confirming Mahowald's intuition, Mitchell and Richter \cite[Theorem 2.1]{CrabbMitchell} proved that the Bott filtration splits after taking suspension spectra.  In short, there is a wedge sum decomposition
-$$\Sigma^{\infty}_+ \Omega SU(n) \simeq \bigvee_k \Sigma^{\infty} F_{n,k}/F_{n,k-1} \simeq \mathbb{S} \vee \Sigma^{\infty} \mathbb{CP}^{n-1} \vee \cdots.$$
-
-\begin{rmk}
-Readers unfamiliar with stable homotopy theory may prefer to think of the suspension spectrum functor $\Sigma^\infty_+$ as analogous to taking the underlying motive of a variety.  The statement is then that this motive splits; in particular, its homology will split in any homology theory.  
-\end{rmk}
-
-\begin{exm}
-In the case $n=2$, the Bott filtration of $\Omega SU(2) \simeq \Omega S^3$ is the classical James filtration of $\Omega \Sigma S^2$.  The Mitchell--Richter splitting recovers the stable James splitting.
-\end{exm}
-
-In this paper, we will be interested in \emph{multiplicative} aspects of the Bott filtration and its splitting.  In Section \ref{sec:FilGra}, we review the ($\infty$)-categories of filtered and graded spectra.  A filtered spectrum is a sequence of spectra $(X_0 \to X_1 \to X_2 \to \cdots)$ connected by maps; a graded spectrum is simply a sequence $(X_0,X_1,X_2,\cdots)$ of spectra.  These categories acquire symmetric monoidal structures by Day convolution coming from the addition of nonnegative integers.  This allows us to talk about $\E_n$-algebras in filtered and graded spectra, providing the language necessary to state our first main theorem (proven in Section \ref{sec:MRFil}):
-
-\begin{thm} \label{thm:BottIsAoo}
-The suspension of the Bott filtration 
-$$\mathbb{S} \longrightarrow \Sigma_+^{\infty} \mathbb{CP}^{n-1} \simeq \Sigma_+^{\infty} F_{n,1} \longrightarrow \Sigma_+^{\infty} F_{n,2} \longrightarrow \cdots \longrightarrow \Sigma^{\infty}_+ \Omega SU(n).$$
-is an $\mathbb{A}_\infty$-algebra object in filtered spectra.
-\end{thm}
-
-\begin{rmk}
-The Bott filtration is multiplicative before suspension, but for technical reasons we prefer to phrase our results in terms of filtered spectra instead of filtered spaces.
-\end{rmk}
-
-\begin{qst} \label{qst:BottE2}
-Is the Bott filtration an $\mathbb{E}_2$ filtration?  We do not know the answer--for some thoughts about the problem, see Remark \ref{rmk:E2fil}.
-\end{qst}
-
-The proof of Theorem \ref{thm:BottIsAoo} is fairly straightforward, once given access to the sophisticated machinery behind the Beilinson--Drinfeld Grassmannian.  For example, we will explain in Section \ref{sec:MRFil} that this machinery immediately dispenses with a conjecture of Mahowald and Richter \cite{MahowaldRichter}.  Nonetheless, there are some subtleties involved, and it is these subtleties that prevent us from determining if the Bott filtration is $\mathbb{E}_2$.  The problem is readily visible in the case $n=\infty$:
-
-\begin{exm}\label{exm:BottFil}
-The limiting case of the Bott filtration of $\Omega SU(n)$ as $n$ tends to $\infty$ is the filtration
-$$* \longrightarrow BU(1) \longrightarrow BU(2) \longrightarrow BU(3) \longrightarrow \cdots \longrightarrow BU \simeq \Omega SU.$$
-It is easy to see that $\coprod BU(n)$ is a graded $\mathbb{E}_2$-algebra in spaces (in fact, it is a graded $\mathbb{E}_\infty$-algebra, being the nerve of the category of vector spaces).  However, the filtered object is much more subtle.  For example, the squares
-$$
-\begin{tikzcd}
-BU(i) \times BU(j) \arrow{d} \arrow{r} & BU(i) \times BU(j+1) \arrow{d} \\
-BU(i+1) \times BU(j) \arrow{r} & BU(i+1) \times BU(j+1)
-\end{tikzcd}
-$$
-do not commute on the nose, but only up to non-canonical homotopy.
-\end{exm}
-
-In Section \ref{sec:FilGra}, we discuss an \textit{associated graded} construction that transforms filtered $\mathbb{E}_n$-algebras into graded $\mathbb{E}_n$-algebras.  The central result of our paper may be thought of as a multiplicatively structured version of the Mitchell--Richter splitting:
-
-\begin{thm} \label{thm:MainAoo}
-As an $\mathbb{A}_\infty$-algebra object in filtered spectra, the Bott filtration of $\Sigma^{\infty}_+ \Omega SU(n)$ is equivalent to its associated graded.
-\end{thm}
-
-\begin{cor}
-For any multiplicative homology theory $E$, $E_*(\Omega SU(n))$ is a bigraded ring.  One grading is given by $*$, and the other by the associated graded of the Bott filtration.
-\end{cor}
-
-\begin{exm} \label{exm:Thom}
-In the case $n=\infty$ of Example \ref{exm:BottFil}, the Mitchell--Richter splitting
-\begin{equation} \label{eqn:MunSplitting}
-\Sigma^{\infty}_+ BU \simeq \bigvee_n \Sigma^{\infty} BU(n)/BU(n-1).
-\end{equation}
-recovers an older result of Snaith \cite{SnaithBook}.  Snaith further showed that (\ref{eqn:MunSplitting}) is an equivalence of homotopy commutative ring spectra, and our Theorem \ref{thm:MainAoo} gives an equivalence of $\mathbb{A}_\infty$-ring spectra.
- 
-The left-hand side of (\ref{eqn:MunSplitting}) is an $\mathbb{A}_\infty$-algebra by virtue of the fact that $BU$ is a loop space, while the right-hand side acquires its $\mathbb{A}_\infty$-algebra structure from an associated graded construction. To understand this latter $\mathbb{A}_\infty$ structure, it may help to know that $BU(n)/BU(n-1) \simeq MU(n),$ the Thom space of the canonical bundle over $BU(n)$.  We therefore recognize the right-hand side of (\ref{eqn:MunSplitting}) as the Thom spectrum of the $J$-homomorphism
-$$\coprod BU(n) \stackrel{J}{\longrightarrow} Pic(\mathbb{S}).$$
-Since $J$ is a loop map, its Thom spectrum acquires an $\mathbb{A}_\infty$-algebra structure, and this turns out to agree with the $\mathbb{A}_\infty$ associated graded of the Bott filtration.
-
-Of course, $BU$ is not just a loop space, but in fact an infinite loop space.  Similarly, $J$ is not just a loop map, but furthermore an infinite loop map.  Thus, both sides of (\ref{eqn:MunSplitting}) are naturally $\mathbb{E}_\infty$-ring spectra.  Perhaps surprisingly, these $\mathbb{E}_\infty$-rings are \textbf{not} equivalent.
-\end{exm}
-
-\begin{rmk}
-Snaith used his splitting $(\ref{eqn:MunSplitting})$ to give an equivalence of homotopy commutative ring spectra
-\begin{equation}
-\Sigma^{\infty}_+ BU[\beta^{-1}] \simeq MUP, \label{eqn:MUP}
-\end{equation}
-where $MUP$ denotes periodic complex bordism.  We will have more to say about the coherence of (\ref{eqn:MUP}) in forthcoming work.
-\end{rmk}
-
-In fact, the $\mathbb{A}_\infty$-splitting provided by Theorem \ref{thm:MainAoo} is the best result possible:
-
-\begin{thm} \label{thm:MainObstruction}
-Suppose $n \ge 4$.  If the Bott filtration of $\Sigma^{\infty}_+ \Omega SU(n)$ may be made into an $\mathbb{E}_2$-algebra object in filtered spectra, then it is \textbf{not} equivalent to its $\mathbb{E}_2$ associated graded.  More generally, any extension of the graded $\mathbb{A}_\infty$-algebra of Theorem \ref{thm:MainAoo} to a graded $\mathbb{E}_2$-algebra must fail to have the usual $\mathbb{E}_2$-algebra structure on its underlying ungraded $\mathbb{E}_2$-ring.
-\end{thm}
-
-However, if one is willing to work in a complex-oriented theory, such as ordinary homology, the situation improves:
-
-\begin{thm} \label{thm:MainMUE2}
-Let $MU$ denote the $\mathbb{E}_\infty$-ring spectrum of complex bordism.  Suppose that $R_1$ and $R_2$ are any two (ungraded) $\mathbb{E}_2$-algebras with the same underlying $\mathbb{A}_\infty$-ring $\Sigma^{\infty}_+ \Omega SU(n)$.  Then there there is an equivalence of $\mathbb{E}_2$-$MU$-algebras
-$$MU \smsh R_1 \simeq MU \smsh R_2.$$
-\end{thm}
-
-For Theorem \ref{thm:MainMUE2} to be of interest, it is necessary to exhibit exotic $\mathbb{E}_2$-algebra structures on $\Sigma^{\infty}_+ \Omega SU(n)$.  Example \ref{exm:Thom} gives some idea of how this may be accomplished via Thom spectra, and we end Section \ref{sec:MRFil} with a sketch of the following:
-
-\begin{cnstr} \label{cnstr:IntroGr}
-There exists a graded $\mathbb{E}_2$-algebra structure on $\text{gr}(\Sigma^{\infty}_+ \{F_{n,k}\})$ extending the canonical graded $\mathbb{A}_\infty$-algebra structure.
-\end{cnstr}
-
-\begin{rmk}
-Theorem \ref{thm:MainMUE2}, combined with Construction \ref{cnstr:IntroGr}, may be seen as a once-looped analogue of work of Kitchloo \cite{Kitchloo}.   Kitchloo studied a splitting, due to Miller \cite{MillerSplitting}, of $\Sigma^{\infty}_+ SU(n)$.  His theorem is that, \textit{for complex-oriented $E$}, the corresponding direct sum decomposition of $E_*(SU(n))$ is multiplicative.
-\end{rmk}
-
-Our proof of Theorem \ref{thm:MainMUE2} is by obstruction theory.  We show in Section \ref{sec:MUE2} that all obstructions to an $\mathbb{E}_2$ equivalence vanish.  On the other hand, we prove Theorem \ref{thm:MainObstruction} by explicitly calculating a non-zero obstruction in Section \ref{sec:Obstruction}.  It remains to discuss Theorem \ref{thm:MainAoo}, the $\mathbb{A}_\infty$ splitting of $\Sigma^{\infty}_+ \Omega SU(n)$, which is the central result of our paper.
-
-To prove that a filtered spectrum
-$$A_0 \longrightarrow A_1 \longrightarrow A_2 \longrightarrow A_3 \longrightarrow \cdots$$
-splits, it suffices to provide splitting maps in the form of a ``cofiltered spectrum''
-$$A_0 \longleftarrow A_1 \longleftarrow A_2 \longleftarrow A_3 \longleftarrow \cdots$$
-In Section \ref{sec:FilGra} we make this statement precise (with the proof in Appendix \ref{app:SplittingMachine}) by explaining the following theorem:
-%Appendix \ref{app:SplittingMachine} we make this statement precise (for rigorous definitions of the terms below, see Section \ref{sec:FilGra}):
-
-\begin{customthm}{\ref{thm:SplitMachine}}%\label{thm:introSplitMachine}%maybe this is an iff 
-Let $X\in \Alg_{\E_n}(\Fil(\Sp))$ be an $\E_n$ filtered spectrum.  Suppose there exists an $\E_n$ cofiltered spectrum $Y\in \Alg_{\E_n}(\Cofil(\Sp))$ with the following two properties:
-\begin{enumerate}
-\item There is an equivalence $\mathrm{colim } X \simeq \lim Y$ of $\E_n$-algebras in spectra.
-\item The resulting natural maps $X_i \to Y_i$ are equivalences.  
-\end{enumerate}
-Then, the filtered spectrum $X$ is $\E_n$-split.
-\end{customthm}
-
-We wish to apply this theorem in the case $n=1$, where $X$ is the $\mathbb{E}_1 = \mathbb{A}_\infty$ filtered spectrum in Theorem \ref{thm:BottIsAoo}.  In Section \ref{sec:MultWeiss}, we produce the corresponding $\mathbb{A}_\infty$ cofiltered spectrum; the proof is then finished in Section \ref{sec:AooSplit}.  To do this, we extend the methods of \cite{Arone}, who used Weiss calculus to give an elegant second proof of the Mitchell--Richter splitting (without multiplicative structure).  
-
-Arone's idea is to use additional functoriality present in the filtration of $\Omega SU(n)$.  Let $\J$ denote the topological category of complex vector spaces and embeddings, fix a complex vector space $V$, and consider the functor $$G_V:\J \longrightarrow \mathcal{S}\text{paces}$$
-given by $G_V(W)=\J(V,V \oplus W)$.  Observe that the special unitary group $SU(V \oplus \mathbb{C})$ arises as the value $G_V(\mathbb{C}) = \J (V,V\oplus \mathbb{C})$.  Weiss calculus provides a toolbox with which to study functors similar to $G_V$ -- a brief review of the theory is provided at the beginning of Section \ref{sec:MultWeiss}.  
-
-The Bott filtration in fact arises from a sequence of functors $$F_0(W) \to F_1(W) \to F_2(W) \to \cdots \to F(W) := \Sigma^{\infty}_+ \Omega \J(V, V\oplus W)$$ from $\J$ to spectra.  This filtration has the key property that the successive quotients $F_n/F_{n-1}$ are \emph{homogeneous functors of degree n}.  Arone then applies an argument of Goodwillie \cite[Example 1.20]{GoodwillieIII} to see that in this situation, the Weiss polynomial approximation $P_n F(W)$ is precisely the functor $F_n(W)$.  The approximations $$P_n F(W) \rightarrow P_{n-1} P_n F(W) \simeq P_{n-1} F(W)$$ provide Arone with splitting maps.
-
-To obtain an $\mathbb{A}_\infty$ splitting, it is no longer sufficient to merely provide splitting maps.  As explained by Theorem \ref{thm:SplitMachine}, we instead require an $\mathbb{A}_\infty$ structure on the whole system of splitting maps, considered as a cofiltered spectrum.  This will arise from combining two statements: the first is that the functor $F(W)$ takes values in $\mathbb{A}_\infty$ ring spectra, and thus gives an $\mathbb{A}_\infty$ object in the category $\Sp^{\J}$ of functors from $\J$ to spectra.  The second is that the Weiss tower can be viewed as a symmetric monoidal functor from $\Sp^{\J}$ to cofiltered objects in $\Sp^{\J}$.  This observation, which may be of independent interest, is likely known to experts and was suggested to us by Jacob Lurie, but we could not locate in the literature.  We have proven it in the following form, where $\Sp^{\J}_{\text{conv}}$ denotes restriction to certain conveniently convergent functors:
-\begin{customthm}{\ref{thm:weissmonoidal}}
-The Weiss tower defines a symmetric monoidal functor $$\text{Tow}: \Sp^{\J}_{\text{conv}} \to \Cofil(\Sp^{\J}_{\text{conv}}).$$
-\end{customthm}
-\begin{rmk*}
-In fact, the convergence hypotheses were made for convenience and are not necessary.  Furthermore, the theorem works just as well in the context of Goodwillie calculus -- see Remark \ref{rmk:goodwilliecase}.  
-\end{rmk*}
-
-There are a number of natural and presumably approachable open questions suggested by our work here.  In addition to Question \ref{qst:BottE2}, we highlight the following:
+The periodic complex bordism spectrum $MUP$ is the Thom spectrum of the tautological bundle over $BU \times \mathbb{Z}$.  This is not just a spectrum, but a ring spectrum, and the connection between homotopy commutative ring maps $MUP \longrightarrow E$ and formal group laws forms the basis of chromatic homotopy theory.  In fact, $MUP$ is not just a homotopy commutative ring spectrum, but an $\mathbb{E}_\infty$-ring spectrum.  A large amount of attention in recent years \cite{HopLaw,Ando,Walker,Moll,Zhu} has been put into variations of the following fundamental question:
 
 \begin{qst}
-Is the Mitchell--Richter filtration of the loop space of a Stiefel manifold always filtered $\mathbb{A}_\infty$?  This is the only obstruction to promoting Theorem \ref{thm:MainAoo} to a result about all such loop spaces.
+What $\mathbb{E}_\infty$-ring spectra $E$ receive $\mathbb{E}_\infty$-ring homomorphisms $MUP \longrightarrow E$?
+\end{qst}
+
+To make sense of the above question, one must be very clear about how the $\mathbb{E}_\infty$-ring structure on $MUP$ is defined.  The first definition that the authors recalled is the following, due to \cite{BMMS}:
+%The story the authors first heard of this definition runs roughly as follows:
+
+Consider the unstable $J$-homomorphism, which is the symmetric monoidal functor
+$$J:\coprod_{n} BU(n) \simeq \{ \text{Complex Vector Spaces}\}^{\simeq} \longrightarrow \text{Spaces}$$
+that sends a $d$-dimensional complex vector space $V$ to its one-point compactification $S^V$, a $2d$-dimensional sphere.  After further composing with the suspension spectrum functor $$\Sigma^{\infty}:\text{Spaces} \longrightarrow \text{Spectra},$$ the $J$-homomorphism takes values in the subgroupoid of invertible spectra and automorphisms, known as the Picard category of Spectra.  This implies that $J$ factors through the group completion of the category of complex vector spaces, giving a stable $J$ functor 
+$$J:BU \times \mathbb{Z} \simeq \{ \text{Virtual Complex Vector Spaces} \}^{\simeq} \longrightarrow \text{Pic}(\text{Spectra}) \subset \text{Spectra}.$$
+Since this stable $J$ functor is symmetric monoidal, its colimit $MUP$ acquires an $\mathbb{E}_\infty$-ring structure \cite{LMS, OmarToby}.
+
+\begin{cnv}
+Throughout this paper, whenever we refer to $MUP$ as an $\mathbb{E}_\infty$-ring spectrum, we always give it the $\mathbb{E}_\infty$-ring structure constructed above.  We will refer to this as the \textit{standard} $\mathbb{E}_\infty$-ring structure on $MUP$.
+\end{cnv}
+
+In contrast, consider the following alternate construction of the periodic complex bordism spectrum by Snaith \cite{SnaithOriginal}:
+
+Since $BU \simeq \Omega^{\infty} \Sigma^2 ku$ is an infinite loop space, $\Sigma^{\infty}_+ BU$ is an $\mathbb{E}_\infty$-ring spectrum.  Given an element in the homotopy of an $\mathbb{E}_\infty$-ring spectrum, we may invert that element to obtain another $\mathbb{E}_\infty$-ring CITE.  In particular, we may invert the suspension of the Bott element $\beta:S^2 \longrightarrow BU$, considered as an element in stable homotopy $\beta \in \pi_2(\Sigma^{\infty}_+ BU)$.
+
+\begin{thm}[Snaith \cite{SnaithOriginal}]
+There is an equivalence of homotopy commutative ring spectra
+$$\Sigma^{\infty}_+ BU[\beta^{-1}] \simeq MUP.$$
+\end{thm}
+
+Our aim, when beginning this project, was to upgrade Snaith's theorem to an equivalence of $\mathbb{E}_\infty$-ring spectra.  We were thus surprised to obtain the following result, which is the main theorem of this paper:
+
+\begin{thm} \label{thm:main}
+There is an equivalence of $\mathbb{E}_2$-ring spectra
+$$\Sigma^{\infty}_+ BU[\beta^{-1}] \simeq MUP,$$
+but there is \textbf{NOT} an equivalence of $\mathbb{E}_5$-ring spectra.  In particular, there is no equivalence of $\mathbb{E}_\infty$-rings.
+\end{thm}
+
+\begin{rmk}
+In order to prove Theorem \ref{thm:main}, we will construct a certain $\mathbb{E}_\infty$-ring structure on $H\mathbb{Z}P$, by which we denote periodic integral homology.  Essentially by construction, there will be an $\mathbb{E}_\infty$-ring homomorphism $MUP \longrightarrow H\mathbb{Z}P$, but we will show that there can be no $\mathbb{E}_5$-ring homomorphism $\Sigma^{\infty}_+ BU[\beta^{-1}] \longrightarrow H\mathbb{Z}P$.  As we will explain, one interpretation of our result is that `no choice of total Chern class can be a five-fold loop map.'  This is related to another result of Snaith \cite{SnaithNotMultiplicative}, which states roughly that `the usual choice of total Chern class is not an infinite loop map.'
+\end{rmk}
+
+Despite the plethora of work that has gone into understanding the standard multiplication on $MUP$ CITE, there are some reasons to prefer the `exotic' multiplication that is $\Sigma^{\infty}_+ BU[\beta^{-1}]$.  Perhaps the main reason is the latter's clear connection to topological complex $K$-theory, as mediated through another theorem of Snaith:
+
+\begin{thm}[Snaith \cite{SnaithOriginal}]
+There is an equivalence of homotopy commutative ring spectra 
+$$\Sigma^{\infty}_+ \mathbb{CP}^{\infty}[\beta^{-1}] \simeq KU.$$
+\end{thm}
+
+\begin{rmk}
+Unlike with periodic complex bordism, the above equivalence can be lifted to one of $\mathbb{E}_\infty$-ring spectra.  This folklore result follows from the existence of a symmetric monoidal inclusion functor
+$$\mathbb{CP}^{\infty} \simeq \{\text{Complex Lines},\otimes \}^{\simeq} \longrightarrow \{\text{Virtual Vector Spaces},\otimes \}^{\simeq} \simeq BU \times \mathbb{Z}.$$
+\end{rmk}
+
+Since the determinant map $BU \longrightarrow BU(1)\simeq \mathbb{CP}^{\infty}$ is an infinite loop map, one has the following theorem
+
+\begin{thm}[Snaith]
+There is a map of $\mathbb{E}_\infty$-ring spectra
+$$\Sigma^{\infty}_+ BU[\beta^{-1}] \longrightarrow \Sigma^{\infty}_+ \mathbb{CP}^{\infty}[\beta^{-1}] \simeq KU.$$
+\end{thm}
+
+This construction of an $\mathbb{E}_\infty$-orientation of $KU$ is so canonical that it can be ported into other settings, such as motivic homotopy theory CITE.
+
+In contrast, while it seems to be folklore that there is an $\mathbb{E}_\infty$-ring homomorphism $MUP \longrightarrow KU$, the authors could find no proof of this in the literature.  We provide in the final section of this document a computational proof of the slightly weaker result that there is an $\mathbb{E}_\infty$-ring map from $MUP$ into the $2$-completion of $KU$.  We prove this as part of a more general story.
+
+\begin{thm} THIS MAYBE BULLSHIT
+Let $E_{(k,\mathbb{G})}$ denote a Morava $E$-theory associated to a height $1$ formal group law $\mathbb{G}$ over a perfect field $k$ of characteristic $2$.  Then there is an $\mathbb{E}_\infty$-ring homomorphism
+$$MUP \longrightarrow E_{(k,\mathbb{G})}$$
+as well as an $\mathbb{E}_\infty$-ring homomorphism
+$$\Sigma^{\infty}_+ BU[\beta^{-1}] \longrightarrow E_{(k,G)}.$$
+\end{thm}
+
+\begin{rmk} Applying the theorem in the case of the multiplicative formal group law over $\mathbb{F}_2$ yields the $MUP$ orientation of $KU_2^{\wedge}$.
+\end{rmk}
+
+\begin{rmk} We believe that slight variants of our arguments work just as well as odd primes $p>2$.  We work at the prime $2$ for simplicity.
+\end{rmk}
+
+A number of open questions are raised by our work here.
+
+
+\begin{qst} Is there an $\mathbb{E}_\infty$-ring homomorphism $MU \longrightarrow \Sigma^{\infty}_+ BU[\beta^{-1}]$?  Is there an `exotic' $\mathbb{E}_\infty$-ring structure on periodic integral homology which admits an $\mathbb{E}_\infty$-ring map from $\Sigma^{\infty}_+ BU[\beta^{-1}]$?
+\end{qst}
+
+\begin{rmk} Tyler Lawson has emphasized to us that there are yet other $\mathbb{E}_\infty$-ring spectra that might naturally be called periodic complex cobordism, such as the Tate spectrum $MU^{tS^1}$.  It would be enlightening to have a catalogue of various $\mathbb{E}_\infty$ `forms' of periodic complex bordism, as well as forms of periodic integral homology such as $H\mathbb{Z}^{tS^1}$.
+\end{rmk}
+
+\begin{qst}
+In the sense of the previous remark, which forms of periodic complex bordism orient which forms of periodic integral homology.  Is there a form of periodic integral homology which is $\mathbb{E}_\infty$ oriented by $\Sigma^{\infty}_+ BU[\beta^{-1}]$?
 \end{qst}
 
 \begin{qst}
-What are the proper motivic analogues of our results, phrased in the category of $\mathbb{A}^1$-invariant Nisnevich sheaves? 
+In addition to the famous open question of which (height $>1$) Morava $E$-theories are $\mathbb{E}_\infty$-oriented by $MU$, which Morava $E$-theories are $\mathbb{E}_\infty$ oriented by which forms of periodic complex bordism?
 \end{qst}
-
-\begin{qst}
-What are the proper equivariant analogues of our result?  See for example \cite{Ullman}, \cite{Tynan}.
-\end{qst}
-
-\subsection*{Acknowledgements}
-The authors thank Greg Arone, Tom Bachmann, Lukas Brantner, Dennis Gaitsgory, Akhil Mathew, Haynes Miller, Denis Nardin, and Bill Richter for helpful conversations and the anonymous referee for numerous clarifying comments.  We were saddened to learn of the passing of Steve Mitchell during the preparation of this manuscript--his papers were a deep inspiration.  Special thanks are due to the authors' PhD advisors, Mike Hopkins and Jacob Lurie, both for their mathematical expertise and their consistent encouragement; many of the ideas in this paper grew out of their suggestions.  Special thanks are also due to Justin Campbell, James Tao, David Yang, and Yifei Zhao, all of whom spent numerous and invaluable hours answering naive questions about the Beilinson--Drinfeld Grassmannian.  The authors were supported by NSF Graduate Fellowships under Grants DGE-114415 and 1122374.
-
-\subsection*{Notation and conventions:} 
-\begin{enumerate}
-\item As through the introduction, we will freely use the word category to refer to a not-necessarily truncated $\infty$-category and will specify when we explicitly work with $1$-categories.  
-\item $\Sp$ denotes the category of spectra and $\mathcal{S}$ denotes the category of spaces.  
-\item We will often conflate a graded spectrum with its underlying spectrum unless there is potential confusion.  
-\item $\Z_{\geq 0}$ denotes the poset of non-negative integers as an ordinary category where $\Hom(a,b)$ is a singleton if $a\leq b$, and empty otherwise.  Denote by $\Z_{\geq 0}^{ds}$ the underlying set considered as a category with no morphisms.  We will implicitly take nerves to obtain $\infty$-categories which will serve as the indexing sets for filtered and graded spectra.  The reader is warned that our numbering conventions are opposite the ones in \cite{LurieRot}.
-\end{enumerate}
